@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TurstappV5", "TurstappV5", "{91DE875B-E463-45C2-818F-706E1B460C9B}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "TurstappV5.Shared", "TurstappV5\TurstappV5.Shared\TurstappV5.Shared.shproj", "{EF655665-EC0C-4E41-81CC-26C1777FC3FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TurstappV5.Windows", "TurstappV5\TurstappV5.Windows\TurstappV5.Windows.csproj", "{4F2654D8-533E-4E1C-A314-CCEE4369CE98}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		TurstappV5\TurstappV5.Shared\TurstappV5.Shared.projitems*{4f2654d8-533e-4e1c-a314-ccee4369ce98}*SharedItemsImports = 4
+		TurstappV5\TurstappV5.Shared\TurstappV5.Shared.projitems*{ef655665-ec0c-4e41-81cc-26c1777fc3fe}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4F2654D8-533E-4E1C-A314-CCEE4369CE98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F2654D8-533E-4E1C-A314-CCEE4369CE98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F2654D8-533E-4E1C-A314-CCEE4369CE98}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{4F2654D8-533E-4E1C-A314-CCEE4369CE98}.Debug|ARM.ActiveCfg = Debug|ARM
+		{4F2654D8-533E-4E1C-A314-CCEE4369CE98}.Debug|ARM.Build.0 = Debug|ARM
+		{4F2654D8-533E-4E1C-A314-CCEE4369CE98}.Debug|ARM.Deploy.0 = Debug|ARM
+		{4F2654D8-533E-4E1C-A314-CCEE4369CE98}.Debug|x64.ActiveCfg = Debug|x64
+		{4F2654D8-533E-4E1C-A314-CCEE4369CE98}.Debug|x64.Build.0 = Debug|x64
+		{4F2654D8-533E-4E1C-A314-CCEE4369CE98}.Debug|x64.Deploy.0 = Debug|x64
+		{4F2654D8-533E-4E1C-A314-CCEE4369CE98}.Debug|x86.ActiveCfg = Debug|x86
+		{4F2654D8-533E-4E1C-A314-CCEE4369CE98}.Debug|x86.Build.0 = Debug|x86
+		{4F2654D8-533E-4E1C-A314-CCEE4369CE98}.Debug|x86.Deploy.0 = Debug|x86
+		{4F2654D8-533E-4E1C-A314-CCEE4369CE98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F2654D8-533E-4E1C-A314-CCEE4369CE98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F2654D8-533E-4E1C-A314-CCEE4369CE98}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{4F2654D8-533E-4E1C-A314-CCEE4369CE98}.Release|ARM.ActiveCfg = Release|ARM
+		{4F2654D8-533E-4E1C-A314-CCEE4369CE98}.Release|ARM.Build.0 = Release|ARM
+		{4F2654D8-533E-4E1C-A314-CCEE4369CE98}.Release|ARM.Deploy.0 = Release|ARM
+		{4F2654D8-533E-4E1C-A314-CCEE4369CE98}.Release|x64.ActiveCfg = Release|x64
+		{4F2654D8-533E-4E1C-A314-CCEE4369CE98}.Release|x64.Build.0 = Release|x64
+		{4F2654D8-533E-4E1C-A314-CCEE4369CE98}.Release|x64.Deploy.0 = Release|x64
+		{4F2654D8-533E-4E1C-A314-CCEE4369CE98}.Release|x86.ActiveCfg = Release|x86
+		{4F2654D8-533E-4E1C-A314-CCEE4369CE98}.Release|x86.Build.0 = Release|x86
+		{4F2654D8-533E-4E1C-A314-CCEE4369CE98}.Release|x86.Deploy.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EF655665-EC0C-4E41-81CC-26C1777FC3FE} = {91DE875B-E463-45C2-818F-706E1B460C9B}
+		{4F2654D8-533E-4E1C-A314-CCEE4369CE98} = {91DE875B-E463-45C2-818F-706E1B460C9B}
+	EndGlobalSection
+EndGlobal
