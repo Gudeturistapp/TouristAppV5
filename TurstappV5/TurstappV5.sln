@@ -9,6 +9,8 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "TurstappV5.Shared", "Tursta
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TurstappV5.Windows", "TurstappV5\TurstappV5.Windows\TurstappV5.Windows.csproj", "{4F2654D8-533E-4E1C-A314-CCEE4369CE98}"
 EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "Modeling V5", "Modeling V5\Modeling V5.modelproj", "{7AF8ECFD-F045-4729-A558-6393DF3EE0EA}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		TurstappV5\TurstappV5.Shared\TurstappV5.Shared.projitems*{4f2654d8-533e-4e1c-a314-ccee4369ce98}*SharedItemsImports = 4
@@ -49,6 +51,16 @@ Global
 		{4F2654D8-533E-4E1C-A314-CCEE4369CE98}.Release|x86.ActiveCfg = Release|x86
 		{4F2654D8-533E-4E1C-A314-CCEE4369CE98}.Release|x86.Build.0 = Release|x86
 		{4F2654D8-533E-4E1C-A314-CCEE4369CE98}.Release|x86.Deploy.0 = Release|x86
+		{7AF8ECFD-F045-4729-A558-6393DF3EE0EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AF8ECFD-F045-4729-A558-6393DF3EE0EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AF8ECFD-F045-4729-A558-6393DF3EE0EA}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{7AF8ECFD-F045-4729-A558-6393DF3EE0EA}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{7AF8ECFD-F045-4729-A558-6393DF3EE0EA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7AF8ECFD-F045-4729-A558-6393DF3EE0EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AF8ECFD-F045-4729-A558-6393DF3EE0EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AF8ECFD-F045-4729-A558-6393DF3EE0EA}.Release|ARM.ActiveCfg = Release|Any CPU
+		{7AF8ECFD-F045-4729-A558-6393DF3EE0EA}.Release|x64.ActiveCfg = Release|Any CPU
+		{7AF8ECFD-F045-4729-A558-6393DF3EE0EA}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
