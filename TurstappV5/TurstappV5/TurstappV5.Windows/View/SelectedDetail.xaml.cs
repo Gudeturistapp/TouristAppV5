@@ -22,7 +22,7 @@ namespace TurstappV5.View
     /// A page that displays details for a single item within a group while allowing gestures to
     /// flip through other items belonging to the same group.
     /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class SelectedDetail : Page
     {
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
@@ -44,7 +44,7 @@ namespace TurstappV5.View
             get { return this.navigationHelper; }
         }
 
-        public MainPage()
+        public SelectedDetail()
         {
             this.InitializeComponent();
             this.navigationHelper = new NavigationHelper(this);
