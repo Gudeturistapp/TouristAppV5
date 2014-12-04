@@ -97,5 +97,12 @@ namespace TuristAppV5.View
         }
 
         #endregion
+
+        private void Ellipse_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof (AppBar));
+        }
+
+        
     }
 }
