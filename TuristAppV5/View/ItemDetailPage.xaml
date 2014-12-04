@@ -8,6 +8,7 @@
     xmlns:common="using:TuristAppV5.Common"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:bm="using:Bing.Maps"
     mc:Ignorable="d">
 
     <!--
@@ -46,6 +47,7 @@
                         AutomationProperties.ItemType="Navigation Button"/>
             <TextBlock x:Name="pageTitle" Text="{Binding Title}" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
                         IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,40"/>
+            <bm:Map Credentials="AntbJxTZZb2Q4bKMr0xQktLpJsaE1GUU1xQOhYDpLmof3c_88gDrCqDwKE2VR2xG" x:Name="myMap" Grid.Column="1" Margin="76,333,896,-529"></bm:Map>
         </Grid>
     </Grid>
 </Page>
