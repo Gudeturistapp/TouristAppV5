@@ -8,5 +8,25 @@ namespace TuristAppV5.Model
 {
     class Museum
     {
+        public string _name { get; set; }
+
+        public string _telephone { get; set; }
+
+        public string _description { get; set; }
+
+        public string _picture { get; set; }
+
+        public Museum(string name, string telephone, string description, string picture)
+        {
+            _name = name;
+            _telephone = telephone;
+            _description = description;
+            _picture = picture;
+        }
+
+        public override string ToString()
+        {
+            return string.Format("_name: {0}, _telephone: {1}, _picture: {2}, _description: {3}", _name, _telephone, _picture, _description);
+        }
     }
 }
