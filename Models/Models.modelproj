@@ -39,6 +39,15 @@
       <SubType>Content</SubType>
       <DependentUpon>Business Modeling\Domain.classdiagram</DependentUpon>
     </Content>
+    <Content Include="ModelDefinition\Package_1237.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1247.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1250.uml">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Requirements\TestPlan.docx">
       <SubType>Content</SubType>
     </Content>
