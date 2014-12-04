@@ -1,13 +1,14 @@
 ﻿<Page
     x:Name="pageRoot"
-    x:Class="TurstappV5.View.SelectedDetail"
+    x:Class="TuristAppV5.View.ItemDetailPage"
     DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:TurstappV5.View"
-    xmlns:common="using:TurstappV5.Common"
+    xmlns:local="using:TuristAppV5.View"
+    xmlns:common="using:TuristAppV5.Common"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:bm="using:Bing.Maps"
     mc:Ignorable="d">
 
     <!--
@@ -46,6 +47,7 @@
                         AutomationProperties.ItemType="Navigation Button"/>
             <TextBlock x:Name="pageTitle" Text="{Binding Title}" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
                         IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,40"/>
+            <bm:Map Credentials="AntbJxTZZb2Q4bKMr0xQktLpJsaE1GUU1xQOhYDpLmof3c_88gDrCqDwKE2VR2xG" x:Name="myMap" Grid.ColumnSpan="2" Margin="39,515,970,-572"></bm:Map>
         </Grid>
     </Grid>
 </Page>
