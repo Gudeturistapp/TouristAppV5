@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
-using TurstappV5.Common;
+using TuristAppV5.Common;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -16,13 +16,13 @@ using Windows.UI.Xaml.Navigation;
 
 // The Item Detail Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234232
 
-namespace TurstappV5.View
+namespace TuristAppV5.View
 {
     /// <summary>
     /// A page that displays details for a single item within a group while allowing gestures to
     /// flip through other items belonging to the same group.
     /// </summary>
-    public sealed partial class SelectedDetail : Page
+    public sealed partial class SelectedBusiness : Page
     {
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
@@ -44,7 +44,7 @@ namespace TurstappV5.View
             get { return this.navigationHelper; }
         }
 
-        public SelectedDetail()
+        public SelectedBusiness()
         {
             this.InitializeComponent();
             this.navigationHelper = new NavigationHelper(this);
