@@ -26,7 +26,7 @@ namespace TuristAppV5.Model
 
         public override string ToString()
         {
-            return string.Format("_name: {0}, _telephone: {1}, _desc: {2}, picture: {3}", _name, _telephone, _desc, picture);
+            return string.Format("_name: {0}, _telephone: {1}, _desc: {2}, picture: {3}", _name, _telephone, _desc, _picture);
         }
     }
 }
