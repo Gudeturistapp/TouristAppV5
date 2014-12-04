@@ -30,7 +30,7 @@
         </AppBar>
     </Page.TopAppBar>
     <Page.BottomAppBar>
-        <AppBar Height="608" Margin="768,0,788,0" Visibility="Collapsed" Background="#FFED6B06">
+        <AppBar Height="608" Margin="500,0,506,0" Visibility="Collapsed" Background="#FFED6B06" RenderTransformOrigin="0.5,0.5">
             <StackPanel>
                 <StackPanel Height="87" Width="296">
                     <TextBlock TextWrapping="Wrap" Text="      Order" Height="146" HorizontalAlignment="Center" Width="296" VerticalAlignment="Center" FontSize="48"/>
@@ -84,14 +84,16 @@
         * Row 1 contains the rest of the page layout
     -->
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1920"/>
+        </Grid.ColumnDefinitions>
         <Grid.ChildrenTransitions>
             <TransitionCollection>
                 <EntranceThemeTransition/>
             </TransitionCollection>
         </Grid.ChildrenTransitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="140"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="1080"/>
         </Grid.RowDefinitions>
 
         <!--
@@ -102,7 +104,7 @@
         <!-- Back button and page title -->
 
         <!-- Back button and page title -->
-        <Grid>
+        <Grid Margin="0,0,0,975">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="120"/>
                 <ColumnDefinition Width="*"/>
@@ -115,9 +117,9 @@
                         AutomationProperties.ItemType="Navigation Button"/>
             <TextBlock x:Name="pageTitle" Text="{Binding Title}" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
                         IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,40"/>
-            <bm:Map Credentials="AntbJxTZZb2Q4bKMr0xQktLpJsaE1GUU1xQOhYDpLmof3c_88gDrCqDwKE2VR2xG" x:Name="myMap" Margin="39,637,1205,-900" Grid.ColumnSpan="2"/>
+            <bm:Map Credentials="AntbJxTZZb2Q4bKMr0xQktLpJsaE1GUU1xQOhYDpLmof3c_88gDrCqDwKE2VR2xG" x:Name="myMap" Margin="39,445,1450,-575" Grid.ColumnSpan="2"/>
         </Grid>
-        <AppBar Margin="0,858,0,-2" Grid.Row="1">
+        <AppBar Margin="0,700,554,312">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
@@ -129,6 +131,6 @@
                 </StackPanel>
             </Grid>
         </AppBar>
-        <Ellipse Fill="#FFED6B06" HorizontalAlignment="Left" Height="272" Margin="768,804,0,-136" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Width="367" Tapped="Ellipse_Tapped"/>
+        <Ellipse Fill="#FFED6B06" HorizontalAlignment="Left" Height="272" Margin="498,645,0,0" Stroke="Black" VerticalAlignment="Top" Width="367" Tapped="Ellipse_Tapped"/>
     </Grid>
 </Page>
