@@ -13,7 +13,7 @@ namespace TuristAppV5.ViewModel
         
 
 
-        //Selected - området.
+        //Selected - området..
         #region Selected
         public static Restaurant SelectedRestaurant { get; set; }
 
