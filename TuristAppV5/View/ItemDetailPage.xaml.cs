@@ -100,7 +100,8 @@ namespace TuristAppV5.View
 
         private void Ellipse_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof (AppBar));
+            OrderAppBar.Visibility = Visibility.Visible;
+
         }
 
         

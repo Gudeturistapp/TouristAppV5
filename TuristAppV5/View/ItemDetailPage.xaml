@@ -30,7 +30,7 @@
         </AppBar>
     </Page.TopAppBar>
     <Page.BottomAppBar>
-        <AppBar Height="608" Margin="500,0,506,0" Visibility="Collapsed" Background="#FFED6B06" RenderTransformOrigin="0.5,0.5">
+        <AppBar x:Name="OrderAppBar" Height="608" Margin="500,0,506,0" Visibility="Collapsed" Background="#FFED6B06" RenderTransformOrigin="0.5,0.5">
             <StackPanel>
                 <StackPanel Height="87" Width="296">
                     <TextBlock TextWrapping="Wrap" Text="      Order" Height="146" HorizontalAlignment="Center" Width="296" VerticalAlignment="Center" FontSize="48"/>
@@ -117,9 +117,10 @@
                         AutomationProperties.ItemType="Navigation Button"/>
             <TextBlock x:Name="pageTitle" Text="{Binding Title}" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
                         IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,40"/>
-            <bm:Map Credentials="AntbJxTZZb2Q4bKMr0xQktLpJsaE1GUU1xQOhYDpLmof3c_88gDrCqDwKE2VR2xG" x:Name="myMap" Margin="39,445,1450,-575" Grid.ColumnSpan="2"/>
+            <bm:Map Credentials="AntbJxTZZb2Q4bKMr0xQktLpJsaE1GUU1xQOhYDpLmof3c_88gDrCqDwKE2VR2xG" x:Name="myMap" Margin="0,480,1450,-665" Grid.ColumnSpan="2"/>
+            <Rectangle Grid.Column="1" Fill="#FFED6B06" HorizontalAlignment="Left" Height="40" Margin="235,25,0,0" Stroke="#FFED6B06" VerticalAlignment="Top" Width="710" RadiusX="45" RadiusY="45"/>
         </Grid>
-        <AppBar Margin="0,700,554,312">
+        <AppBar Margin="0,700,549,309">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
@@ -131,6 +132,11 @@
                 </StackPanel>
             </Grid>
         </AppBar>
-        <Ellipse Fill="#FFED6B06" HorizontalAlignment="Left" Height="272" Margin="498,645,0,0" Stroke="Black" VerticalAlignment="Top" Width="367" Tapped="Ellipse_Tapped"/>
+        <Ellipse x:Name="OrderButton1" Fill="#FFED6B06" HorizontalAlignment="Left" Height="272" Margin="498,645,0,0" Stroke="Black" VerticalAlignment="Top" Width="367" Tapped="Ellipse_Tapped"/>
+        <Image HorizontalAlignment="Left" Height="370" Margin="0,110,0,0" VerticalAlignment="Top" Width="470" Source="ms-appx:///Assets/StoreLogo.png"/>
+        <ListView x:Name="ReviewList" HorizontalAlignment="Left" Height="490" Margin="930,135,0,0" VerticalAlignment="Top" Width="400"/>
+        <TextBox x:Name="AddReviewText" HorizontalAlignment="Left" Margin="930,625,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="70" Width="400" PlaceholderText="Write your Review here!" AcceptsReturn="True"/>
+        <TextBlock HorizontalAlignment="Left" Margin="580,700,0,0" TextWrapping="Wrap" Text="Order Here" VerticalAlignment="Top" Height="61" Width="230" FontSize="40" FontWeight="Bold"/>
+        <TextBlock x:Name="DescriptionText" HorizontalAlignment="Left" Margin="498,135,0,0" TextWrapping="Wrap" Text="Description written here for more information" VerticalAlignment="Top" Height="345" Width="390" FontSize="15"/>
     </Grid>
 </Page>
