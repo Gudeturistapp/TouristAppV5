@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
 // The Items Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234233
+using TuristAppV5.ViewModel;
 
 namespace TuristAppV5.View
 {
@@ -26,6 +27,7 @@ namespace TuristAppV5.View
     {
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
+        MainViewModel viewModel = new MainViewModel();
 
         /// <summary>
         /// This can be changed to a strongly typed view model.
@@ -67,6 +69,7 @@ namespace TuristAppV5.View
             // TODO: Assign a bindable collection of items to this.DefaultViewModel["Items"]
         }
 
+        
         #region NavigationHelper registration
 
         /// The methods provided in this section are simply used to allow
@@ -92,7 +95,8 @@ namespace TuristAppV5.View
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            MainViewModel.SelectedRestaurant = viewModel.Restaurants.Restaurants[0];
+            Frame.Navigate(typeof (ItemDetailPage));
         }
 
     }

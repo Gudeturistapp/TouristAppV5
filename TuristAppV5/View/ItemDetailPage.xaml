@@ -1,7 +1,6 @@
 ﻿<Page
     x:Name="pageRoot"
     x:Class="TuristAppV5.View.ItemDetailPage"
-    DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:TuristAppV5.View"
@@ -14,6 +13,9 @@
 
     xmlns:turistAppV5="using:TuristAppV5"
     mc:Ignorable="d" Background="White">
+    <Page.DataContext>
+        <ViewModel:MainViewModel/>
+    </Page.DataContext>
     <Page.TopAppBar>
         <AppBar Height="105" Margin="0,0,0.429,0" Background="White">
             <Grid>
@@ -236,7 +238,11 @@
 
         
 
-        <Grid Grid.Row="1" x:Name="contentRegion"/>
+        <Grid Grid.Row="1" x:Name="contentRegion">
+            <Grid.DataContext>
+                <ViewModel:MainViewModel/>
+            </Grid.DataContext>
+        </Grid>
 
 
         <!-- Back button and page title -->
@@ -268,7 +274,7 @@
         <ListView x:Name="ReviewList" HorizontalAlignment="Left" Height="490" Margin="930,135,0,0" VerticalAlignment="Top" Width="400"/>
         <TextBox x:Name="AddReviewText" HorizontalAlignment="Left" Margin="930,625,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="70" Width="400" PlaceholderText="Write your Review here!" AcceptsReturn="True"/>
         <TextBlock HorizontalAlignment="Left" Margin="580,700,0,0" TextWrapping="Wrap" Text="Order Here" VerticalAlignment="Top" Height="61" Width="230" FontSize="40" FontWeight="Bold"/>
-        <TextBlock x:Name="DescriptionText" HorizontalAlignment="Left" Margin="498,135,0,0" TextWrapping="Wrap" Text="Description written here for more information" VerticalAlignment="Top" Height="345" Width="390" FontSize="15"/>
+        <TextBlock x:Name="DescriptionText" HorizontalAlignment="Left" Margin="498,135,0,0" TextWrapping="Wrap" Text="{Binding SelectedRestaurant._desc}" VerticalAlignment="Top" Height="345" Width="390" FontSize="15"/>
         <Button Content="" HorizontalAlignment="Left" Margin="495,642,0,0" VerticalAlignment="Top" Click="Button_Click" Height="132" Width="373" BorderBrush="Transparent" Foreground="Transparent" Opacity="0">
             <Button.Projection>
                 <PlaneProjection CenterOfRotationX="0" CenterOfRotationY="0" CenterOfRotationZ="25"/>
