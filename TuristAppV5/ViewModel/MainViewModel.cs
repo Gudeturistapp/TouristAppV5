@@ -10,7 +10,7 @@ namespace TuristAppV5.ViewModel
     class MainViewModel
     {
 
-        MuseumList Museums = new MuseumList();
+        
 
 
         //Selected - området.
@@ -26,8 +26,6 @@ namespace TuristAppV5.ViewModel
         public static Category SelectedCategory { get; set; }
         #endregion
 
-
-
         public CategoryList Categories { get; set; }
 
 
@@ -37,19 +35,25 @@ namespace TuristAppV5.ViewModel
         public MainViewModel()
         {
             Restaurants = new RestaurantList();
-
             Categories = new CategoryList();
-
-            Categories.AddRestaurantItem("Bølles mor", "Bølles far", "", "");
-            
-
-            Categories.AddEventItem("Fedeste event ever", "Dårligste event ever", "", "");
 
 
             Restaurants.AddRestaurant("Bølles frue", "666", "Best fisk ever", "");
 
+            
+
+            Categories.AddRestaurantItem("Bølles mor", "Bølles far", "", "");
+
+
+
+            Categories.AddEventItem("Fedeste event ever", "Dårligste event ever", "", "");
+
 
             
+
+
+            
+
         }
     }
 }

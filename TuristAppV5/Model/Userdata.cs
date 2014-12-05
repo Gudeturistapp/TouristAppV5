@@ -35,7 +35,7 @@ namespace TuristAppV5.Model
 
         public void Login()
         {
-            //if (UserDictionary.ContainsKey(NameBox.Text) && UserDictionary.ContainsValue(PassBox.Password)
+            //if (UserDictionary.ContainsKey(Namebox.Text) && UserDictionary.ContainsValue(PassBox.Password)
             //{
                     //Success
                     //isLoggedIn = true;
@@ -44,9 +44,9 @@ namespace TuristAppV5.Model
 
         public void CreateUser()
         {
-            //if (!UserDictionary.ContainsKey(NameBox.Text)
+            //if (!UserDictionary.ContainsKey(Namebox.Text)
             //{
-                    //UserDictionary.Add(NameBox.Text, PassBox.Password);
+                    //UserDictionary.Add(Namebox.Text, PassBox.Password);
                     
 
             //}

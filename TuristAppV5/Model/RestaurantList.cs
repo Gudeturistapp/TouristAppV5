@@ -10,11 +10,11 @@ namespace TuristAppV5.Model
     class RestaurantList
     {
 
-        public ObservableCollection<Restaurant> Restaurant = new ObservableCollection<Restaurant>();
+        public ObservableCollection<Restaurant> Restaurants = new ObservableCollection<Restaurant>();
 
         public void AddRestaurant(string name, string telephone, string desc, string picture)
         {
-            Restaurant.Add(new Restaurant(name, telephone, desc, picture));
+            Restaurants.Add(new Restaurant(name, telephone, desc, picture));
         }
     }
 }

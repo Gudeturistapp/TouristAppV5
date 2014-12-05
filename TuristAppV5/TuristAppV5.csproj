@@ -144,10 +144,16 @@
     <None Include="TuristAppV5_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\DenmarkFlag.png" />
+    <Content Include="Assets\FranceFlag.png" />
+    <Content Include="Assets\GermanyFlag.png" />
     <Content Include="Assets\Logo.scale-100.png" />
+    <Content Include="Assets\RussianFlag.png" />
     <Content Include="Assets\SmallLogo.scale-100.png" />
+    <Content Include="Assets\SpainFlag.png" />
     <Content Include="Assets\SplashScreen.scale-100.png" />
     <Content Include="Assets\StoreLogo.scale-100.png" />
+    <Content Include="Assets\USFlag.png" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
