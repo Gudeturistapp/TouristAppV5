@@ -8,8 +8,9 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Button Content="Restaurants" HorizontalAlignment="Left" Margin="233,270,0,0" VerticalAlignment="Top" Height="205" Width="244" Click="Button_Click"/>
-        <Button Content="Events" HorizontalAlignment="Left" Margin="741,270,0,0" VerticalAlignment="Top" Height="205" Width="226" Click="Button_Click_1"/>
+        <Button Content="Next page" HorizontalAlignment="Left" Margin="208,510,0,0" VerticalAlignment="Top" Height="157" Width="272" Click="Button_Click"/>
+
+
 
     </Grid>
 </Page>

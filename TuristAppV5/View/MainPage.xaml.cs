@@ -9,15 +9,17 @@ namespace TuristAppV5.View
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        MainViewModel viewModel = new MainViewModel();
-
         public MainPage()
         {
             this.InitializeComponent();
         }
 
+        MainViewModel viewModel = new MainViewModel();
+
+
         private void Button_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
+
             MainViewModel.SelectedCategory = viewModel.Categories.Restaurant[0];
             Frame.Navigate(typeof (ItemsPage));
         }
@@ -26,6 +28,8 @@ namespace TuristAppV5.View
         {
             MainViewModel.SelectedCategory = viewModel.Categories.Event[0];
             Frame.Navigate(typeof (ItemsPage));
+
         }
+
     }
 }

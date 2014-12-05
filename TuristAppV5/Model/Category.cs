@@ -8,7 +8,6 @@ namespace TuristAppV5.Model
 {
     class Category
     {
-
         public string photo1 { get; set; }
 
         public string photo2 { get; set; }
@@ -26,7 +25,8 @@ namespace TuristAppV5.Model
         public string name4 { get; set; }
 
 
-        public Category(string name1, string name2, string photo1, string photo2, string name3, string name4, string photo3, string photo4)
+        public Category(string name1, string name2, string photo1, string photo2, string name3, string name4,
+            string photo3, string photo4)
         {
             this.name1 = name1;
             this.name2 = name2;
@@ -36,8 +36,6 @@ namespace TuristAppV5.Model
             this.photo2 = photo2;
             this.photo3 = photo3;
             this.photo4 = photo4;
-
         }
-
     }
 }
