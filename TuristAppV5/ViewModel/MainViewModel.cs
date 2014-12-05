@@ -10,7 +10,6 @@ namespace TuristAppV5.ViewModel
     class MainViewModel
     {
 
-        RestaurantList Restaurants = new RestaurantList();
         MuseumList Museums = new MuseumList();
 
 
@@ -22,21 +21,35 @@ namespace TuristAppV5.ViewModel
 
         public static Shopping SelectedShopping { get; set; }
 
-        public static Event SelectedEvent { get; set; } 
+        public static Event SelectedEvent { get; set; }
+
+        public static Category SelectedCategory { get; set; }
         #endregion
 
-        //Listerne:
-        #region Lists
 
 
-        public List<Shopping> Shoppings = new List<Shopping>();
+        public CategoryList Categories { get; set; }
 
-        public List<Event> Events = new List<Event>();  
-        #endregion
+
+        public RestaurantList Restaurants { get; set; }
+
 
         public MainViewModel()
         {
-            Restaurants.AddRestaurent("Bølles frue", "666", "Best fisk ever", "");
+            Restaurants = new RestaurantList();
+
+            Categories = new CategoryList();
+
+            Categories.AddRestaurantItem("Bølles mor", "Bølles far", "", "");
+            
+
+            Categories.AddEventItem("Fedeste event ever", "Dårligste event ever", "", "");
+
+
+            Restaurants.AddRestaurant("Bølles frue", "666", "Best fisk ever", "");
+
+
+            
         }
     }
 }
