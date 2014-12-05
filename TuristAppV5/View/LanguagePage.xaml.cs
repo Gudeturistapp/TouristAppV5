@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
+using TuristAppV5.Model;
 
 namespace TuristAppV5.View
 {
@@ -22,9 +23,20 @@ namespace TuristAppV5.View
     /// </summary>
     public sealed partial class LanguagePage : Page
     {
+        Language languageData = new Language();
+
         public LanguagePage()
         {
+
             this.InitializeComponent();
+            languageData.CheckIfContinue();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof (MainPage));
+        }
+
+
     }
 }

@@ -15,5 +15,7 @@ namespace TuristAppV5.Model
         {
             Museums.Add(new Museum(name, telephone, desc, picture));
         }
+
+        
     }
 }
