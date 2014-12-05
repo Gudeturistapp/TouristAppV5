@@ -109,6 +109,11 @@ namespace TuristAppV5.View
             OrderAppBar.Visibility = Visibility.Collapsed;
         }
 
+        private void AppBarButton_Click(object sender, RoutedEventArgs e)
+        {
+            OrderAppBar.Visibility = Visibility.Collapsed;
+        }
+
         
     }
 }
