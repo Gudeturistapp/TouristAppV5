@@ -11,6 +11,97 @@
     xmlns:bm="using:Bing.Maps"
     xmlns:turistAppV5="using:TuristAppV5"
     mc:Ignorable="d" Background="White">
+    <Page.Resources>
+        <Style x:Key="AppBarButtonStyle1" TargetType="AppBarButton">
+            <Setter Property="Foreground" Value="{ThemeResource AppBarItemForegroundThemeBrush1}"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="FontFamily" Value="{ThemeResource ContentControlThemeFontFamily}"/>
+            <Setter Property="FontWeight" Value="Normal"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="AppBarButton">
+                        <Grid x:Name="RootGrid" Background="Transparent" Width="100">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="ApplicationViewStates">
+                                    <VisualState x:Name="FullSize"/>
+                                    <VisualState x:Name="Compact">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility" Storyboard.TargetName="TextLabel">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Width" Storyboard.TargetName="RootGrid">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="60"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal"/>
+                                    <VisualState x:Name="PointerOver">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Fill" Storyboard.TargetName="BackgroundEllipse">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource AppBarItemPointerOverBackgroundThemeBrush1}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="Content">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource AppBarItemPointerOverForegroundThemeBrush1}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Pressed">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Stroke" Storyboard.TargetName="OutlineEllipse">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource AppBarItemForegroundThemeBrush}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Fill" Storyboard.TargetName="BackgroundEllipse">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource AppBarItemForegroundThemeBrush1}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="Content">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource AppBarItemPressedForegroundThemeBrush1}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Disabled">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Stroke" Storyboard.TargetName="OutlineEllipse">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource AppBarItemDisabledForegroundThemeBrush1}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="Content">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource AppBarItemDisabledForegroundThemeBrush1}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="TextLabel">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource AppBarItemDisabledForegroundThemeBrush1}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="FocusStates">
+                                    <VisualState x:Name="Focused">
+                                        <Storyboard>
+                                            <DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="FocusVisualWhite"/>
+                                            <DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="FocusVisualBlack"/>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Unfocused"/>
+                                    <VisualState x:Name="PointerFocused"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <StackPanel Margin="0,14,0,13" VerticalAlignment="Top">
+                                <Grid HorizontalAlignment="Center" Height="40" Margin="0,0,0,5" Width="40">
+                                    <Ellipse x:Name="BackgroundEllipse" Fill="{ThemeResource AppBarItemBackgroundThemeBrush1}" Height="40" UseLayoutRounding="False" Width="40"/>
+                                    <Ellipse x:Name="OutlineEllipse" Height="40" Stroke="{ThemeResource AppBarItemForegroundThemeBrush1}" StrokeThickness="2" UseLayoutRounding="False" Width="40"/>
+                                    <ContentPresenter x:Name="Content" AutomationProperties.AccessibilityView="Raw" Content="{TemplateBinding Icon}" Foreground="{TemplateBinding Foreground}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                </Grid>
+                                <TextBlock x:Name="TextLabel" Foreground="{ThemeResource AppBarItemForegroundThemeBrush1}" FontSize="12" FontFamily="{TemplateBinding FontFamily}" TextAlignment="Center" TextWrapping="Wrap" Text="{TemplateBinding Label}" Width="88"/>
+                            </StackPanel>
+                            <Rectangle x:Name="FocusVisualWhite" IsHitTestVisible="False" Opacity="0" StrokeDashOffset="1.5" StrokeEndLineCap="Square" Stroke="{ThemeResource FocusVisualWhiteStrokeThemeBrush}" StrokeDashArray="1,1"/>
+                            <Rectangle x:Name="FocusVisualBlack" IsHitTestVisible="False" Opacity="0" StrokeDashOffset="0.5" StrokeEndLineCap="Square" Stroke="{ThemeResource FocusVisualBlackStrokeThemeBrush}" StrokeDashArray="1,1"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
     <Page.TopAppBar>
         <AppBar Height="105" Margin="0,0,0.429,0" Background="White">
             <Grid>
@@ -178,7 +269,7 @@
 						<LineBreak/>
 						<Run/>
                     </TextBlock>
-                    <TextBox TextWrapping="Wrap" FontSize="26.667" Height="44"/>
+                    <TextBox TextWrapping="Wrap" FontSize="26.667" Height="44" IsReadOnly="True"/>
                     <TextBlock TextWrapping="Wrap" FontSize="26.667" Height="62">
 						<Run/>
 						<LineBreak/>
@@ -188,19 +279,19 @@
 						<LineBreak/>
 						<Run/>
                     </TextBlock>
-                    <TextBox TextWrapping="Wrap" FontSize="26.667" Height="41"/>
+                    <TextBox TextWrapping="Wrap" FontSize="26.667" Height="41" IsReadOnly="True"/>
                     <TextBlock TextWrapping="Wrap" Height="59" VerticalAlignment="Bottom">
 						<LineBreak/>
 						<Run FontSize="26.667"/>
 						<LineBreak/>
 						<Run FontSize="26.667" Text="E-mail"/>
                     </TextBlock>
-                    <TextBox TextWrapping="Wrap" Text="&#xA;"/>
+                    <TextBox TextWrapping="Wrap" Text="&#xA;" IsReadOnly="True"/>
                 </StackPanel>
                 <StackPanel Height="76" Width="364">
                     <StackPanel Height="151" Margin="0,0,0.286,0" Orientation="Horizontal">
-                        <AppBarButton HorizontalAlignment="Stretch" Icon="Cancel" Label="Cancel" VerticalAlignment="Stretch" Margin="0,0,0,53.714" Width="192" Click="AppBarButton_Click"/>
-                        <AppBarButton x:Name="OrderButton" HorizontalAlignment="Stretch" Icon="Add" Label="Place Order" VerticalAlignment="Stretch" Click="OrderButton_Click" Margin="0,0,0,51.143" Width="125"/>
+                        <AppBarButton HorizontalAlignment="Stretch" Icon="Cancel" Label="Cancel" VerticalAlignment="Stretch" Margin="0,0,0,53.714" Width="192" Click="AppBarButton_Click" Style="{StaticResource AppBarButtonStyle1}"/>
+                        <AppBarButton x:Name="OrderButton" HorizontalAlignment="Stretch" Icon="Add" Label="Place Order" VerticalAlignment="Stretch" Click="OrderButton_Click" Margin="0,0,0,51.143" Width="125" Style="{StaticResource AppBarButtonStyle1}"/>
                     </StackPanel>
                 </StackPanel>
             </StackPanel>
@@ -266,7 +357,9 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <StackPanel Orientation="Horizontal"/>
+                <StackPanel Orientation="Horizontal">
+                    <AppBarButton x:Name="ExitButton" HorizontalAlignment="Stretch" Icon="Accept" Label="AppBarButton" VerticalAlignment="Stretch"/>
+                </StackPanel>
                 <StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal">
                     <AppBarButton x:Name="AddReviewButton" HorizontalAlignment="Left" Icon="Add" Label="Add Review" VerticalAlignment="Top"/>
                 </StackPanel>
