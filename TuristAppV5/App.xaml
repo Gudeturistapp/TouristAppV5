@@ -5,13 +5,20 @@
     xmlns:local="using:TuristAppV5">
 	<Application.Resources>
 		<MenuFlyout x:Key="FlyoutBase1"/>
-        <SolidColorBrush x:Key="AppBarItemBackgroundThemeBrush" Color="Transparent" />
+        <!--<SolidColorBrush x:Key="AppBarItemBackgroundThemeBrush" Color="Transparent" />
         <SolidColorBrush x:Key="AppBarItemDisabledForegroundThemeBrush" Color="#FFED6B06" />
         <SolidColorBrush x:Key="AppBarItemForegroundThemeBrush" Color="#FFED6B06" />
         <SolidColorBrush x:Key="AppBarItemPointerOverBackgroundThemeBrush" Color="#FFED6B06" />
         <SolidColorBrush x:Key="AppBarItemPointerOverForegroundThemeBrush" Color="Transparent" />
-        <SolidColorBrush x:Key="AppBarItemPressedForegroundThemeBrush" Color="Transparent" />
-        
+        <SolidColorBrush x:Key="AppBarItemPressedForegroundThemeBrush" Color="Transparent" />-->
+
+        <SolidColorBrush x:Key="AppBarItemBackgroundThemeBrush" Color="Transparent" />
+        <SolidColorBrush x:Key="AppBarItemDisabledForegroundThemeBrush" Color="#FFED6B06" />
+        <SolidColorBrush x:Key="AppBarItemForegroundThemeBrush" Color="#FFED6B06" />
+        <SolidColorBrush x:Key="AppBarItemPointerOverBackgroundThemeBrush" Color="#FFED6B06" />
+        <SolidColorBrush x:Key="AppBarItemPointerOverForegroundThemeBrush" Color="#FFED6B06" />
+        <SolidColorBrush x:Key="AppBarItemPressedForegroundThemeBrush" Color="#FFED6B06" />
+
     </Application.Resources>
 
 </Application>

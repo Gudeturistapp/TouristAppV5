@@ -19,7 +19,7 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <StackPanel Orientation="Horizontal">
-                    <AppBarButton Label="Language" Height="88" Width="100" Foreground="#FFED6B06" Icon="Flag" >
+                    <AppBarButton Label="Language" Height="88" Width="100" Foreground="#FFED6B06" Icon="Flag">
                         <AppBarButton.Resources>
                             <MenuFlyout x:Key="LanguageFlyOut">
                                 <MenuFlyoutItem Margin="0,0,0,0" Height="34" BorderBrush="White">
