@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel"
   dslVersion="1.0.0.0"
   Id="dda288e4-6b39-4bb7-8cc9-fb29d8ae56ee"
   name="Models" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -75,20 +75,20 @@
         isLeaf="false">
         <targetEnds>
           <association
-            Id="c72c1b02-963f-4f50-9a7a-d406db9bcb34"
+            Id="7867097f-672e-4f5f-838e-959a631aa8c7"
             isDerived="false"
             sourceEndRoleName="Vælger sprog"
-            targetEndRoleName="UseCase1"
+            targetEndRoleName="Skriv anmeldelse til valgt Kategori"
             isLeaf="false"
             isAbstract="false">
             <useCaseMoniker
-              Id="b9a2a90c-6c66-46ce-8686-1cbe60ba1536"
-              LastKnownName="Logger ind"
+              Id="e927f74b-083c-41c4-9acc-de6ab0d5da26"
+              LastKnownName="Skriv anmeldelse til valgt Kategori"
               LastKnownLocation="Models.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="37f8c8f0-4ba2-40f4-b681-bc31580e6c6b"
+                  Id="3892b783-b0bc-47a0-862c-f36f34d8705c"
                   name="Vælger sprog"
                   isLeaf="false"
                   isStatic="false"
@@ -101,8 +101,47 @@
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="42cf632b-72dd-49e5-b91c-a6e6d9edcc62"
-                  name="UseCase1"
+                  Id="95f2fa79-709c-4329-978b-fd83bc24bd8a"
+                  name="Skriv anmeldelse til valgt Kategori"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="48731e17-3dbd-49f1-8fe1-6845cb0f7624"
+            isDerived="false"
+            sourceEndRoleName="Vælger sprog"
+            targetEndRoleName="Bestil tid til valgt kategori"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="17cf7af2-2de8-46fc-8dda-c24c6df2fa88"
+              LastKnownName="Bestil tid til valgt kategori"
+              LastKnownLocation="Models.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="981d1afb-65fc-49bd-9884-df7bf3ffea9e"
+                  name="Vælger sprog"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="649e26ca-4d4b-4c7d-a2f1-1c0682edb80a"
+                  name="Bestil tid til valgt kategori"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -121,88 +160,7 @@
         Id="b9a2a90c-6c66-46ce-8686-1cbe60ba1536"
         name="Logger ind"
         isAbstract="false"
-        isLeaf="false">
-        <targetEnds>
-          <association
-            Id="a1f995d9-fe6c-4f34-91a3-37b50f270120"
-            isDerived="false"
-            sourceEndRoleName="UseCase1"
-            targetEndRoleName="UseCase2"
-            isLeaf="false"
-            isAbstract="false">
-            <useCaseMoniker
-              Id="e927f74b-083c-41c4-9acc-de6ab0d5da26"
-              LastKnownName="Skriv anmeldelse til valgt Kategori"
-              LastKnownLocation="Models.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="88c8b58d-99d2-4b04-a413-771a934600ec"
-                  name="UseCase1"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="c6331a17-206a-47fe-829b-ea16581ca9ab"
-                  name="UseCase2"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
-            Id="a3a7239e-64a8-4bdc-8930-bd6f0e2d871a"
-            isDerived="false"
-            sourceEndRoleName="UseCase1"
-            targetEndRoleName="UseCase3"
-            isLeaf="false"
-            isAbstract="false">
-            <useCaseMoniker
-              Id="17cf7af2-2de8-46fc-8dda-c24c6df2fa88"
-              LastKnownName="Bestil tid til valgt kategori"
-              LastKnownLocation="Models.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="146641c0-b0be-480c-8344-29462bb01ea8"
-                  name="UseCase1"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="c2365bb3-e736-423c-842c-ad06d8e14165"
-                  name="UseCase3"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-        </targetEnds>
-      </useCase>
+        isLeaf="false" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
