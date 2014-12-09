@@ -97,5 +97,23 @@ namespace TuristAppV5.View
         }
 
         #endregion
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            OrderAppBar.IsOpen = true;
+            OrderAppBar.Visibility = Visibility.Visible;
+        }
+
+        private void OrderButton_Click(object sender, RoutedEventArgs e)
+        {
+            OrderAppBar.Visibility = Visibility.Collapsed;
+        }
+
+        private void AppBarButton_Click(object sender, RoutedEventArgs e)
+        {
+            OrderAppBar.Visibility = Visibility.Collapsed;
+        }
+
+        
     }
 }

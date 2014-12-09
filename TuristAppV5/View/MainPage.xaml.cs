@@ -12,5 +12,10 @@ namespace TuristAppV5.View
         {
             this.InitializeComponent();
         }
+
+        private void Button_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof (ItemDetailPage));
+        }
     }
 }
