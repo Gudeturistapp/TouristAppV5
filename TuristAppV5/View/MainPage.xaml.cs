@@ -16,18 +16,18 @@ namespace TuristAppV5.View
         }
 
         MainViewModel viewModel = new MainViewModel();
-        SingletonViewModel singleton = new SingletonViewModel();
+        //SingletonViewModel singleton = new SingletonViewModel();
 
         private void Button_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
-            MainViewModel.SelectedCategory = singleton.Categories[0];
+           // MainViewModel.SelectedCategory = singleton.Categories[0];
             Frame.Navigate(typeof (ItemsPage));
         }
 
         private void Button_Click_1(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
 
-            MainViewModel.SelectedCategory = viewModel.Categories.Event[0];
+            //MainViewModel.SelectedCategory = viewModel.Categories.Event[0];
             Frame.Navigate(typeof (ItemsPage));
         }
 
