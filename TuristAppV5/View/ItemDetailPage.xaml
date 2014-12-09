@@ -274,7 +274,7 @@
         <ListView x:Name="ReviewList" HorizontalAlignment="Left" Height="490" Margin="930,135,0,0" VerticalAlignment="Top" Width="400"/>
         <TextBox x:Name="AddReviewText" HorizontalAlignment="Left" Margin="930,625,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="70" Width="400" PlaceholderText="Write your Review here!" AcceptsReturn="True"/>
         <TextBlock HorizontalAlignment="Left" Margin="580,700,0,0" TextWrapping="Wrap" Text="Order Here" VerticalAlignment="Top" Height="61" Width="230" FontSize="40" FontWeight="Bold"/>
-        <TextBlock x:Name="DescriptionText" HorizontalAlignment="Left" Margin="498,135,0,0" TextWrapping="Wrap" Text="{Binding SelectedRestaurant._desc}" VerticalAlignment="Top" Height="345" Width="390" FontSize="15"/>
+        <TextBlock x:Name="DescriptionText" HorizontalAlignment="Left" Margin="498,135,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="345" Width="390" FontSize="15"/>
         <Button Content="" HorizontalAlignment="Left" Margin="495,642,0,0" VerticalAlignment="Top" Click="Button_Click" Height="132" Width="373" BorderBrush="Transparent" Foreground="Transparent" Opacity="0">
             <Button.Projection>
                 <PlaneProjection CenterOfRotationX="0" CenterOfRotationY="0" CenterOfRotationZ="25"/>

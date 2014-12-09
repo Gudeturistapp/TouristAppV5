@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Tracing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,10 +33,15 @@ namespace TuristAppV5.ViewModel
         public RestaurantList Restaurants { get; set; }
 
 
+        public EventList Events { get; set; }
+
         public MainViewModel()
         {
             Restaurants = new RestaurantList();
             Categories = new CategoryList();
+            Events = new EventList();
+
+            Events.AddEvents("Kaj's liv", "666", "BEDSTE EVENT I VERDENEN", "");
 
 
             Restaurants.AddRestaurant("Bølles frue", "666", "Best fisk ever", "");
@@ -48,7 +54,7 @@ namespace TuristAppV5.ViewModel
 
             Categories.AddEventItem("Fedeste event ever", "Dårligste event ever", "", "");
 
-
+            
             
 
 
