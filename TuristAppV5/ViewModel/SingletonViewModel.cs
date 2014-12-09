@@ -10,7 +10,10 @@ namespace TuristAppV5.ViewModel
 {
     class SingletonViewModel
     {
-        private static SingletonViewModel instance;
+
+        public static Category SelectedCategory { get; set; }
+
+        //private static SingletonViewModel instance;
         private ObservableCollection<Restaurant> restaurants;
         private ObservableCollection<Category> categories;
 
@@ -25,6 +28,8 @@ namespace TuristAppV5.ViewModel
             get { return categories; }
             set { categories = value; }
         }
+
+
 
         public SingletonViewModel()
         {
@@ -49,16 +54,16 @@ namespace TuristAppV5.ViewModel
 
         }
 
-        public static SingletonViewModel Instance
-        {
-            get
-            {
-                if (instance == null)
-                {
-                    instance = new SingletonViewModel();
-                }
-                return instance;
-            }
-        }
+        //////public static SingletonViewModel Instance
+        ////{
+        ////    get
+        ////    {
+        ////        if (instance == null)
+        ////        {
+        ////            instance = new SingletonViewModel();
+        ////        }
+        ////        return instance;
+        ////    }
+        //}
     }
 }
