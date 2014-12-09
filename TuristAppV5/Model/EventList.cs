@@ -9,7 +9,7 @@ namespace TuristAppV5.Model
 {
     class EventList
     {
-        ObservableCollection<Event> Events = new ObservableCollection<Event>();
+        public ObservableCollection<Event> Events = new ObservableCollection<Event>();
 
         public void AddEvents(string name, string telephone, string desc, string picture)
         {

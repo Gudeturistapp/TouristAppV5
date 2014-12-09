@@ -34,7 +34,7 @@ namespace TuristAppV5.View
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof (MainPage));
+            this.Frame.Navigate(typeof (View.MainPage));
         }
 
 

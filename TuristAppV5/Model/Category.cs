@@ -8,6 +8,9 @@ namespace TuristAppV5.Model
 {
     class Category
     {
+        private List<Restaurant> restaurants;
+        private List<Event> events; 
+
         public string photo1 { get; set; }
 
         public string photo2 { get; set; }
@@ -37,5 +40,21 @@ namespace TuristAppV5.Model
             this.photo3 = photo3;
             this.photo4 = photo4;
         }
+
+        public List<Restaurant> Restaurants
+        {
+            get { return restaurants; }
+            set { restaurants = value; }
+        }
+
+        public List<Event> Events
+        {
+            get { return events; }
+            set { events = value; }
+        }
+         
+
+        
+
     }
 }

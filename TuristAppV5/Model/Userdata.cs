@@ -9,6 +9,12 @@ namespace TuristAppV5.Model
     class Userdata
     {
 
+       
+
+
+
+
+
         //The main user dictionary where username and login is stored. 
         private static Dictionary<string, string> userDictionary = new Dictionary<string, string>(); 
 

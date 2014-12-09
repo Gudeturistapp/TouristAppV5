@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Tracing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,12 +33,22 @@ namespace TuristAppV5.ViewModel
 
         public KulturList Kultur { get; set; }
 
+        public EventList Events { get; set; }
+
         public MainViewModel()
         {
             Restaurants = new RestaurantList();
+<<<<<<< HEAD
             Events = new EventList();
             Shoppings = new ShoppingList();
             Kultur = new KulturList();
+=======
+            Categories = new CategoryList();
+            Events = new EventList();
+
+            Events.AddEvents("Kaj's liv", "666", "BEDSTE EVENT I VERDENEN", "");
+
+>>>>>>> origin/Danny
 
             Categories = new CategoryList();
 
@@ -73,6 +84,16 @@ namespace TuristAppV5.ViewModel
             Categories.AddRestaurantItem("Bølles mor", "Bølles far", "", "");
 
             Categories.AddEventItem("Fedeste event ever", "Dårligste event ever", "", "");
+<<<<<<< HEAD
+=======
+
+            
+            
+
+
+            
+
+>>>>>>> origin/Danny
         }
     }
 }
