@@ -23,6 +23,8 @@ namespace TuristAppV5.ViewModel
         public static Category SelectedCategory { get; set; }
         #endregion
 
+        //Lists - området..
+        #region Lists
         public CategoryList Categories { get; set; }
 
         public RestaurantList Restaurants { get; set; }
@@ -31,27 +33,18 @@ namespace TuristAppV5.ViewModel
 
         public ShoppingList Shoppings { get; set; }
 
-        public KulturList Kultur { get; set; }
-
-        public EventList Events { get; set; }
+        public KulturList Kultur { get; set; } 
+        #endregion
 
         public MainViewModel()
         {
             Restaurants = new RestaurantList();
-<<<<<<< HEAD
             Events = new EventList();
             Shoppings = new ShoppingList();
             Kultur = new KulturList();
-=======
+            
             Categories = new CategoryList();
-            Events = new EventList();
-
-            Events.AddEvents("Kaj's liv", "666", "BEDSTE EVENT I VERDENEN", "");
-
->>>>>>> origin/Danny
-
-            Categories = new CategoryList();
-
+            
             //De forskellige restauranter.
             #region Restauranter
             Restaurants.AddRestaurant("Jensens Bøfhus", "1111 2222", "Jensens bøfhus hvor du kan få bøffer.", "");
@@ -79,21 +72,6 @@ namespace TuristAppV5.ViewModel
             Kultur.AddKultur("Roskilde Domkirke", "En bøn til Gud", "Det er en kirke, og en stor en af slagsen", "");
             Kultur.AddKultur("Et Gallery", "Gallery nummer", "Gallery deskription", "");
             #endregion
-
-
-            Categories.AddRestaurantItem("Bølles mor", "Bølles far", "", "");
-
-            Categories.AddEventItem("Fedeste event ever", "Dårligste event ever", "", "");
-<<<<<<< HEAD
-=======
-
-            
-            
-
-
-            
-
->>>>>>> origin/Danny
         }
     }
 }
