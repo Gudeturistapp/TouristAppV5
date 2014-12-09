@@ -103,8 +103,6 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
-    <Folder Include="Model\" />
-    <Folder Include="ViewModel\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -114,7 +112,18 @@
     <Compile Include="Common\ObservableDictionary.cs" />
     <Compile Include="Common\RelayCommand.cs" />
     <Compile Include="Common\SuspensionManager.cs" />
+    <Compile Include="Model\Event.cs" />
+    <Compile Include="Model\EventList.cs" />
+    <Compile Include="Model\Language.cs" />
+    <Compile Include="Model\Museum.cs" />
+    <Compile Include="Model\MuseumList.cs" />
+    <Compile Include="Model\Restaurant.cs" />
+    <Compile Include="Model\RestaurantList.cs" />
+    <Compile Include="Model\Shopping.cs" />
+    <Compile Include="Model\ShoppingList.cs" />
+    <Compile Include="Model\Userdata.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="View\ItemDetailPage.xaml.cs">
       <DependentUpon>ItemDetailPage.xaml</DependentUpon>
     </Compile>
