@@ -114,8 +114,8 @@
     <Compile Include="Model\Event.cs" />
     <Compile Include="Model\EventList.cs" />
     <Compile Include="Model\Language.cs" />
-    <Compile Include="Model\Museum.cs" />
-    <Compile Include="Model\MuseumList.cs" />
+    <Compile Include="Model\Kultur.cs" />
+    <Compile Include="Model\KulturList.cs" />
     <Compile Include="Model\Restaurant.cs" />
     <Compile Include="Model\RestaurantList.cs" />
     <Compile Include="Model\Shopping.cs" />

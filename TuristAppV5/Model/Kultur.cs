@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TuristAppV5.Model
 {
-    class Museum
+    class Kultur
     {
         public string _name { get; set; }
 
@@ -16,7 +16,7 @@ namespace TuristAppV5.Model
 
         public string _picture { get; set; }
 
-        public Museum(string name, string telephone, string description, string picture)
+        public Kultur(string name, string telephone, string description, string picture)
         {
             _name = name;
             _telephone = telephone;
