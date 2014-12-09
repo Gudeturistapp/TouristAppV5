@@ -1,1 +1,99 @@
-﻿ 
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="15e0f772-5011-45f9-94c1-45794c0f9fc7" name="Usecase" linkedPackageId="d0f08368-73c2-4301-865a-f9e40ffde727" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="5ede3894-989c-4012-9f2d-6d13200ed51a" name="Actor1" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3b5a5010-8148-45bf-9dc6-01e0b3295444" />
+        <targetEnds>
+          <association Id="fbad691d-5df8-48a1-b7a8-6b18b8c4992d" isDerived="false" sourceEndRoleName="Actor1" targetEndRoleName="Vælger sprog" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="10d61446-a7a9-4f38-9439-d2f2b10d1b47" LastKnownName="Vælger sprog" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9725fdd2-73fc-454f-8cee-bc890b5b617c" name="Actor1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="3a1ac122-b147-4713-b893-5bf42f38d3aa" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="69880906-fa40-4b75-9473-33f36d03427d" name="Vælger sprog" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="2dc7ee55-3d3d-4732-9065-ffd5c0350996" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f40ae139-f672-4785-b430-4a6ca1e6475e" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="10d61446-a7a9-4f38-9439-d2f2b10d1b47" name="Vælger sprog" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1ca33852-2944-47a9-b64a-55496c383091" />
+        <targetEnds>
+          <association Id="ca93d7b3-1e93-493d-9139-31b2a0421fa5" isDerived="false" sourceEndRoleName="Vælger sprog" targetEndRoleName="Skriv anmeldelse til valgt Kategori" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="bd913157-0f57-44ec-80c2-8933e7cf88cb" LastKnownName="Skriv anmeldelse til valgt Kategori" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f7e9bb7e-74a1-4374-8e9e-9d4491288807" name="Vælger sprog" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="3892b783-b0bc-47a0-862c-f36f34d8705c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1c0c2235-7781-432f-ad89-d6fea74e8352" name="Skriv anmeldelse til valgt Kategori" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="95f2fa79-709c-4329-978b-fd83bc24bd8a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7867097f-672e-4f5f-838e-959a631aa8c7" />
+          </association>
+          <association Id="f369f876-3b63-466f-8ff2-5a61c535baf9" isDerived="false" sourceEndRoleName="Vælger sprog" targetEndRoleName="Bestil tid til valgt kategori" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="e78200c1-1652-45c0-afe2-ecbaca510cc9" LastKnownName="Bestil tid til valgt kategori" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a945eb5a-3aaa-42b1-b096-72b175247cfd" name="Vælger sprog" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="981d1afb-65fc-49bd-9884-df7bf3ffea9e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ae43593f-479d-4c15-b9d8-e416444edbec" name="Bestil tid til valgt kategori" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="649e26ca-4d4b-4c7d-a2f1-1c0682edb80a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="48731e17-3dbd-49f1-8fe1-6845cb0f7624" />
+          </association>
+        </targetEnds>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="efea717f-898b-462d-b1f3-ff17bf8e3735" name="Logger ind" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b9a2a90c-6c66-46ce-8686-1cbe60ba1536" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="bd913157-0f57-44ec-80c2-8933e7cf88cb" name="Skriv anmeldelse til valgt Kategori" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e927f74b-083c-41c4-9acc-de6ab0d5da26" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="e78200c1-1652-45c0-afe2-ecbaca510cc9" name="Bestil tid til valgt kategori" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="17cf7af2-2de8-46fc-8dda-c24c6df2fa88" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="d0f08368-73c2-4301-865a-f9e40ffde727" name="Models">
+    <elementDefinition Id="dda288e4-6b39-4bb7-8cc9-fb29d8ae56ee" />
+    <profileInstances>
+      <packageHasProfileInstances Id="1f2615ec-631c-462b-a044-c59e4912a2c1">
+        <profileInstance Id="43a7ac54-89fd-4729-b416-a7920ec5fe7e" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="2489c97f-20d0-4874-b98e-93bfe7da0120">
+        <profileInstance Id="7dc05021-55a8-4a02-b382-ffe1548fe5ea" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>

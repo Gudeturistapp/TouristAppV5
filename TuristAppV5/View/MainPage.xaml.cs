@@ -15,6 +15,7 @@ namespace TuristAppV5.View
             this.InitializeComponent();
         }
 
+<<<<<<< HEAD
         MainViewModel viewModel = new MainViewModel();
         //SingletonViewModel singleton = new SingletonViewModel();
 
@@ -33,5 +34,11 @@ namespace TuristAppV5.View
 
      
 
+=======
+        private void Button_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof (ItemDetailPage));
+        }
+>>>>>>> origin/master
     }
 }

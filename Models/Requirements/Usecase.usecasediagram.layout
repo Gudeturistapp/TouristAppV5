@@ -1,1 +1,50 @@
-﻿ 
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Usecase">
+  <useCaseModelRootMoniker Id="15e0f772-5011-45f9-94c1-45794c0f9fc7" />
+  <nestedChildShapes>
+    <actorShape Id="67c39eec-bc95-46d8-bec8-8204d00a19b5" absoluteBounds="0.5, 1.75, 0.625, 0.75" isReference="false" heightOffset="0">
+      <actorMoniker Id="5ede3894-989c-4012-9f2d-6d13200ed51a" LastKnownName="Actor1" />
+      <relativeChildShapes />
+    </actorShape>
+    <useCaseShape Id="f4eec6fb-15d1-4871-9c1c-e86dc535d6fb" absoluteBounds="2.5, 1.875, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="10d61446-a7a9-4f38-9439-d2f2b10d1b47" LastKnownName="Vælger sprog" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseAssociationConnector edgePoints="[(1.125 : 2.125); (2.5 : 2.125)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="fbad691d-5df8-48a1-b7a8-6b18b8c4992d" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="67c39eec-bc95-46d8-bec8-8204d00a19b5" />
+        <useCaseShapeMoniker Id="f4eec6fb-15d1-4871-9c1c-e86dc535d6fb" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseShape Id="87d8f6f4-0c2c-4b15-8d16-f3585842d194" absoluteBounds="0.5, 3.75, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="efea717f-898b-462d-b1f3-ff17bf8e3735" LastKnownName="Logger ind" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseShape Id="da7c5332-f990-4162-a10f-c114e42eb61e" absoluteBounds="4.5, 1.125, 1, 0.875" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="bd913157-0f57-44ec-80c2-8933e7cf88cb" LastKnownName="Skriv anmeldelse til valgt Kategori" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseAssociationConnector edgePoints="[(3.43578776856227 : 2.00243469009186); (4.52398571935737 : 1.69637901643074)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="ca93d7b3-1e93-493d-9139-31b2a0421fa5" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="f4eec6fb-15d1-4871-9c1c-e86dc535d6fb" />
+        <useCaseShapeMoniker Id="da7c5332-f990-4162-a10f-c114e42eb61e" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseShape Id="419a3d37-2662-458f-a2b4-a7fd8d7791da" absoluteBounds="4.5, 2.5, 1, 0.75" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="e78200c1-1652-45c0-afe2-ecbaca510cc9" LastKnownName="Bestil tid til valgt kategori" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseAssociationConnector edgePoints="[(3.4 : 2.275); (4.55278640450004 : 2.70729490168752)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="f369f876-3b63-466f-8ff2-5a61c535baf9" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="f4eec6fb-15d1-4871-9c1c-e86dc535d6fb" />
+        <useCaseShapeMoniker Id="419a3d37-2662-458f-a2b4-a7fd8d7791da" />
+      </nodes>
+    </useCaseAssociationConnector>
+  </nestedChildShapes>
+</useCaseDiagram>

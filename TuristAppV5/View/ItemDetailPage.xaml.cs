@@ -119,8 +119,5 @@ namespace TuristAppV5.View
         {
             OrderAppBar.Visibility = Visibility.Collapsed;
         }
-
-
-
     }
 }
