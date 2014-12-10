@@ -109,5 +109,5 @@
         		<Button x:Name="CatagoryButton4" Content="Button" HorizontalAlignment="Left" Margin="-3,-3,0,-3" VerticalAlignment="Top" Height="212" Width="233" BorderBrush="Transparent" Foreground="Transparent"/>
         	</Grid>
         </StackPanel>
-    </Grid>
-</Page>
+    
+<Page/></Grid></Page>
