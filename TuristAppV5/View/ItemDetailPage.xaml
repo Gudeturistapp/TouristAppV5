@@ -162,19 +162,19 @@
                                         </StackPanel>
                                         <StackPanel Height="180">
                                             <TextBlock TextWrapping="Wrap" FontSize="13" Height="15" Foreground="#FFED6B06" Text="Username" Margin="10,0"/>
-                                            <TextBox TextWrapping="Wrap" Height="15" FontSize="13" MinHeight="20" Margin="10,0"/>
+                                            <TextBox TextWrapping="Wrap" Height="15" FontSize="7" MinHeight="20" Margin="10,0" PlaceholderText="Enter your Username"/>
                                             <TextBlock TextWrapping="Wrap" FontSize="13" Height="18" Foreground="#FFED6B06" Text="Phone" Margin="10,0,0,0"/>
-                                            <TextBox TextWrapping="Wrap" FontSize="13" Height="21" MinHeight="20" Margin="10,0"/>
+                                            <TextBox TextWrapping="Wrap" FontSize="7" Height="21" MinHeight="20" Margin="10,0" PlaceholderText="Enter your Phone number"/>
                                             <TextBlock TextWrapping="Wrap" Height="17" VerticalAlignment="Bottom" Foreground="#FFED6B06" Text="E-mail" FontSize="13" Margin="10,0,0,0"/>
-                                            <TextBox TextWrapping="Wrap" Text="&#xA;" Height="15" FontSize="13" MinHeight="20" Margin="10,0"/>
+                                            <TextBox TextWrapping="Wrap" Text="&#xA;" Height="15" FontSize="7" MinHeight="20" Margin="10,0" PlaceholderText="Enter your Email"/>
                                             <TextBlock TextWrapping="Wrap" Height="14" VerticalAlignment="Bottom" Foreground="#FFED6B06" Text="Password" FontSize="13" Margin="10,0,0,0"/>
-                                            <TextBox TextWrapping="Wrap" Text="&#xA;" Height="20" FontSize="13" RenderTransformOrigin="0.5,0.5" Margin="9,0,11,0" MinHeight="20">
+                                            <TextBox TextWrapping="Wrap" Text="&#xA;" Height="20" FontSize="7" RenderTransformOrigin="0.5,0.5" Margin="9,0,11,0" MinHeight="20" PlaceholderText="Enter your Password">
                                                 <TextBox.RenderTransform>
                                                     <CompositeTransform ScaleY="-1"/>
                                                 </TextBox.RenderTransform>
                                             </TextBox>
                                             <TextBlock TextWrapping="Wrap" Height="12" VerticalAlignment="Bottom" Foreground="#FFED6B06" Text="Re-Enter Password" FontSize="13" Margin="10,0,0,0"/>
-                                            <TextBox TextWrapping="Wrap" Text="&#xA;" Height="20" FontSize="13" RenderTransformOrigin="0.5,0.5" Margin="9,0,11,0" MinHeight="20">
+                                            <TextBox TextWrapping="Wrap" Text="&#xA;" Height="20" FontSize="7" RenderTransformOrigin="0.5,0.5" Margin="9,0,11,0" MinHeight="20" PlaceholderText="Enter your Password again">
                                                 <TextBox.RenderTransform>
                                                     <CompositeTransform ScaleY="-1"/>
                                                 </TextBox.RenderTransform>
@@ -211,9 +211,9 @@
                                                 </Flyout>
                                             </FlyoutBase.AttachedFlyout>
                                             <TextBlock TextWrapping="Wrap" FontSize="13" Height="15" Foreground="#FFED6B06" Text="Username" Margin="10,0"/>
-                                            <TextBox TextWrapping="Wrap" Height="15" FontSize="13" MinHeight="20" Margin="10,0"/>
+                                            <TextBox TextWrapping="Wrap" Height="15" FontSize="7" MinHeight="20" Margin="10,0" PlaceholderText="Enter your Username"/>
                                             <TextBlock TextWrapping="Wrap" Height="14" VerticalAlignment="Bottom" Foreground="#FFED6B06" Text="Password" FontSize="13" Margin="10,0,0,0"/>
-                                            <TextBox TextWrapping="Wrap" Text="&#xA;" Height="20" FontSize="13" RenderTransformOrigin="0.5,0.5" Margin="9,0,11,0" MinHeight="20">
+                                            <TextBox TextWrapping="Wrap" Text="&#xA;" Height="20" FontSize="7" RenderTransformOrigin="0.5,0.5" Margin="9,0,11,0" MinHeight="20" PlaceholderText="Enter your Password">
                                                 <TextBox.RenderTransform>
                                                     <CompositeTransform ScaleY="-1"/>
                                                 </TextBox.RenderTransform>
@@ -241,7 +241,7 @@
         </AppBar>
     </Page.TopAppBar>
     <Page.BottomAppBar>
-        <AppBar x:Name="OrderAppBar" Height="628" Margin="500,0,506,0" Visibility="Collapsed" Background="#FFED6B06" RenderTransformOrigin="0.5,0.5">
+        <AppBar x:Name="OrderAppBar" Height="628" Margin="497,0,485,0" Visibility="Collapsed" Background="#FFED6B06" RenderTransformOrigin="0.5,0.5" BorderBrush="#FFED6B06">
             <StackPanel>
                 <StackPanel Height="87" Width="296">
                     <TextBlock TextWrapping="Wrap" Text="      Order" Height="146" HorizontalAlignment="Center" Width="296" VerticalAlignment="Center" FontSize="48"/>
