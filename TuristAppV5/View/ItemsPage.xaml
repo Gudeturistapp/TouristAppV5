@@ -44,23 +44,8 @@
             TabIndex="1"
             Grid.RowSpan="2"
             Padding="116,136,116,46"
-            ItemsSource="{Binding Source={StaticResource itemsViewSource}}"
             SelectionMode="None"
-            IsSwipeEnabled="false">
-            <GridView.ItemTemplate>
-                <DataTemplate>
-                    <Grid HorizontalAlignment="Left" Width="250" Height="250">
-                        <Border Background="{ThemeResource ListViewItemPlaceholderBackgroundThemeBrush}">
-                            <Image Source="{Binding ImagePath}" Stretch="UniformToFill" AutomationProperties.Name="{Binding Title}"/>
-                        </Border>
-                        <StackPanel VerticalAlignment="Bottom" Background="{ThemeResource ListViewItemOverlayBackgroundThemeBrush}">
-                            <TextBlock Text="{Binding Title}" Foreground="{ThemeResource ListViewItemOverlayForegroundThemeBrush}" Style="{StaticResource BaseTextBlockStyle}" Height="60" Margin="15,0,15,0" FontWeight="SemiBold"/>
-                            <TextBlock Text="{Binding Subtitle}" Foreground="{ThemeResource ListViewItemOverlaySecondaryForegroundThemeBrush}" Style="{StaticResource BaseTextBlockStyle}" TextWrapping="NoWrap" Margin="15,0,15,10" FontSize="12"/>
-                        </StackPanel>
-                    </Grid>
-                </DataTemplate>
-            </GridView.ItemTemplate>
-        </GridView>
+            IsSwipeEnabled="false" Background="Black"/>
 
         <!-- Back button and page title -->
         <Grid>
@@ -74,8 +59,55 @@
                         AutomationProperties.Name="Back"
                         AutomationProperties.AutomationId="BackButton"
                         AutomationProperties.ItemType="Navigation Button"/>
-            <TextBlock x:Name="pageTitle" Text="{StaticResource AppName}" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
-                        IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,40"/>
+            <Rectangle x:Name="HeadPiece" Grid.Column="1" Fill="#FFED6B06" HorizontalAlignment="Left" Height="40" Margin="235,25,0,0" Stroke="#FFED6B06" VerticalAlignment="Top" Width="710" RadiusX="45" RadiusY="45"/>
         </Grid>
+        <StackPanel x:Name="Catagory1" HorizontalAlignment="Left" Height="212" Margin="266,83,0,0" Grid.Row="1" VerticalAlignment="Top" Width="500">
+        	<Grid Height="206" Margin="0,0,244,0">
+        		<Ellipse Fill="#FFED6B06" Stroke="Black" HorizontalAlignment="Left" Width="254"/>
+        		<Rectangle Fill="Black" HorizontalAlignment="Left" Height="260" Stroke="Black" VerticalAlignment="Top" Width="161" Margin="120,-30,-25,-24"/>
+        		<Ellipse HorizontalAlignment="Left" Height="155" Margin="28,26,0,0" Stroke="Black" VerticalAlignment="Top" Width="199">
+        			<Ellipse.Fill>
+        				<ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/Shops/koebmand_logo.jpg"/>
+        			</Ellipse.Fill>
+        		</Ellipse>
+        		<Button x:Name="CatagoryButton1" Content="Button" HorizontalAlignment="Left" Margin="-7,1,0,-3" VerticalAlignment="Top" Height="208" Width="237" BorderBrush="Transparent" Foreground="Transparent"/>
+        	</Grid>
+        </StackPanel>
+        <StackPanel x:Name="Catagory2" HorizontalAlignment="Left" Height="212" Margin="811,83,0,0" Grid.Row="1" VerticalAlignment="Top" Width="500">
+        	<Grid Height="206" Margin="0,0,244,0">
+        		<Ellipse Fill="#FFED6B06" Stroke="Black" HorizontalAlignment="Left" Width="254"/>
+        		<Rectangle Fill="Black" HorizontalAlignment="Left" Height="263" Stroke="Black" VerticalAlignment="Top" Width="179" Margin="120,-30,-43,-27"/>
+        		<Ellipse HorizontalAlignment="Left" Height="155" Margin="28,26,0,0" Stroke="Black" VerticalAlignment="Top" Width="199">
+        			<Ellipse.Fill>
+        				<ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/Eat/Jensens_Front.jpg"/>
+        			</Ellipse.Fill>
+        		</Ellipse>
+        		<Button x:Name="CatagoryButton2" Content="Button" HorizontalAlignment="Left" Margin="7,-3,0,-3" VerticalAlignment="Top" Height="212" Width="223" BorderBrush="Transparent" Foreground="Transparent"/>
+        	</Grid>
+        </StackPanel>
+        <StackPanel x:Name="Catagory3" HorizontalAlignment="Left" Height="212" Margin="811,385,0,0" Grid.Row="1" VerticalAlignment="Top" Width="500">
+        	<Grid Height="206" Margin="0,0,244,0">
+        		<Ellipse Fill="#FFED6B06" Stroke="Black" HorizontalAlignment="Left" Width="254"/>
+        		<Rectangle Fill="Black" HorizontalAlignment="Left" Height="250" Stroke="Black" VerticalAlignment="Top" Width="176" Margin="120,-22,-40,-22"/>
+        		<Ellipse HorizontalAlignment="Left" Height="155" Margin="28,26,0,0" Stroke="Black" VerticalAlignment="Top" Width="199">
+        			<Ellipse.Fill>
+        				<ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/Shops/Gaagade_billede2.gif"/>
+        			</Ellipse.Fill>
+        		</Ellipse>
+        		<Button x:Name="CatagoryButton3" Content="Button" HorizontalAlignment="Left" Margin="-3,-3,0,-3" VerticalAlignment="Top" Height="212" Width="233" BorderBrush="Transparent" Foreground="Transparent"/>
+        	</Grid>
+        </StackPanel>
+        <StackPanel x:Name="Catagory4" HorizontalAlignment="Left" Height="212" Margin="266,385,0,0" Grid.Row="1" VerticalAlignment="Top" Width="500">
+        	<Grid Height="206" Margin="0,0,244,0">
+        		<Ellipse Fill="#FFED6B06" Stroke="Black" HorizontalAlignment="Left" Width="254"/>
+        		<Rectangle Fill="Black" HorizontalAlignment="Left" Height="261" Stroke="Black" VerticalAlignment="Top" Width="174" Margin="120,-27,-38,-28"/>
+        		<Ellipse HorizontalAlignment="Left" Height="155" Margin="28,26,0,0" Stroke="Black" VerticalAlignment="Top" Width="199">
+        			<Ellipse.Fill>
+        				<ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/Museum/Galleri_billede2.jpg"/>
+        			</Ellipse.Fill>
+        		</Ellipse>
+        		<Button x:Name="CatagoryButton4" Content="Button" HorizontalAlignment="Left" Margin="-3,-3,0,-3" VerticalAlignment="Top" Height="212" Width="233" BorderBrush="Transparent" Foreground="Transparent"/>
+        	</Grid>
+        </StackPanel>
     </Grid>
 </Page>
