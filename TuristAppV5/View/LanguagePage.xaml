@@ -171,7 +171,7 @@
                 <ImageBrush Stretch="Fill"/>
             </Button.Background>
         </Button>
-        <Grid Margin="870,109,165,384">
+        <Grid Margin="870,87,165,384">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
