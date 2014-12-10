@@ -154,6 +154,7 @@
     <Content Include="Assets\Events\Roskilde_Festival_logo.jpg" />
     <Content Include="Assets\Events\Roskilde_Festival_Scene.jpg" />
     <Content Include="Assets\Flag\DenmarkFlag.png" />
+    <Content Include="Assets\Flag\FranceFlag - Copy.png" />
     <Content Include="Assets\Flag\FranceFlag.png" />
     <Content Include="Assets\Flag\GermanyFlag.png" />
     <Content Include="Assets\Flag\RussianFlag.png" />
@@ -161,12 +162,14 @@
     <Content Include="Assets\Flag\USFlag.png" />
     <Content Include="Assets\Icons\appbar.cards.heart.png" />
     <Content Include="Assets\Icons\appbar.church.png" />
+    <Content Include="Assets\Icons\appbar.flag.wavy.png" />
     <Content Include="Assets\Icons\appbar.food.silverware.png" />
     <Content Include="Assets\Icons\appbar.shopping.png" />
     <Content Include="Assets\Logo.scale-100.png" />
     <Content Include="Assets\Museum\domkirke_billede1.jpg" />
     <Content Include="Assets\Museum\Domkirke_billede2.jpg" />
     <Content Include="Assets\Museum\Galleri_billede1.jpg" />
+    <Content Include="Assets\Museum\Galleri_billede2 - Copy.jpg" />
     <Content Include="Assets\Museum\Galleri_billede2.jpg" />
     <Content Include="Assets\Museum\Galleri_Logo.png" />
     <Content Include="Assets\Museum\RoskildeDomkirke_logo.gif" />
