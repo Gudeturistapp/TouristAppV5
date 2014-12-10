@@ -1,7 +1,5 @@
 ﻿// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 using Windows.UI.Xaml.Controls;
-using TuristAppV5.Model;
-using TuristAppV5.ViewModel;
 
 namespace TuristAppV5.View
 {
@@ -15,30 +13,9 @@ namespace TuristAppV5.View
             this.InitializeComponent();
         }
 
-<<<<<<< HEAD
-        MainViewModel viewModel = new MainViewModel();
-        //SingletonViewModel singleton = new SingletonViewModel();
-
-        private void Button_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
-        {
-           // MainViewModel.SelectedCategory = singleton.Categories[0];
-            Frame.Navigate(typeof (ItemsPage));
-        }
-
-        private void Button_Click_1(object sender, Windows.UI.Xaml.RoutedEventArgs e)
-        {
-
-            //MainViewModel.SelectedCategory = viewModel.Categories.Event[0];
-            Frame.Navigate(typeof (ItemsPage));
-        }
-
-     
-
-=======
         private void Button_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof (ItemDetailPage));
         }
->>>>>>> origin/master
     }
 }

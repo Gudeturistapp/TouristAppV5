@@ -7,15 +7,77 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-<<<<<<< HEAD
-        <Button Content="Restaurant" HorizontalAlignment="Left" Margin="208,510,0,0" VerticalAlignment="Top" Height="157" Width="272" Click="Button_Click"/>
-        <Button Content="Events" HorizontalAlignment="Left" Margin="848,510,0,0" VerticalAlignment="Top" Height="157" Width="247" Click="Button_Click_1"/>
-
-
-=======
-        <Button Content="Next page" HorizontalAlignment="Left" Margin="208,510,0,0" VerticalAlignment="Top" Height="157" Width="272" Click="Button_Click"/>
->>>>>>> origin/master
+    <Grid Background="Black">
+        <Rectangle x:Name="HeadPiece" Fill="#FFED6B06" HorizontalAlignment="Left" Height="40" Margin="355,25,0,0" Stroke="#FFED6B06" VerticalAlignment="Top" Width="710" RadiusX="45" RadiusY="45"/>
+        <Button Content="Next page" HorizontalAlignment="Left" Margin="26,347,0,0" VerticalAlignment="Top" Height="157" Width="272" Click="Button_Click" BorderBrush="Transparent"/>
+        <StackPanel HorizontalAlignment="Left" Height="300" Margin="322,127,0,0" VerticalAlignment="Top" Width="331">
+            <Grid Height="297">
+                <Ellipse Stroke="#FFED6B06" Fill="#FFED6B06" Height="287" VerticalAlignment="Top"/>
+                <Rectangle Fill="Black" HorizontalAlignment="Left" Height="309" Stroke="Transparent" VerticalAlignment="Top" Width="186" Margin="161,-12,-16,0"/>
+                <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="-3,56,0,0" VerticalAlignment="Top" Height="186" Width="183" BorderBrush="Transparent">
+                    <Button.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/Icons/appbar.cards.heart.png"/>
+                    </Button.Background>
+                    <Button.Foreground>
+                        <ImageBrush Stretch="Fill"/>
+                    </Button.Foreground>
+                </Button>
+                <Ellipse Fill="Transparent" HorizontalAlignment="Left" Height="287" Stroke="#FFED6B06" VerticalAlignment="Top" Width="331"/>
+                <TextBox HorizontalAlignment="Left" Margin="165,123,0,0" TextWrapping="Wrap" Text="Events" VerticalAlignment="Top" Height="76" Width="147" Background="Transparent" Foreground="White" BorderBrush="Transparent" FontSize="22" FontWeight="Bold"/>
+                <Button x:Name="MenuButton1" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Height="290" Margin="0,0,-3,0" Width="334" BorderBrush="Transparent" Foreground="Transparent"/>
+            </Grid>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Height="300" Margin="747,127,0,0" VerticalAlignment="Top" Width="331">
+            <Grid Height="297">
+                <Ellipse Stroke="#FFED6B06" Fill="#FFED6B06" Height="287" VerticalAlignment="Top"/>
+                <Rectangle Fill="Black" HorizontalAlignment="Left" Height="309" Stroke="Transparent" VerticalAlignment="Top" Width="186" Margin="-12,-12,0,0"/>
+                <Button x:Name="button2" Content="Button" HorizontalAlignment="Left" Margin="138,33,-22,0" VerticalAlignment="Top" Height="191" Width="215" BorderBrush="Transparent">
+                    <Button.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/Icons/appbar.church.png"/>
+                    </Button.Background>
+                    <Button.Foreground>
+                        <ImageBrush Stretch="Fill"/>
+                    </Button.Foreground>
+                </Button>
+                <Ellipse Fill="Transparent" HorizontalAlignment="Left" Height="287" Stroke="#FFED6B06" VerticalAlignment="Top" Width="331"/>
+                <TextBox HorizontalAlignment="Left" Margin="62,124,0,0" TextWrapping="Wrap" Text="Culture" VerticalAlignment="Top" Height="76" Width="147" Background="Transparent" Foreground="White" BorderBrush="Transparent" FontSize="22" FontWeight="Bold"/>
+                <Button x:Name="MenuButton2" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Height="290" Margin="0,0,-3,0" Width="334" BorderBrush="Transparent" Foreground="Transparent"/>
+            </Grid>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Height="300" Margin="322,432,0,0" VerticalAlignment="Top" Width="331">
+            <Grid Height="297">
+                <Ellipse Stroke="#FFED6B06" Fill="#FFED6B06" Height="287" VerticalAlignment="Top"/>
+                <Rectangle Fill="Black" HorizontalAlignment="Left" Height="309" Stroke="Transparent" VerticalAlignment="Top" Width="186" Margin="161,-12,-16,0"/>
+                <Button x:Name="button3" Content="Button" HorizontalAlignment="Left" Margin="-22,31,0,0" VerticalAlignment="Top" Height="236" Width="230" BorderBrush="Transparent">
+                    <Button.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/Icons/appbar.food.silverware.png"/>
+                    </Button.Background>
+                    <Button.Foreground>
+                        <ImageBrush Stretch="Fill"/>
+                    </Button.Foreground>
+                </Button>
+                <Ellipse Fill="Transparent" HorizontalAlignment="Left" Height="287" Stroke="#FFED6B06" VerticalAlignment="Top" Width="331"/>
+                <TextBox HorizontalAlignment="Left" Margin="163,129,0,0" TextWrapping="Wrap" Text="Restaurants" VerticalAlignment="Top" Height="76" Width="147" Background="Transparent" Foreground="White" BorderBrush="Transparent" FontWeight="Bold" FontSize="22"/>
+                <Button x:Name="MenuButton3" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Height="290" Margin="0,0,-3,0" Width="334" BorderBrush="Transparent" Foreground="Transparent"/>
+            </Grid>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Height="300" Margin="747,432,0,0" VerticalAlignment="Top" Width="331">
+            <Grid Height="297">
+                <Ellipse Stroke="#FFED6B06" Fill="#FFED6B06" Height="287" VerticalAlignment="Top"/>
+                <Rectangle Fill="Black" HorizontalAlignment="Left" Height="309" Stroke="Transparent" VerticalAlignment="Top" Width="186" Margin="-12,-12,0,0"/>
+                <Ellipse Fill="Transparent" HorizontalAlignment="Left" Height="287" Stroke="#FFED6B06" VerticalAlignment="Top" Width="331"/>
+                <Button x:Name="button4" Content="Button" HorizontalAlignment="Left" Margin="152,41,-15,0" VerticalAlignment="Top" Height="188" Width="194" BorderBrush="Transparent">
+                    <Button.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/Icons/appbar.shopping.png"/>
+                    </Button.Background>
+                    <Button.Foreground>
+                        <ImageBrush Stretch="Fill"/>
+                    </Button.Foreground>
+                </Button>
+                <TextBox HorizontalAlignment="Left" Margin="44,132,0,0" TextWrapping="Wrap" Text="Shopping" VerticalAlignment="Top" Height="71" Width="142" Background="Transparent" Foreground="White" BorderBrush="Transparent" FontSize="22" FontWeight="Bold"/>
+                <Button x:Name="MenuButton4" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Height="290" Margin="0,0,-3,0" Width="334" BorderBrush="Transparent" Foreground="Transparent"/>
+            </Grid>
+        </StackPanel>
 
     </Grid>
 </Page>
