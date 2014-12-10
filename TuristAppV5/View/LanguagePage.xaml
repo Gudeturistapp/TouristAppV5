@@ -14,7 +14,7 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <StackPanel Orientation="Horizontal">
-                    <AppBarButton x:Name="ExitButton" HorizontalAlignment="Stretch" Icon="Accept" Label="AppBarButton" VerticalAlignment="Stretch"/>
+                    <AppBarButton x:Name="ExitButton" HorizontalAlignment="Stretch" Icon="Cancel" Label="Exit" VerticalAlignment="Stretch"/>
                 </StackPanel>
                 <StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal"/>
             </Grid>
@@ -27,47 +27,7 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <StackPanel Orientation="Horizontal">
-                    <AppBarButton Label="Language" Height="88" Width="100" Foreground="#FFED6B06" Icon="Flag">
-                        <AppBarButton.Resources>
-                            <MenuFlyout x:Key="LanguageFlyOut">
-                                <MenuFlyoutItem Margin="0,0,0,0" Height="34" BorderBrush="White">
-                                    <MenuFlyoutItem.Background>
-                                        <ImageBrush ImageSource="/Assets/Flag/DenmarkFlag.png" Stretch="Uniform"/>
-                                    </MenuFlyoutItem.Background>
-                                </MenuFlyoutItem>
-                                <MenuFlyoutItem BorderBrush="White" Width="45" Height="40">
-                                    <MenuFlyoutItem.Background>
-                                        <ImageBrush Stretch="Uniform" ImageSource="/Assets/Flag/USFlag.png"/>
-                                    </MenuFlyoutItem.Background>
-                                </MenuFlyoutItem>
-                                <MenuFlyoutItem BorderBrush="White" Width="45" Margin="0,0.1" BorderThickness="0,0.1">
-                                    <MenuFlyoutItem.Background>
-                                        <ImageBrush Stretch="Uniform" ImageSource="/Assets/Flag/FranceFlag.png"/>
-                                    </MenuFlyoutItem.Background>
-                                </MenuFlyoutItem>
-                                <MenuFlyoutItem BorderBrush="White" Width="45">
-                                    <MenuFlyoutItem.Background>
-                                        <ImageBrush Stretch="Uniform" ImageSource="/Assets/Flag/GermanyFlag.png"/>
-                                    </MenuFlyoutItem.Background>
-                                </MenuFlyoutItem>
-                                <MenuFlyoutItem BorderBrush="Black" Width="45" BorderThickness="0.1,0.1,0.1,0" Margin="0.1,0.1,0.1,0">
-                                    <MenuFlyoutItem.Background>
-                                        <ImageBrush Stretch="Uniform" ImageSource="/Assets/Flag/RussianFlag.png"/>
-                                    </MenuFlyoutItem.Background>
-                                </MenuFlyoutItem>
-                                <MenuFlyoutItem BorderBrush="White" Width="45">
-                                    <MenuFlyoutItem.Background>
-                                        <ImageBrush Stretch="Uniform" ImageSource="/Assets/Flag/SpainFlag.png"/>
-                                    </MenuFlyoutItem.Background>
-                                </MenuFlyoutItem>
-                            </MenuFlyout>
-                        </AppBarButton.Resources>
-                        <AppBarButton.Flyout>
-                            <StaticResource ResourceKey="LanguageFlyOut"/>
-                        </AppBarButton.Flyout>
-                    </AppBarButton>
-                </StackPanel>
+                <StackPanel Orientation="Horizontal"/>
                 <StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal">
                     <AppBarButton x:Name="RegisterButton" HorizontalAlignment="Stretch" Icon="AddFriend" Label="Register" VerticalAlignment="Stretch">
                         <AppBarButton.Resources>
@@ -165,13 +125,13 @@
         </AppBar>
     </Page.TopAppBar>
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="#B200C8FF">
         <Button Content="Button" HorizontalAlignment="Left" Margin="27,106,0,0" VerticalAlignment="Top" Height="48" Width="82" Click="Button_Click">
             <Button.Background>
                 <ImageBrush Stretch="Fill"/>
             </Button.Background>
         </Button>
-        <Grid Margin="870,87,165,384">
+        <Grid Margin="1002,144,39,333">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
@@ -187,7 +147,7 @@
             <Image HorizontalAlignment="Left" Height="191" VerticalAlignment="Top" Width="198" Source="ms-appx:///Assets/Icons/appbar.flag.wavy.png" Margin="0,48,0,0" Stretch="Fill"/>
             <Button x:Name="MenuButton1" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Height="290" Margin="0,0,-3,0" Width="334" BorderBrush="{x:Null}" Foreground="White" Background="{x:Null}" FontWeight="Normal" FontSize="11" FontFamily="Global User Interface"/>
         </Grid>
-        <Grid Margin="870,425,165,46">
+        <Grid Margin="1002,467,39,10">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
@@ -203,7 +163,7 @@
             <Image HorizontalAlignment="Left" Height="191" VerticalAlignment="Top" Width="198" Source="ms-appx:///Assets/Icons/appbar.flag.wavy.png" Stretch="Fill" Margin="0,46,0,0"/>
             <Button x:Name="MenuButton2" HorizontalAlignment="Left" VerticalAlignment="Top" Height="290" Margin="0,0,-3,0" Width="334" BorderBrush="{x:Null}" Foreground="White" Background="{x:Null}" FontWeight="Normal" FontSize="11" FontFamily="Global User Interface"/>
         </Grid>
-        <Grid Margin="440,425,595,46">
+        <Grid Margin="530,467,511,10">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
@@ -217,9 +177,9 @@
                 </Path.RenderTransform>
             </Path>
             <Image HorizontalAlignment="Left" Height="191" VerticalAlignment="Top" Width="198" Source="ms-appx:///Assets/Icons/appbar.flag.wavy.png" Margin="0,48,0,0" Stretch="Fill"/>
-            <Button x:Name="MenuButton3" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Height="290" Margin="0,0,-3,0" Width="334" BorderBrush="{x:Null}" Foreground="White" Background="{x:Null}" FontWeight="Normal" FontSize="11" FontFamily="Global User Interface"/>
+            <Button x:Name="MenuButton3" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Height="290" Margin="8,0,-17,0" BorderBrush="{x:Null}" Foreground="White" Background="{x:Null}" FontWeight="Normal" FontSize="11" FontFamily="Global User Interface" Width="334"/>
         </Grid>
-        <Grid Margin="63,425,972,46">
+        <Grid Margin="39,467,1002,10">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
@@ -235,7 +195,7 @@
             <Image HorizontalAlignment="Left" Height="191" VerticalAlignment="Top" Width="198" Source="ms-appx:///Assets/Icons/appbar.flag.wavy.png" Margin="0,48,0,0" Stretch="Fill"/>
             <Button x:Name="MenuButton4" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Height="290" Margin="0,0,-3,0" Width="334" BorderBrush="{x:Null}" Foreground="White" Background="{x:Null}" FontWeight="Normal" FontSize="11" FontFamily="Global User Interface"/>
         </Grid>
-        <Grid Margin="440,87,595,384">
+        <Grid Margin="530,144,511,333">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
@@ -251,7 +211,7 @@
             <Image HorizontalAlignment="Left" Height="191" VerticalAlignment="Top" Width="198" Source="ms-appx:///Assets/Icons/appbar.flag.wavy.png" Margin="0,48,0,0" Stretch="Fill"/>
             <Button x:Name="MenuButton5" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Height="290" Margin="0,0,-3,0" Width="334" BorderBrush="{x:Null}" Foreground="White" Background="{x:Null}" FontWeight="Normal" FontSize="11" FontFamily="Global User Interface"/>
         </Grid>
-        <Grid Margin="63,87,972,384">
+        <Grid Margin="30,144,1002,333">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
@@ -267,6 +227,7 @@
             <Image HorizontalAlignment="Left" Height="191" VerticalAlignment="Top" Width="198" Source="ms-appx:///Assets/Icons/appbar.flag.wavy.png" Margin="0,48,0,0" Stretch="Fill"/>
             <Button x:Name="MenuButton6" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Height="290" Margin="0,0,-3,0" Width="334" BorderBrush="{x:Null}" Foreground="White" Background="{x:Null}" FontWeight="Normal" FontSize="11" FontFamily="Global User Interface"/>
         </Grid>
+        <Rectangle Fill="#FFED6B06" HorizontalAlignment="Left" Height="40" Margin="355,25,0,0" Stroke="#FFED6B06" VerticalAlignment="Top" Width="710" RadiusX="45" RadiusY="45"/>
 
     </Grid>
 </Page>

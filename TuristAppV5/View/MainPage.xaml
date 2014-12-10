@@ -14,7 +14,7 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <StackPanel Orientation="Horizontal">
-                    <AppBarButton x:Name="ExitButton" HorizontalAlignment="Stretch" Icon="Accept" Label="AppBarButton" VerticalAlignment="Stretch"/>
+                    <AppBarButton x:Name="ExitButton" HorizontalAlignment="Stretch" Icon="Cancel" Label="Exit" VerticalAlignment="Stretch"/>
                 </StackPanel>
                 <StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal">
                     <AppBarButton x:Name="AddReviewButton" HorizontalAlignment="Left" Icon="Add" Label="Add Review" VerticalAlignment="Top"/>
@@ -185,7 +185,7 @@
                 </Ellipse>
                 <Path Data="M161.5,0.5 L161.5,286.412 L161.241,286.409 C72.0825,284.452 0.5,221.199 0.5,143.456 C0.5,65.7134 72.0825,2.46051 161.241,0.502838 z" Fill="#FFED6B06" HorizontalAlignment="Left" Height="286.912" Margin="0,0.044,0,0" RenderTransformOrigin="1.0216,0.5" Stretch="Fill" Stroke="#FFED6B06" UseLayoutRounding="False" VerticalAlignment="Top" Width="162"/>
                 <Image HorizontalAlignment="Left" Height="185" VerticalAlignment="Top" Width="177" Margin="0,55,0,0" Stretch="Fill" Source="ms-appx:///Assets/Icons/appbar.cards.heart.png"/>
-                <TextBox HorizontalAlignment="Left" Margin="165,123,0,0" TextWrapping="Wrap" Text="Events" VerticalAlignment="Top" Height="76" Width="147" Background="Transparent" Foreground="White" BorderBrush="Transparent" FontSize="22" FontWeight="Bold"/>
+                <TextBox HorizontalAlignment="Left" Margin="165,123,0,0" TextWrapping="Wrap" Text="Events" VerticalAlignment="Top" Height="76" Width="147" Background="Transparent" Foreground="White" BorderBrush="Transparent" FontSize="22" FontWeight="Bold" IsReadOnly="True"/>
             </Grid>
         </StackPanel>
         <StackPanel HorizontalAlignment="Left" Height="300" Margin="747,127,0,0" VerticalAlignment="Top" Width="331">
@@ -207,7 +207,7 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.Foreground>
                 </Button>
-                <TextBox HorizontalAlignment="Left" Margin="62,124,0,0" TextWrapping="Wrap" Text="Culture" VerticalAlignment="Top" Height="76" Width="147" Background="Transparent" Foreground="White" BorderBrush="Transparent" FontSize="22" FontWeight="Bold"/>
+                <TextBox HorizontalAlignment="Left" Margin="62,124,0,0" TextWrapping="Wrap" Text="Culture" VerticalAlignment="Top" Height="76" Width="147" Background="Transparent" Foreground="White" BorderBrush="Transparent" FontSize="22" FontWeight="Bold" IsReadOnly="True"/>
                 <Button x:Name="MenuButton2" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Height="290" Margin="0,0,-3,0" Width="334" BorderBrush="Transparent" Foreground="Transparent" Opacity="0"/>
             </Grid>
         </StackPanel>
@@ -227,7 +227,7 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.Foreground>
                 </Button>
-                <TextBox HorizontalAlignment="Left" Margin="163,129,0,0" TextWrapping="Wrap" Text="Restaurants" VerticalAlignment="Top" Height="76" Width="147" Background="Transparent" Foreground="White" BorderBrush="Transparent" FontWeight="Bold" FontSize="22"/>
+                <TextBox HorizontalAlignment="Left" Margin="163,129,0,0" TextWrapping="Wrap" Text="Restaurants" VerticalAlignment="Top" Height="76" Width="147" Background="Transparent" Foreground="White" BorderBrush="Transparent" FontWeight="Bold" FontSize="22" IsReadOnly="True"/>
                 <Button x:Name="MenuButton3" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Height="290" Margin="0,0,-3,0" Width="334" BorderBrush="Transparent" Foreground="Transparent" Opacity="0"/>
             </Grid>
         </StackPanel>
@@ -247,7 +247,7 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.Foreground>
                 </Button>
-                <TextBox HorizontalAlignment="Left" Margin="44,132,0,0" TextWrapping="Wrap" Text="Shopping" VerticalAlignment="Top" Height="71" Width="142" Background="Transparent" Foreground="White" BorderBrush="Transparent" FontSize="22" FontWeight="Bold"/>
+                <TextBox HorizontalAlignment="Left" Margin="44,132,0,0" TextWrapping="Wrap" Text="Shopping" VerticalAlignment="Top" Height="71" Width="142" Background="Transparent" Foreground="White" BorderBrush="Transparent" FontSize="22" FontWeight="Bold" IsReadOnly="True"/>
                 <Button x:Name="MenuButton4" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Height="290" Margin="0,0,-3,0" Width="334" BorderBrush="Transparent" Foreground="Transparent" Opacity="0"/>
             </Grid>
         </StackPanel>

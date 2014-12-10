@@ -90,5 +90,5 @@ namespace TuristAppV5.View
 
         #endregion
 
-    }
+      }
 }
