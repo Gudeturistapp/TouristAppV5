@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
 // The Item Detail Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234232
+using TuristAppV5.Model;
 
 namespace TuristAppV5.View
 {
@@ -24,6 +25,9 @@ namespace TuristAppV5.View
     /// </summary>
     public sealed partial class ItemDetailPage : Page
     {
+        public Login login = new Login();
+
+
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
 
@@ -49,6 +53,15 @@ namespace TuristAppV5.View
             this.InitializeComponent();
             this.navigationHelper = new NavigationHelper(this);
             this.navigationHelper.LoadState += navigationHelper_LoadState;
+
+            if (login.IsLoggedIn == false)
+            {
+                OrderHereBlock.Text = "Log in first";
+            }
+            else
+            {
+                OrderHereBlock.Text = "Order here";
+            }
         }
 
         /// <summary>
