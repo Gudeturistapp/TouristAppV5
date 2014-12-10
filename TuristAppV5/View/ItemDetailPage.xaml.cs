@@ -111,22 +111,59 @@ namespace TuristAppV5.View
 
         #endregion
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void OrderButton_Click(object sender, RoutedEventArgs e)
         {
             OrderAppBar.IsOpen = true;
             OrderAppBar.Visibility = Visibility.Visible;
         }
 
-        private void OrderButton_Click(object sender, RoutedEventArgs e)
+        private void RegisterButton_Click(object sender, RoutedEventArgs e)
+        {
+            Register();
+        }
+
+        private void CancelOrderButton_Click(object sender, RoutedEventArgs e)
         {
             OrderAppBar.Visibility = Visibility.Collapsed;
         }
 
-        private void AppBarButton_Click(object sender, RoutedEventArgs e)
+        public void Register()
         {
-            OrderAppBar.Visibility = Visibility.Collapsed;
+            if (!string.IsNullOrWhiteSpace(registerUserNameBox.Text) &&
+                !string.IsNullOrWhiteSpace(registerPasswordBox.Text) &&
+                !string.IsNullOrWhiteSpace(registerReEnterPasswordBox.Text) &&
+                !string.IsNullOrWhiteSpace(registerEmailBox.Text) &&
+                !string.IsNullOrWhiteSpace(registerPhoneBox.Text))
+            {
+
+                if (registerPasswordBox.Text == registerReEnterPasswordBox.Text)
+                {
+                    UserData userdata = new UserData(registerPasswordBox.Text, registerEmailBox.Text, registerPhoneBox.Text);
+
+                    login.LoginDictionary.Add(registerUserNameBox.Text, userdata);
+
+                    login.IsLoggedIn = true;
+
+                    RegisterButton.Flyout.Hide();
+
+
+                    SuccessBlock.Text = "Success! User has been created.";
+                }
+                else
+                {
+                    ErrorBlock.Text = "Passwords doesn't match.";
+                }
+            }
+            else
+            {
+                SuccessBlock.Text = "";
+                ErrorBlock.Text = "Error! Please input values in all fields.";
+            }
         }
 
-        
+
+        private void LoginButton_Click(object sender, RoutedEventArgs e)
+        {
+        }
     }
 }

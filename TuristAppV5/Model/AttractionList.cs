@@ -15,5 +15,11 @@ namespace TuristAppV5.Model
         {
             AttractionLists.Add(new Attractions(name, phone, description, photo, price));
         }
+
+        public void AddAttractionItem(string name1, string photo1, string name2, string photo2, string name3,
+            string photo3, string name4, string photo4)
+        {
+            AttractionLists.Add(new Attractions(name1, photo1, name2, photo2, name3, photo3, name4, photo4));
+        }
     }
 }
