@@ -9,27 +9,35 @@ namespace TuristAppV5.View
     /// </summary>
     public sealed partial class MainPage : Page
     {
-       // MainViewModel viewModel = new MainViewModel();
+       
 
         public MainPage()
         {
             this.InitializeComponent();
         }
 
+
+
+        MainViewModel viewModel = new MainViewModel();
+        
+
         private void Button_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof (ItemsPage));
         }
 
+
         private void EventsButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
-           // MainViewModel.SelectedAttraction = viewModel.Events.AttractionLists[0];
+            
+
+            MainViewModel.SelectedAttraction = viewModel.Events.AttractionLists[4];
             Frame.Navigate(typeof (ItemsPage));
         }
 
         private void RestaurantButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
-            // MainViewModel.SelectedAttraction = viewModel.Restaurants.AttractionLists[0];
+            MainViewModel.SelectedAttraction = viewModel.Restaurants.AttractionLists[4];
             Frame.Navigate(typeof (ItemsPage));
         }
     }

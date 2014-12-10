@@ -29,9 +29,21 @@ namespace TuristAppV5.View
             this.InitializeComponent();
         }
 
+        
+
+        private void MenuButton6_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof (View.MainPage));
+        }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof (MainPage));
+            Frame.Navigate(typeof (MainPage));
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof (MainPage));
         }
 
 

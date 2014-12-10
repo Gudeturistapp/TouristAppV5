@@ -169,7 +169,7 @@
 
     <Grid Background="#B200C8FF">
         <Rectangle x:Name="HeadPiece" Fill="#FFED6B06" HorizontalAlignment="Left" Height="40" Margin="355,25,0,0" Stroke="#FFED6B06" VerticalAlignment="Top" Width="710" RadiusX="45" RadiusY="45"/>
-        <Button Content="Next page" HorizontalAlignment="Left" Margin="26,347,0,0" VerticalAlignment="Top" Height="157" Width="272" Click="Button_Click" BorderBrush="Transparent"/>
+        <Button Content="ItemDetail" HorizontalAlignment="Left" Margin="26,347,0,0" VerticalAlignment="Top" Height="157" Width="272" Click="Button_Click" BorderBrush="Transparent"/>
         <StackPanel HorizontalAlignment="Left" Height="300" Margin="322,127,0,0" VerticalAlignment="Top" Width="331">
             <Grid Height="297">
                 <Grid.ColumnDefinitions>
