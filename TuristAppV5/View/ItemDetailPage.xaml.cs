@@ -15,8 +15,6 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
 // The Item Detail Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234232
-using TuristAppV5.Model;
-using TuristAppV5.ViewModel;
 
 namespace TuristAppV5.View
 {
@@ -28,9 +26,6 @@ namespace TuristAppV5.View
     {
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
-        Userdata userData = new Userdata();
-        MainViewModel viewModel = new MainViewModel();
-        Restaurant rest = new Restaurant("lol", "", "", "");
 
         /// <summary>
         /// This can be changed to a strongly typed view model.
@@ -54,7 +49,6 @@ namespace TuristAppV5.View
             this.InitializeComponent();
             this.navigationHelper = new NavigationHelper(this);
             this.navigationHelper.LoadState += navigationHelper_LoadState;
-            
         }
 
         /// <summary>
@@ -119,5 +113,7 @@ namespace TuristAppV5.View
         {
             OrderAppBar.Visibility = Visibility.Collapsed;
         }
+
+        
     }
 }
