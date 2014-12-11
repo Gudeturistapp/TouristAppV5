@@ -6,9 +6,223 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+    <Page.BottomAppBar>
+        <AppBar Background="White">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Horizontal">
+                    <AppBarButton x:Name="ExitButton" HorizontalAlignment="Stretch" Icon="Cancel" Label="Exit" VerticalAlignment="Stretch"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal"/>
+            </Grid>
+        </AppBar>
+    </Page.BottomAppBar>
+    <Page.TopAppBar>
+        <AppBar Background="White">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Horizontal"/>
+                <StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal">
+                    <AppBarButton x:Name="RegisterButton" HorizontalAlignment="Stretch" Icon="AddFriend" Label="Register" VerticalAlignment="Stretch">
+                        <AppBarButton.Resources>
+                            <Flyout x:Key="FlyoutBase2">
+                                <Grid Height="250" Width="200">
+                                    <StackPanel Margin="-16,-20,-19,-15">
+                                        <StackPanel Height="10"/>
+                                        <StackPanel Height="35" Margin="35,0,36,0">
+                                            <TextBlock TextWrapping="Wrap" Text="Register" Height="65" HorizontalAlignment="Center" Width="235" VerticalAlignment="Center" FontSize="25" Margin="34,0,-104.714,0" Foreground="#FFED6B06" FontWeight="Bold"/>
+                                        </StackPanel>
+                                        <StackPanel Height="180">
+                                            <TextBlock TextWrapping="Wrap" FontSize="13" Height="15" Foreground="#FFED6B06" Text="Name" Margin="10,0"/>
+                                            <TextBox TextWrapping="Wrap" Height="15" FontSize="13" MinHeight="20" Margin="10,0"/>
+                                            <TextBlock TextWrapping="Wrap" FontSize="13" Height="18" Foreground="#FFED6B06" Text="Phone" Margin="10,0,0,0"/>
+                                            <TextBox TextWrapping="Wrap" FontSize="13" Height="21" MinHeight="20" Margin="10,0"/>
+                                            <TextBlock TextWrapping="Wrap" Height="17" VerticalAlignment="Bottom" Foreground="#FFED6B06" Text="E-mail" FontSize="13" Margin="10,0,0,0"/>
+                                            <TextBox TextWrapping="Wrap" Text="&#xA;" Height="15" FontSize="13" MinHeight="20" Margin="10,0"/>
+                                            <TextBlock TextWrapping="Wrap" Height="14" VerticalAlignment="Bottom" Foreground="#FFED6B06" Text="Password" FontSize="13" Margin="10,0,0,0"/>
+                                            <TextBox TextWrapping="Wrap" Text="&#xA;" Height="20" FontSize="13" RenderTransformOrigin="0.5,0.5" Margin="9,0,11,0" MinHeight="20">
+                                                <TextBox.RenderTransform>
+                                                    <CompositeTransform ScaleY="-1"/>
+                                                </TextBox.RenderTransform>
+                                            </TextBox>
+                                            <TextBlock TextWrapping="Wrap" Height="12" VerticalAlignment="Bottom" Foreground="#FFED6B06" Text="Re-Enter Password" FontSize="13" Margin="10,0,0,0"/>
+                                            <TextBox TextWrapping="Wrap" Text="&#xA;" Height="20" FontSize="13" RenderTransformOrigin="0.5,0.5" Margin="9,0,11,0" MinHeight="20">
+                                                <TextBox.RenderTransform>
+                                                    <CompositeTransform ScaleY="-1"/>
+                                                </TextBox.RenderTransform>
+                                            </TextBox>
+                                            <TextBlock TextWrapping="Wrap" Height="13" VerticalAlignment="Bottom" Foreground="#FFED6B06" FontSize="13"/>
+                                        </StackPanel>
+                                        <StackPanel Height="76" Width="364">
+                                            <StackPanel Height="86" Margin="0,0,123.286,0" Orientation="Horizontal">
+                                                <AppBarButton x:Name="RegisterButton1" HorizontalAlignment="Stretch" Icon="Add" Label="Register" VerticalAlignment="Stretch" Margin="0,-14,0,9.714" Width="221"/>
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </Grid>
+                            </Flyout>
+                        </AppBarButton.Resources>
+                        <AppBarButton.Flyout>
+                            <StaticResource ResourceKey="FlyoutBase2"/>
+                        </AppBarButton.Flyout>
+                    </AppBarButton>
+                    <AppBarButton x:Name="LoginButton" HorizontalAlignment="Stretch" Icon="Contact" Label="Login" VerticalAlignment="Stretch">
+                        <AppBarButton.Resources>
+                            <Flyout x:Key="FlyoutBase3">
+                                <Grid Height="200" Width="200">
+                                    <StackPanel Margin="-16,-20,-19,-15">
+                                        <StackPanel Height="10"/>
+                                        <StackPanel Height="35" Margin="35,0,36,0">
+                                            <TextBlock TextWrapping="Wrap" Text="Login" Height="65" HorizontalAlignment="Center" Width="235" VerticalAlignment="Center" FontSize="25" Margin="34,0,-104.714,0" Foreground="#FFED6B06" FontWeight="Bold"/>
+                                            <StackPanel Height="100"/>
+                                        </StackPanel>
+                                        <StackPanel Height="121">
+                                            <FlyoutBase.AttachedFlyout>
+                                                <Flyout>
+                                                    <Grid Height="100" Width="100"/>
+                                                </Flyout>
+                                            </FlyoutBase.AttachedFlyout>
+                                            <TextBlock TextWrapping="Wrap" FontSize="13" Height="15" Foreground="#FFED6B06" Text="Name" Margin="10,0"/>
+                                            <TextBox TextWrapping="Wrap" Height="15" FontSize="13" MinHeight="20" Margin="10,0"/>
+                                            <TextBlock TextWrapping="Wrap" Height="14" VerticalAlignment="Bottom" Foreground="#FFED6B06" Text="Password" FontSize="13" Margin="10,0,0,0"/>
+                                            <TextBox TextWrapping="Wrap" Text="&#xA;" Height="20" FontSize="13" RenderTransformOrigin="0.5,0.5" Margin="9,0,11,0" MinHeight="20">
+                                                <TextBox.RenderTransform>
+                                                    <CompositeTransform ScaleY="-1"/>
+                                                </TextBox.RenderTransform>
+                                            </TextBox>
+                                            <TextBlock TextWrapping="Wrap" Height="12" VerticalAlignment="Bottom" Foreground="#FFED6B06" Text="Re-Enter Password" FontSize="13" Margin="10,0,0,0"/>
+                                            <TextBox TextWrapping="Wrap" Text="&#xA;" Height="20" FontSize="13" RenderTransformOrigin="0.5,0.5" Margin="9,0,11,0" MinHeight="20">
+                                                <TextBox.RenderTransform>
+                                                    <CompositeTransform ScaleY="-1"/>
+                                                </TextBox.RenderTransform>
+                                            </TextBox>
+                                            <TextBlock TextWrapping="Wrap" Height="13" VerticalAlignment="Bottom" Foreground="#FFED6B06" FontSize="13"/>
+                                            <StackPanel Height="17"/>
+                                        </StackPanel>
+                                        <StackPanel Height="76" Width="364">
+                                            <StackPanel Height="85" Margin="0,0,130.286,0" Orientation="Horizontal">
+                                                <AppBarButton x:Name="LoginButton1" HorizontalAlignment="Stretch" Icon="Add" Label="Register" VerticalAlignment="Stretch" Margin="0,-14,0,-4" Width="219">
+                                                    <TextBlock Height="100" TextWrapping="Wrap" Text="TextBlock" Width="100"/>
+                                                </AppBarButton>
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </Grid>
+                            </Flyout>
+                        </AppBarButton.Resources>
+                        <AppBarButton.Flyout>
+                            <StaticResource ResourceKey="FlyoutBase3"/>
+                        </AppBarButton.Flyout>
+                    </AppBarButton>
+                </StackPanel>
+            </Grid>
+        </AppBar>
+    </Page.TopAppBar>
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Button Content="Button" HorizontalAlignment="Left" Margin="146,271,0,0" VerticalAlignment="Top" Height="196" Width="247" Click="Button_Click"/>
+    <Grid Background="#B200C8FF">
+        <Grid Margin="1002,144,39,333">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Ellipse HorizontalAlignment="Left" Height="287" Stroke="#FFED6B06" VerticalAlignment="Top" Width="331" StrokeThickness="2" RenderTransformOrigin="0.5,0.5">
+                <Ellipse.RenderTransform>
+                    <CompositeTransform ScaleX="-1"/>
+                </Ellipse.RenderTransform>
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="ms-appx:///Assets/Flag/SpainFlag.png"/>
+                </Ellipse.Fill>
+            </Ellipse>
+            <Path Data="M161.5,0.5 L161.5,286.412 L161.241,286.409 C72.0825,284.452 0.5,221.199 0.5,143.456 C0.5,65.7134 72.0825,2.46051 161.241,0.502838 z" Fill="#FFED6B06" HorizontalAlignment="Left" Height="286.912" Margin="0,0.044,0,0" RenderTransformOrigin="1.0216,0.5" Stretch="Fill" Stroke="#FFED6B06" UseLayoutRounding="False" VerticalAlignment="Top" Width="162"/>
+            <Image HorizontalAlignment="Left" Height="191" VerticalAlignment="Top" Width="198" Source="ms-appx:///Assets/Icons/appbar.flag.wavy.png" Margin="0,48,0,0" Stretch="Fill"/>
+            <Button x:Name="MenuButton1" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Height="290" Margin="0,0,-3,0" Width="334" BorderBrush="{x:Null}" Foreground="White" Background="{x:Null}" FontWeight="Normal" FontSize="11" FontFamily="Global User Interface"/>
+        </Grid>
+        <Grid Margin="1002,467,39,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Ellipse HorizontalAlignment="Left" Height="287" Stroke="#FFED6B06" VerticalAlignment="Top" Width="331" StrokeThickness="2" RenderTransformOrigin="0.5,0.5">
+                <Ellipse.RenderTransform>
+                    <CompositeTransform ScaleX="-1"/>
+                </Ellipse.RenderTransform>
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="ms-appx:///Assets/Flag/RussianFlag.png"/>
+                </Ellipse.Fill>
+            </Ellipse>
+            <Path Data="M161.5,0.5 L161.5,286.412 L161.241,286.409 C72.0825,284.452 0.5,221.199 0.5,143.456 C0.5,65.7134 72.0825,2.46051 161.241,0.502838 z" Fill="#FFED6B06" HorizontalAlignment="Left" Height="286.912" Margin="0,0.044,0,0" RenderTransformOrigin="1.0216,0.5" Stretch="Fill" Stroke="#FFED6B06" UseLayoutRounding="False" VerticalAlignment="Top" Width="162"/>
+            <Image HorizontalAlignment="Left" Height="191" VerticalAlignment="Top" Width="198" Source="ms-appx:///Assets/Icons/appbar.flag.wavy.png" Stretch="Fill" Margin="0,46,0,0"/>
+            <Button x:Name="MenuButton2" HorizontalAlignment="Left" VerticalAlignment="Top" Height="290" Margin="0,0,-3,0" Width="334" BorderBrush="{x:Null}" Foreground="White" Background="{x:Null}" FontWeight="Normal" FontSize="11" FontFamily="Global User Interface"/>
+        </Grid>
+        <Grid Margin="530,467,511,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Path Data="M161.5,0.5 L161.5,286.412 L161.241,286.409 C72.0825,284.452 0.5,221.199 0.5,143.456 C0.5,65.7134 72.0825,2.46051 161.241,0.502838 z" Fill="#FFED6B06" HorizontalAlignment="Left" Height="286.912" Margin="0,0.044,0,0" RenderTransformOrigin="1.0216,0.5" Stretch="Fill" Stroke="#FFED6B06" UseLayoutRounding="False" VerticalAlignment="Top" Width="162"/>
+            <Path Data="M161.5,0.5 L161.5,286.412 L161.241,286.409 C72.0825,284.452 0.5,221.199 0.5,143.456 C0.5,65.7134 72.0825,2.46051 161.241,0.502838 z" HorizontalAlignment="Left" Height="286.912" Margin="-34.876,0.044,0,0" RenderTransformOrigin="1.0216,0.5" Stretch="Fill" Stroke="#FFED6B06" UseLayoutRounding="False" VerticalAlignment="Top" Width="181.517">
+                <Path.Fill>
+                    <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/Flag/FranceFlag - Copy.png"/>
+                </Path.Fill>
+                <Path.RenderTransform>
+                    <CompositeTransform ScaleX="-1"/>
+                </Path.RenderTransform>
+            </Path>
+            <Image HorizontalAlignment="Left" Height="191" VerticalAlignment="Top" Width="198" Source="ms-appx:///Assets/Icons/appbar.flag.wavy.png" Margin="0,48,0,0" Stretch="Fill"/>
+            <Button x:Name="MenuButton3" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Height="290" Margin="8,0,-17,0" BorderBrush="{x:Null}" Foreground="White" Background="{x:Null}" FontWeight="Normal" FontSize="11" FontFamily="Global User Interface" Width="334"/>
+        </Grid>
+        <Grid Margin="39,467,1002,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Ellipse HorizontalAlignment="Left" Height="287" Stroke="#FFED6B06" VerticalAlignment="Top" Width="331" StrokeThickness="2" RenderTransformOrigin="0.5,0.5">
+                <Ellipse.RenderTransform>
+                    <CompositeTransform ScaleX="-1"/>
+                </Ellipse.RenderTransform>
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="ms-appx:///Assets/Flag/GermanyFlag.png"/>
+                </Ellipse.Fill>
+            </Ellipse>
+            <Path Data="M161.5,0.5 L161.5,286.412 L161.241,286.409 C72.0825,284.452 0.5,221.199 0.5,143.456 C0.5,65.7134 72.0825,2.46051 161.241,0.502838 z" Fill="#FFED6B06" HorizontalAlignment="Left" Height="286.912" Margin="0,0.044,0,0" RenderTransformOrigin="1.0216,0.5" Stretch="Fill" Stroke="#FFED6B06" UseLayoutRounding="False" VerticalAlignment="Top" Width="162"/>
+            <Image HorizontalAlignment="Left" Height="191" VerticalAlignment="Top" Width="198" Source="ms-appx:///Assets/Icons/appbar.flag.wavy.png" Margin="0,48,0,0" Stretch="Fill"/>
+            <Button x:Name="MenuButton4" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Height="290" Margin="0,0,-3,0" Width="334" BorderBrush="{x:Null}" Foreground="White" Background="{x:Null}" FontWeight="Normal" FontSize="11" FontFamily="Global User Interface"/>
+        </Grid>
+        <Grid Margin="530,144,511,333">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Ellipse HorizontalAlignment="Left" Height="287" Stroke="#FFED6B06" VerticalAlignment="Top" Width="331" StrokeThickness="2" RenderTransformOrigin="0.5,0.5">
+                <Ellipse.RenderTransform>
+                    <CompositeTransform ScaleX="-1"/>
+                </Ellipse.RenderTransform>
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="ms-appx:///Assets/Flag/USFlag.png"/>
+                </Ellipse.Fill>
+            </Ellipse>
+            <Path Data="M161.5,0.5 L161.5,286.412 L161.241,286.409 C72.0825,284.452 0.5,221.199 0.5,143.456 C0.5,65.7134 72.0825,2.46051 161.241,0.502838 z" Fill="#FFED6B06" HorizontalAlignment="Left" Height="286.912" Margin="0,0.044,0,0" RenderTransformOrigin="1.0216,0.5" Stretch="Fill" Stroke="#FFED6B06" UseLayoutRounding="False" VerticalAlignment="Top" Width="162"/>
+            <Image HorizontalAlignment="Left" Height="191" VerticalAlignment="Top" Width="198" Source="ms-appx:///Assets/Icons/appbar.flag.wavy.png" Margin="0,48,0,0" Stretch="Fill"/>
+            <Button x:Name="MenuButton5" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Height="290" Margin="0,0,-3,0" Width="334" BorderBrush="{x:Null}" Foreground="White" Background="{x:Null}" FontWeight="Normal" FontSize="11" FontFamily="Global User Interface"/>
+        </Grid>
+        <Grid Margin="30,144,1002,333">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Ellipse HorizontalAlignment="Left" Height="287" Stroke="#FFED6B06" VerticalAlignment="Top" Width="331" StrokeThickness="2" RenderTransformOrigin="0.5,0.5">
+                <Ellipse.RenderTransform>
+                    <CompositeTransform ScaleX="-1"/>
+                </Ellipse.RenderTransform>
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="ms-appx:///Assets/Flag/DenmarkFlag.png"/>
+                </Ellipse.Fill>
+            </Ellipse>
+            <Path Data="M161.5,0.5 L161.5,286.412 L161.241,286.409 C72.0825,284.452 0.5,221.199 0.5,143.456 C0.5,65.7134 72.0825,2.46051 161.241,0.502838 z" Fill="#FFED6B06" HorizontalAlignment="Left" Height="286.912" Margin="0,0.044,0,0" RenderTransformOrigin="1.0216,0.5" Stretch="Fill" Stroke="#FFED6B06" UseLayoutRounding="False" VerticalAlignment="Top" Width="162"/>
+            <Image HorizontalAlignment="Left" Height="191" VerticalAlignment="Top" Width="198" Source="ms-appx:///Assets/Icons/appbar.flag.wavy.png" Margin="0,48,0,0" Stretch="Fill"/>
+        </Grid>
+        <Rectangle Fill="#FFED6B06" HorizontalAlignment="Left" Height="40" Margin="355,25,0,0" Stroke="#FFED6B06" VerticalAlignment="Top" Width="710" RadiusX="45" RadiusY="45"/>
+        <Button Content="" HorizontalAlignment="Left" BorderThickness="0" VerticalAlignment="Top" Margin="27,141,0,0" Height="297" Width="340" Click="Button_Click_1"/>
 
     </Grid>
 </Page>

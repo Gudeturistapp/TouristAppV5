@@ -16,7 +16,6 @@ using Windows.UI.Xaml.Navigation;
 
 // The Item Detail Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234232
 using TuristAppV5.Model;
-using TuristAppV5.ViewModel;
 
 namespace TuristAppV5.View
 {
@@ -26,11 +25,11 @@ namespace TuristAppV5.View
     /// </summary>
     public sealed partial class ItemDetailPage : Page
     {
+        public Login login = new Login();
+
+
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
-        Userdata userData = new Userdata();
-        MainViewModel viewModel = new MainViewModel();
-        Restaurant rest = new Restaurant("lol", "", "", "");
 
         /// <summary>
         /// This can be changed to a strongly typed view model.
@@ -54,7 +53,15 @@ namespace TuristAppV5.View
             this.InitializeComponent();
             this.navigationHelper = new NavigationHelper(this);
             this.navigationHelper.LoadState += navigationHelper_LoadState;
-            
+
+            if (login.IsLoggedIn == false)
+            {
+                OrderHereBlock.Text = "Log in first";
+            }
+            else
+            {
+                OrderHereBlock.Text = "Order here";
+            }
         }
 
         /// <summary>
@@ -104,20 +111,59 @@ namespace TuristAppV5.View
 
         #endregion
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void OrderButton_Click(object sender, RoutedEventArgs e)
         {
             OrderAppBar.IsOpen = true;
             OrderAppBar.Visibility = Visibility.Visible;
         }
 
-        private void OrderButton_Click(object sender, RoutedEventArgs e)
+        private void RegisterButton_Click(object sender, RoutedEventArgs e)
+        {
+            Register();
+        }
+
+        private void CancelOrderButton_Click(object sender, RoutedEventArgs e)
         {
             OrderAppBar.Visibility = Visibility.Collapsed;
         }
 
-        private void AppBarButton_Click(object sender, RoutedEventArgs e)
+        public void Register()
         {
-            OrderAppBar.Visibility = Visibility.Collapsed;
+            if (!string.IsNullOrWhiteSpace(registerUserNameBox.Text) &&
+                !string.IsNullOrWhiteSpace(registerPasswordBox.Text) &&
+                !string.IsNullOrWhiteSpace(registerReEnterPasswordBox.Text) &&
+                !string.IsNullOrWhiteSpace(registerEmailBox.Text) &&
+                !string.IsNullOrWhiteSpace(registerPhoneBox.Text))
+            {
+
+                if (registerPasswordBox.Text == registerReEnterPasswordBox.Text)
+                {
+                    UserData userdata = new UserData(registerPasswordBox.Text, registerEmailBox.Text, registerPhoneBox.Text);
+
+                    login.LoginDictionary.Add(registerUserNameBox.Text, userdata);
+
+                    login.IsLoggedIn = true;
+
+                    RegisterButton.Flyout.Hide();
+
+
+                    SuccessBlock.Text = "Success! User has been created.";
+                }
+                else
+                {
+                    ErrorBlock.Text = "Passwords doesn't match.";
+                }
+            }
+            else
+            {
+                SuccessBlock.Text = "";
+                ErrorBlock.Text = "Error! Please input values in all fields.";
+            }
+        }
+
+
+        private void LoginButton_Click(object sender, RoutedEventArgs e)
+        {
         }
     }
 }
