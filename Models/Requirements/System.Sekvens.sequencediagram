@@ -1,19 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="4f597255-9935-49c8-ba8a-5e23f63b82f2" name="System.Sekvens" linkedPackageId="a0101371-c0d8-4a0f-b4f9-33b82bdba3a1" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
-  <profileInstances>
-    <packageHasProfileInstances Id="b0e74595-5644-4cfd-b2ff-726cbc32c373">
-      <profileInstance Id="4d68cff9-571e-4539-bb5d-c3dd0e631302" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="973774d8-91b4-4b85-bb2e-c15ea7b73feb">
-      <profileInstance Id="60100b09-567a-48b8-83de-85941c6f8823" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="4f597255-9935-49c8-ba8a-5e23f63b82f2" name="System.Sekvens" linkedPackageId="a0101371-c0d8-4a0f-b4f9-33b82bdba3a1" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
   <packagedElements>
     <packageHasNamedElement>
       <interaction Id="6bbdce55-511b-4fca-bc47-21f7342e0ea2" name="System.Sekvens" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
@@ -297,7 +283,7 @@
           </lifeline>
         </lifelines>
         <messages>
-          <message Id="a6f05847-b834-4d86-aa5c-757cf5fa7693" name="Vælger et sprog" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false">
+          <message Id="a6f05847-b834-4d86-aa5c-757cf5fa7693" name="Choose Language" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false">
             <elementDefinition Id="9bdcd329-828a-4fc8-9855-2ebbc7358b9d" />
             <sendEvent>
               <messageOccurrenceSpecificationMoniker Id="3989f690-37cd-41ce-92fb-f24e6909d593" LastKnownName="MessageOccurrenceSpecification1" />
@@ -351,7 +337,7 @@
               <messageOccurrenceSpecificationMoniker Id="92b8fe55-b59d-44c4-8bd0-6332ba31def6" LastKnownName="MessageOccurrenceSpecification16" />
             </receiveEvent>
           </message>
-          <message Id="3d474878-7052-402f-897d-c44fe12e490c" name="Booking" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false">
+          <message Id="3d474878-7052-402f-897d-c44fe12e490c" name="Add Booking" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false">
             <elementDefinition Id="eba8f39b-c633-41fd-bc42-5e8b44d90676" />
             <sendEvent>
               <messageOccurrenceSpecificationMoniker Id="3c6ea4a7-5d62-43d3-be8e-e902bceae165" LastKnownName="MessageOccurrenceSpecification17" />
@@ -415,5 +401,19 @@
   </packagedElements>
   <package Id="a0101371-c0d8-4a0f-b4f9-33b82bdba3a1" name="Models">
     <elementDefinition Id="dda288e4-6b39-4bb7-8cc9-fb29d8ae56ee" />
+    <profileInstances>
+      <packageHasProfileInstances Id="b0e74595-5644-4cfd-b2ff-726cbc32c373">
+        <profileInstance Id="4d68cff9-571e-4539-bb5d-c3dd0e631302" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="973774d8-91b4-4b85-bb2e-c15ea7b73feb">
+        <profileInstance Id="60100b09-567a-48b8-83de-85941c6f8823" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </SequenceDesignerModel>

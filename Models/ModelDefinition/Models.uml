@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="dda288e4-6b39-4bb7-8cc9-fb29d8ae56ee"
   name="Models" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -2203,7 +2203,7 @@
         <messages>
           <message
             Id="9bdcd329-828a-4fc8-9855-2ebbc7358b9d"
-            name="Vælger et sprog"
+            name="Choose Language"
             messageKind="Complete"
             messageSort="SynchCall"
             createSelfMessage="false">
@@ -2317,7 +2317,7 @@
           </message>
           <message
             Id="eba8f39b-c633-41fd-bc42-5e8b44d90676"
-            name="Booking"
+            name="Add Booking"
             messageKind="Complete"
             messageSort="SynchCall"
             createSelfMessage="false">
@@ -2395,6 +2395,184 @@
       <executionEvent
         Id="8f251e0a-f6cd-4eca-b3f4-867a5b54d12a"
         name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="5f151786-1e88-416c-b850-ed5cacd56396"
+        name="Class1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="855e01b6-a444-41f9-914f-a6fca5eeae6c"
+        name="Class2"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="d31ff42b-ec43-481f-85cf-b971bea67e67"
+        name="Class3"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="6b20a36a-cdf8-4de1-9d32-1455d3b0d325"
+        LastKnownName="View1"
+        LastKnownLocation="Package_1641.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="7eab2b1d-18b3-47a7-ba46-62b75b880982"
+        LastKnownName="ViewModel1"
+        LastKnownLocation="Package1_1641.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="3e2bfe89-4811-4dbe-ba1a-ca4e2bbdb94d"
+        LastKnownName="Package1"
+        LastKnownLocation="Package_1642.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="6ed9d440-cb2b-4768-8533-ce1c35c2d587"
+        name="Language"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="1533eeab-4e9e-4577-b2f1-69dc738ee911"
+            isDerived="false"
+            sourceEndRoleName="Language"
+            targetEndRoleName="AttractionList"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="5becc883-d87e-45e5-aec0-1e3a9a603298"
+              LastKnownName="AttractionList"
+              LastKnownLocation="Models.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="eed361ca-83eb-40ca-90c8-004f197d1f48"
+                  name="Language"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="96b0f127-a267-4a89-b6fb-b7a658b0cdfb"
+                  name="AttractionList"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="b9a4f707-166d-410e-baaa-7d6fc963d86e"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="5becc883-d87e-45e5-aec0-1e3a9a603298"
+        name="AttractionList"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="180b3367-04ac-43be-b7a9-7e0bd3be8094"
+            isDerived="false"
+            sourceEndRoleName="AttractionList"
+            targetEndRoleName="Attractions"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="d03f7479-c3f8-493e-9a94-f72d3cf72dd2"
+              LastKnownName="Attractions"
+              LastKnownLocation="Models.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9c877e95-43f2-42e2-9817-00dda4b7f103"
+                  name="AttractionList"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a7cf7344-390e-499c-bd87-1a670c7f58b7"
+                  name="Attractions"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="d03f7479-c3f8-493e-9a94-f72d3cf72dd2"
+        name="Attractions"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="20a70261-2126-4c6f-a9c5-fee89b20265c"
+        name="Login"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="d39e53e5-e037-42dc-943b-db498eb77d0d"
+        name="User Data"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
