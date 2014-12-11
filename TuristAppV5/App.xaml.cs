@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -28,12 +31,29 @@ namespace TuristAppV5
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
         /// </summary>
+        private static bool exist;
         public App()
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
         }
 
+        //Checks wether our language file exists.
+        public static async void Banana()
+        {
+            var path = ApplicationData.Current.LocalFolder;
+            var file = await path.TryGetItemAsync("language.txt") as IStorageFile;
+            
+
+            if (file != null)
+            {
+                exist = true;
+            }
+            else
+            {
+                exist = false;
+            }
+        }
         /// <summary>
         /// Invoked when the application is launched normally by the end user.  Other entry points
         /// will be used such as when the application is launched to open a specific file.
@@ -41,7 +61,6 @@ namespace TuristAppV5
         /// <param name="e">Details about the launch request and process.</param>
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
-
 #if DEBUG
             if (System.Diagnostics.Debugger.IsAttached)
             {
@@ -76,7 +95,15 @@ namespace TuristAppV5
                 // When the navigation stack isn't restored navigate to the first page,
                 // configuring the new page by passing required information as a navigation
                 // parameter
-                rootFrame.Navigate(typeof(View.LanguagePage), e.Arguments);
+                Banana();
+                if (exist == true)
+                {
+                    rootFrame.Navigate(typeof (View.MainPage), e.Arguments);
+                }
+                else
+                {
+                    rootFrame.Navigate(typeof (View.LanguagePage), e.Arguments);
+                }
             }
             // Ensure the current window is active
             Window.Current.Activate();
