@@ -3,17 +3,16 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:TuristAppV5">
-	<Application.Resources>
-		<MenuFlyout x:Key="FlyoutBase1"/>
+    <Application.Resources>
+        <MenuFlyout x:Key="FlyoutBase1"/>
         <SolidColorBrush x:Key="AppBarItemBackgroundThemeBrush" Color="Transparent" />
         <SolidColorBrush x:Key="AppBarItemDisabledForegroundThemeBrush" Color="#FFED6B06" />
         <SolidColorBrush x:Key="AppBarItemForegroundThemeBrush" Color="#FFED6B06" />
         <SolidColorBrush x:Key="AppBarItemPointerOverBackgroundThemeBrush" Color="#FFED6B06" />
         <SolidColorBrush x:Key="AppBarItemPointerOverForegroundThemeBrush" Color="Transparent" />
         <SolidColorBrush x:Key="AppBarItemPressedForegroundThemeBrush" Color="Transparent" />
-<<<<<<< HEAD
+
         
-=======
 
         <SolidColorBrush x:Key="AppBarItemBackgroundThemeBrush1" Color="Transparent" />
         <SolidColorBrush x:Key="AppBarItemDisabledForegroundThemeBrush1" Color="White" />
@@ -24,7 +23,6 @@
 
 
 
->>>>>>> origin/master
     </Application.Resources>
 
 </Application>
