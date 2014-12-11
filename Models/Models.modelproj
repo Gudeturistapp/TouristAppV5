@@ -48,6 +48,13 @@
     <Content Include="ModelDefinition\Package_1250.uml">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Requirements\System.Sekvens.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Requirements\System.Sekvens.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Requirements\System.Sekvens.sequencediagram</DependentUpon>
+    </Content>
     <Content Include="Requirements\TestPlan.docx">
       <SubType>Content</SubType>
     </Content>
