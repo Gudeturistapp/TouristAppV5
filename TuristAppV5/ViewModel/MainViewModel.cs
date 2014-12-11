@@ -49,6 +49,7 @@ namespace TuristAppV5.ViewModel
             Shopping.AddAttraction("Ro's Torv", "1234 5678", "Men stor biograf, eller noget.", "");
             Shopping.AddAttraction("Et shoppings område andetsteds", "1234 8765", "En nice deskription", "");
             Shopping.AddAttraction("Internet Shopping, anyone?", "8765 4321", "En random deskription", "");
+            Shopping.AddAttraction("Something", "12345678", "description", "");
             #endregion
 
             //Cultural areas for detailPage.
@@ -56,11 +57,14 @@ namespace TuristAppV5.ViewModel
             Culture.AddAttraction("Vikingeskibs Museum", "5555 0000", "Ser store og pragtige vikinge skibe", "");
             Culture.AddAttraction("Roskilde Domkirke", "En bøn til Gud", "Det er en kirke, og en stor en af slagsen", "");
             Culture.AddAttraction("Et Gallery", "Gallery nummer", "Gallery deskription", "");
+            Culture.AddAttraction("Someplace", "12345678", "Description", "");
             #endregion
 
             //Restaurants for itemsPage.
             Restaurants.AddAttractionItem("Jensen's Bøfhus", "/Assets/Eat/Jensens logo.png", "Bones", "/Assets/Eat/Bones_logo.gif", "Vivaldi", "/Assets/Eat/Vivaldi-logo.jpg", "", "");
             Events.AddAttractionItem("Roskilde Festival", "/Assets/Events/Roskilde_Festival_logo.jpg", "Lysfest", "/Assets/Events/Lysfest_Logo.jpg", "Havnen", "/Assets/Events/Havn_Logo.JPG", "", "");
+
+            
 
 
         }
