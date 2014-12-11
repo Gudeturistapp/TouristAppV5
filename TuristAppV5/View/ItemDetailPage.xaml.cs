@@ -54,14 +54,14 @@ namespace TuristAppV5.View
             this.navigationHelper = new NavigationHelper(this);
             this.navigationHelper.LoadState += navigationHelper_LoadState;
 
-            if (login.IsLoggedIn == false)
-            {
-                OrderHereBlock.Text = "Log in first";
-            }
-            else
-            {
-                OrderHereBlock.Text = "Order here";
-            }
+        //    if (login.IsLoggedIn == false)
+        //    {
+        //        OrderHereBlock.Text = "Log in first";
+        //    }
+        //    else
+        //    {
+        //        OrderHereBlock.Text = "Order here";
+        //    }
         }
 
         /// <summary>
