@@ -34,7 +34,7 @@ namespace TuristAppV5.View
      
 
 
-        private void Button_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        private void Button_Click2(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof (ItemDetailPage));
         }
