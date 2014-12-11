@@ -90,10 +90,60 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="7774b352-8fe4-4bf7-af71-b2b9130f9815"
+            isDerived="false"
+            sourceEndRoleName="MainViewModel"
+            targetEndRoleName="User Data"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="2478f059-9091-4de7-b92d-6dd0a00dcf1d"
+              LastKnownName="User Data"
+              LastKnownLocation="Package_1642.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4998c94b-dfeb-4fcc-9f00-c80ac346d819"
+                  name="MainViewModel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b185829d-bcb9-451b-b393-33bc77440287"
+                  name="User Data"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="b4935218-11c8-4e26-a329-bacdfd52f505"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="e2c5a9b0-6ae9-4eb9-82e6-5a525da45239"
+            name="SelectedAttraction"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
