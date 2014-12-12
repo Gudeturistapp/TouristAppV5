@@ -154,36 +154,29 @@
                     <AppBarButton x:Name="RegisterButton" HorizontalAlignment="Stretch" Icon="AddFriend" Label="Register" VerticalAlignment="Stretch">
                         <AppBarButton.Resources>
                             <Flyout x:Key="FlyoutBase2">
-                                <Grid Height="250" Width="200">
+                                <Grid Height="298" Width="200">
                                     <StackPanel Margin="-16,-20,-19,-15">
                                         <StackPanel Height="10"/>
                                         <StackPanel Height="35" Margin="35,0,36,0">
                                             <TextBlock TextWrapping="Wrap" Text="Register" Height="65" HorizontalAlignment="Center" Width="235" VerticalAlignment="Center" FontSize="25" Margin="34,0,-104.714,0" Foreground="#FFED6B06" FontWeight="Bold"/>
                                         </StackPanel>
-                                        <StackPanel Height="180">
+                                        <StackPanel Height="208">
                                             <TextBlock TextWrapping="Wrap" FontSize="13" Height="15" Foreground="#FFED6B06" Text="Username" Margin="10,0"/>
-                                            <TextBox x:Name="registerUserNameBox" TextWrapping="Wrap" Height="15" FontSize="7" MinHeight="20" Margin="10,0" PlaceholderText="Enter your Username"/>
+                                            <TextBox x:Name="registerUserNameBox" TextWrapping="Wrap" Height="36" FontSize="7" MinHeight="20" Margin="10,0" PlaceholderText="Enter your Username"/>
                                             <TextBlock TextWrapping="Wrap" FontSize="13" Height="18" Foreground="#FFED6B06" Text="Phone" Margin="10,0,0,0"/>
-                                            <TextBox x:Name="registerPhoneBox" TextWrapping="Wrap" FontSize="7" Height="21" MinHeight="20" Margin="10,0" PlaceholderText="Enter your Phone number"/>
+                                            <TextBox x:Name="registerPhoneBox" TextWrapping="Wrap" FontSize="7" Height="36" MinHeight="20" Margin="10,0" PlaceholderText="Enter your Phone number"/>
                                             <TextBlock TextWrapping="Wrap" Height="17" VerticalAlignment="Bottom" Foreground="#FFED6B06" Text="E-mail" FontSize="13" Margin="10,0,0,0"/>
-                                            <TextBox x:Name="registerEmailBox" TextWrapping="Wrap" Text="&#xA;" Height="15" FontSize="7" MinHeight="20" Margin="10,0" PlaceholderText="Enter your Email"/>
+                                            <TextBox x:Name="registerEmailBox" TextWrapping="Wrap" Text="&#xA;" Height="36" FontSize="7" MinHeight="20" Margin="10,0" PlaceholderText="Enter your Email"/>
                                             <TextBlock TextWrapping="Wrap" Height="14" VerticalAlignment="Bottom" Foreground="#FFED6B06" Text="Password" FontSize="13" Margin="10,0,0,0"/>
-                                            <TextBox x:Name="registerPasswordBox" TextWrapping="Wrap" Text="&#xA;" Height="20" FontSize="7" RenderTransformOrigin="0.5,0.5" Margin="9,0,11,0" MinHeight="20" PlaceholderText="Enter your Password">
-                                                <TextBox.RenderTransform>
+                                            <PasswordBox Margin="10,0" Height="24" FontFamily="Global User Interface" RenderTransformOrigin="0.5,0.5">
+                                                <PasswordBox.RenderTransform>
                                                     <CompositeTransform ScaleY="-1"/>
-                                                </TextBox.RenderTransform>
-                                            </TextBox>
-                                            <TextBlock TextWrapping="Wrap" Height="12" VerticalAlignment="Bottom" Foreground="#FFED6B06" Text="Re-Enter Password" FontSize="13" Margin="10,0,0,0"/>
-                                            <TextBox x:Name="registerReEnterPasswordBox" TextWrapping="Wrap" Text="&#xA;" Height="20" FontSize="7" RenderTransformOrigin="0.5,0.5" Margin="9,0,11,0" MinHeight="20" PlaceholderText="Enter your Password again">
-                                                <TextBox.RenderTransform>
-                                                    <CompositeTransform ScaleY="-1"/>
-                                                </TextBox.RenderTransform>
-                                            </TextBox>
-                                            <TextBlock TextWrapping="Wrap" Height="13" VerticalAlignment="Bottom" Foreground="#FFED6B06" FontSize="13"/>
+                                                </PasswordBox.RenderTransform>
+                                            </PasswordBox>
                                         </StackPanel>
-                                        <StackPanel Height="76" Width="364">
-                                            <StackPanel Height="86" Margin="0,0,123.286,0" Orientation="Horizontal">
-                                                <AppBarButton x:Name="RegisterButton1" HorizontalAlignment="Stretch" Icon="Add" Label="Register" VerticalAlignment="Stretch" Click="RegisterButton_Click" Margin="0,-14,0,9.714" Width="221"/>
+                                        <StackPanel Height="114" Margin="0,0,-228,0">
+                                            <StackPanel Height="121" Margin="0,0,123,0" Orientation="Horizontal">
+                                                <AppBarButton x:Name="RegisterButton1" HorizontalAlignment="Stretch" Icon="Add" Label="Register" VerticalAlignment="Stretch" Click="RegisterButton_Click" Margin="0,-4,0,10" Width="221"/>
                                             </StackPanel>
                                         </StackPanel>
                                     </StackPanel>
@@ -211,19 +204,23 @@
                                                 </Flyout>
                                             </FlyoutBase.AttachedFlyout>
                                             <TextBlock TextWrapping="Wrap" FontSize="13" Height="15" Foreground="#FFED6B06" Text="Username" Margin="10,0"/>
-                                            <TextBox TextWrapping="Wrap" Height="15" FontSize="7" MinHeight="20" Margin="10,0" PlaceholderText="Enter your Username"/>
-                                            <TextBlock TextWrapping="Wrap" Height="14" VerticalAlignment="Bottom" Foreground="#FFED6B06" Text="Password" FontSize="13" Margin="10,0,0,0"/>
-                                            <TextBox TextWrapping="Wrap" Text="&#xA;" Height="20" FontSize="7" RenderTransformOrigin="0.5,0.5" Margin="9,0,11,0" MinHeight="20" PlaceholderText="Enter your Password">
-                                                <TextBox.RenderTransform>
-                                                    <CompositeTransform ScaleY="-1"/>
-                                                </TextBox.RenderTransform>
-                                            </TextBox>
-                                            <TextBlock TextWrapping="Wrap" Height="13" VerticalAlignment="Bottom" Foreground="#FFED6B06" FontSize="13"/>
-                                            <StackPanel Height="17"/>
+                                            <TextBox TextWrapping="Wrap" Height="36" FontSize="12" MinHeight="20" Margin="10,0" PlaceholderText="Enter your Username" FontFamily="Global User Interface"/>
+                                            <TextBlock TextWrapping="Wrap" Height="30" VerticalAlignment="Bottom" Foreground="#FFED6B06" FontSize="13" Margin="10,0,0,0">
+                                            	<Run/>
+                                            	<LineBreak/>
+                                            	<Run Text="Password"/>
+                                            </TextBlock>
+                                            <StackPanel Height="48">
+                                                <PasswordBox Height="3" Margin="10,0" RenderTransformOrigin="0.5,0.5" FontSize="7" FontFamily="Global User Interface">
+                                                    <PasswordBox.RenderTransform>
+                                                        <CompositeTransform ScaleY="-1"/>
+                                                    </PasswordBox.RenderTransform>
+                                                </PasswordBox>
+                                            </StackPanel>
                                         </StackPanel>
                                         <StackPanel Height="76" Width="364">
                                             <StackPanel Height="85" Margin="0,0,130.286,0" Orientation="Horizontal">
-                                                <AppBarButton x:Name="LoginButton1" HorizontalAlignment="Stretch" Icon="Add" Label="Login" VerticalAlignment="Stretch" Click="LoginButton_Click" Margin="0,-14,0,-4" Width="219">
+                                                <AppBarButton x:Name="LoginButton1" HorizontalAlignment="Stretch" Icon="Add" Label="Login" VerticalAlignment="Stretch" Click="LoginButton_Click" Margin="0,-14,0,-4" Width="219" FontFamily="Global User Interface">
                                                     <TextBlock Height="100" TextWrapping="Wrap" Text="TextBlock" Width="100"/>
                                                 </AppBarButton>
                                             </StackPanel>
