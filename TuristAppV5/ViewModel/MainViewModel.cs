@@ -9,7 +9,7 @@ using TuristAppV5.Model;
 
 namespace TuristAppV5.ViewModel
 {
-    class MainViewModel
+    public class MainViewModel
     {
         //Properties + SelectedAttraction.
         #region Properties

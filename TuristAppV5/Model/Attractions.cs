@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TuristAppV5.Model
 {
-    class Attractions
+    public class Attractions
     {
         #region Single Attraction properties + constructor
         public string _name { get; set; }
