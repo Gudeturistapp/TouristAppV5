@@ -1,11 +1,25 @@
 ﻿<Page
-    x:Class="TuristAppV5.View.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:TuristAppV5"
+    xmlns:local="using:TuristAppV5.View"
+    xmlns:common="using:TuristAppV5.Common"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ViewModel="using:TuristAppV5.ViewModel"
+    x:Name="pageRoot"
+    x:Class="TuristAppV5.View.ItemsPage"
+    DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Mode=Self}}"
     mc:Ignorable="d">
+
+    <Page.Resources>
+        <!-- Collection of items displayed by this page -->
+        <CollectionViewSource
+        x:Name="itemsViewSource"
+        Source="{Binding Items}"/>
+
+        <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
+        <x:String x:Key="AppName">My Application</x:String>
+    </Page.Resources>
     <Page.BottomAppBar>
         <AppBar Background="White">
             <Grid>
@@ -16,9 +30,7 @@
                 <StackPanel Orientation="Horizontal">
                     <AppBarButton x:Name="ExitButton" HorizontalAlignment="Stretch" Icon="Cancel" Label="Exit" VerticalAlignment="Stretch"/>
                 </StackPanel>
-                <StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal">
-                    <AppBarButton x:Name="AddReviewButton" HorizontalAlignment="Left" Icon="Add" Label="Add Review" VerticalAlignment="Top"/>
-                </StackPanel>
+                <StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal"/>
             </Grid>
         </AppBar>
     </Page.BottomAppBar>
@@ -167,91 +179,115 @@
         </AppBar>
     </Page.TopAppBar>
 
-    <Grid Background="#B200C8FF">
-        <Rectangle x:Name="HeadPiece" Fill="#FFED6B06" HorizontalAlignment="Left" Height="40" Margin="355,25,0,0" Stroke="#FFED6B06" VerticalAlignment="Top" Width="710" RadiusX="45" RadiusY="45"/>
-        <Button Content="ItemDetail" HorizontalAlignment="Left" Margin="26,347,0,0" VerticalAlignment="Top" Height="157" Width="272" Click="Button_Click" BorderBrush="Transparent"/>
-        <StackPanel HorizontalAlignment="Left" Height="300" Margin="322,127,0,0" VerticalAlignment="Top" Width="331">
-            <Grid Height="297">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Ellipse HorizontalAlignment="Left" Height="287" Stroke="#FFED6B06" VerticalAlignment="Top" Width="331" StrokeThickness="2" RenderTransformOrigin="0.5,0.5">
-                    <Ellipse.RenderTransform>
-                        <CompositeTransform ScaleX="-1"/>
-                    </Ellipse.RenderTransform>
+    <!--
+        This grid acts as a root panel for the page that defines two rows:
+        * Row 0 contains the back button and page title
+        * Row 1 contains the rest of the page layout
+    -->
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="140"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Horizontal scrolling grid -->
+        <GridView
+			x:Name="itemGridView"
+			AutomationProperties.AutomationId="ItemsGridView"
+			AutomationProperties.Name="Items"
+			TabIndex="1"
+			Grid.RowSpan="2"
+			Padding="116,136,116,46"
+			SelectionMode="None"
+			IsSwipeEnabled="false" Background="#B200C8FF">
+            <GridView.DataContext>
+                <ViewModel:MainViewModel/>
+            </GridView.DataContext>
+            
+
+        </GridView>
+
+        <!-- Back button and page title -->
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="backButton" Margin="39,59,39,0" Command="{Binding NavigationHelper.GoBackCommand, ElementName=pageRoot}"
+				Style="{StaticResource NavigationBackButtonNormalStyle}"
+				VerticalAlignment="Top"
+				AutomationProperties.Name="Back"
+				AutomationProperties.AutomationId="BackButton"
+				AutomationProperties.ItemType="Navigation Button"/>
+            <Rectangle x:Name="HeadPiece" Grid.Column="1" Fill="#FFED6B06" HorizontalAlignment="Left" Height="40" Margin="235,25,0,0" Stroke="#FFED6B06" VerticalAlignment="Top" Width="710" RadiusX="45" RadiusY="45"/>
+        </Grid>
+        <StackPanel x:Name="EventStack1" HorizontalAlignment="Left" Height="212" Margin="266,83,0,0" Grid.Row="1" VerticalAlignment="Top" Width="500">
+            <Grid Height="206" Margin="0,0,244,0">
+                <Path Data="M120.5,0.5 L120.5,205.234 L120.49,205.234 C53.6515,202.488 0.5,157.707 0.5,102.867 C0.5,48.0268 53.6515,3.24557 120.49,0.500298 z" Fill="#FFED6B06" HorizontalAlignment="Left" Margin="0,0.133" Stretch="Fill" Stroke="Black" UseLayoutRounding="False" Width="121"/>
+                <Ellipse HorizontalAlignment="Left" Height="155" Margin="28,26,0,0" Stroke="Black" VerticalAlignment="Top" Width="199">
+                    <Ellipse.DataContext>
+                        <ViewModel:MainViewModel/>
+                    </Ellipse.DataContext>
+
                     <Ellipse.Fill>
-                        <ImageBrush Stretch="UniformToFill" ImageSource="ms-appx:///Assets/Events/Roskilde_Festival_Scene.jpg"/>
+                        <ImageBrush ImageSource="{Binding SelectedAttraction.photo1}"/>
                     </Ellipse.Fill>
                 </Ellipse>
-                <Path Data="M161.5,0.5 L161.5,286.412 L161.241,286.409 C72.0825,284.452 0.5,221.199 0.5,143.456 C0.5,65.7134 72.0825,2.46051 161.241,0.502838 z" Fill="#FFED6B06" HorizontalAlignment="Left" Height="286.912" Margin="0,0.044,0,0" RenderTransformOrigin="1.0216,0.5" Stretch="Fill" Stroke="#FFED6B06" UseLayoutRounding="False" VerticalAlignment="Top" Width="162"/>
-                <Image HorizontalAlignment="Left" Height="185" VerticalAlignment="Top" Width="177" Margin="0,55,0,0" Stretch="Fill" Source="ms-appx:///Assets/Icons/appbar.cards.heart.png"/>
-                <TextBox HorizontalAlignment="Left" Margin="186,131,-2,0" TextWrapping="Wrap" Text="Events" VerticalAlignment="Top" Height="76" Width="147" Background="Transparent" Foreground="White" BorderBrush="Transparent" FontSize="22" FontWeight="Bold" IsReadOnly="True"/>
-                <Button x:Name="MenuButton1" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Height="290" Margin="-16,0,-3,0" Width="350" BorderBrush="Transparent" Foreground="Transparent" Opacity="0" Click="EventsButton_Click"/>
+                <Button x:Name="EventButton1" Content="Button" HorizontalAlignment="Left" Margin="-7,1,0,-3" VerticalAlignment="Top" Height="208" Width="237" BorderBrush="Transparent" Foreground="Transparent" Opacity="0"/>
             </Grid>
         </StackPanel>
-        <StackPanel HorizontalAlignment="Left" Height="300" Margin="747,127,0,0" VerticalAlignment="Top" Width="331">
-            <Grid Height="297">
-                <Ellipse HorizontalAlignment="Left" Height="287" Stroke="#FFED6B06" VerticalAlignment="Top" Width="331" StrokeThickness="2" RenderTransformOrigin="0.5,0.5">
-                    <Ellipse.RenderTransform>
-                        <CompositeTransform ScaleX="-1"/>
-                    </Ellipse.RenderTransform>
+        <StackPanel x:Name="EventStack2" HorizontalAlignment="Left" Height="212" Margin="811,83,0,0" Grid.Row="1" VerticalAlignment="Top" Width="500">
+            <Grid Height="206" Margin="0,0,244,0">
+                <Path Data="M120.5,0.5 L120.5,205.234 L120.49,205.234 C53.6515,202.488 0.5,157.707 0.5,102.867 C0.5,48.0268 53.6515,3.24557 120.49,0.500298 z" Fill="#FFED6B06" HorizontalAlignment="Left" Margin="0,0.133" Stretch="Fill" Stroke="Black" UseLayoutRounding="False" Width="121"/>
+                <Ellipse HorizontalAlignment="Left" Height="155" Margin="28,26,0,0" Stroke="Black" VerticalAlignment="Top" Width="199">
+                    <Ellipse.DataContext>
+                        <ViewModel:MainViewModel/>
+                    </Ellipse.DataContext>
                     <Ellipse.Fill>
-                        <ImageBrush ImageSource="ms-appx:///Assets/Events/Havn_front.jpg" Stretch="UniformToFill"/>
+                        <ImageBrush Stretch="Fill" ImageSource="{Binding SelectedAttraction.photo2}"/>
                     </Ellipse.Fill>
                 </Ellipse>
-                <Path Data="M0.5,0.5 L0.990845,0.516164 C88.1719,4.34615 157.5,66.8214 157.5,143.33 C157.5,219.839 88.1719,282.314 0.990845,286.144 L0.5,286.16 z" Fill="#FFED6B06" Height="286.66" Margin="173,0.17,0,0" Stretch="Fill" Stroke="#FFED6B06" UseLayoutRounding="False" VerticalAlignment="Top"/>
-                <Button x:Name="button2" Content="Button" HorizontalAlignment="Left" Margin="138,33,-22,0" VerticalAlignment="Top" Height="191" Width="215" BorderBrush="Transparent">
-                    <Button.Background>
-                        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/Icons/appbar.church.png"/>
-                    </Button.Background>
-                    <Button.Foreground>
-                        <ImageBrush Stretch="Fill"/>
-                    </Button.Foreground>
+                <Button x:Name="EventButton2" Content="Button" HorizontalAlignment="Left" Margin="7,-3,0,-3" VerticalAlignment="Top" Height="212" Width="223" BorderBrush="Transparent" Foreground="Transparent" Opacity="0">
+                    <Button.DataContext>
+                        <ViewModel:MainViewModel/>
+                    </Button.DataContext>
                 </Button>
-                <TextBox HorizontalAlignment="Left" Margin="62,124,0,0" TextWrapping="Wrap" Text="Culture" VerticalAlignment="Top" Height="76" Width="147" Background="Transparent" Foreground="White" BorderBrush="Transparent" FontSize="22" FontWeight="Bold" IsReadOnly="True"/>
-                <Button x:Name="CultureButton" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Height="290" Margin="0,0,-3,0" Width="334" BorderBrush="Transparent" Foreground="Transparent" Opacity="0"/>
             </Grid>
         </StackPanel>
-        <StackPanel HorizontalAlignment="Left" Height="300" Margin="322,432,0,0" VerticalAlignment="Top" Width="331">
-            <Grid Height="297">
-                <Ellipse HorizontalAlignment="Left" Height="287" Stroke="#FFED6B06" VerticalAlignment="Top" Width="331" StrokeThickness="2">
+        <StackPanel x:Name="EventStack3" HorizontalAlignment="Left" Height="212" Margin="811,385,0,0" Grid.Row="1" VerticalAlignment="Top" Width="500">
+            <Grid Height="206" Margin="0,0,244,0">
+                <Path Data="M120.5,0.5 L120.5,205.234 L120.49,205.234 C53.6515,202.488 0.5,157.707 0.5,102.867 C0.5,48.0268 53.6515,3.24557 120.49,0.500298 z" Fill="#FFED6B06" HorizontalAlignment="Left" Margin="0,0.133" Stretch="Fill" Stroke="Black" UseLayoutRounding="False" Width="121"/>
+                <Ellipse HorizontalAlignment="Left" Height="155" Margin="28,26,0,0" Stroke="Black" VerticalAlignment="Top" Width="199">
+                    <Ellipse.DataContext>
+                        <ViewModel:MainViewModel/>
+                    </Ellipse.DataContext>
                     <Ellipse.Fill>
-                        <ImageBrush ImageSource="ms-appx:///Assets/Eat/Jensens_Steak2.jpg" Stretch="UniformToFill"/>
+                        <ImageBrush Stretch="Fill" ImageSource="{Binding SelectedAttraction.photo4}"/>
                     </Ellipse.Fill>
                 </Ellipse>
-                <Path Data="M161.5,0.5 L161.5,286.412 L161.241,286.409 C72.0825,284.452 0.5,221.199 0.5,143.456 C0.5,65.7134 72.0825,2.46051 161.241,0.502838 z" Fill="#FFED6B06" Height="286.912" Margin="0,0.044,169,0" Stretch="Fill" Stroke="#FFED6B06" UseLayoutRounding="False" VerticalAlignment="Top"/>
-                <Button x:Name="button3" Content="Button" HorizontalAlignment="Left" Margin="-22,31,0,0" VerticalAlignment="Top" Height="236" Width="230" BorderBrush="Transparent">
-                    <Button.Background>
-                        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/Icons/appbar.food.silverware.png"/>
-                    </Button.Background>
-                    <Button.Foreground>
-                        <ImageBrush Stretch="Fill"/>
-                    </Button.Foreground>
-                </Button>
-                <TextBox HorizontalAlignment="Left" Margin="163,129,0,0" TextWrapping="Wrap" Text="Restaurants" VerticalAlignment="Top" Height="76" Width="147" Background="Transparent" Foreground="White" BorderBrush="Transparent" FontWeight="Bold" FontSize="22" IsReadOnly="True"/>
-                <Button x:Name="RestaurantButton" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Height="290" Margin="0,0,-3,0" Width="334" BorderBrush="Transparent" Foreground="Transparent" Opacity="0" Click="RestaurantButton_Click"/>
+                <Button x:Name="EventButton3" Content="Button" HorizontalAlignment="Left" Margin="-3,-3,0,-3" VerticalAlignment="Top" Height="212" Width="233" BorderBrush="Transparent" Foreground="Transparent" Opacity="0"/>
             </Grid>
         </StackPanel>
-        <StackPanel HorizontalAlignment="Left" Height="300" Margin="747,432,0,0" VerticalAlignment="Top" Width="331">
-            <Grid Height="297">
-                <Ellipse HorizontalAlignment="Left" Height="287" Stroke="#FFED6B06" VerticalAlignment="Top" Width="331" StrokeThickness="2">
+        <StackPanel x:Name="EventStack4" HorizontalAlignment="Left" Height="212" Margin="266,385,0,0" Grid.Row="1" VerticalAlignment="Top" Width="500">
+            <Grid Height="206" Margin="0,0,244,0">
+                <Path Data="M120.5,0.5 L120.5,205.234 L120.49,205.234 C53.6515,202.488 0.5,157.707 0.5,102.867 C0.5,48.0268 53.6515,3.24557 120.49,0.500298 z" Fill="#FFED6B06" HorizontalAlignment="Left" Margin="0,0.133" Stretch="Fill" Stroke="Black" UseLayoutRounding="False" Width="121"/>
+                <Ellipse HorizontalAlignment="Left" Height="155" Margin="28,26,0,0" Stroke="Black" VerticalAlignment="Top" Width="199">
+                    <Ellipse.DataContext>
+                        <ViewModel:MainViewModel/>
+                    </Ellipse.DataContext>
                     <Ellipse.Fill>
-                        <ImageBrush ImageSource="ms-appx:///Assets/Shops/Shopping_billede1.jpg" Stretch="UniformToFill"/>
+                        <ImageBrush Stretch="Fill" ImageSource="{Binding SelectedAttraction.photo3}"/>
                     </Ellipse.Fill>
                 </Ellipse>
-                <Path Data="M0.5,0.5 L0.990845,0.516164 C88.1719,4.34615 157.5,66.8214 157.5,143.33 C157.5,219.839 88.1719,282.314 0.990845,286.144 L0.5,286.16 z" Fill="#FFED6B06" Height="286.66" Margin="173,0.17,0,0" Stretch="Fill" Stroke="#FFED6B06" UseLayoutRounding="False" VerticalAlignment="Top"/>
-                <Button x:Name="button4" Content="Button" HorizontalAlignment="Left" Margin="152,41,-15,0" VerticalAlignment="Top" Height="188" Width="194" BorderBrush="Transparent">
-                    <Button.Background>
-                        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/Icons/appbar.shopping.png"/>
-                    </Button.Background>
-                    <Button.Foreground>
-                        <ImageBrush Stretch="Fill"/>
-                    </Button.Foreground>
-                </Button>
-                <TextBox HorizontalAlignment="Left" Margin="44,132,0,0" TextWrapping="Wrap" Text="Shopping" VerticalAlignment="Top" Height="71" Width="142" Background="Transparent" Foreground="White" BorderBrush="Transparent" FontSize="22" FontWeight="Bold" IsReadOnly="True"/>
-                <Button x:Name="ShoppingButton" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Height="290" Margin="0,0,-3,0" Width="334" BorderBrush="Transparent" Foreground="Transparent" Opacity="0"/>
+                <Button x:Name="EventButton4" Content="Button" HorizontalAlignment="Left" Margin="-3,-3,0,-3" VerticalAlignment="Top" Height="212" Width="233" BorderBrush="Transparent" Foreground="Transparent" Opacity="0"/>
             </Grid>
         </StackPanel>
 
+        <Page/>
     </Grid>
 </Page>
