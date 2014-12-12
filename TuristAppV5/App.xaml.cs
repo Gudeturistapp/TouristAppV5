@@ -39,11 +39,10 @@ namespace TuristAppV5
         }
 
         //Checks wether our language file exists.
-        public static async void Banana()
+        public static async void CheckForFile()
         {
             var path = ApplicationData.Current.LocalFolder;
-            var file = await path.TryGetItemAsync("language.txt") as IStorageFile;
-            
+            var file = await path.TryGetItemAsync("Language.Dat") as IStorageFile;
 
             if (file != null)
             {
@@ -95,8 +94,8 @@ namespace TuristAppV5
                 // When the navigation stack isn't restored navigate to the first page,
                 // configuring the new page by passing required information as a navigation
                 // parameter
-                Banana();
-                if (exist == true)
+                CheckForFile();
+                if (exist)
                 {
                     rootFrame.Navigate(typeof (View.MainPage), e.Arguments);
                 }

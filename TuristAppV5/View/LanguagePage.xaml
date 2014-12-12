@@ -140,7 +140,7 @@
             </Ellipse>
             <Path Data="M161.5,0.5 L161.5,286.412 L161.241,286.409 C72.0825,284.452 0.5,221.199 0.5,143.456 C0.5,65.7134 72.0825,2.46051 161.241,0.502838 z" Fill="#FFED6B06" HorizontalAlignment="Left" Height="286.912" Margin="0,0.044,0,0" RenderTransformOrigin="1.0216,0.5" Stretch="Fill" Stroke="#FFED6B06" UseLayoutRounding="False" VerticalAlignment="Top" Width="162"/>
             <Image HorizontalAlignment="Left" Height="191" VerticalAlignment="Top" Width="198" Source="ms-appx:///Assets/Icons/appbar.flag.wavy.png" Margin="0,48,0,0" Stretch="Fill"/>
-            <Button x:Name="MenuButton1" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Height="290" Margin="0,0,-3,0" Width="334" BorderBrush="{x:Null}" Foreground="White" Background="{x:Null}" FontWeight="Normal" FontSize="11" FontFamily="Global User Interface"/>
+            <Button x:Name="SpanishButton" Content="Button" HorizontalAlignment="Left" Margin="-3" VerticalAlignment="Top" Height="297" Width="331" Opacity="0" Click="SpanishLanguageButton"/>
         </Grid>
         <Grid Margin="1002,467,39,10">
             <Grid.ColumnDefinitions>
@@ -156,7 +156,7 @@
             </Ellipse>
             <Path Data="M161.5,0.5 L161.5,286.412 L161.241,286.409 C72.0825,284.452 0.5,221.199 0.5,143.456 C0.5,65.7134 72.0825,2.46051 161.241,0.502838 z" Fill="#FFED6B06" HorizontalAlignment="Left" Height="286.912" Margin="0,0.044,0,0" RenderTransformOrigin="1.0216,0.5" Stretch="Fill" Stroke="#FFED6B06" UseLayoutRounding="False" VerticalAlignment="Top" Width="162"/>
             <Image HorizontalAlignment="Left" Height="191" VerticalAlignment="Top" Width="198" Source="ms-appx:///Assets/Icons/appbar.flag.wavy.png" Stretch="Fill" Margin="0,46,0,0"/>
-            <Button x:Name="MenuButton2" HorizontalAlignment="Left" VerticalAlignment="Top" Height="290" Margin="0,0,-3,0" Width="334" BorderBrush="{x:Null}" Foreground="White" Background="{x:Null}" FontWeight="Normal" FontSize="11" FontFamily="Global User Interface"/>
+            <Button x:Name="RussianButton" Content="Button" HorizontalAlignment="Left" Margin="-3" VerticalAlignment="Top" Height="297" Width="331" Opacity="0" Click="RussianLanguageButton"/>
         </Grid>
         <Grid Margin="530,467,511,10">
             <Grid.ColumnDefinitions>
@@ -172,7 +172,7 @@
                 </Path.RenderTransform>
             </Path>
             <Image HorizontalAlignment="Left" Height="191" VerticalAlignment="Top" Width="198" Source="ms-appx:///Assets/Icons/appbar.flag.wavy.png" Margin="0,48,0,0" Stretch="Fill"/>
-            <Button x:Name="MenuButton3" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Height="290" Margin="8,0,-17,0" BorderBrush="{x:Null}" Foreground="White" Background="{x:Null}" FontWeight="Normal" FontSize="11" FontFamily="Global User Interface" Width="334"/>
+            <Button x:Name="FrenchButton" Content="Button" HorizontalAlignment="Left" Margin="-3,-3,-18,0" VerticalAlignment="Top" Height="293" Width="346" Opacity="0" Click="FrenchLanguageButton"/>
         </Grid>
         <Grid Margin="39,467,1002,10">
             <Grid.ColumnDefinitions>
@@ -188,7 +188,7 @@
             </Ellipse>
             <Path Data="M161.5,0.5 L161.5,286.412 L161.241,286.409 C72.0825,284.452 0.5,221.199 0.5,143.456 C0.5,65.7134 72.0825,2.46051 161.241,0.502838 z" Fill="#FFED6B06" HorizontalAlignment="Left" Height="286.912" Margin="0,0.044,0,0" RenderTransformOrigin="1.0216,0.5" Stretch="Fill" Stroke="#FFED6B06" UseLayoutRounding="False" VerticalAlignment="Top" Width="162"/>
             <Image HorizontalAlignment="Left" Height="191" VerticalAlignment="Top" Width="198" Source="ms-appx:///Assets/Icons/appbar.flag.wavy.png" Margin="0,48,0,0" Stretch="Fill"/>
-            <Button x:Name="MenuButton4" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Height="290" Margin="0,0,-3,0" Width="334" BorderBrush="{x:Null}" Foreground="White" Background="{x:Null}" FontWeight="Normal" FontSize="11" FontFamily="Global User Interface"/>
+            <Button x:Name="GermanButton" Content="Button" HorizontalAlignment="Left" Margin="-3,-3,0,-3" VerticalAlignment="Top" Height="297" Width="325" Opacity="0" Click ="GermanLanguageButton"/>
         </Grid>
         <Grid Margin="530,144,511,333">
             <Grid.ColumnDefinitions>
@@ -222,7 +222,7 @@
             <Image HorizontalAlignment="Left" Height="191" VerticalAlignment="Top" Width="198" Source="ms-appx:///Assets/Icons/appbar.flag.wavy.png" Margin="0,48,0,0" Stretch="Fill"/>
         </Grid>
         <Rectangle Fill="#FFED6B06" HorizontalAlignment="Left" Height="40" Margin="355,25,0,0" Stroke="#FFED6B06" VerticalAlignment="Top" Width="710" RadiusX="45" RadiusY="45"/>
-        <Button Content="" HorizontalAlignment="Left" BorderThickness="0" VerticalAlignment="Top" Margin="27,141,0,0" Height="297" Width="340" Click="Button_Click_1"/>
-
+        <Button x:Name="DanishButton" Content="" HorizontalAlignment="Left" BorderThickness="0" VerticalAlignment="Top" Margin="27,141,0,0" Height="297" Width="340" Click="DanishLanguageButton" Opacity="0"/>
+        <Button x:Name="EnglishButton"  Content="" HorizontalAlignment="Left" Margin="527,141,0,0" VerticalAlignment="Top" Height="293" Width="331" Opacity="0" Click ="EnglishLanguageButton"/>
     </Grid>
 </Page>
