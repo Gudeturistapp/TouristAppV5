@@ -1,188 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
-  Id="a0d24504-0104-4935-a7b8-21590300764d"
-  name="ViewModel" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  Id="7eab2b1d-18b3-47a7-ba46-62b75b880982"
+  name="ViewModel1" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
   <packagedElements>
     <packageHasNamedElement>
       <class
-        Id="18fcb55b-d9f0-495a-8d06-fbd1800151af"
+        Id="77ba7a42-c564-46d5-aa28-b125d935a630"
         name="MainViewModel"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
         <targetEnds>
           <association
-            Id="d88df59b-35d7-4442-b8d1-e49b2918fafb"
-            isDerived="false"
-            sourceEndRoleName="MainViewModel"
-            targetEndRoleName="Museum"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="5a4152da-0f85-4f3b-a5cf-26a6d1db4c7e"
-              LastKnownName="MuseumList"
-              LastKnownLocation="Package_1250.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="d5f926f5-1783-4861-ac72-c48251c9f747"
-                  name="MainViewModel"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="6c469711-b896-49b8-9dac-47cd01d55ea7"
-                  name="Museum"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
-            Id="c7c2686f-bece-4e45-8752-046e98824d27"
-            isDerived="false"
-            sourceEndRoleName="MainViewModel"
-            targetEndRoleName="Shopping"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="d4484eea-82b7-41a0-b715-c576e30a3a93"
-              LastKnownName="ShoppingList"
-              LastKnownLocation="Package_1250.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="b39ac5d4-9c4b-4e2a-a6dc-8bfb66c9c492"
-                  name="MainViewModel"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="2827839d-2b62-4943-941b-c80f478b07ff"
-                  name="Shopping"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
-            Id="90723090-3f5d-4600-8748-749582963a56"
-            isDerived="false"
-            sourceEndRoleName="MainViewModel"
-            targetEndRoleName="Event"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="9ea7195e-acc0-4ec5-b9c5-bd1adeb0d4f5"
-              LastKnownName="EventList"
-              LastKnownLocation="Package_1250.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="d702204b-364a-4165-bdee-7799dbe1c601"
-                  name="MainViewModel"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="b4edfcd7-1259-4031-b543-f0dbb2abb6f2"
-                  name="Event"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
-            Id="ea00f015-8ac5-4c89-a1ac-99452b9ff9b4"
-            isDerived="false"
-            sourceEndRoleName="MainViewModel"
-            targetEndRoleName="Restaurant"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="4d743120-03ab-46d4-8883-ac35953f8a29"
-              LastKnownName="RestaurantList"
-              LastKnownLocation="Package_1250.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="00b802f0-4830-4dee-9c2b-188d9e91cbe3"
-                  name="MainViewModel"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="233b6e17-9685-45ae-9563-a50ee783ad2a"
-                  name="Restaurant"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
-            Id="dccc08e6-b010-446f-8463-2117877c6a0a"
+            Id="969f8b3c-c583-4861-b9f4-c0a2cd2fa64e"
             isDerived="false"
             sourceEndRoleName="MainViewModel"
             targetEndRoleName="RelayCommand"
             isLeaf="false"
             isAbstract="false">
             <classMoniker
-              Id="54149b84-cfff-496b-9955-e5f37cfa3f82"
+              Id="62a984cf-23f1-4e75-a3a8-bd4263b26626"
               LastKnownName="RelayCommand"
-              LastKnownLocation="Package_1247.uml" />
+              LastKnownLocation="Package1_1641.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="4d6793cb-efad-431d-b8c7-25460435c705"
+                  Id="c5a161b4-a5ae-492d-9f2b-28250f05cc3d"
                   name="MainViewModel"
                   isLeaf="false"
                   isStatic="false"
@@ -195,8 +39,86 @@
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="940e96ac-58f9-4f26-8eff-7ea7da32a92c"
+                  Id="e031a164-8acd-44ef-888b-81c1dbe3cca5"
                   name="RelayCommand"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="297f6e31-902b-4f8d-83a3-d3a3b5597f98"
+            isDerived="false"
+            sourceEndRoleName="MainViewModel"
+            targetEndRoleName="Class1"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="eb17f5a0-b50c-42f5-9619-53527b3a5b6c"
+              LastKnownName="AttractionList"
+              LastKnownLocation="Package_1642.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a3253748-d845-47fc-ae02-ca193bdb1537"
+                  name="MainViewModel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f30c875e-33e8-440d-89d5-6a1eb00708a7"
+                  name="Class1"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="7774b352-8fe4-4bf7-af71-b2b9130f9815"
+            isDerived="false"
+            sourceEndRoleName="MainViewModel"
+            targetEndRoleName="User Data"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="2478f059-9091-4de7-b92d-6dd0a00dcf1d"
+              LastKnownName="User Data"
+              LastKnownLocation="Package_1642.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4998c94b-dfeb-4fcc-9f00-c80ac346d819"
+                  name="MainViewModel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b185829d-bcb9-451b-b393-33bc77440287"
+                  name="User Data"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -210,7 +132,18 @@
         </targetEnds>
         <ownedAttributesInternal>
           <property
-            Id="c6d5a103-3805-4b77-842f-2a033a3b29e7"
+            Id="b4935218-11c8-4e26-a329-bacdfd52f505"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="e2c5a9b0-6ae9-4eb9-82e6-5a525da45239"
+            name="SelectedAttraction"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -224,7 +157,7 @@
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
-        Id="54149b84-cfff-496b-9955-e5f37cfa3f82"
+        Id="62a984cf-23f1-4e75-a3a8-bd4263b26626"
         name="RelayCommand"
         isAbstract="false"
         isLeaf="false"

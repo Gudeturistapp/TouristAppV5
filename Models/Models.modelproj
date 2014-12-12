@@ -22,6 +22,13 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
+    <Content Include="Analyse\Design.Class.Diagram.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Analyse\Design.Class.Diagram.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Analyse\Design.Class.Diagram.classdiagram</DependentUpon>
+    </Content>
     <Content Include="Analyse\Design.classdiagram">
       <SubType>Content</SubType>
     </Content>
@@ -32,12 +39,22 @@
       <SubType>Content</SubType>
       <DependentUpon>Analyse\Sequence.sequencediagram</DependentUpon>
     </Content>
+    <Content Include="Business Modeling\Domain model2.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Business Modeling\Domain model2.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Business Modeling\Domain model2.classdiagram</DependentUpon>
+    </Content>
     <Content Include="Business Modeling\Domain.classdiagram">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Business Modeling\Domain.classdiagram.layout">
       <SubType>Content</SubType>
       <DependentUpon>Business Modeling\Domain.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="ModelDefinition\Package1_1641.uml">
+      <SubType>Content</SubType>
     </Content>
     <Content Include="ModelDefinition\Package_1237.uml">
       <SubType>Content</SubType>
@@ -47,6 +64,19 @@
     </Content>
     <Content Include="ModelDefinition\Package_1250.uml">
       <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1641.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1642.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Requirements\System.Sekvens.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Requirements\System.Sekvens.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Requirements\System.Sekvens.sequencediagram</DependentUpon>
     </Content>
     <Content Include="Requirements\TestPlan.docx">
       <SubType>Content</SubType>
