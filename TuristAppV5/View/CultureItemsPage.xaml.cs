@@ -90,5 +90,10 @@ namespace TuristAppV5.View
 
         #endregion
 
+        private void CultureButton1_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
       }
 }
