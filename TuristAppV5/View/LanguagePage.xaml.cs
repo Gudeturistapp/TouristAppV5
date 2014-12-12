@@ -101,5 +101,10 @@ namespace TuristAppV5.View
             Frame.Navigate(typeof(MainPage));
         } 
         #endregion
+
+        private void ExitButton_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Exit();
+        }
     }
 }
