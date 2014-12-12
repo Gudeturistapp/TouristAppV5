@@ -5,16 +5,16 @@
     xmlns:common="using:TuristAppV5.Common"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:ViewModel="using:TuristAppV5.ViewModel"
-    x:Name="pageRoot"
-    x:Class="TuristAppV5.View.ItemsPage"
+    xmlns:viewModel="using:TuristAppV5.ViewModel"
+    x:Name="PageRoot"
+    x:Class="TuristAppV5.View.EventItemsPage"
     DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Mode=Self}}"
     mc:Ignorable="d">
 
     <Page.Resources>
         <!-- Collection of items displayed by this page -->
         <CollectionViewSource
-        x:Name="itemsViewSource"
+        x:Name="ItemsViewSource"
         Source="{Binding Items}"/>
 
         <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
@@ -206,7 +206,7 @@
 			SelectionMode="None"
 			IsSwipeEnabled="false" Background="#B200C8FF">
             <GridView.DataContext>
-                <ViewModel:MainViewModel/>
+                <viewModel:MainViewModel/>
             </GridView.DataContext>
             
 
@@ -218,7 +218,7 @@
                 <ColumnDefinition Width="120"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="backButton" Margin="39,59,39,0" Command="{Binding NavigationHelper.GoBackCommand, ElementName=pageRoot}"
+            <Button x:Name="backButton" Margin="39,59,39,0" Command="{Binding NavigationHelper.GoBackCommand, ElementName=PageRoot}"
 				Style="{StaticResource NavigationBackButtonNormalStyle}"
 				VerticalAlignment="Top"
 				AutomationProperties.Name="Back"
@@ -231,7 +231,7 @@
                 <Path Data="M120.5,0.5 L120.5,205.234 L120.49,205.234 C53.6515,202.488 0.5,157.707 0.5,102.867 C0.5,48.0268 53.6515,3.24557 120.49,0.500298 z" Fill="#FFED6B06" HorizontalAlignment="Left" Margin="0,0.133" Stretch="Fill" Stroke="Black" UseLayoutRounding="False" Width="121"/>
                 <Ellipse HorizontalAlignment="Left" Height="155" Margin="28,26,0,0" Stroke="Black" VerticalAlignment="Top" Width="199">
                     <Ellipse.DataContext>
-                        <ViewModel:MainViewModel/>
+                        <viewModel:MainViewModel/>
                     </Ellipse.DataContext>
 
                     <Ellipse.Fill>
@@ -246,7 +246,7 @@
                 <Path Data="M120.5,0.5 L120.5,205.234 L120.49,205.234 C53.6515,202.488 0.5,157.707 0.5,102.867 C0.5,48.0268 53.6515,3.24557 120.49,0.500298 z" Fill="#FFED6B06" HorizontalAlignment="Left" Margin="0,0.133" Stretch="Fill" Stroke="Black" UseLayoutRounding="False" Width="121"/>
                 <Ellipse HorizontalAlignment="Left" Height="155" Margin="28,26,0,0" Stroke="Black" VerticalAlignment="Top" Width="199">
                     <Ellipse.DataContext>
-                        <ViewModel:MainViewModel/>
+                        <viewModel:MainViewModel/>
                     </Ellipse.DataContext>
                     <Ellipse.Fill>
                         <ImageBrush Stretch="Fill" ImageSource="{Binding SelectedAttraction.photo2}"/>
@@ -254,7 +254,7 @@
                 </Ellipse>
                 <Button x:Name="EventButton2" Content="Button" HorizontalAlignment="Left" Margin="7,-3,0,-3" VerticalAlignment="Top" Height="212" Width="223" BorderBrush="Transparent" Foreground="Transparent" Opacity="0">
                     <Button.DataContext>
-                        <ViewModel:MainViewModel/>
+                        <viewModel:MainViewModel/>
                     </Button.DataContext>
                 </Button>
             </Grid>
@@ -264,7 +264,7 @@
                 <Path Data="M120.5,0.5 L120.5,205.234 L120.49,205.234 C53.6515,202.488 0.5,157.707 0.5,102.867 C0.5,48.0268 53.6515,3.24557 120.49,0.500298 z" Fill="#FFED6B06" HorizontalAlignment="Left" Margin="0,0.133" Stretch="Fill" Stroke="Black" UseLayoutRounding="False" Width="121"/>
                 <Ellipse HorizontalAlignment="Left" Height="155" Margin="28,26,0,0" Stroke="Black" VerticalAlignment="Top" Width="199">
                     <Ellipse.DataContext>
-                        <ViewModel:MainViewModel/>
+                        <viewModel:MainViewModel/>
                     </Ellipse.DataContext>
                     <Ellipse.Fill>
                         <ImageBrush Stretch="Fill" ImageSource="{Binding SelectedAttraction.photo4}"/>
@@ -278,7 +278,7 @@
                 <Path Data="M120.5,0.5 L120.5,205.234 L120.49,205.234 C53.6515,202.488 0.5,157.707 0.5,102.867 C0.5,48.0268 53.6515,3.24557 120.49,0.500298 z" Fill="#FFED6B06" HorizontalAlignment="Left" Margin="0,0.133" Stretch="Fill" Stroke="Black" UseLayoutRounding="False" Width="121"/>
                 <Ellipse HorizontalAlignment="Left" Height="155" Margin="28,26,0,0" Stroke="Black" VerticalAlignment="Top" Width="199">
                     <Ellipse.DataContext>
-                        <ViewModel:MainViewModel/>
+                        <viewModel:MainViewModel/>
                     </Ellipse.DataContext>
                     <Ellipse.Fill>
                         <ImageBrush Stretch="Fill" ImageSource="{Binding SelectedAttraction.photo3}"/>

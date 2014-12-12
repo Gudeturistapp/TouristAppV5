@@ -22,7 +22,7 @@ namespace TuristAppV5.View
     /// A page that displays a collection of item previews.  In the Split Application this page
     /// is used to display and select one of the available groups.
     /// </summary>
-    public sealed partial class ItemsPage : Page
+    public sealed partial class EatItemsPage : Page
     {
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
@@ -44,7 +44,7 @@ namespace TuristAppV5.View
             get { return this.navigationHelper; }
         }
 
-        public ItemsPage()
+        public EatItemsPage()
         {
             this.InitializeComponent();
             this.navigationHelper = new NavigationHelper(this);

@@ -23,7 +23,7 @@ namespace TuristAppV5.View
 
         private void Button_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof (ItemsPage));
+            this.Frame.Navigate(typeof (CultureItemsPage));
         }
 
 
@@ -32,13 +32,13 @@ namespace TuristAppV5.View
             
 
             MainViewModel.SelectedAttraction = viewModel.Events.AttractionLists[4];
-            Frame.Navigate(typeof (ItemsPage));
+            Frame.Navigate(typeof (EatItemsPage));
         }
 
         private void RestaurantButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
             MainViewModel.SelectedAttraction = viewModel.Restaurants.AttractionLists[4];
-            Frame.Navigate(typeof (ItemsPage));
+            Frame.Navigate(typeof (EventItemsPage));
         }
     }
 }
