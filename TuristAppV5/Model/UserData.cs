@@ -8,16 +8,16 @@ namespace TuristAppV5.Model
 {
     public class UserData
     {
-        private static string _password;
+        private static string _userName;
         private static string _email;
         private static string _phone;
 
-        public string UserPassword
+        public string UserName
         {
-            get { return _password; }
-            set { _password = value; }
+            get { return _userName; }
+            set { _userName = value; }
         }
-
+       
         public string UserEmail
         {
             get { return _email; }
@@ -30,9 +30,8 @@ namespace TuristAppV5.Model
             set { _phone = value; }
         }
 
-        public UserData(string password, string email, string phone)
+        public UserData(string email, string phone)
         {
-            _password = password;
             _email = email;
             _phone = phone;
         }

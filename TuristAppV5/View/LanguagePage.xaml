@@ -222,7 +222,7 @@
             <Image HorizontalAlignment="Left" Height="191" VerticalAlignment="Top" Width="198" Source="ms-appx:///Assets/Icons/appbar.flag.wavy.png" Margin="0,48,0,0" Stretch="Fill"/>
         </Grid>
         <Rectangle Fill="#FFED6B06" HorizontalAlignment="Left" Height="40" Margin="355,25,0,0" Stroke="#FFED6B06" VerticalAlignment="Top" Width="710" RadiusX="45" RadiusY="45"/>
-        <Button Content="" HorizontalAlignment="Left" BorderThickness="0" VerticalAlignment="Top" Margin="27,141,0,0" Height="297" Width="340" Click="Button_Click_1"/>
+        <Button Content="" HorizontalAlignment="Left" BorderThickness="0" VerticalAlignment="Top" Margin="27,141,0,0" Height="297" Width="340" Click="Button_Click_1" Opacity="0"/>
 
     </Grid>
 </Page>

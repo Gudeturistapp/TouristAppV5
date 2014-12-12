@@ -26,6 +26,7 @@ namespace TuristAppV5.View
     public sealed partial class ItemDetailPage : Page
     {
         public Login login = new Login();
+        private UserData userData = new UserData("", "");
 
 
         private NavigationHelper navigationHelper;
@@ -113,8 +114,15 @@ namespace TuristAppV5.View
 
         private void OrderButton_Click(object sender, RoutedEventArgs e)
         {
-            OrderAppBar.IsOpen = true;
-            OrderAppBar.Visibility = Visibility.Visible;
+            if (login.IsLoggedIn == true)
+            {
+                OrderAppBar.IsOpen = true;
+                OrderAppBar.Visibility = Visibility.Visible;
+
+                OrderHereNameBox.Text = userData.UserName;
+                OrderHereEmailBox.Text = userData.UserEmail;
+                OrderHerePhoneBox.Text = userData.UserPhone;
+            }
         }
 
         private void RegisterButton_Click(object sender, RoutedEventArgs e)
@@ -130,27 +138,30 @@ namespace TuristAppV5.View
         public void Register()
         {
             if (!string.IsNullOrWhiteSpace(registerUserNameBox.Text) &&
-                !string.IsNullOrWhiteSpace(registerPasswordBox.Text) &&
-                !string.IsNullOrWhiteSpace(registerReEnterPasswordBox.Text) &&
+                !string.IsNullOrWhiteSpace(registerPasswordBox.Password) &&
+
                 !string.IsNullOrWhiteSpace(registerEmailBox.Text) &&
                 !string.IsNullOrWhiteSpace(registerPhoneBox.Text))
             {
 
-                if (registerPasswordBox.Text == registerReEnterPasswordBox.Text)
+                if (registerPasswordBox.Password != null)
                 {
-                    UserData userdata = new UserData(registerPasswordBox.Text, registerEmailBox.Text, registerPhoneBox.Text);
+                    userData.UserName = registerUserNameBox.Text;
+                    userData.UserEmail = registerEmailBox.Text;
+                    userData.UserPhone = registerPhoneBox.Text;
 
-                    login.LoginDictionary.Add(registerUserNameBox.Text, userdata);
+                    login.LoginDictionary.Add(registerUserNameBox.Text, registerPasswordBox.Password);
 
                     login.IsLoggedIn = true;
 
                     RegisterButton.Flyout.Hide();
 
-
+                    ErrorBlock.Text = "";
                     SuccessBlock.Text = "Success! User has been created.";
                 }
                 else
                 {
+                    SuccessBlock.Text = "";
                     ErrorBlock.Text = "Passwords doesn't match.";
                 }
             }

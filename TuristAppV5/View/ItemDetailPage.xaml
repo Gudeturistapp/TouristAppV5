@@ -265,7 +265,7 @@
 						<LineBreak/>
 						<Run/>
                     </TextBlock>
-                    <TextBox TextWrapping="Wrap" FontSize="26.667" Height="44" IsReadOnly="True"/>
+                    <TextBox x:Name="OrderHereNameBox" TextWrapping="Wrap" FontSize="26.667" Height="44" IsReadOnly="True"/>
                     <TextBlock TextWrapping="Wrap" FontSize="26.667" Height="62">
 						<Run/>
 						<LineBreak/>
@@ -275,14 +275,14 @@
 						<LineBreak/>
 						<Run/>
                     </TextBlock>
-                    <TextBox TextWrapping="Wrap" FontSize="26.667" Height="41" IsReadOnly="True"/>
+                    <TextBox x:Name="OrderHerePhoneBox" TextWrapping="Wrap" FontSize="26.667" Height="41" IsReadOnly="True"/>
                     <TextBlock TextWrapping="Wrap" Height="59" VerticalAlignment="Bottom">
 						<LineBreak/>
 						<Run FontSize="26.667"/>
 						<LineBreak/>
 						<Run FontSize="26.667" Text="E-mail"/>
                     </TextBlock>
-                    <TextBox TextWrapping="Wrap" Text="&#xA;" IsReadOnly="True"/>
+                    <TextBox x:Name="OrderHereEmailBox" TextWrapping="Wrap" Text="&#xA;" IsReadOnly="True"/>
                 </StackPanel>
                 <StackPanel Height="76" Width="364">
                     <StackPanel Height="151" Margin="0,0,0.286,0" Orientation="Horizontal">
