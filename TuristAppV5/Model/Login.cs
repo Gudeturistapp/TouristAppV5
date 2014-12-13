@@ -24,5 +24,7 @@ namespace TuristAppV5.Model
             get { return isLoggedIn; }
             set { isLoggedIn = value; }
         }
+
+        
     }
 }

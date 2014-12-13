@@ -29,6 +29,7 @@ namespace TuristAppV5.View
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
 
         MainViewModel viewModel = new MainViewModel();
+        ItemDetailPageNEW itemDetailPage = new ItemDetailPageNEW();
 
         /// <summary>
         /// This can be changed to a strongly typed view model.
@@ -117,6 +118,11 @@ namespace TuristAppV5.View
         {
             MainViewModel.SelectedAttraction = viewModel.Events.AttractionLists[0];
             Frame.Navigate(typeof(ItemDetailPageNEW));
+        }
+
+        private void Login()
+        {
+            itemDetailPage.Login();
         }
 
       }

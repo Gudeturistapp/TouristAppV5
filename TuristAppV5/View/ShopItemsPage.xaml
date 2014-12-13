@@ -253,6 +253,9 @@
                     </Ellipse.Fill>
                 </Ellipse>
                 <Button x:Name="ShopButton2" Content="Button" HorizontalAlignment="Left" Margin="7,-3,0,-3" VerticalAlignment="Top" Height="212" Width="223" BorderBrush="Transparent" Foreground="Transparent" Opacity="0" Click="ShopButton2_Click">
+                    <Button.Background>
+                        <ImageBrush Stretch="Fill"/>
+                    </Button.Background>
                     <Button.DataContext>
                         <viewModel:MainViewModel/>
                     </Button.DataContext>

@@ -26,31 +26,7 @@ namespace TuristAppV5.Model
         } 
         #endregion
 
-        public string name1 { get; set; }
-        public string name2 { get; set; }
-        public string name3 { get; set; }
-        public string name4 { get; set; }
-
-        public string photo1 { get; set; }
-
-        public string photo2 { get; set; }
-
-        public string photo3 { get; set; }
-        
-        public string photo4 { get; set; }
-
-        public Attractions(string name1, string photo1, string name2, string photo2, string name3, string photo3,
-            string name4, string photo4)
-        {
-            this.name1 = name1;
-            this.photo1 = photo1;
-            this.name2 = name2;
-            this.photo2 = photo2;
-            this.name3 = name3;
-            this.photo3 = photo3;
-            this.name4 = name4;
-            this.photo4 = photo4;
-        }
+       
     
 
         

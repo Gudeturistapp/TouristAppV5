@@ -345,10 +345,10 @@
 				AutomationProperties.ItemType="Navigation Button"/>
             <Maps:Map Credentials="AntbJxTZZb2Q4bKMr0xQktLpJsaE1GUU1xQOhYDpLmof3c_88gDrCqDwKE2VR2xG" x:Name="myMap" Margin="0,480,1450,310" Grid.ColumnSpan="2"/>
             <TextBlock x:Name="pageTitle" Text="{Binding SelectedAttraction._name}" FontWeight="SemiBold" FontSize="47" Style="{StaticResource HeaderTextBlockStyle}" 
-            	IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="432,0,-412,1021" Grid.Column="1"/>
+            	IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="471,0,876,1021" Grid.Column="1"/>
         </Grid>
         <Ellipse x:Name="OrderButton1" Fill="#FFED6B06" HorizontalAlignment="Left" Height="272" Margin="498,645,0,0" Stroke="Black" VerticalAlignment="Top" Width="367"/>
-        <Image HorizontalAlignment="Left" Height="294" Margin="0,186,0,0" VerticalAlignment="Top" Width="470" Source="{Binding SelectedAttraction._photo}"/>
+            <Image HorizontalAlignment="Left" Height="294" Margin="0,186,0,0" VerticalAlignment="Top" Width="470" Source="{Binding SelectedAttraction._photo}"/>
         <ListView x:Name="ReviewList" HorizontalAlignment="Left" Height="490" Margin="930,135,0,0" VerticalAlignment="Top" Width="400"/>
         <TextBox x:Name="AddReviewText" HorizontalAlignment="Left" Margin="930,625,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="70" Width="400" PlaceholderText="Write your Review here!" AcceptsReturn="True"/>
         <TextBlock x:Name="OrderHereBlock" HorizontalAlignment="Left" Margin="580,700,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="61" Width="230" FontSize="40" FontWeight="Bold"/>
