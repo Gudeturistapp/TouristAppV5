@@ -15,7 +15,6 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
 // The Item Detail Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234232
-using TuristAppV5.Model;
 
 namespace TuristAppV5.View
 {
@@ -23,12 +22,8 @@ namespace TuristAppV5.View
     /// A page that displays details for a single item within a group while allowing gestures to
     /// flip through other items belonging to the same group.
     /// </summary>
-    public sealed partial class ItemDetailPage : Page
+    public sealed partial class ItemDetailPageNEW : Page
     {
-        public Login login = new Login();
-        private UserData userData = new UserData("", "");
-
-
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
 
@@ -49,20 +44,11 @@ namespace TuristAppV5.View
             get { return this.navigationHelper; }
         }
 
-        public ItemDetailPage()
+        public ItemDetailPageNEW()
         {
             this.InitializeComponent();
             this.navigationHelper = new NavigationHelper(this);
             this.navigationHelper.LoadState += navigationHelper_LoadState;
-
-            if (login.IsLoggedIn == false)
-            {
-                OrderHereBlock.Text = "Log in first";
-            }
-            else
-            {
-                OrderHereBlock.Text = "Order here";
-            }
         }
 
         /// <summary>
@@ -111,91 +97,5 @@ namespace TuristAppV5.View
         }
 
         #endregion
-
-        private void OrderButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (login.IsLoggedIn == true)
-            {
-                OrderAppBar.IsOpen = true;
-                OrderAppBar.Visibility = Visibility.Visible;
-
-                OrderHereNameBox.Text = userData.UserName;
-                OrderHereEmailBox.Text = userData.UserEmail;
-                OrderHerePhoneBox.Text = userData.UserPhone;
-            }
-        }
-
-        private void RegisterButton_Click(object sender, RoutedEventArgs e)
-        {
-            Register();
-        }
-
-        private void CancelOrderButton_Click(object sender, RoutedEventArgs e)
-        {
-            OrderAppBar.Visibility = Visibility.Collapsed;
-        }
-
-        public void Register()
-        {
-            if (!string.IsNullOrWhiteSpace(registerUserNameBox.Text) &&
-                !string.IsNullOrWhiteSpace(registerPasswordBox.Password) &&
-
-                !string.IsNullOrWhiteSpace(registerEmailBox.Text) &&
-                !string.IsNullOrWhiteSpace(registerPhoneBox.Text))
-            {
-
-                
-                    userData.UserName = registerUserNameBox.Text;
-                    userData.UserEmail = registerEmailBox.Text;
-                    userData.UserPhone = registerPhoneBox.Text;
-
-                    login.LoginDictionary.Add(registerUserNameBox.Text, registerPasswordBox.Password);
-
-                    login.IsLoggedIn = true;
-
-                    RegisterButton.Flyout.Hide();
-
-                    ErrorBlock.Text = "";
-                    SuccessBlock.Text = "Success! User has been created.";
-               
-            }
-            else
-            {
-                SuccessBlock.Text = "";
-                ErrorBlock.Text = "Error! Please input values in all fields.";
-            }
-        }
-
-        public void Login()
-        {
-            if (login.LoginDictionary.ContainsKey(UsernameLoginBox.Text) && login.LoginDictionary.ContainsValue(PasswordLoginBox.Password))
-            {
-                login.IsLoggedIn = true;
-                LoginButton.Flyout.Hide();
-
-                ErrorBlock.Text = "";
-                SuccessBlock.Text = "Success! Loggged in.";
-
-                OrderHereBlock.Text = "Order here";
-            }
-            else
-            {
-                SuccessBlock.Text = "";
-                ErrorBlock.Text = "Error! Username or password incorrect.";
-            }
-        }
-
-
-        private void LoginButton_Click(object sender, RoutedEventArgs e)
-        {
-            Login();
-        }
-
-        private void RegisterButton1_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        
     }
 }

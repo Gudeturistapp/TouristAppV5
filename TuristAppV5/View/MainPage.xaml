@@ -209,7 +209,7 @@
                     </Button.Foreground>
                 </Button>
                 <TextBox HorizontalAlignment="Left" Margin="62,124,0,0" TextWrapping="Wrap" Text="Culture" VerticalAlignment="Top" Height="76" Width="147" Background="Transparent" Foreground="White" BorderBrush="Transparent" FontSize="22" FontWeight="Bold" IsReadOnly="True"/>
-                <Button x:Name="CultureButton" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Height="290" Margin="0,0,-3,0" Width="334" BorderBrush="Transparent" Foreground="Transparent" Opacity="0"/>
+                <Button x:Name="CultureButton" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Height="290" Margin="0,0,-3,0" Width="334" BorderBrush="Transparent" Foreground="Transparent" Opacity="0" Click="CultureButton_Click"/>
             </Grid>
         </StackPanel>
         <StackPanel HorizontalAlignment="Left" Height="300" Margin="322,432,0,0" VerticalAlignment="Top" Width="331">
@@ -249,7 +249,7 @@
                     </Button.Foreground>
                 </Button>
                 <TextBox HorizontalAlignment="Left" Margin="44,132,0,0" TextWrapping="Wrap" Text="Shopping" VerticalAlignment="Top" Height="71" Width="142" Background="Transparent" Foreground="White" BorderBrush="Transparent" FontSize="22" FontWeight="Bold" IsReadOnly="True"/>
-                <Button x:Name="ShoppingButton" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Height="290" Margin="0,0,-3,0" Width="334" BorderBrush="Transparent" Foreground="Transparent" Opacity="0"/>
+                <Button x:Name="ShoppingButton" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Height="290" Margin="0,0,-3,0" Width="334" BorderBrush="Transparent" Foreground="Transparent" Opacity="0" Click="ShoppingButton_Click"/>
             </Grid>
         </StackPanel>
 

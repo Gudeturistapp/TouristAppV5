@@ -119,6 +119,9 @@
     <Compile Include="View\CultureItemsPage.xaml.cs">
       <DependentUpon>CultureItemsPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\ItemDetailPageNEW.xaml.cs">
+      <DependentUpon>ItemDetailPageNEW.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\ShopItemsPage.xaml.cs">
       <DependentUpon>ShopItemsPage.xaml</DependentUpon>
     </Compile>
@@ -223,6 +226,10 @@
     <Page Include="View\CultureItemsPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\ItemDetailPageNEW.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\ShopItemsPage.xaml">
       <Generator>MSBuild:Compile</Generator>

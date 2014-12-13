@@ -5,13 +5,12 @@
     xmlns:common="using:TuristAppV5.Common"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:bm="using:Bing.Maps"
-    xmlns:turistAppV5="using:TuristAppV5"
-    xmlns:viewModel="using:TuristAppV5.ViewModel"
-    x:Name="PageRoot"
-    x:Class="TuristAppV5.View.ItemDetailPage"
+    xmlns:ViewModel="using:TuristAppV5.ViewModel"
+    xmlns:Maps="using:Bing.Maps"
+    x:Name="pageRoot"
+    x:Class="TuristAppV5.View.ItemDetailPageNEW"
     DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Mode=Self}}"
-    mc:Ignorable="d" Background="White">
+    mc:Ignorable="d">
     <Page.Resources>
         <Style x:Key="AppBarButtonStyle1" TargetType="AppBarButton">
             <Setter Property="Foreground" Value="{ThemeResource AppBarItemForegroundThemeBrush1}"/>
@@ -177,7 +176,7 @@
                                         </StackPanel>
                                         <StackPanel Height="114" Margin="0,0,-228,0">
                                             <StackPanel Height="121" Margin="0,0,123,0" Orientation="Horizontal">
-                                                <AppBarButton x:Name="RegisterButton1" HorizontalAlignment="Stretch" Icon="Add" Label="Register" VerticalAlignment="Stretch" Click="RegisterButton1_Click" Margin="0,-4,0,10" Width="221"/>
+                                                <AppBarButton x:Name="RegisterButton1" HorizontalAlignment="Stretch" Icon="Add" Label="Register" VerticalAlignment="Stretch"  Margin="0,-4,0,10" Width="221"/>
                                             </StackPanel>
                                         </StackPanel>
                                     </StackPanel>
@@ -221,7 +220,7 @@
                                         </StackPanel>
                                         <StackPanel Height="76" Width="364">
                                             <StackPanel Height="85" Margin="0,0,130.286,0" Orientation="Horizontal">
-                                                <AppBarButton x:Name="LoginButton1" HorizontalAlignment="Stretch" Icon="Add" Label="Login" VerticalAlignment="Stretch" Click="LoginButton_Click" Margin="0,-14,0,-4" Width="219" FontFamily="Global User Interface">
+                                                <AppBarButton x:Name="LoginButton1" HorizontalAlignment="Stretch" Icon="Add" Label="Login" VerticalAlignment="Stretch" Margin="0,-14,0,-4" Width="219" FontFamily="Global User Interface">
                                                     <TextBlock Height="100" TextWrapping="Wrap" Text="TextBlock" Width="100"/>
                                                 </AppBarButton>
                                             </StackPanel>
@@ -284,8 +283,8 @@
                 </StackPanel>
                 <StackPanel Height="76" Width="364">
                     <StackPanel Height="151" Margin="0,0,0.286,0" Orientation="Horizontal">
-                        <AppBarButton HorizontalAlignment="Stretch" Icon="Cancel" Label="Cancel" VerticalAlignment="Stretch" Margin="0,0,0,53.714" Width="192" Click="CancelOrderButton_Click" Style="{StaticResource AppBarButtonStyle1}"/>
-                        <AppBarButton x:Name="OrderButton" HorizontalAlignment="Stretch" Icon="Add" Label="Place Order" VerticalAlignment="Stretch" Click="OrderButton_Click" Margin="0,0,0,51.143" Width="125" Style="{StaticResource AppBarButtonStyle1}"/>
+                        <AppBarButton HorizontalAlignment="Stretch" Icon="Cancel" Label="Cancel" VerticalAlignment="Stretch" Margin="0,0,0,53.714" Width="192"  Style="{StaticResource AppBarButtonStyle1}"/>
+                        <AppBarButton x:Name="OrderButton" HorizontalAlignment="Stretch" Icon="Add" Label="Place Order" VerticalAlignment="Stretch"  Margin="0,0,0,51.143" Width="125" Style="{StaticResource AppBarButtonStyle1}"/>
                     </StackPanel>
                 </StackPanel>
             </StackPanel>
@@ -298,6 +297,9 @@
         * Row 1 contains the rest of the page layout
     -->
     <Grid Background="#B200C8FF">
+        <Grid.DataContext>
+            <ViewModel:MainViewModel/>
+        </Grid.DataContext>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1920"/>
         </Grid.ColumnDefinitions>
@@ -310,41 +312,48 @@
             <RowDefinition Height="1080"/>
         </Grid.RowDefinitions>
 
+
         <!--
             TODO: Content should be placed within the following grid 
                   to show details for the current item
         -->
+        <Rectangle Fill="#FFED6B06" HorizontalAlignment="Left" Height="40" Margin="357,25,0,0" Stroke="#FFED6B06" VerticalAlignment="Top" Width="710" RadiusX="45" RadiusY="45"/>
+        <!--
+            TODO: Content should be placed within the following grid 
+                  to show details for the current item
+        -->
+        <Grid Grid.Row="1" x:Name="contentRegion"/>
 
         <!-- Back button and page title -->
-
-        <Grid.DataContext>
-            <viewModel:MainViewModel/>
-        </Grid.DataContext>
-
-        <!-- Back button and page title -->
-        <Grid Margin="0,0,0,975">
+        <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="120"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="backButton" Margin="39,59,39,0" Command="{Binding NavigationHelper.GoBackCommand, ElementName=PageRoot}"
+            <Grid.DataContext>
+                <ViewModel:MainViewModel/>
+            </Grid.DataContext>
+            <Button x:Name="backButton" Margin="39,59,39,0" Command="{Binding NavigationHelper.GoBackCommand, ElementName=pageRoot}"
 				Style="{StaticResource NavigationBackButtonNormalStyle}"
 				VerticalAlignment="Top"
 				AutomationProperties.Name="Back"
 				AutomationProperties.AutomationId="BackButton"
 				AutomationProperties.ItemType="Navigation Button"/>
-            <bm:Map Credentials="AntbJxTZZb2Q4bKMr0xQktLpJsaE1GUU1xQOhYDpLmof3c_88gDrCqDwKE2VR2xG" x:Name="myMap" Margin="0,480,1450,-665" Grid.ColumnSpan="2"/>
-            <Rectangle Grid.Column="1" Fill="#FFED6B06" HorizontalAlignment="Left" Height="40" Margin="237,25,0,0" Stroke="#FFED6B06" VerticalAlignment="Top" Width="710" RadiusX="45" RadiusY="45"/>
-            <TextBlock x:Name="pageTitle" FontWeight="SemiBold" FontSize="" Text="{Binding SelectedAttraction._name}" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
-            	IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="410,0,-93,40" Height="40"/>
+            <Maps:Map Credentials="AntbJxTZZb2Q4bKMr0xQktLpJsaE1GUU1xQOhYDpLmof3c_88gDrCqDwKE2VR2xG" x:Name="myMap" Margin="0,480,1450,310" Grid.ColumnSpan="2"/>
+            <TextBlock x:Name="pageTitle" Text="{Binding SelectedAttraction._name}" FontWeight="SemiBold" FontSize="47" Style="{StaticResource HeaderTextBlockStyle}" 
+            	IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="432,0,-412,1021" Grid.Column="1"/>
         </Grid>
         <Ellipse x:Name="OrderButton1" Fill="#FFED6B06" HorizontalAlignment="Left" Height="272" Margin="498,645,0,0" Stroke="Black" VerticalAlignment="Top" Width="367"/>
         <Image HorizontalAlignment="Left" Height="294" Margin="0,186,0,0" VerticalAlignment="Top" Width="470" Source="{Binding SelectedAttraction._photo}"/>
         <ListView x:Name="ReviewList" HorizontalAlignment="Left" Height="490" Margin="930,135,0,0" VerticalAlignment="Top" Width="400"/>
         <TextBox x:Name="AddReviewText" HorizontalAlignment="Left" Margin="930,625,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="70" Width="400" PlaceholderText="Write your Review here!" AcceptsReturn="True"/>
         <TextBlock x:Name="OrderHereBlock" HorizontalAlignment="Left" Margin="580,700,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="61" Width="230" FontSize="40" FontWeight="Bold"/>
-        <TextBlock x:Name="DescriptionText" HorizontalAlignment="Left" Margin="498,186,0,0" TextWrapping="Wrap" Text="{Binding SelectedAttraction._description}" VerticalAlignment="Top" Height="359" Width="390" FontSize="15"/>
-        <Button Content="" HorizontalAlignment="Left" Margin="495,642,0,0" VerticalAlignment="Top" Click="OrderButton_Click" Height="132" Width="373" BorderBrush="Transparent" Foreground="Transparent" Opacity="0">
+        <TextBlock x:Name="DescriptionText" HorizontalAlignment="Left" Margin="498,186,0,0" TextWrapping="Wrap" Text="{Binding SelectedAttraction._description}" VerticalAlignment="Top" Height="359" Width="390" FontSize="15">
+            <TextBlock.DataContext>
+                <ViewModel:MainViewModel/>
+            </TextBlock.DataContext>
+        </TextBlock>
+        <Button Content="" HorizontalAlignment="Left" Margin="495,642,0,0" VerticalAlignment="Top" Height="132" Width="373" BorderBrush="Transparent" Foreground="Transparent" Opacity="0">
             <Button.Projection>
                 <PlaneProjection CenterOfRotationX="0" CenterOfRotationY="0" CenterOfRotationZ="25"/>
             </Button.Projection>

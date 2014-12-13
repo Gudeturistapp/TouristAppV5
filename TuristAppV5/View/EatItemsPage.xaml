@@ -235,10 +235,10 @@
                     </Ellipse.DataContext>
 
                     <Ellipse.Fill>
-                        <ImageBrush ImageSource="{Binding SelectedAttraction.photo1}"/>
+                        <ImageBrush ImageSource="ms-appx:///Assets/Eat/Jensens logo.png" Stretch="UniformToFill"/>
                     </Ellipse.Fill>
                 </Ellipse>
-                <Button x:Name="EatButton1" Content="Button" HorizontalAlignment="Left" Margin="-7,1,0,-3" VerticalAlignment="Top" Height="208" Width="237" BorderBrush="Transparent" Foreground="Transparent" Opacity="0"/>
+                <Button x:Name="EatButton1" Content="Button" HorizontalAlignment="Left" Margin="-7,1,0,-3" VerticalAlignment="Top" Height="208" Width="237" BorderBrush="Transparent" Foreground="Transparent" Opacity="0" Click="EatButton1_Click"/>
             </Grid>
         </StackPanel>
         <StackPanel x:Name="Eatstack2" HorizontalAlignment="Left" Height="212" Margin="811,83,0,0" Grid.Row="1" VerticalAlignment="Top" Width="500">
@@ -249,10 +249,10 @@
                         <viewModel:MainViewModel/>
                     </Ellipse.DataContext>
                     <Ellipse.Fill>
-                        <ImageBrush Stretch="Fill" ImageSource="{Binding SelectedAttraction.photo2}"/>
+                        <ImageBrush ImageSource="ms-appx:///Assets/Eat/bones_logo.gif"/>
                     </Ellipse.Fill>
                 </Ellipse>
-                <Button x:Name="EatButton2" Content="Button" HorizontalAlignment="Left" Margin="7,-3,0,-3" VerticalAlignment="Top" Height="212" Width="223" BorderBrush="Transparent" Foreground="Transparent" Opacity="0">
+                <Button x:Name="EatButton2" Content="Button" HorizontalAlignment="Left" Margin="7,-3,0,-3" VerticalAlignment="Top" Height="212" Width="223" BorderBrush="Transparent" Foreground="Transparent" Opacity="0" Click="EatButton2_Click">
                     <Button.DataContext>
                         <viewModel:MainViewModel/>
                     </Button.DataContext>
@@ -267,10 +267,10 @@
                         <viewModel:MainViewModel/>
                     </Ellipse.DataContext>
                     <Ellipse.Fill>
-                        <ImageBrush Stretch="Fill" ImageSource="{Binding SelectedAttraction.photo4}"/>
+                        <ImageBrush ImageSource="ms-appx:///Assets/Eat/Mumm_logo.jpg"/>
                     </Ellipse.Fill>
                 </Ellipse>
-                <Button x:Name="EatButton3" Content="Button" HorizontalAlignment="Left" Margin="-3,-3,0,-3" VerticalAlignment="Top" Height="212" Width="233" BorderBrush="Transparent" Foreground="Transparent" Opacity="0"/>
+                <Button x:Name="EatButton3" Content="Button" HorizontalAlignment="Left" Margin="-3,-3,0,-3" VerticalAlignment="Top" Height="212" Width="233" BorderBrush="Transparent" Foreground="Transparent" Opacity="0" Click="EatButton3_Click"/>
             </Grid>
         </StackPanel>
         <StackPanel x:Name="Eatstack4" HorizontalAlignment="Left" Height="212" Margin="266,385,0,0" Grid.Row="1" VerticalAlignment="Top" Width="500">
@@ -281,10 +281,10 @@
                         <viewModel:MainViewModel/>
                     </Ellipse.DataContext>
                     <Ellipse.Fill>
-                        <ImageBrush Stretch="Fill" ImageSource="{Binding SelectedAttraction.photo3}"/>
+                        <ImageBrush ImageSource="ms-appx:///Assets/Eat/Vivaldi-logo.jpg"/>
                     </Ellipse.Fill>
                 </Ellipse>
-                <Button x:Name="EatButton4" Content="Button" HorizontalAlignment="Left" Margin="-3,-3,0,-3" VerticalAlignment="Top" Height="212" Width="233" BorderBrush="Transparent" Foreground="Transparent" Opacity="0"/>
+                <Button x:Name="EatButton4" Content="Button" HorizontalAlignment="Left" Margin="-3,-3,0,-3" VerticalAlignment="Top" Height="212" Width="233" BorderBrush="Transparent" Foreground="Transparent" Opacity="0" Click="EatButton4_Click"/>
             </Grid>
         </StackPanel>
 

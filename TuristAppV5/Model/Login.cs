@@ -8,12 +8,12 @@ namespace TuristAppV5.Model
 {
     public class Login
     {
-        private static Dictionary<string, UserData> loginDictionary = new Dictionary<string, UserData>();
+        private static Dictionary<string, string> loginDictionary = new Dictionary<string, string>();
 
         private static bool isLoggedIn = false;
 
 
-        public Dictionary<string, UserData> LoginDictionary
+        public Dictionary<string, string> LoginDictionary
         {
             get { return loginDictionary; }
             set { loginDictionary = value; }
