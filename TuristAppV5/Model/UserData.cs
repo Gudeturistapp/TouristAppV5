@@ -30,8 +30,9 @@ namespace TuristAppV5.Model
             set { _phone = value; }
         }
 
-        public UserData(string email, string phone)
+        public UserData(string username, string email, string phone)
         {
+            _userName = username;
             _email = email;
             _phone = phone;
         }

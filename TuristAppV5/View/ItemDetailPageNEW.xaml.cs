@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.UI;
 using TuristAppV5.Common;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -29,7 +30,7 @@ namespace TuristAppV5.View
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
 
         private Login login = new Login();
-        private UserData userData = new UserData("", "");
+        private UserData userData;
 
         /// <summary>
         /// This can be changed to a strongly typed view model.
@@ -60,7 +61,7 @@ namespace TuristAppV5.View
             }
             else
             {
-                OrderHereBlock.Text = "Order here";
+                OrderHereBlock.Text = "   Order here";
             }
         }
 
@@ -122,12 +123,14 @@ namespace TuristAppV5.View
                 !string.IsNullOrWhiteSpace(registerPhoneBox.Text))
             {
 
+                userData = new UserData(registerUserNameBox.Text, registerEmailBox.Text, registerPhoneBox.Text);
 
-                userData.UserName = registerUserNameBox.Text;
-                userData.UserEmail = registerEmailBox.Text;
-                userData.UserPhone = registerPhoneBox.Text;
+                //userData.UserName = registerUserNameBox.Text;
+                //userData.UserEmail = registerEmailBox.Text;
+                //userData.UserPhone = registerPhoneBox.Text;
 
                 login.LoginDictionary.Add(registerUserNameBox.Text, registerPasswordBox.Password);
+
 
                 login.IsLoggedIn = true;
 
@@ -146,7 +149,7 @@ namespace TuristAppV5.View
 
         public void Login()
         {
-            if (login.LoginDictionary.ContainsKey(UsernameLoginBox.Text) && login.LoginDictionary.ContainsValue(PasswordLoginBox.Password))
+            if (login.LoginDictionary.ContainsKey(UsernameLoginBox.Text) && PasswordLoginBox.Password == login.LoginDictionary[UsernameLoginBox.Text])
             {
                 login.IsLoggedIn = true;
                 LoginButton.Flyout.Hide();
@@ -154,7 +157,7 @@ namespace TuristAppV5.View
                 ErrorBlock.Text = "";
                 SuccessBlock.Text = "Success! Loggged in.";
 
-                OrderHereBlock.Text = "Order here";
+                OrderHereBlock.Text = "   Order here";
             }
             else
             {
@@ -187,10 +190,28 @@ namespace TuristAppV5.View
                 OrderAppBar.IsOpen = true;
                 OrderAppBar.Visibility = Visibility.Visible;
 
+              
                 OrderHereNameBox.Text = userData.UserName;
                 OrderHereEmailBox.Text = userData.UserEmail;
                 OrderHerePhoneBox.Text = userData.UserPhone;
+
+                
+               
+
+                
+
+                
             }
+        }
+
+        private void PlaceOrderButton_Click(object sender, RoutedEventArgs e)
+        {
+            OrderAppBar.IsOpen = false;
+
+            OrderHereBlock.Foreground = new SolidColorBrush(Colors.Lime);
+            OrderHereBlock.Text = "Order placed";
+            
+            
         }
 
 
