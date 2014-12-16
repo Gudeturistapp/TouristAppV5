@@ -7,10 +7,52 @@
     <packageHasNamedElement>
       <class
         Id="f8189eb6-6ec5-4d1f-8934-5ab79e7d1aeb"
-        name="LanguageSelection"
+        name="LanguagePage"
         isAbstract="false"
         isLeaf="false"
-        isActiveClass="false" />
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="b114bb1c-3a60-4c0a-9b3d-6a6f064de3a1"
+            isDerived="false"
+            sourceEndRoleName="LanguagePage"
+            targetEndRoleName="MainViewModel"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="77ba7a42-c564-46d5-aa28-b125d935a630"
+              LastKnownName="MainViewModel"
+              LastKnownLocation="Package1_1641.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b0fb0de2-df02-4d7b-af8d-c6ff53371ff5"
+                  name="LanguagePage"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8e442fbc-c6c7-4f24-8e44-3962106e9625"
+                  name="MainViewModel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
@@ -114,7 +156,7 @@
     <packageHasNamedElement>
       <class
         Id="31cda8e7-f0e0-4284-a9ae-000e0d856c5d"
-        name="ItemDetailPage2"
+        name="ShopItemsPage"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -163,26 +205,152 @@
     <packageHasNamedElement>
       <class
         Id="6b90d5bb-d961-4640-b0ef-7bd3e807e386"
-        name="Class1"
+        name="CultureItemsPage"
         isAbstract="false"
         isLeaf="false"
-        isActiveClass="false" />
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="eb4ad21d-fc49-457d-90d0-02b08119e492"
+            isDerived="false"
+            sourceEndRoleName="CultureItemsPage"
+            targetEndRoleName="MainViewModel"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="77ba7a42-c564-46d5-aa28-b125d935a630"
+              LastKnownName="MainViewModel"
+              LastKnownLocation="Package1_1641.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ac253961-be88-4755-b39e-d561a25393f5"
+                  name="CultureItemsPage"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="afd4e527-d056-4925-be6e-21ade3665f00"
+                  name="MainViewModel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
         Id="581e5425-5ca5-4086-8450-a2537995466c"
-        name="Class2"
+        name="EatItemsPage"
         isAbstract="false"
         isLeaf="false"
-        isActiveClass="false" />
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="2c62b5b0-b030-4099-b4f9-612289cc4ca2"
+            isDerived="false"
+            sourceEndRoleName="EatItemsPage"
+            targetEndRoleName="MainViewModel"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="77ba7a42-c564-46d5-aa28-b125d935a630"
+              LastKnownName="MainViewModel"
+              LastKnownLocation="Package1_1641.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ffd90895-7431-4db7-9e1e-c13aedbb9e39"
+                  name="EatItemsPage"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ddea2227-e1fa-427f-a069-940fe5028221"
+                  name="MainViewModel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
         Id="8194eca3-ca4a-439a-b625-e95a23140a78"
-        name="Class3"
+        name="EvenItemsPage"
         isAbstract="false"
         isLeaf="false"
-        isActiveClass="false" />
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="5d766f9a-6bfd-4cd2-bc4c-04ecaeeb5070"
+            isDerived="false"
+            sourceEndRoleName="EvenItemsPage"
+            targetEndRoleName="MainViewModel"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="77ba7a42-c564-46d5-aa28-b125d935a630"
+              LastKnownName="MainViewModel"
+              LastKnownLocation="Package1_1641.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ebb90031-e40c-4214-a4fa-f158e1bf9e4b"
+                  name="EvenItemsPage"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="00116462-a686-4452-8c2b-816b2fad36af"
+                  name="MainViewModel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
     </packageHasNamedElement>
   </packagedElements>
 </package>

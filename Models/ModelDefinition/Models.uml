@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
   dslVersion="1.0.0.0"
   Id="dda288e4-6b39-4bb7-8cc9-fb29d8ae56ee"
   name="Models" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -21,7 +21,7 @@
     <packageHasNamedElement>
       <actor
         Id="3b5a5010-8148-45bf-9dc6-01e0b3295444"
-        name="Actor1"
+        name="User"
         isAbstract="false"
         isLeaf="false">
         <targetEnds>
@@ -64,6 +64,162 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="c9694f94-4dfa-46b8-8780-562dbbdcd62e"
+            isDerived="false"
+            sourceEndRoleName="Actor"
+            targetEndRoleName="Book time for the selected attraction"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="17cf7af2-2de8-46fc-8dda-c24c6df2fa88"
+              LastKnownName="Book time for the selected attraction"
+              LastKnownLocation="Models.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6d5400b7-4571-477a-bb8d-0bb6effaf50a"
+                  name="Actor"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="cf59dc3f-2f18-4f21-8cd2-fe003a545857"
+                  name="Book time for the selected attraction"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="0a3e70a6-6c50-45b8-9e96-3695dcece382"
+            isDerived="false"
+            sourceEndRoleName="Actor"
+            targetEndRoleName="Add a review for the selected attraction"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="e927f74b-083c-41c4-9acc-de6ab0d5da26"
+              LastKnownName="Add a review for the selected attraction"
+              LastKnownLocation="Models.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ccb1a2cb-3638-4891-9b07-86abbd340f92"
+                  name="Actor"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4be336c3-f92d-491f-b6b1-b6390d970737"
+                  name="Add a review for the selected attraction"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="61c1e07d-1f88-4e6d-9666-27fbbffe9b5c"
+            isDerived="false"
+            sourceEndRoleName="Actor"
+            targetEndRoleName="Log in"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="b9a2a90c-6c66-46ce-8686-1cbe60ba1536"
+              LastKnownName="Log in"
+              LastKnownLocation="Models.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="791d5f5d-912c-48b3-a7fb-99b7754b1efc"
+                  name="Actor"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="51533fab-05ff-4446-b5df-9089f32713aa"
+                  name="Log in"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="c73eda15-56a3-4ec7-ac89-47924db0b2f9"
+            isDerived="false"
+            sourceEndRoleName="Actor"
+            targetEndRoleName="Create user"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="a0eb63d2-9e67-48dd-b2bd-e931b471cac4"
+              LastKnownName="Create user"
+              LastKnownLocation="Models.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d2a028da-3619-4e73-895d-82cc52770e6d"
+                  name="Actor"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7bb1c39e-99f2-4845-81d7-6a80b44936fe"
+                  name="Create user"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
       </actor>
     </packageHasNamedElement>
@@ -72,88 +228,7 @@
         Id="1ca33852-2944-47a9-b64a-55496c383091"
         name="Choose Language"
         isAbstract="false"
-        isLeaf="false">
-        <targetEnds>
-          <association
-            Id="7867097f-672e-4f5f-838e-959a631aa8c7"
-            isDerived="false"
-            sourceEndRoleName="Vælger sprog"
-            targetEndRoleName="Skriv anmeldelse til valgt Kategori"
-            isLeaf="false"
-            isAbstract="false">
-            <useCaseMoniker
-              Id="e927f74b-083c-41c4-9acc-de6ab0d5da26"
-              LastKnownName="Add a review for the selected category"
-              LastKnownLocation="Models.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="3892b783-b0bc-47a0-862c-f36f34d8705c"
-                  name="Vælger sprog"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="95f2fa79-709c-4329-978b-fd83bc24bd8a"
-                  name="Skriv anmeldelse til valgt Kategori"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
-            Id="48731e17-3dbd-49f1-8fe1-6845cb0f7624"
-            isDerived="false"
-            sourceEndRoleName="Vælger sprog"
-            targetEndRoleName="Bestil tid til valgt kategori"
-            isLeaf="false"
-            isAbstract="false">
-            <useCaseMoniker
-              Id="17cf7af2-2de8-46fc-8dda-c24c6df2fa88"
-              LastKnownName="Book time for the selected catefory"
-              LastKnownLocation="Models.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="981d1afb-65fc-49bd-9884-df7bf3ffea9e"
-                  name="Vælger sprog"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="649e26ca-4d4b-4c7d-a2f1-1c0682edb80a"
-                  name="Bestil tid til valgt kategori"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-        </targetEnds>
-      </useCase>
+        isLeaf="false" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
@@ -165,14 +240,14 @@
     <packageHasNamedElement>
       <useCase
         Id="e927f74b-083c-41c4-9acc-de6ab0d5da26"
-        name="Add a review for the selected category"
+        name="Add a review for the selected attraction"
         isAbstract="false"
         isLeaf="false" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
         Id="17cf7af2-2de8-46fc-8dda-c24c6df2fa88"
-        name="Book time for the selected catefory"
+        name="Book time for the selected attraction"
         isAbstract="false"
         isLeaf="false" />
     </packageHasNamedElement>
@@ -1578,7 +1653,7 @@
           </message>
           <message
             Id="1e390f65-957b-42d0-b3bb-d859d178aafe"
-            name="CreateOrder"
+            name="AddBooking"
             messageKind="Complete"
             messageSort="SynchCall"
             createSelfMessage="false">
@@ -2279,7 +2354,7 @@
           </message>
           <message
             Id="7d00aa3d-4a54-48fc-948c-fd455bc52398"
-            name="Add comment"
+            name="Add Review"
             messageKind="Complete"
             messageSort="SynchCall"
             createSelfMessage="false">
@@ -2445,48 +2520,6 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
-        <targetEnds>
-          <association
-            Id="1533eeab-4e9e-4577-b2f1-69dc738ee911"
-            isDerived="false"
-            sourceEndRoleName="Language"
-            targetEndRoleName="AttractionList"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="5becc883-d87e-45e5-aec0-1e3a9a603298"
-              LastKnownName="AttractionList"
-              LastKnownLocation="Models.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="eed361ca-83eb-40ca-90c8-004f197d1f48"
-                  name="Language"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="96b0f127-a267-4a89-b6fb-b7a658b0cdfb"
-                  name="AttractionList"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="b9a4f707-166d-410e-baaa-7d6fc963d86e"
@@ -2598,17 +2631,6 @@
             aggregation="None"
             isComposite="false" />
           <property
-            Id="dee97d99-501c-4125-bbed-60a1c7271812"
-            name="Phone"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false" />
-          <property
             Id="3ad2a5ed-f851-40da-a713-cdb0580177dc"
             name="Price"
             isLeaf="false"
@@ -2651,61 +2673,6 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
-        <targetEnds>
-          <association
-            Id="3fb5eccc-6c5d-4e6a-97b6-3fca24403c91"
-            isDerived="false"
-            sourceEndRoleName="Login"
-            targetEndRoleName="User Data"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="d39e53e5-e037-42dc-943b-db498eb77d0d"
-              LastKnownName="User Data"
-              LastKnownLocation="Models.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="67c42200-602d-476c-9906-cdbf35660b71"
-                  name="Login"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="068c84c7-5355-49d1-8b36-6e34379b34ed"
-                  name="User Data"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="041fac53-4ae7-4999-8819-ad39d78302e3"
-                      name="Lower"
-                      value="*" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="f7946711-9cc7-4d82-be25-861429ace462"
-                      name="Upper"
-                      value="*" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="0e5c5c65-0059-461a-aad4-0f601138ac6a"
@@ -2719,8 +2686,8 @@
             aggregation="None"
             isComposite="false" />
           <property
-            Id="b93a6f43-13bb-4d85-adf3-6461e6a2cefe"
-            name="Userdata"
+            Id="ff4d1413-a721-43ce-83e4-dcec32f8f3df"
+            name="LoginDictionary"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -2773,6 +2740,17 @@
             isDerivedUnion="false"
             aggregation="None"
             isComposite="false" />
+          <property
+            Id="76620174-2714-41b9-8ec5-109e2bf8b436"
+            name="UserName"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
         </ownedAttributesInternal>
       </class>
     </packageHasNamedElement>
@@ -2781,98 +2759,7 @@
         Id="a0eb63d2-9e67-48dd-b2bd-e931b471cac4"
         name="Create user"
         isAbstract="false"
-        isLeaf="false">
-        <targetEnds>
-          <association
-            Id="c8b9d27b-3cb0-4a4d-ac8d-15d9f254bd88"
-            isDerived="false"
-            sourceEndRoleName="Create user"
-            targetEndRoleName="Log in"
-            isLeaf="false"
-            isAbstract="false">
-            <useCaseMoniker
-              Id="b9a2a90c-6c66-46ce-8686-1cbe60ba1536"
-              LastKnownName="Log in"
-              LastKnownLocation="Models.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="56a035a8-883d-402a-b8b2-c29e25529c30"
-                  name="Create user"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="64b9c6d6-c51d-4ccf-b2a9-764a26a90596"
-                  name="Log in"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-        </targetEnds>
-      </useCase>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <actor
-        Id="a226ed27-46a6-44cf-88ce-cd14a68b22ce"
-        name="Actor2"
-        isAbstract="false"
-        isLeaf="false">
-        <targetEnds>
-          <association
-            Id="80f404a5-6307-4b1b-af36-4747c3c0205a"
-            isDerived="false"
-            sourceEndRoleName="Actor2"
-            targetEndRoleName="Create user"
-            isLeaf="false"
-            isAbstract="false">
-            <useCaseMoniker
-              Id="a0eb63d2-9e67-48dd-b2bd-e931b471cac4"
-              LastKnownName="Create user"
-              LastKnownLocation="Models.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="3b060a6e-3907-43fd-b0c1-e222a62c588e"
-                  name="Actor2"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="a85f1c00-6146-407f-b9ae-65f2bb79acc6"
-                  name="Create user"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-        </targetEnds>
-      </actor>
+        isLeaf="false" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

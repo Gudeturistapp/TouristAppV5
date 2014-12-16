@@ -319,7 +319,7 @@
               <messageOccurrenceSpecificationMoniker Id="97eb1309-b136-4839-b260-bf92741aa99e" LastKnownName="MessageOccurrenceSpecification8" />
             </receiveEvent>
           </message>
-          <message Id="db36f8ad-fd33-4a48-bcaa-faf70b9d10fa" name="Add comment" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false">
+          <message Id="db36f8ad-fd33-4a48-bcaa-faf70b9d10fa" name="Add Review" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false">
             <elementDefinition Id="7d00aa3d-4a54-48fc-948c-fd455bc52398" />
             <sendEvent>
               <messageOccurrenceSpecificationMoniker Id="232aa728-d874-45ef-98c3-2ae40ddb7192" LastKnownName="MessageOccurrenceSpecification13" />

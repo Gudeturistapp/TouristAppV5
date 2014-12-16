@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
   dslVersion="1.0.0.0"
   Id="3e2bfe89-4811-4dbe-ba1a-ca4e2bbdb94d"
   name="Model" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -54,7 +54,8 @@
         </targetEnds>
         <ownedAttributesInternal>
           <property
-            Id="f8ea2d96-421d-42d9-8d74-ecd79bacb99b"
+            Id="158d374d-0716-433a-82ec-0f8e0de7c022"
+            name="AttractionLists"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -62,20 +63,19 @@
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false" />
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a260c538-26c1-4fb4-8ed0-9ec36b0ce3bf"
+                LastKnownName="ObserveableCollection&lt;Attrations&gt;"
+                LastKnownLocation="Package_1642.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
             Id="ce821bd9-f195-4164-b9dd-326b4db988c8"
             name="AddAttraction"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="35ff74c8-7ee2-4a06-b23a-3a1cbf09abb9"
-            name="AddAttractionItem"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -112,7 +112,6 @@
           </property>
           <property
             Id="836a5fad-7895-40af-9f3c-1a3f34fd4cee"
-            name="Phone string"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -195,7 +194,7 @@
             isAbstract="false">
             <classMoniker
               Id="bbb6fe76-d6fd-4341-9ca2-f0edf7de79ec"
-              LastKnownName="LogIn"
+              LastKnownName="Login"
               LastKnownLocation="Package_1642.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -230,24 +229,7 @@
           <property
             Id="68229bcd-5a57-4d67-b61b-8403196f2e97"
             name="Email"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <undefinedTypeMoniker
-                Id="7b4e4727-52e4-4a06-86aa-2f72be626935"
-                LastKnownName="string"
-                LastKnownLocation="Package_1250.uml" />
-            </type_NamedElement>
-          </property>
-          <property
-            Id="9cb59ec6-44a3-49f0-b064-6507225fb8b8"
-            name="Password"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -266,6 +248,26 @@
           <property
             Id="8d2b1752-b228-419b-a65a-977e7a1a153c"
             name="Phone"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="7b4e4727-52e4-4a06-86aa-2f72be626935"
+                LastKnownName="string"
+                LastKnownLocation="Package_1250.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="a7a6249c-4fdb-48bd-b415-89e53ee562a6"
+            name="UserName"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -292,7 +294,7 @@
     <packageHasNamedElement>
       <class
         Id="bbb6fe76-d6fd-4341-9ca2-f0edf7de79ec"
-        name="LogIn"
+        name="Login"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -345,6 +347,16 @@
       <undefinedType
         Id="f41fe1ac-ffa9-4897-a4e0-7cbfa481fa9d"
         name="bool" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="da5893e2-7375-41a3-9f0b-87a01a3e7067"
+        name="Observeablecollection&lt;Attrations&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="a260c538-26c1-4fb4-8ed0-9ec36b0ce3bf"
+        name="ObserveableCollection&lt;Attrations&gt;" />
     </packageHasNamedElement>
   </packagedElements>
 </package>

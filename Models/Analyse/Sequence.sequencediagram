@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="dcb8dd06-854c-478d-8a96-f8dbf1ef29b9" name="Sequence" linkedPackageId="2bd52cd4-b939-4bce-bfe2-1148f210604c" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="dcb8dd06-854c-478d-8a96-f8dbf1ef29b9" name="Sequence" linkedPackageId="2bd52cd4-b939-4bce-bfe2-1148f210604c" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
   <packagedElements>
     <packageHasNamedElement>
       <interaction Id="b06b84bd-4907-4577-817e-75696886490e" name="Sequence" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
@@ -135,16 +135,16 @@
               <lifelineMoniker Id="6ce49a5c-d0ee-464e-8e18-cb88da712df6" LastKnownName=": Selected (things)" />
             </covered>
           </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="f3cbc582-b908-407c-97b6-77b09689f55d" name="MessageOccurrenceSpecification10">
-            <elementDefinition Id="e5ad93d9-bd6a-4deb-9cd2-584d6030d992" />
-            <covered>
-              <lifelineMoniker Id="6ce49a5c-d0ee-464e-8e18-cb88da712df6" LastKnownName=": Selected (things)" />
-            </covered>
-          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="499852f2-fb00-4a1e-bd27-08254c6cd5e6" name="MessageOccurrenceSpecification9">
             <elementDefinition Id="e1f79d04-b346-42b5-b5c5-adf6a3f8a389" />
             <covered>
               <lifelineMoniker Id="534f9f63-60f5-4a24-adea-97ac5df0c894" LastKnownName=": MainViewModel" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="f3cbc582-b908-407c-97b6-77b09689f55d" name="MessageOccurrenceSpecification10">
+            <elementDefinition Id="e5ad93d9-bd6a-4deb-9cd2-584d6030d992" />
+            <covered>
+              <lifelineMoniker Id="6ce49a5c-d0ee-464e-8e18-cb88da712df6" LastKnownName=": Selected (things)" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="e7f4ae35-ce1d-40ae-86a4-a9b08d436505" name="MessageOccurrenceSpecification11">
@@ -350,7 +350,7 @@
               <messageOccurrenceSpecificationMoniker Id="af06b3ad-2fc7-4848-9ce1-8dcad3f51a74" LastKnownName="MessageOccurrenceSpecification8" />
             </receiveEvent>
           </message>
-          <message Id="0ff5c8b7-4465-44f4-b0f3-cf2da49cf2a2" name="CreateOrder" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false">
+          <message Id="0ff5c8b7-4465-44f4-b0f3-cf2da49cf2a2" name="AddBooking" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false">
             <elementDefinition Id="1e390f65-957b-42d0-b3bb-d859d178aafe" />
             <sendEvent>
               <messageOccurrenceSpecificationMoniker Id="a0a5dbd1-d675-4031-9f10-876e89a2a9ea" LastKnownName="MessageOccurrenceSpecification13" />
