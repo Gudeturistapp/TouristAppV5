@@ -208,7 +208,7 @@
             <GridView.DataContext>
                 <viewModel:MainViewModel/>
             </GridView.DataContext>
-            
+
 
         </GridView>
 
@@ -235,10 +235,10 @@
                     </Ellipse.DataContext>
 
                     <Ellipse.Fill>
-                        <ImageBrush ImageSource="{Binding SelectedAttraction.photo1}"/>
+                        <ImageBrush ImageSource="ms-appx:///Assets/Shops/Shopping_Logo1.gif"/>
                     </Ellipse.Fill>
                 </Ellipse>
-                <Button x:Name="ShopButton1" Content="Button" HorizontalAlignment="Left" Margin="-7,1,0,-3" VerticalAlignment="Top" Height="208" Width="237" BorderBrush="Transparent" Foreground="Transparent" Opacity="0"/>
+                <Button x:Name="ShopButton1" Content="" Opacity="0" HorizontalAlignment="Left" Margin="25,23,0,0" VerticalAlignment="Top" Height="161" Width="205" Click="ShopButton1_Click"/>
             </Grid>
         </StackPanel>
         <StackPanel x:Name="Stack2" HorizontalAlignment="Left" Height="212" Margin="811,83,0,0" Grid.Row="1" VerticalAlignment="Top" Width="500">
@@ -249,10 +249,13 @@
                         <viewModel:MainViewModel/>
                     </Ellipse.DataContext>
                     <Ellipse.Fill>
-                        <ImageBrush Stretch="Fill" ImageSource="{Binding SelectedAttraction.photo2}"/>
+                        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/Shops/koebmand_logo.jpg"/>
                     </Ellipse.Fill>
                 </Ellipse>
-                <Button x:Name="ShopButton2" Content="Button" HorizontalAlignment="Left" Margin="7,-3,0,-3" VerticalAlignment="Top" Height="212" Width="223" BorderBrush="Transparent" Foreground="Transparent" Opacity="0">
+                <Button x:Name="ShopButton2" Content="Button" HorizontalAlignment="Left" Margin="7,-3,0,-3" VerticalAlignment="Top" Height="212" Width="223" BorderBrush="Transparent" Foreground="Transparent" Opacity="0" Click="ShopButton2_Click">
+                    <Button.Background>
+                        <ImageBrush Stretch="Fill"/>
+                    </Button.Background>
                     <Button.DataContext>
                         <viewModel:MainViewModel/>
                     </Button.DataContext>
@@ -267,10 +270,10 @@
                         <viewModel:MainViewModel/>
                     </Ellipse.DataContext>
                     <Ellipse.Fill>
-                        <ImageBrush Stretch="Fill" ImageSource="{Binding SelectedAttraction.photo4}"/>
+                        <ImageBrush Stretch="UniformToFill" ImageSource="ms-appx:///Assets/Shops/Trold_logo.jpg"/>
                     </Ellipse.Fill>
                 </Ellipse>
-                <Button x:Name="ShopButton3" Content="Button" HorizontalAlignment="Left" Margin="-3,-3,0,-3" VerticalAlignment="Top" Height="212" Width="233" BorderBrush="Transparent" Foreground="Transparent" Opacity="0"/>
+                <Button x:Name="ShopButton3" Content="Button" HorizontalAlignment="Left" Margin="-3,-3,0,-3" VerticalAlignment="Top" Height="212" Width="233" BorderBrush="Transparent" Foreground="Transparent" Opacity="0" Click="ShopButton3_Click"/>
             </Grid>
         </StackPanel>
         <StackPanel x:Name="Stack4" HorizontalAlignment="Left" Height="212" Margin="266,385,0,0" Grid.Row="1" VerticalAlignment="Top" Width="500">
@@ -281,10 +284,10 @@
                         <viewModel:MainViewModel/>
                     </Ellipse.DataContext>
                     <Ellipse.Fill>
-                        <ImageBrush Stretch="Fill" ImageSource="{Binding SelectedAttraction.photo3}"/>
+                        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/Shops/gaagade_Logo.jpg"/>
                     </Ellipse.Fill>
                 </Ellipse>
-                <Button x:Name="ShopButton4" Content="Button" HorizontalAlignment="Left" Margin="-3,-3,0,-3" VerticalAlignment="Top" Height="212" Width="233" BorderBrush="Transparent" Foreground="Transparent" Opacity="0"/>
+                <Button x:Name="ShopButton4" Content="Button" HorizontalAlignment="Left" Margin="-3,-3,0,-3" VerticalAlignment="Top" Height="212" Width="233" BorderBrush="Transparent" Foreground="Transparent" Opacity="0" Click="ShopButton4_Click"/>
             </Grid>
         </StackPanel>
 

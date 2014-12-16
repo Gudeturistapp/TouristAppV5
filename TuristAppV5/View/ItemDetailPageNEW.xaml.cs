@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.UI;
 using TuristAppV5.Common;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -23,13 +24,13 @@ namespace TuristAppV5.View
     /// A page that displays details for a single item within a group while allowing gestures to
     /// flip through other items belonging to the same group.
     /// </summary>
-    public sealed partial class ItemDetailPage : Page
+    public sealed partial class ItemDetailPageNEW : Page
     {
-        public Login login = new Login();
-
-
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
+
+        private Login login = new Login();
+        private UserData userData;
 
         /// <summary>
         /// This can be changed to a strongly typed view model.
@@ -48,7 +49,7 @@ namespace TuristAppV5.View
             get { return this.navigationHelper; }
         }
 
-        public ItemDetailPage()
+        public ItemDetailPageNEW()
         {
             this.InitializeComponent();
             this.navigationHelper = new NavigationHelper(this);
@@ -60,7 +61,7 @@ namespace TuristAppV5.View
             }
             else
             {
-                OrderHereBlock.Text = "Order here";
+                OrderHereBlock.Text = "   Order here";
             }
         }
 
@@ -111,48 +112,33 @@ namespace TuristAppV5.View
 
         #endregion
 
-        private void OrderButton_Click(object sender, RoutedEventArgs e)
-        {
-            OrderAppBar.IsOpen = true;
-            OrderAppBar.Visibility = Visibility.Visible;
-        }
 
-        private void RegisterButton_Click(object sender, RoutedEventArgs e)
-        {
-            Register();
-        }
-
-        private void CancelOrderButton_Click(object sender, RoutedEventArgs e)
-        {
-            OrderAppBar.Visibility = Visibility.Collapsed;
-        }
 
         public void Register()
         {
             if (!string.IsNullOrWhiteSpace(registerUserNameBox.Text) &&
-                !string.IsNullOrWhiteSpace(registerPasswordBox.Text) &&
-                !string.IsNullOrWhiteSpace(registerReEnterPasswordBox.Text) &&
+                !string.IsNullOrWhiteSpace(registerPasswordBox.Password) &&
+
                 !string.IsNullOrWhiteSpace(registerEmailBox.Text) &&
                 !string.IsNullOrWhiteSpace(registerPhoneBox.Text))
             {
 
-                if (registerPasswordBox.Text == registerReEnterPasswordBox.Text)
-                {
-                    UserData userdata = new UserData(registerPasswordBox.Text, registerEmailBox.Text, registerPhoneBox.Text);
+                userData = new UserData(registerUserNameBox.Text, registerEmailBox.Text, registerPhoneBox.Text);
 
-                    login.LoginDictionary.Add(registerUserNameBox.Text, userdata);
+                //userData.UserName = registerUserNameBox.Text;
+                //userData.UserEmail = registerEmailBox.Text;
+                //userData.UserPhone = registerPhoneBox.Text;
 
-                    login.IsLoggedIn = true;
-
-                    RegisterButton.Flyout.Hide();
+                login.LoginDictionary.Add(registerUserNameBox.Text, registerPasswordBox.Password);
 
 
-                    SuccessBlock.Text = "Success! User has been created.";
-                }
-                else
-                {
-                    ErrorBlock.Text = "Passwords doesn't match.";
-                }
+                login.IsLoggedIn = true;
+
+                RegisterButton.Flyout.Hide();
+
+                ErrorBlock.Text = "";
+                SuccessBlock.Text = "Success! User has been created.";
+
             }
             else
             {
@@ -161,14 +147,81 @@ namespace TuristAppV5.View
             }
         }
 
-
-        private void LoginButton_Click(object sender, RoutedEventArgs e)
+        public void Login()
         {
+            if (login.LoginDictionary.ContainsKey(UsernameLoginBox.Text) && PasswordLoginBox.Password == login.LoginDictionary[UsernameLoginBox.Text])
+            {
+                login.IsLoggedIn = true;
+                LoginButton.Flyout.Hide();
+
+                ErrorBlock.Text = "";
+                SuccessBlock.Text = "Success! Loggged in.";
+
+                OrderHereBlock.Text = "   Order here";
+            }
+            else
+            {
+                SuccessBlock.Text = "";
+                ErrorBlock.Text = "Error! Username or password incorrect.";
+            }
         }
 
+        
+        private void RegisterButton1_Click(object sender, RoutedEventArgs e)
+        {
+            Register();
+        }
+
+        private void CancelOrderButton_Click(object sender, RoutedEventArgs e)
+        {
+            OrderAppBar.Visibility = Visibility.Collapsed;
+
+        }
+
+        private void LoginButton1_Click(object sender, RoutedEventArgs e)
+        {
+            Login();
+        }
+
+        private void OrderButton_Click_1(object sender, RoutedEventArgs e)
+        {
+            if (login.IsLoggedIn == true)
+            {
+                OrderAppBar.IsOpen = true;
+                OrderAppBar.Visibility = Visibility.Visible;
+
+              
+                OrderHereNameBox.Text = userData.UserName;
+                OrderHereEmailBox.Text = userData.UserEmail;
+                OrderHerePhoneBox.Text = userData.UserPhone;
+
+                
+               
+
+                
+
+                
+            }
+        }
+
+        private void PlaceOrderButton_Click(object sender, RoutedEventArgs e)
+        {
+            OrderAppBar.IsOpen = false;
+
+            OrderHereBlock.Foreground = new SolidColorBrush(Colors.Lime);
+            OrderHereBlock.Text = "Order placed";
+            
+            
+        }
+
+<<<<<<< HEAD:TuristAppV5/View/ItemDetailPage.xaml.cs
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Exit();
         }
+=======
+
+
+>>>>>>> origin/DannyDJ:TuristAppV5/View/ItemDetailPageNEW.xaml.cs
     }
 }
