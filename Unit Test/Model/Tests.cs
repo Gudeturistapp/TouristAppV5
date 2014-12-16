@@ -97,16 +97,6 @@ namespace UnitTesting
        public void Testmethod5()
        {
            //tester om brugeren bruger @ ved registerering af email indtast test 3.8 her
-
-           itemDetailPage.EmailTextbox1 = "hej";
-
-           Assert.IsTrue(itemDetailPage.EmailTextbox1 == "hej");
-
-
-           //itemDetailPage.EmailTextBlock.Text = "l";
-
-           //Assert.AreEqual("l", itemDetailPage.EmailTextBlock.Text);
-
            try
            {
                itemDetailPage.EmailTextbox1 = "";
