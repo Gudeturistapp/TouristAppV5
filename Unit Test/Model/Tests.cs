@@ -98,13 +98,19 @@ namespace UnitTesting
        {
            //tester om brugeren bruger @ ved registerering af email indtast test 3.8 her
 
-           itemDetailPage.EmailTextBlock.Text = "l";
+           itemDetailPage.EmailTextbox1 = "hej";
 
-           Assert.AreEqual("l", itemDetailPage.EmailTextBlock.Text);
+           Assert.IsTrue(itemDetailPage.EmailTextbox1 == "hej");
+
+
+           //itemDetailPage.EmailTextBlock.Text = "l";
+
+           //Assert.AreEqual("l", itemDetailPage.EmailTextBlock.Text);
 
            try
            {
-               itemDetailPage.EmailTextBlock.Text = "";
+               itemDetailPage.EmailTextbox1 = "";
+               Assert.Fail();
            }
            catch (ArgumentException ex)
            {
