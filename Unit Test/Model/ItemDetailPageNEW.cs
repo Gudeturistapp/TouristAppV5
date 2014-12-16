@@ -9,21 +9,28 @@ namespace Unit_Test.Model
 {
     class ItemDetailPageNew
     {
-        private static TextBlock _emailTextBlock = new TextBlock();
 
-        public TextBlock EmailTextBlock
+        private string EmailTextbox = "";
+
+        public string EmailTextbox1
         {
-            get { return _emailTextBlock; }
+            get { return EmailTextbox; }
             set
             {
-                _emailTextBlock = value;
                 CheckTextBlock(value);
+                EmailTextbox = value;
             }
         }
 
-        public void CheckTextBlock(TextBlock awesometextblockgonewild)
+        
+
+        
+
+
+
+        public void CheckTextBlock(string awesometextblockgonewild)
         {
-            if (!awesometextblockgonewild.Text.Contains("@"))
+            if (!awesometextblockgonewild.Contains("@"))
             {
                 throw new ArgumentException("Please enter a valid email adress.");
             }
