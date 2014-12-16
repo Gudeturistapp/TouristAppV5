@@ -32,18 +32,11 @@ namespace TuristAppV5.View
         private Login login = new Login();
         private UserData userData;
 
-        /// <summary>
-        /// This can be changed to a strongly typed view model.
-        /// </summary>
         public ObservableDictionary DefaultViewModel
         {
             get { return this.defaultViewModel; }
         }
 
-        /// <summary>
-        /// NavigationHelper is used on each page to aid in navigation and 
-        /// process lifetime management
-        /// </summary>
         public NavigationHelper NavigationHelper
         {
             get { return this.navigationHelper; }
@@ -65,17 +58,6 @@ namespace TuristAppV5.View
             }
         }
 
-        /// <summary>
-        /// Populates the page with content passed during navigation.  Any saved state is also
-        /// provided when recreating a page from a prior session.
-        /// </summary>
-        /// <param name="sender">
-        /// The source of the event; typically <see cref="NavigationHelper"/>
-        /// </param>
-        /// <param name="e">Event data that provides both the navigation parameter passed to
-        /// <see cref="Frame.Navigate(Type, Object)"/> when this page was initially requested and
-        /// a dictionary of state preserved by this page during an earlier
-        /// session.  The state will be null the first time a page is visited.</param>
         private void navigationHelper_LoadState(object sender, LoadStateEventArgs e)
         {
             object navigationParameter;
@@ -111,8 +93,6 @@ namespace TuristAppV5.View
         }
 
         #endregion
-
-
 
         public void Register()
         {
@@ -172,15 +152,15 @@ namespace TuristAppV5.View
             Register();
         }
 
+        private void LoginButton1_Click(object sender, RoutedEventArgs e)
+        {
+            Login();
+        }
+
         private void CancelOrderButton_Click(object sender, RoutedEventArgs e)
         {
             OrderAppBar.Visibility = Visibility.Collapsed;
 
-        }
-
-        private void LoginButton1_Click(object sender, RoutedEventArgs e)
-        {
-            Login();
         }
 
         private void OrderButton_Click_1(object sender, RoutedEventArgs e)

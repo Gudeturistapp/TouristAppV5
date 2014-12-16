@@ -18,6 +18,7 @@ using Newtonsoft.Json;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 //using TuristAppV5.Model;
+using TuristAppV5.Model;
 
 namespace TuristAppV5.View
 {
@@ -28,13 +29,75 @@ namespace TuristAppV5.View
     {
         private static string _language = "English";
         private static string fileName = "Language.Dat";
-
+        private Login login = new Login();
+        private UserData userData;
         
 
         public LanguagePage()
         {
             this.InitializeComponent();
             SaveLanguageAsJson(_language);
+        }
+
+        public void Register()
+        {
+            if (!string.IsNullOrWhiteSpace(registerUserNameBox.Text) &&
+                !string.IsNullOrWhiteSpace(registerPasswordBox.Password) &&
+
+                !string.IsNullOrWhiteSpace(registerEmailBox.Text) &&
+                !string.IsNullOrWhiteSpace(registerPhoneBox.Text))
+            {
+
+                userData = new UserData(registerUserNameBox.Text, registerEmailBox.Text, registerPhoneBox.Text);
+
+                //userData.UserName = registerUserNameBox.Text;
+                //userData.UserEmail = registerEmailBox.Text;
+                //userData.UserPhone = registerPhoneBox.Text;
+
+                login.LoginDictionary.Add(registerUserNameBox.Text, registerPasswordBox.Password);
+
+
+                login.IsLoggedIn = true;
+
+                RegisterButton.Flyout.Hide();
+
+                ErrorBlock.Text = "";
+                SuccessBlock.Text = "Success! User has been created.";
+
+            }
+            else
+            {
+                SuccessBlock.Text = "";
+                ErrorBlock.Text = "Error! Please input values in all fields.";
+            }
+        }
+
+        public void Login()
+        {
+            if (login.LoginDictionary.ContainsKey(UsernameLoginBox.Text) && PasswordLoginBox.Password == login.LoginDictionary[UsernameLoginBox.Text])
+            {
+                login.IsLoggedIn = true;
+                LoginButton.Flyout.Hide();
+
+                ErrorBlock.Text = "";
+                SuccessBlock.Text = "Success! Loggged in.";
+            }
+            else
+            {
+                SuccessBlock.Text = "";
+                ErrorBlock.Text = "Error! Username or password incorrect.";
+            }
+        }
+
+
+        private void RegisterButton1_Click(object sender, RoutedEventArgs e)
+        {
+            Register();
+        }
+
+        private void LoginButton1_Click(object sender, RoutedEventArgs e)
+        {
+            Login();
         }
 
         #region Language file handling.

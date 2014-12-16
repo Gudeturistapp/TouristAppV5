@@ -300,7 +300,10 @@
         * Row 0 contains the back button and page title
         * Row 1 contains the rest of the page layout
     -->
-    <Grid Background="#B200C8FF">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/Wood.jpg"/>
+        </Grid.Background>
         <Grid.DataContext>
             <ViewModel:MainViewModel/>
         </Grid.DataContext>
