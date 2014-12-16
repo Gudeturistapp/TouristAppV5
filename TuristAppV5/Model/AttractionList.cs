@@ -11,11 +11,9 @@ namespace TuristAppV5.Model
     {
         public ObservableCollection<Attractions> AttractionLists = new ObservableCollection<Attractions>();
 
-        public void AddAttraction(string name, string phone, string description, string photo, string price = null)
+        public void AddAttraction(string name, string description, string photo)
         {
-            AttractionLists.Add(new Attractions(name, phone, description, photo, price));
+            AttractionLists.Add(new Attractions(name, description, photo));
         }
-
-        
     }
 }

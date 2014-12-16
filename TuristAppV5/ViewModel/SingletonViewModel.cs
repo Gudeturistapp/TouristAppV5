@@ -35,37 +35,29 @@ namespace TuristAppV5.ViewModel
         public SingletonViewModel()
         {
             _AttractionPage = new ObservableCollection<Attractions>();
-            Attractions Rest1 = new Attractions("", "", "", "", "")
+            Attractions Rest1 = new Attractions("", "", "")
             {
                 _description = "Dette er en fantastisk god Restaurant",
                 _name = "Jensens Bøfhus",
-                _phone = " ",
                 _photo = "placeholder",
-                _price = "3823"
              };
-            Attractions Event1 = new Attractions("", "", "", "", "")
+            Attractions Event1 = new Attractions("", "", "")
             {
                 _description = "Dette er det flotteste event nogensinde",
                 _name = "Roskilde Festival",
-                _phone = "2323",
                 _photo = "placeholder",
-                _price = "2323"
             };
-            Attractions Culture1 = new Attractions("", "", "", "", "")
+            Attractions Culture1 = new Attractions("", "", "")
             {
                 _description = "Dette er det flotteste Museum nogensinde",
                 _name = "Roskilde Museum",
-                _phone = "2323",
                 _photo = "placeholder",
-                _price = "2323"
             };
-            Attractions Shop1 = new Attractions("", "", "", "", "")
+            Attractions Shop1 = new Attractions("", "", "")
             {
                 _description = "Dette er det flotteste indkøbscenter nogensinde",
                 _name = "Ro's Torv",
-                _phone = "2323",
                 _photo = "placeholder",
-                _price = "2323"
             };
 
             _AttractionPage.Add((Rest1));
