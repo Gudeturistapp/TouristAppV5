@@ -95,5 +95,20 @@ namespace TuristAppV5.View
 
         }
 
+        private void CultureButton2_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void CultureButton4_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void CultureButton3_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
       }
 }

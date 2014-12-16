@@ -214,14 +214,11 @@ namespace TuristAppV5.View
             
         }
 
-<<<<<<< HEAD:TuristAppV5/View/ItemDetailPage.xaml.cs
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Exit();
         }
-=======
 
 
->>>>>>> origin/DannyDJ:TuristAppV5/View/ItemDetailPageNEW.xaml.cs
     }
 }

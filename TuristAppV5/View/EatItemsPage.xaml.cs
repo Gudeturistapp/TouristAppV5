@@ -95,5 +95,20 @@ namespace TuristAppV5.View
 
         }
 
+        private void EatButton2_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void EatButton4_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void EatButton3_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
       }
 }

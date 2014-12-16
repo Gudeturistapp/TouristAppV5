@@ -252,7 +252,7 @@
                         <ImageBrush Stretch="Fill" ImageSource="{Binding SelectedAttraction.photo2}"/>
                     </Ellipse.Fill>
                 </Ellipse>
-                <Button x:Name="CultureButton2" Content="Button" HorizontalAlignment="Left" Margin="7,-3,0,-3" VerticalAlignment="Top" Height="212" Width="223" BorderBrush="Transparent" Foreground="Transparent" Opacity="0">
+                <Button x:Name="CultureButton2" Content="Button" HorizontalAlignment="Left" Margin="7,-3,0,-3" VerticalAlignment="Top" Height="212" Width="223" BorderBrush="Transparent" Foreground="Transparent" Opacity="0" Click="CultureButton2_Click">
                     <Button.DataContext>
                         <viewModel:MainViewModel/>
                     </Button.DataContext>
@@ -270,7 +270,7 @@
                         <ImageBrush Stretch="Fill" ImageSource="{Binding SelectedAttraction.photo4}"/>
                     </Ellipse.Fill>
                 </Ellipse>
-                <Button x:Name="CultureButton3" Content="Button" HorizontalAlignment="Left" Margin="-3,-3,0,-3" VerticalAlignment="Top" Height="212" Width="233" BorderBrush="Transparent" Foreground="Transparent" Opacity="0"/>
+                <Button x:Name="CultureButton3" Content="Button" HorizontalAlignment="Left" Margin="-3,-3,0,-3" VerticalAlignment="Top" Height="212" Width="233" BorderBrush="Transparent" Foreground="Transparent" Opacity="0" Click="CultureButton3_Click"/>
             </Grid>
         </StackPanel>
         <StackPanel x:Name="Stack4" HorizontalAlignment="Left" Height="212" Margin="266,385,0,0" Grid.Row="1" VerticalAlignment="Top" Width="500">
@@ -284,7 +284,7 @@
                         <ImageBrush Stretch="Fill" ImageSource="{Binding SelectedAttraction.photo3}"/>
                     </Ellipse.Fill>
                 </Ellipse>
-                <Button x:Name="CultureButton4" Content="Button" HorizontalAlignment="Left" Margin="-3,-3,0,-3" VerticalAlignment="Top" Height="212" Width="233" BorderBrush="Transparent" Foreground="Transparent" Opacity="0"/>
+                <Button x:Name="CultureButton4" Content="Button" HorizontalAlignment="Left" Margin="-3,-3,0,-3" VerticalAlignment="Top" Height="212" Width="233" BorderBrush="Transparent" Foreground="Transparent" Opacity="0" Click="CultureButton4_Click"/>
             </Grid>
         </StackPanel>
 

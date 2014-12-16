@@ -14,10 +14,10 @@ namespace UnitTesting
     [TestClass()]
     public class Tests
     {
-        private MainViewModel
-        private ItemDetailPage 
+        //private MainViewModel
+        //private ItemDetailPage 
 
-        [TestInitialize]
+        //[TestInitialize]
         public void Beforetest()
         {
             
