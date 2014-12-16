@@ -238,7 +238,7 @@
                         <ImageBrush ImageSource="{Binding SelectedAttraction.photo1}"/>
                     </Ellipse.Fill>
                 </Ellipse>
-                <Button x:Name="EatButton1" Content="Button" HorizontalAlignment="Left" Margin="-7,1,0,-3" VerticalAlignment="Top" Height="208" Width="237" BorderBrush="Transparent" Foreground="Transparent" Opacity="0"/>
+                <Button x:Name="EatButton1" Content="Button" HorizontalAlignment="Left" Margin="-7,1,0,-3" VerticalAlignment="Top" Height="208" Width="237" BorderBrush="Transparent" Foreground="Transparent" Opacity="0" Click="EatButton1_Click"/>
             </Grid>
         </StackPanel>
         <StackPanel x:Name="Eatstack2" HorizontalAlignment="Left" Height="212" Margin="811,83,0,0" Grid.Row="1" VerticalAlignment="Top" Width="500">

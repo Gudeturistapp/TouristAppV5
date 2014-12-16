@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:viewModel="using:TuristAppV5.ViewModel"
     x:Name="PageRoot"
-    x:Class="TuristAppV5.View.CultureItemsPage"
+    x:Class="TuristAppV5.View.ShopItemsPage"
     DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Mode=Self}}"
     mc:Ignorable="d">
 

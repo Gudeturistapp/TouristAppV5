@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TuristAppV5.Model
 {
-    class AttractionList
+    public class AttractionList
     {
         public ObservableCollection<Attractions> AttractionLists = new ObservableCollection<Attractions>();
 
