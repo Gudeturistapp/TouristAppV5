@@ -160,7 +160,7 @@
                                         <StackPanel Height="35" Margin="35,0,36,0">
                                             <TextBlock TextWrapping="Wrap" Text="Register" Height="65" HorizontalAlignment="Center" Width="235" VerticalAlignment="Center" FontSize="25" Margin="34,0,-104.714,0" Foreground="#FFED6B06" FontWeight="Bold"/>
                                         </StackPanel>
-                                        <StackPanel Height="208">
+                                        <StackPanel x:Name="StackRegister" Height="208">
                                             <TextBlock TextWrapping="Wrap" FontSize="13" Height="15" Foreground="#FFED6B06" Text="Username" Margin="10,0"/>
                                             <TextBox x:Name="registerUserNameBox" TextWrapping="Wrap" Height="36" FontSize="7" MinHeight="20" Margin="10,0" PlaceholderText="Enter your Username"/>
                                             <TextBlock TextWrapping="Wrap" FontSize="13" Height="18" Foreground="#FFED6B06" Text="Phone" Margin="10,0,0,0"/>

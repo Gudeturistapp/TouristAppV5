@@ -22,9 +22,9 @@ namespace TuristAppV5.Model
         public bool IsLoggedIn
         {
             get { return isLoggedIn; }
-            set { isLoggedIn = value; }
+            set { isLoggedIn = value;}
         }
-
+        }
         
     }
-}
+

@@ -15,7 +15,11 @@ namespace TuristAppV5.Model
         public string UserName
         {
             get { return _userName; }
-            set { _userName = value; }
+            set
+            {
+                CheckUserName(value);
+                _userName = value;
+            }
         }
        
         public string UserEmail
@@ -30,6 +34,13 @@ namespace TuristAppV5.Model
             set { _phone = value; }
         }
 
+        private void CheckUserName(string UserName)
+        {
+            if (string.IsNullOrWhiteSpace(UserName))
+            {
+                throw new ArgumentException("Error! Username is null.");
+            }
+        }
         public UserData(string username, string email, string phone)
         {
             _userName = username;

@@ -219,6 +219,20 @@ namespace TuristAppV5.View
             Application.Current.Exit();
         }
 
+        public bool EmailTextBox(bool Success)
+        {
+            if (!registerEmailBox.Text.Contains("@"))
+            {
+                Success = true;
+                throw new ArgumentException("Please enter a correct Email.");
+            }
+            else
+            {
+                Success = false;
+                throw new ArgumentException("Success!");
+            }
+        }
+
 
     }
 }
