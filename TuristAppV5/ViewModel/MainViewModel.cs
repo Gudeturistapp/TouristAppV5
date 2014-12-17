@@ -1,6 +1,5 @@
 ﻿using System.Text;
 using System.Threading.Tasks;
-//using TuristAppV5.Model;
 using Windows.Globalization;
 using TuristAppV5.Common;
 using TuristAppV5.Model;
@@ -9,11 +8,9 @@ namespace TuristAppV5.ViewModel
 {
     public class MainViewModel
     {
-        //Properties + SelectedAttraction.
         //Properties + SelectedAttraction + attributter.
         #region Properties
         public static Attractions SelectedAttraction { get; set; }
-
         public AttractionList Restaurants { get; set; }
         public AttractionList Events { get; set; }
         public AttractionList Culture { get; set; }
@@ -49,7 +46,6 @@ namespace TuristAppV5.ViewModel
             Culture = new AttractionList();
             Shopping = new AttractionList();
 
-            //Ipsum
             #region Language Checker
             if (FileHandling.LoadLanguageAsJson().Result.Contains("Dansk"))
             {

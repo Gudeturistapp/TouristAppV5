@@ -18,6 +18,7 @@ using Newtonsoft.Json;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 //using TuristAppV5.Model;
+using TuristAppV5.Common;
 using TuristAppV5.Model;
 
 namespace TuristAppV5.View
@@ -27,8 +28,6 @@ namespace TuristAppV5.View
     /// </summary>
     public sealed partial class LanguagePage : Page
     {
-        private static string _language = "English";
-        private static string fileName = "Language.Dat";
         private Login login = new Login();
         private UserData userData;
         
@@ -36,7 +35,6 @@ namespace TuristAppV5.View
         public LanguagePage()
         {
             this.InitializeComponent();
-            SaveLanguageAsJson(_language);
         }
 
         public void Register()
@@ -50,9 +48,9 @@ namespace TuristAppV5.View
 
                 userData = new UserData(registerUserNameBox.Text, registerEmailBox.Text, registerPhoneBox.Text);
 
-                //userData.UserName = registerUserNameBox.Text;
-                //userData.UserEmail = registerEmailBox.Text;
-                //userData.UserPhone = registerPhoneBox.Text;
+                userData.UserName = registerUserNameBox.Text;
+                userData.UserEmail = registerEmailBox.Text;
+                userData.UserPhone = registerPhoneBox.Text;
 
                 login.LoginDictionary.Add(registerUserNameBox.Text, registerPasswordBox.Password);
 
@@ -100,67 +98,40 @@ namespace TuristAppV5.View
             Login();
         }
 
-        #region Language file handling.
-        public static async void SaveLanguageAsJson(string _language)
-        {
-            string languageJsonString = JsonConvert.SerializeObject(_language);
-            SerializeLanguageFileAsync(languageJsonString, fileName);
-        }
-
-        public static async Task<string> LoadLanguageAsJson()
-        {
-            string languageJsonString = await DeSerializeLanguageFileAsync(fileName);
-            return(string)JsonConvert.DeserializeObject(languageJsonString, typeof(string));
-        }
-
-        public static async void SerializeLanguageFileAsync(string languageDataString, string localFileName)
-        {
-            StorageFile localFile = await ApplicationData.Current.LocalFolder.CreateFileAsync(localFileName, CreationCollisionOption.ReplaceExisting);
-            await FileIO.WriteTextAsync(localFile, languageDataString);
-        }
-
-        public static async Task<string> DeSerializeLanguageFileAsync(string localFileName)
-        {
-            StorageFile localFile = await ApplicationData.Current.LocalFolder.GetFileAsync(localFileName);
-            return await FileIO.ReadTextAsync(localFile);
-        }
-
-        #endregion
-
         #region Buttons
         private void DanishLanguageButton(object sender, RoutedEventArgs e)
         {
-            SaveLanguageAsJson("Danish");
+            FileHandling.SaveLanguageAsJson("Danish");
             Frame.Navigate(typeof(MainPage));
         }
 
         private void EnglishLanguageButton(object sender, RoutedEventArgs e)
         {
-            SaveLanguageAsJson("English");
+            FileHandling.SaveLanguageAsJson("English");
             Frame.Navigate(typeof(MainPage));
         }
 
         private void SpanishLanguageButton(object sender, RoutedEventArgs e)
         {
-            SaveLanguageAsJson("Spanish");
+            FileHandling.SaveLanguageAsJson("Spanish");
             Frame.Navigate(typeof(MainPage));
         }
 
         private void GermanLanguageButton(object sender, RoutedEventArgs e)
         {
-            SaveLanguageAsJson("German");
+            FileHandling.SaveLanguageAsJson("German");
             Frame.Navigate(typeof(MainPage));
         }
 
         private void FrenchLanguageButton(object sender, RoutedEventArgs e)
         {
-            SaveLanguageAsJson("French");
+            FileHandling.SaveLanguageAsJson("French");
             Frame.Navigate(typeof(MainPage));
         }
 
         private void RussianLanguageButton(object sender, RoutedEventArgs e)
         {
-            SaveLanguageAsJson("Russian");
+            FileHandling.SaveLanguageAsJson("Russian");
             Frame.Navigate(typeof(MainPage));
         } 
         #endregion
