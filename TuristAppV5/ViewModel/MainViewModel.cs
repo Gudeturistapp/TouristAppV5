@@ -4,7 +4,7 @@ using System.Diagnostics.Tracing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//using TuristAppV5.Model;
+using TuristAppV5.Common;
 using TuristAppV5.Model;
 
 namespace TuristAppV5.ViewModel
@@ -28,48 +28,246 @@ namespace TuristAppV5.ViewModel
             Culture = new AttractionList();
             Shopping = new AttractionList();
 
-            //Ipsum
-            #region Ipsum
-            string ipsum = "Mauris pellentesque auctor malesuada. Nulla hendrerit sodales ipsum, eu aliquet sapien. Mauris cursus lorem sit amet augue dignissim, ut placerat sapien tristique. In hac habitasse platea dictumst. Cras ut auctor nisi, sit amet dapibus nibh. Aliquam congue, dui a viverra faucibus, justo magna convallis mi, nec dapibus velit est rhoncus quam. Nullam id tristique ex. Nunc ultrices interdum consectetur. Mauris felis risus, ornare non purus id, vehicula ullamcorper eros. Ut efficitur, elit vitae imperdiet dictum, sem eros elementum tortor, eget rhoncus erat eros nec nisi. Integer mollis ipsum est, vitae lobortis est consectetur sit amet. Curabitur lobortis gravida congue. Quisque gravida lorem et suscipit congue. Proin pretium ex elit, quis rhoncus lorem laoreet sit amet. Praesent fermentum suscipit consectetur.";
+           // int language = languagechecker();
 
-            #endregion
+            string restaurentJensensBøfhus = "";
+            string restaurentBones = "";
+            string restaurentCafeVivaldi = "";
+            string restaurentMumm = "";
+
+            string eventRoskildeFestival = "";
+            string eventLysfest = "";
+            string eventHavnen = "";
+            string eventMusicon = "";
+
+            string shoppingsRoTorv = "";
+            string shoppingsRandomOmråde = "";
+            string shoppingsWebShopping = "";
+            string shoppingsSomething = "";
+
+            string attractionVikingeSkibsMuseum = "";
+            string attractionRoskildeDomkirke = "";
+            string attractionEtGallery = "";
+            string attractionSomeplace = "";
+
+            
+
+        //    #region Text Definer
+        //    if (language == 1)
+        //    {
+        //        //Danish
+        //        #region Danish version
+        //        restaurentJensensBøfhus = "";
+        //        restaurentBones = "";
+        //        restaurentCafeVivaldi = "";
+        //        restaurentMumm = "";
+
+        //        eventRoskildeFestival = "";
+        //        eventLysfest = "";
+        //        eventHavnen = "";
+        //        eventMusicon = "";
+
+        //        shoppingsRoTorv = "";
+        //        shoppingsRandomOmråde = "";
+        //        shoppingsWebShopping = "";
+        //        shoppingsSomething = "";
+
+        //        attractionVikingeSkibsMuseum = "";
+        //        attractionRoskildeDomkirke = "";
+        //        attractionEtGallery = "";
+        //        attractionSomeplace = "";
+        //        #endregion
+        //    }
+        //    else if (language == 2)
+        //    {
+        //        //English
+        //        #region English version
+        //        restaurentJensensBøfhus = "";
+        //        restaurentBones = "";
+        //        restaurentCafeVivaldi = "";
+        //        restaurentMumm = "";
+
+        //        eventRoskildeFestival = "";
+        //        eventLysfest = "";
+        //        eventHavnen = "";
+        //        eventMusicon = "";
+
+        //        shoppingsRoTorv = "";
+        //        shoppingsRandomOmråde = "";
+        //        shoppingsWebShopping = "";
+        //        shoppingsSomething = "";
+
+        //        attractionVikingeSkibsMuseum = "";
+        //        attractionRoskildeDomkirke = "";
+        //        attractionEtGallery = "";
+        //        attractionSomeplace = "";
+        //        #endregion
+        //    }
+        //    else if (language == 3)
+        //    {
+        //        //French
+        //        #region French version
+        //        restaurentJensensBøfhus = "";
+        //        restaurentBones = "";
+        //        restaurentCafeVivaldi = "";
+        //        restaurentMumm = "";
+
+        //        eventRoskildeFestival = "";
+        //        eventLysfest = "";
+        //        eventHavnen = "";
+        //        eventMusicon = "";
+
+        //        shoppingsRoTorv = "";
+        //        shoppingsRandomOmråde = "";
+        //        shoppingsWebShopping = "";
+        //        shoppingsSomething = "";
+
+        //        attractionVikingeSkibsMuseum = "";
+        //        attractionRoskildeDomkirke = "";
+        //        attractionEtGallery = "";
+        //        attractionSomeplace = "";
+        //        #endregion
+        //    }
+        //    else if (language == 4)
+        //    {
+        //        //German
+        //        #region German version
+        //        restaurentJensensBøfhus = "";
+        //        restaurentBones = "";
+        //        restaurentCafeVivaldi = "";
+        //        restaurentMumm = "";
+
+        //        eventRoskildeFestival = "";
+        //        eventLysfest = "";
+        //        eventHavnen = "";
+        //        eventMusicon = "";
+
+        //        shoppingsRoTorv = "";
+        //        shoppingsRandomOmråde = "";
+        //        shoppingsWebShopping = "";
+        //        shoppingsSomething = "";
+
+        //        attractionVikingeSkibsMuseum = "";
+        //        attractionRoskildeDomkirke = "";
+        //        attractionEtGallery = "";
+        //        attractionSomeplace = "";
+        //        #endregion
+        //    }
+        //    else if (language == 5)
+        //    {
+        //        //Russian
+        //        #region Russian version
+        //        restaurentJensensBøfhus = "";
+        //        restaurentBones = "";
+        //        restaurentCafeVivaldi = "";
+        //        restaurentMumm = "";
+
+        //        eventRoskildeFestival = "";
+        //        eventLysfest = "";
+        //        eventHavnen = "";
+        //        eventMusicon = "";
+
+        //        shoppingsRoTorv = "";
+        //        shoppingsRandomOmråde = "";
+        //        shoppingsWebShopping = "";
+        //        shoppingsSomething = "";
+
+        //        attractionVikingeSkibsMuseum = "";
+        //        attractionRoskildeDomkirke = "";
+        //        attractionEtGallery = "";
+        //        attractionSomeplace = "";
+        //        #endregion
+        //    }
+        //    else
+        //    {
+        //        //Spanish
+        //        #region Spanish version
+        //        restaurentJensensBøfhus = "";
+        //        restaurentBones = "";
+        //        restaurentCafeVivaldi = "";
+        //        restaurentMumm = "";
+
+        //        eventRoskildeFestival = "";
+        //        eventLysfest = "";
+        //        eventHavnen = "";
+        //        eventMusicon = "";
+
+        //        shoppingsRoTorv = "";
+        //        shoppingsRandomOmråde = "";
+        //        shoppingsWebShopping = "";
+        //        shoppingsSomething = "";
+
+        //        attractionVikingeSkibsMuseum = "";
+        //        attractionRoskildeDomkirke = "";
+        //        attractionEtGallery = "";
+        //        attractionSomeplace = "";
+        //        #endregion
+        //    }
+        //    #endregion
+
+           
 
             //Restaurants for detailPage.
-            #region Restauranter
-            Restaurants.AddAttraction("Jensens Bøfhus", "1111 2222", ipsum, "/Assets/Eat/Jensens_Steak2.jpg");
-            Restaurants.AddAttraction("Bones", "2222 3333", ipsum, "/Assets/Eat/bones_steak.jpg");
-            Restaurants.AddAttraction("Café Vivaldi", "3333 4444", ipsum, "/Assets/Eat/Vivaldi_Steak2.jpg");
-            Restaurants.AddAttraction("Mumm", "666, 666, 666", ipsum, "/Assets/Eat/Mumm_billede1.jpg");
+            #region Restaurants
+            Restaurants.AddAttraction("Jensens Bøfhus", restaurentJensensBøfhus, "/Assets/Eat/Jensens_Steak2.jpg");
+            Restaurants.AddAttraction("Bones", restaurentBones, "/Assets/Eat/bones_steak.jpg");
+            Restaurants.AddAttraction("Café Vivaldi", restaurentCafeVivaldi, "/Assets/Eat/Vivaldi_Steak2.jpg");
+            Restaurants.AddAttraction("Mumm", restaurentMumm, "/Assets/Eat/Mumm_billede1.jpg");
             #endregion
 
             //Events for detailPage.
             #region Events
-            Events.AddAttraction("Roskilde Festival", "6x3", ipsum, "/Assets/Events/Roskilde_Festival_Scene.jpg");
-            Events.AddAttraction("Lysfest", "666 666", ipsum, "/Assets/Events/LysFest_billede1.gif");
-            Events.AddAttraction("Havnen", "999 333 999", ipsum, "/Assets/Events/Havn_front.jpg");
-            Events.AddAttraction("Musicon", "88888888", ipsum, "/Assets/Events/Musicon_billede2.jpg");
+            Events.AddAttraction("Roskilde Festival", eventRoskildeFestival, "/Assets/Events/Roskilde_Festival_Scene.jpg");
+            Events.AddAttraction("Lysfest", eventLysfest, "/Assets/Events/LysFest_billede1.gif");
+            Events.AddAttraction("Havnen", eventHavnen, "/Assets/Events/Havn_front.jpg");
+            Events.AddAttraction("Musicon", eventMusicon, "/Assets/Events/Musicon_billede2.jpg");
             #endregion
 
             //Shopping areas for detailPage.
             #region Shoppings
-            Shopping.AddAttraction("Ro's Torv", "1234 5678", ipsum, "/Assets/Shops/shopping_billede2.jpg");
-            Shopping.AddAttraction("Brødrene Lutshøft's Efterfølgere", "1234 8765", ipsum, "/Assets/Shops/koebmand_billede1.jpg");
-            Shopping.AddAttraction("Gågaden", "8765 4321", ipsum, "/Assets/Shops/Gaagade_billede2.gif");
-            Shopping.AddAttraction("Bjergtrolden", "12345678", ipsum, "/Assets/Shops/Trold_billede1.jpg");
+            Shopping.AddAttraction("Ro's Torv", shoppingsRoTorv, "/Assets/Shops/shopping_billede2.jpg");
+            Shopping.AddAttraction("Random Område", shoppingsRandomOmråde, "/Assets/Shops/koebmand_billede1.jpg");
+            Shopping.AddAttraction("WebShopping", shoppingsWebShopping, "/Assets/Shops/Gaagade_billede2.gif");
+            Shopping.AddAttraction("Something", shoppingsSomething, "/Assets/Shops/Trold_billede1.jpg");
             #endregion
 
             //Cultural areas for detailPage.
-            #region Kultur
-            Culture.AddAttraction("Vikingeskibs Museum", "5555 0000", ipsum, "/Assets/Museum/viking_billede1.jpg");
-            Culture.AddAttraction("Roskilde Domkirke", "123", ipsum, "/Assets/Museum/Domkirke_billede2.jpg");
-            Culture.AddAttraction("Galleri LABR", "321", ipsum, "/Assets/Museum/Galleri_billede2.jpg");
-            Culture.AddAttraction("Rådhuset", "12345678", ipsum, "/Assets/Museum/Radhus_billede1.JPG");
+            #region Cultur
+            Culture.AddAttraction("Vikinge Skibs Museum", attractionVikingeSkibsMuseum, "/Assets/Museum/viking_billede1.jpg");
+            Culture.AddAttraction("Roskildes Domkirke", attractionRoskildeDomkirke, "/Assets/Museum/Domkirke_billede2.jpg");
+            Culture.AddAttraction("Et random Galleri", attractionEtGallery, "/Assets/Museum/Galleri_billede2.jpg");
+            Culture.AddAttraction("someplace", attractionSomeplace, "/Assets/Museum/Radhus_billede1.JPG");
             #endregion
+        }
 
-
-            
-
-
+        //public int languagechecker()
+        //{
+        //    #region Language Checker
+        //    if (FileHandling.LoadLanguageAsJson().Result.Contains("Danish"))
+        //    {
+        //        return 1;
+        //    }
+        //    else if (FileHandling.LoadLanguageAsJson().Result.Contains("Spanish"))
+        //    {
+        //        return 6;
+        //    }
+        //    else if (FileHandling.LoadLanguageAsJson().Result.Contains("French"))
+        //    {
+        //        return 3;
+        //    }
+        //    else if (FileHandling.LoadLanguageAsJson().Result.Contains("German"))
+        //    {
+        //        return 4;
+        //    }
+        //    else if (FileHandling.LoadLanguageAsJson().Result.Contains("Russian"))
+        //    {
+        //        return 5;
+        //    }
+        //    else
+        //    {
+        //        //Default language is now English
+        //        return 2;
+        //    }
+        //    #endregion
         }
     }
-}
