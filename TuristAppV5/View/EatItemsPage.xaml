@@ -249,7 +249,7 @@
                         <viewModel:MainViewModel/>
                     </Ellipse.DataContext>
                     <Ellipse.Fill>
-                        <ImageBrush ImageSource="ms-appx:///Assets/Eat/bones_logo.gif"/>
+                        <ImageBrush ImageSource="ms-appx:///Assets/Eat/bones_logo.png"/>
                     </Ellipse.Fill>
                 </Ellipse>
                 <Button x:Name="EatButton2" Content="Button" HorizontalAlignment="Left" Margin="7,-3,0,-3" VerticalAlignment="Top" Height="212" Width="223" BorderBrush="Transparent" Foreground="Transparent" Opacity="0" Click="EatButton2_Click">
@@ -281,7 +281,7 @@
                         <viewModel:MainViewModel/>
                     </Ellipse.DataContext>
                     <Ellipse.Fill>
-                        <ImageBrush ImageSource="ms-appx:///Assets/Eat/Vivaldi-logo.jpg"/>
+                        <ImageBrush ImageSource="ms-appx:///Assets/Eat/Vivaldi-logo.png"/>
                     </Ellipse.Fill>
                 </Ellipse>
                 <Button x:Name="EatButton4" Content="Button" HorizontalAlignment="Left" Margin="-3,-3,0,-3" VerticalAlignment="Top" Height="212" Width="233" BorderBrush="Transparent" Foreground="Transparent" Opacity="0" Click="EatButton4_Click"/>

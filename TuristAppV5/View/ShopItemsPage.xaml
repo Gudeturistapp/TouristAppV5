@@ -249,7 +249,7 @@
                         <viewModel:MainViewModel/>
                     </Ellipse.DataContext>
                     <Ellipse.Fill>
-                        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/Shops/koebmand_logo.jpg"/>
+                        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/Shops/Koebmand_logo.jpg"/>
                     </Ellipse.Fill>
                 </Ellipse>
                 <Button x:Name="ShopButton2" Content="Button" HorizontalAlignment="Left" Margin="7,-3,0,-3" VerticalAlignment="Top" Height="212" Width="223" BorderBrush="Transparent" Foreground="Transparent" Opacity="0" Click="ShopButton2_Click">
@@ -270,7 +270,7 @@
                         <viewModel:MainViewModel/>
                     </Ellipse.DataContext>
                     <Ellipse.Fill>
-                        <ImageBrush Stretch="UniformToFill" ImageSource="ms-appx:///Assets/Shops/Trold_logo.jpg"/>
+                        <ImageBrush ImageSource="ms-appx:///Assets/Shops/Trold_logo.jpg"/>
                     </Ellipse.Fill>
                 </Ellipse>
                 <Button x:Name="ShopButton3" Content="Button" HorizontalAlignment="Left" Margin="-3,-3,0,-3" VerticalAlignment="Top" Height="212" Width="233" BorderBrush="Transparent" Foreground="Transparent" Opacity="0" Click="ShopButton3_Click"/>
