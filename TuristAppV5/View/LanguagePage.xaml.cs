@@ -35,6 +35,7 @@ namespace TuristAppV5.View
         public LanguagePage()
         {
             this.InitializeComponent();
+            FileHandling.SaveLanguageAsJson("English");
         }
 
         public void Register()

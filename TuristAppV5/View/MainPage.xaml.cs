@@ -21,11 +21,6 @@ namespace TuristAppV5.View
         {
             this.InitializeComponent();
         }
-
-
-
-        MainViewModel viewModel = new MainViewModel();
-
         public void Register()
         {
             if (!string.IsNullOrWhiteSpace(registerUserNameBox.Text) &&
