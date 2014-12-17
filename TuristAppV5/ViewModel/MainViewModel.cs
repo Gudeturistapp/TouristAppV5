@@ -24,7 +24,7 @@ namespace TuristAppV5.ViewModel
         {
             int language;
 
-            string restaurentJensensBøfhus;
+            string restaurentJensensBøfhus = "";
             string restaurentBones = "";
             string restaurentCafeVivaldi = "";
             string restaurentMumm = "";
