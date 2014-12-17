@@ -1,5 +1,6 @@
 ﻿// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
+using System.ComponentModel;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using TuristAppV5.Model;
@@ -23,7 +24,7 @@ namespace TuristAppV5.View
 
 
 
-        MainViewModel viewModel = new MainViewModel();
+        private MainViewModel viewModel = new MainViewModel();
 
         public void Register()
         {
