@@ -35,7 +35,7 @@ namespace TuristAppV5.View
         public LanguagePage()
         {
             this.InitializeComponent();
-            FileHandling.SaveLanguageAsJson("English");
+            FileHandling.SaveLanguageAsync("English");
         }
 
         public void Register()
@@ -102,37 +102,37 @@ namespace TuristAppV5.View
         #region Buttons
         private void DanishLanguageButton(object sender, RoutedEventArgs e)
         {
-            FileHandling.SaveLanguageAsJson("Danish");
+            FileHandling.SaveLanguageAsync("Danish");
             Frame.Navigate(typeof(MainPage));
         }
 
         private void EnglishLanguageButton(object sender, RoutedEventArgs e)
         {
-            FileHandling.SaveLanguageAsJson("English");
+            FileHandling.SaveLanguageAsync("English");
             Frame.Navigate(typeof(MainPage));
         }
 
         private void SpanishLanguageButton(object sender, RoutedEventArgs e)
         {
-            FileHandling.SaveLanguageAsJson("Spanish");
+            FileHandling.SaveLanguageAsync("Spanish");
             Frame.Navigate(typeof(MainPage));
         }
 
         private void GermanLanguageButton(object sender, RoutedEventArgs e)
         {
-            FileHandling.SaveLanguageAsJson("German");
+            FileHandling.SaveLanguageAsync("German");
             Frame.Navigate(typeof(MainPage));
         }
 
         private void FrenchLanguageButton(object sender, RoutedEventArgs e)
         {
-            FileHandling.SaveLanguageAsJson("French");
+            FileHandling.SaveLanguageAsync("French");
             Frame.Navigate(typeof(MainPage));
         }
 
         private void RussianLanguageButton(object sender, RoutedEventArgs e)
         {
-            FileHandling.SaveLanguageAsJson("Russian");
+            FileHandling.SaveLanguageAsync("Russian");
             Frame.Navigate(typeof(MainPage));
         } 
         #endregion

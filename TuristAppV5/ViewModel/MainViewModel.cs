@@ -1,6 +1,9 @@
-﻿using System.Text;
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics.Tracing;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
-using Windows.Globalization;
 using TuristAppV5.Common;
 using TuristAppV5.Model;
 
@@ -19,7 +22,12 @@ namespace TuristAppV5.ViewModel
 
         public MainViewModel()
         {
-            int language;
+            string language;
+
+            Restaurants = new AttractionList();
+            Events = new AttractionList();
+            Culture = new AttractionList();
+            Shopping = new AttractionList();
 
             string restaurentJensensBøfhus = "";
             string restaurentBones = "";
@@ -41,42 +49,38 @@ namespace TuristAppV5.ViewModel
             string attractionEtGallery = "";
             string attractionSomeplace = "";
 
-            Restaurants = new AttractionList();
-            Events = new AttractionList();
-            Culture = new AttractionList();
-            Shopping = new AttractionList();
-
             #region Language Checker
-            if (FileHandling.LoadLanguageAsJson().Result.Contains("Dansk"))
-            {
-                language = 1;
-            }
-            else if (FileHandling.LoadLanguageAsJson().Result.Contains("Spanish"))
-            {
-                language = 6;
-            }
-            else if (FileHandling.LoadLanguageAsJson().Result.Contains("French"))
-            {
-                language = 3;
-            }
-            else if (FileHandling.LoadLanguageAsJson().Result.Contains("German"))
-            {
-                language = 4;
-            }
-            else if (FileHandling.LoadLanguageAsJson().Result.Contains("Russian"))
-            {
-                language = 5;
-            }
-            else
-            {
-                //Default language is now English
-                language = 2;
-            } 
+
+            language = FileHandling.LoadLanguageAsync().Result;
+            //if (FileHandling.LoadLanguageAsJson().Result.Contains("Dansk"))
+            //{
+            //    language = 1;
+            //}
+            //else if (FileHandling.LoadLanguageAsJson().Result.Contains("Spanish"))
+            //{
+            //    language = 6;
+            //}
+            //else if (FileHandling.LoadLanguageAsJson().Result.Contains("French"))
+            //{
+            //    language = 3;
+            //}
+            //else if (FileHandling.LoadLanguageAsJson().Result.Contains("German"))
+            //{
+            //    language = 4;
+            //}
+            //else if (FileHandling.LoadLanguageAsJson().Result.Contains("Russian"))
+            //{
+            //    language = 5;
+            //}
+            //else
+            //{
+            //    //Default language is now English
+            //    language = 2;
+            //} 
             #endregion
 
             #region Text Definer
-
-            if (language == 1)
+            if (language.Equals("Danish"))
             {
                 //Danish
                 #region Danish version
@@ -101,7 +105,7 @@ namespace TuristAppV5.ViewModel
                 attractionSomeplace = ""; 
                 #endregion
             }
-            else if (language == 2)
+            else if (language.Equals("English"))
             {
                 //English
                 #region English version
@@ -126,7 +130,7 @@ namespace TuristAppV5.ViewModel
                 attractionSomeplace = ""; 
                 #endregion
             }
-            else if (language == 3)
+            else if (language.Equals("French"))
             {
                 //French
                 #region French version
@@ -151,7 +155,7 @@ namespace TuristAppV5.ViewModel
                 attractionSomeplace = ""; 
                 #endregion
             }
-            else if (language == 4)
+            else if (language.Equals("German"))
             {
                 //German
                 #region German version
@@ -176,7 +180,7 @@ namespace TuristAppV5.ViewModel
                 attractionSomeplace = ""; 
                 #endregion
             }
-            else if (language == 5)
+            else if (language.Equals("Russian"))
             {
                 //Russian
                 #region Russian version
@@ -226,7 +230,6 @@ namespace TuristAppV5.ViewModel
                 attractionSomeplace = ""; 
                 #endregion
             }
-
             #endregion
 
             //Restaurants for detailPage.
@@ -260,6 +263,13 @@ namespace TuristAppV5.ViewModel
             Culture.AddAttraction("Et random Galleri", attractionEtGallery, "/Assets/Museum/Galleri_billede2.jpg");
             Culture.AddAttraction("someplace", attractionSomeplace, "/Assets/Museum/Radhus_billede1.JPG");
             #endregion
+        }
+
+        public string GetLanguage()
+        {
+            var task = FileHandling.LoadLanguageAsync();
+            task.Wait();
+            return task.Result;
         }
     }
 }

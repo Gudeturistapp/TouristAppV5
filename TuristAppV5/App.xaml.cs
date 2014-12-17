@@ -42,7 +42,7 @@ namespace TuristAppV5
         public static async void CheckForFile()
         {
             var path = ApplicationData.Current.LocalFolder;
-            var file = await path.TryGetItemAsync("Language.Dat") as IStorageFile;
+            var file = await path.TryGetItemAsync("Language.DAT") as IStorageFile;
 
             if (file != null)
             {

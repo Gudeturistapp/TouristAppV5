@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Storage;
+using Windows.UI.Text;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -21,32 +22,43 @@ namespace TuristAppV5.Common
     public class FileHandling
     {
         private static string _language = "English";
-        private const string languageFileName = "Language.Dat";
+        private const string languageFileName = "Language.DAT";
 
         #region Language file handling.
-        public static async void SaveLanguageAsJson(string _language)
+        public static async void SaveLanguageAsync(string _language)
         {
-            string languageJsonString = JsonConvert.SerializeObject(_language);
-            SerializeLanguageFileAsync(languageJsonString, languageFileName);
+            //SaveLanguageAsync
+            WriteLanguageFileAsync(_language, languageFileName);
         }
 
-        public static async Task<string> LoadLanguageAsJson()
+        public static async Task<string> LoadLanguageAsync()
         {
-            string languageJsonString = await DeSerializeLanguageFileAsync(languageFileName);
-            return(string)JsonConvert.DeserializeObject(languageJsonString, typeof(string));
+            //LoadLanguageAsync
+            string languageJsonString = await ReadLanguageFileAsync(languageFileName);
+            return languageJsonString;
         }
 
-        public static async void SerializeLanguageFileAsync(string languageDataString, string localFileName)
+        public static async void WriteLanguageFileAsync(string languageDataString, string localFileName)
         {
+            //WriteLanguageFileAsync
             StorageFile localFile = await ApplicationData.Current.LocalFolder.CreateFileAsync(localFileName, CreationCollisionOption.ReplaceExisting);
             await FileIO.WriteTextAsync(localFile, languageDataString);
         }
 
-        public static async Task<string> DeSerializeLanguageFileAsync(string localFileName)
+        public static async Task<string> ReadLanguageFileAsync(string localFileName)
         {
+            //ReadLanguageFileAsync
             StorageFile localFile = await ApplicationData.Current.LocalFolder.GetFileAsync(localFileName);
             return await FileIO.ReadTextAsync(localFile);
         }
         #endregion
+
+        //public static async Task<String> FindLanguage()
+        //{
+        //    string boh;
+        //    var task = LoadLanguageAsJson();
+        //    task.Wait();
+        //    return task.Result;
+        //}
     }
 }

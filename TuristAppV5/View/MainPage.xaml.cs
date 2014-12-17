@@ -16,6 +16,7 @@ namespace TuristAppV5.View
         private Login login = new Login();
         private UserData _userData;
 
+        //MainViewModel _viewModel = new MainViewModel();
 
         public MainPage()
         {
@@ -82,65 +83,63 @@ namespace TuristAppV5.View
         }
 
 
-        private void Button_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        //private void Button_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        //{
+        //    Frame.Navigate(typeof (ItemDetailPageNEW));
+        //}
+
+
+        private void EventsButton_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof (ItemDetailPageNEW));
-        }
-
-
-        private void EventsButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
-        {
-            
-
             Frame.Navigate(typeof (EventItemsPage));
         }
 
-        private void RestaurantButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        private void RestaurantButton_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof (EatItemsPage));
         }
 
-        private void CultureButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        private void CultureButton_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof (CultureItemsPage));
         }
 
-        private void ShoppingButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        private void ShoppingButton_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof (ShopItemsPage));
         }
 
-        private void DanishFlybutton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        private void DanishFlybutton_Click(object sender, RoutedEventArgs e)
         {
-            FileHandling.SaveLanguageAsJson("Danish");
+            FileHandling.SaveLanguageAsync("Danish");
         }
 
-        private void EnglishFlyButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        private void EnglishFlyButton_Click(object sender, RoutedEventArgs e)
         {
-            FileHandling.SaveLanguageAsJson("English");
+            FileHandling.SaveLanguageAsync("English");
         }
 
-        private void FrenchFlyButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        private void FrenchFlyButton_Click(object sender, RoutedEventArgs e)
         {
-            FileHandling.SaveLanguageAsJson("French");
+            FileHandling.SaveLanguageAsync("French");
         }
 
-        private void GermanFlyButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        private void GermanFlyButton_Click(object sender, RoutedEventArgs e)
         {
-            FileHandling.SaveLanguageAsJson("German");
+            FileHandling.SaveLanguageAsync("German");
         }
 
-        private void RussianFlyButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        private void RussianFlyButton_Click(object sender, RoutedEventArgs e)
         {
-            FileHandling.SaveLanguageAsJson("Russian");
+            FileHandling.SaveLanguageAsync("Russian");
         }
 
-        private void SpanishFlyButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        private void SpanishFlyButton_Click(object sender, RoutedEventArgs e)
         {
-            FileHandling.SaveLanguageAsJson("Spanish");
+            FileHandling.SaveLanguageAsync("Spanish");
         }
 
-        private void ExitButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Exit();
         }
