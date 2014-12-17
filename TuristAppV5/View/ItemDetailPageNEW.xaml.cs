@@ -213,6 +213,19 @@ namespace TuristAppV5.View
             }
         }
 
+        private void AddReviewButton_Click(object sender, RoutedEventArgs e)
+        {
+            ReviewList.Items.Add(AddReviewText.Text);
+            AddReviewText.Text = "";   
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            ReviewList.Items.Add(AddReviewText.Text);
+            AddReviewText.Text = "";
+        }
+
 
     }
 }
