@@ -10,19 +10,14 @@ namespace TuristAppV5.Model
     {
         #region Single Attraction properties + constructor
         public string _name { get; set; }
-        public string _phone { get; set; }
         public string _description { get; set; }
         public string _photo { get; set; }
 
-        public string _price { get; set; }
-
-        public Attractions(string name, string phone, string description, string photo, string price = null)
+        public Attractions(string name, string description, string photo)
         {
             _name = name;
-            _phone = phone;
             _description = description;
             _photo = photo;
-            _price = price;
         } 
         #endregion
 
