@@ -17,6 +17,7 @@ using Windows.UI.Xaml.Navigation;
 
 // The Item Detail Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234232
 using TuristAppV5.Model;
+using TuristAppV5.ViewModel;
 
 namespace TuristAppV5.View
 {
@@ -29,6 +30,8 @@ namespace TuristAppV5.View
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
 
+
+        private Comments comments = new Comments();
         private Login login = new Login();
         private UserData userData;
 
@@ -213,6 +216,11 @@ namespace TuristAppV5.View
             }
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+           MainViewModel.SelectedComments.Comment.Add(AddReviewText.Text);
+           
+        }
 
     }
 }

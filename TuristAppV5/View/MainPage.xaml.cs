@@ -22,14 +22,7 @@ namespace TuristAppV5.View
         {
             this.InitializeComponent();
         }
-
-
-
-<<<<<<< HEAD
         private MainViewModel viewModel = new MainViewModel();
-=======
-        //MainViewModel viewModel = new MainViewModel();
->>>>>>> origin/Friis
 
         public void Register()
         {

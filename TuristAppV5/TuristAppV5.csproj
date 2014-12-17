@@ -112,6 +112,7 @@
     <Compile Include="Common\SuspensionManager.cs" />
     <Compile Include="Model\AttractionList.cs" />
     <Compile Include="Model\Attractions.cs" />
+    <Compile Include="Model\Comments.cs" />
     <Compile Include="Model\Login.cs" />
     <Compile Include="Model\UserData.cs" />
     <Compile Include="Properties\Annotations.cs" />

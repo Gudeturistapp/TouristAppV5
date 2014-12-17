@@ -6,36 +6,24 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
-using Windows.UI.Xaml.Media.Animation;
 using TuristAppV5.Annotations;
 
 namespace TuristAppV5.Model
 {
-    public class Attractions :INotifyPropertyChanged
+    public class Comments :INotifyPropertyChanged
     {
+        private ObservableCollection<string> comment = new ObservableCollection<string>();
 
-        public Comments Comment = new Comments();
-
-        #region Single Attraction properties + constructor
-        public string _name { get; set; }
-        public string _description { get; set; }
-        public string _photo { get; set; }
-
-        public Attractions(string name, string description, string photo)
+        public ObservableCollection<string> Comment
         {
-            _name = name;
-            _description = description;
-            _photo = photo;
-        } 
-        #endregion
-
-        public void AddComment(string comment)
-        {
-            Comment.Comment.Add(comment);
+            get { return comment; }
+            set { comment = value; }
         }
-        public override string ToString()
+
+        public void AddComments(string comment)
         {
-            return string.Format("_name: {0}", _name);
+            Comment.Add(comment);
+            OnPropertyChanged("Comments");
         }
 
         #region PC

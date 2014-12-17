@@ -17,8 +17,7 @@ namespace TuristAppV5.ViewModel
         //Properties + SelectedAttraction + attributter.
         #region Properties
         public static Attractions SelectedAttraction { get; set; }
-        public static string SelectedComment { get; set; }
-
+        public static Comments SelectedComments { get; set; }
         public AttractionList Restaurants { get; set; }
         public AttractionList Events { get; set; }
         public AttractionList Culture { get; set; }
@@ -61,38 +60,38 @@ namespace TuristAppV5.ViewModel
 
             #region Language Checker
 
-            if (FileHandling.LoadLanguageAsJson().Result.Contains("Dansk"))
-            {
-                language = 1;
-            }
-            else if (FileHandling.LoadLanguageAsJson().Result.Contains("Spanish"))
-            {
-                language = 6;
-            }
-            else if (FileHandling.LoadLanguageAsJson().Result.Contains("French"))
-            {
-                language = 3;
-            }
-            else if (FileHandling.LoadLanguageAsJson().Result.Contains("German"))
-            {
-                language = 4;
-            }
-            else if (FileHandling.LoadLanguageAsJson().Result.Contains("Russian"))
-            {
-                language = 5;
-            }
-            else
-            {
-                //Default language is now English
-                language = 2;
-            }
+            //if (FileHandling.LoadLanguageAsJson().Result.Contains("Dansk"))
+            //{
+            //    language = 1;
+            //}
+            //else if (FileHandling.LoadLanguageAsJson().Result.Contains("Spanish"))
+            //{
+            //    language = 6;
+            //}
+            //else if (FileHandling.LoadLanguageAsJson().Result.Contains("French"))
+            //{
+            //    language = 3;
+            //}
+            //else if (FileHandling.LoadLanguageAsJson().Result.Contains("German"))
+            //{
+            //    language = 4;
+            //}
+            //else if (FileHandling.LoadLanguageAsJson().Result.Contains("Russian"))
+            //{
+            //    language = 5;
+            //}
+            //else
+            //{
+            //    //Default language is now English
+            //    language = 2;
+            //}
 
-            #endregion
+            //#endregion
 
-            #region Text Definer
+            //#region Text Definer
 
-            if (language == 1)
-            {
+            //if (language == 1)
+            //{
                 //Danish
 
                 #region Danish version
@@ -118,8 +117,8 @@ namespace TuristAppV5.ViewModel
                 attractionRaadhus = "";
 
                 #endregion
-            }
-            else if (language == 2)
+            //}
+            //else if (language == 2)
             {
                 //English
 
@@ -147,7 +146,7 @@ namespace TuristAppV5.ViewModel
 
                 #endregion
             }
-            else if (language == 3)
+          //  else if (language == 3)
             {
                 //French
 
@@ -175,7 +174,7 @@ namespace TuristAppV5.ViewModel
 
                 #endregion
             }
-            else if (language == 4)
+          //  else if (language == 4)
             {
                 //German
 
@@ -203,7 +202,7 @@ namespace TuristAppV5.ViewModel
 
                 #endregion
             }
-            else if (language == 5)
+           // else if (language == 5)
             {
                 //Russian
 
@@ -231,7 +230,7 @@ namespace TuristAppV5.ViewModel
 
                 #endregion
             }
-            else
+           // else
             {
                 //Spanish
 
@@ -310,25 +309,25 @@ namespace TuristAppV5.ViewModel
             #endregion
 
             #region Comments
-            Restaurants.AttractionLists[0].AddComments("blabla");
-            Restaurants.AttractionLists[1].AddComments("blabla");
-            Restaurants.AttractionLists[2].AddComments("blabla");
-            Restaurants.AttractionLists[3].AddComments("blabla");
+            Restaurants.AttractionLists[0].AddComment("blabla");
+            Restaurants.AttractionLists[1].AddComment("blabla");
+            Restaurants.AttractionLists[2].AddComment("blabla");
+            Restaurants.AttractionLists[3].AddComment("blabla");
 
-            Shopping.AttractionLists[0].AddComments("blabla");
-            Shopping.AttractionLists[1].AddComments("blabla");
-            Shopping.AttractionLists[2].AddComments("blabla");
-            Shopping.AttractionLists[3].AddComments("blabla");
+            Shopping.AttractionLists[0].AddComment("blabla");
+            Shopping.AttractionLists[1].AddComment("blabla");
+            Shopping.AttractionLists[2].AddComment("blabla");
+            Shopping.AttractionLists[3].AddComment("blabla");
 
-            Culture.AttractionLists[0].AddComments("blabla");
-            Culture.AttractionLists[1].AddComments("blabla");
-            Culture.AttractionLists[2].AddComments("blabla");
-            Culture.AttractionLists[3].AddComments("blabla");
+            Culture.AttractionLists[0].AddComment("blabla");
+            Culture.AttractionLists[1].AddComment("blabla");
+            Culture.AttractionLists[2].AddComment("blabla");
+            Culture.AttractionLists[3].AddComment("blabla");
 
-            Events.AttractionLists[0].AddComments("blabla");
-            Events.AttractionLists[1].AddComments("blabla");
-            Events.AttractionLists[2].AddComments("blabla");
-            Events.AttractionLists[3].AddComments("blabla");
+            Events.AttractionLists[0].AddComment("blabla");
+            Events.AttractionLists[1].AddComment("blabla");
+            Events.AttractionLists[2].AddComment("blabla");
+            Events.AttractionLists[3].AddComment("blabla");
 
             #endregion
 

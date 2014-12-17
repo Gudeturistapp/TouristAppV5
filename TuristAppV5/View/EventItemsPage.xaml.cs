@@ -161,7 +161,7 @@ namespace TuristAppV5.View
         private void EventButton2_Click(object sender, RoutedEventArgs e)
         {
             MainViewModel.SelectedAttraction = viewModel.Events.AttractionLists[1];
-            MainViewModel.SelectedComment = viewModel.Events.Comments[0];
+            MainViewModel.SelectedComments = viewModel.Events.AttractionLists[0].Comment;
             Frame.Navigate(typeof (ItemDetailPageNEW));
         }
 
