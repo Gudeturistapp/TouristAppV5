@@ -24,6 +24,7 @@ namespace TuristAppV5.ViewModel
         public AttractionList Shopping { get; set; }
         public string Comment { get; set; }
 
+        
         #endregion
 
        public MainViewModel()
@@ -328,7 +329,6 @@ namespace TuristAppV5.ViewModel
             Events.AttractionLists[1].AddComment("blabla");
             Events.AttractionLists[2].AddComment("blabla");
             Events.AttractionLists[3].AddComment("blabla");
-
             #endregion
 
         }

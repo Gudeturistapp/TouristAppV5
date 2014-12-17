@@ -34,7 +34,7 @@ namespace TuristAppV5.View
         private Comments comments = new Comments();
         private Login login = new Login();
         private UserData userData;
-
+        private static CommentAsJson commentJson = new CommentAsJson();
         public ObservableDictionary DefaultViewModel
         {
             get { return this.defaultViewModel; }
@@ -48,6 +48,7 @@ namespace TuristAppV5.View
         public ItemDetailPageNEW()
         {
             this.InitializeComponent();
+            commentJson.LoadComments();
             this.navigationHelper = new NavigationHelper(this);
             this.navigationHelper.LoadState += navigationHelper_LoadState;
 
@@ -59,6 +60,7 @@ namespace TuristAppV5.View
             {
                 OrderHereBlock.Text = "   Order here";
             }
+            
         }
 
         private void navigationHelper_LoadState(object sender, LoadStateEventArgs e)
@@ -218,9 +220,11 @@ namespace TuristAppV5.View
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-           MainViewModel.SelectedComments.Comment.Add(AddReviewText.Text);
-           
+            MainViewModel.SelectedComments.Comment.Add(AddReviewText.Text);
+            commentJson.SaveComments();
         }
+
+
 
     }
 }

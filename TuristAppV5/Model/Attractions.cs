@@ -14,7 +14,7 @@ namespace TuristAppV5.Model
     public class Attractions :INotifyPropertyChanged
     {
 
-        public Comments Comment = new Comments();
+        public  Comments Comment = new Comments();
 
         #region Single Attraction properties + constructor
         public string _name { get; set; }
