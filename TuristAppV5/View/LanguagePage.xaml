@@ -224,6 +224,6 @@
         <Rectangle Fill="#FFED6B06" HorizontalAlignment="Left" Height="40" Margin="355,25,0,0" Stroke="#FFED6B06" VerticalAlignment="Top" Width="710" RadiusX="45" RadiusY="45"/>
         <Button x:Name="DanishButton" Content="" HorizontalAlignment="Left" BorderThickness="0" VerticalAlignment="Top" Margin="27,141,0,0" Height="297" Width="340" Click="DanishLanguageButton" Opacity="0"/>
         <Button x:Name="EnglishButton"  Content="" HorizontalAlignment="Left" Margin="527,141,0,0" VerticalAlignment="Top" Height="293" Width="331" Opacity="0" Click ="EnglishLanguageButton"/>
-        <TextBlock x:Name="Titel" HorizontalAlignment="Left" Margin="590,25,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="45" Width="247"/>
+        <TextBlock x:Name="Titel" Style="{StaticResource HeaderTextBlockStyle}" FontSize="45" FontWeight="SemiBold" HorizontalAlignment="Left" Margin="402,25,0,0" TextWrapping="Wrap" Text="Please choose your language" VerticalAlignment="Top" Height="45" Width="625"/>
     </Grid>
 </Page>
