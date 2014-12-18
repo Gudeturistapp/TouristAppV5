@@ -177,10 +177,39 @@ namespace TuristAppV5.View
             Frame.Navigate(typeof(ItemDetailPageNEW));
         }
 
+        private void DanishFlybutton_Click_1(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            FileHandling.SaveLanguageAsJson("Danish");
+        }
+
+        private void EnglishFlybutton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            FileHandling.SaveLanguageAsJson("English");
+        }
+
+        private void FrenchFlybutton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            FileHandling.SaveLanguageAsJson("French");
+        }
+
+        private void GermanFlybutton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            FileHandling.SaveLanguageAsJson("German");
+        }
+
+        private void RussianFlybutton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            FileHandling.SaveLanguageAsJson("Russian");
+        }
+
+        private void SpanishFlybutton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            FileHandling.SaveLanguageAsJson("Spanish");
+        }
+
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Exit();
         }
-
       }
 }

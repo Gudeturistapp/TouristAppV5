@@ -45,32 +45,32 @@
                     <AppBarButton Label="Language" Height="88" Width="100" Foreground="#FFED6B06" Icon="Flag">
                         <AppBarButton.Resources>
                             <MenuFlyout x:Key="LanguageFlyOut">
-                                <MenuFlyoutItem Margin="0,0,0,0" Height="34" BorderBrush="White">
+                                <MenuFlyoutItem x:Name="DanishFlyButton" Margin="0,0,0,0" Height="34" BorderBrush="White" Click="DanishFlybutton_Click">
                                     <MenuFlyoutItem.Background>
                                         <ImageBrush ImageSource="/Assets/Flag/DenmarkFlag.png" Stretch="Uniform"/>
                                     </MenuFlyoutItem.Background>
                                 </MenuFlyoutItem>
-                                <MenuFlyoutItem BorderBrush="White" Width="45" Height="40">
+                                <MenuFlyoutItem x:Name="EnglishFlyButton" BorderBrush="White" Width="45" Height="40" Click="EnglishFlyButton_Click">
                                     <MenuFlyoutItem.Background>
                                         <ImageBrush Stretch="Uniform" ImageSource="/Assets/Flag/USFlag.png"/>
                                     </MenuFlyoutItem.Background>
                                 </MenuFlyoutItem>
-                                <MenuFlyoutItem BorderBrush="White" Width="45" Margin="0,0.1" BorderThickness="0,0.1">
+                                <MenuFlyoutItem x:Name="FrenchFlyButton" BorderBrush="White" Width="45" Margin="0,0.1" BorderThickness="0,0.1" Click="FrenchFlyButton_Click">
                                     <MenuFlyoutItem.Background>
                                         <ImageBrush Stretch="Uniform" ImageSource="/Assets/Flag/FranceFlag.png"/>
                                     </MenuFlyoutItem.Background>
                                 </MenuFlyoutItem>
-                                <MenuFlyoutItem BorderBrush="White" Width="45">
+                                <MenuFlyoutItem x:Name="GermanFlyButton" BorderBrush="White" Width="45" Click="GermanFlyButton_Click">
                                     <MenuFlyoutItem.Background>
                                         <ImageBrush Stretch="Uniform" ImageSource="/Assets/Flag/GermanyFlag.png"/>
                                     </MenuFlyoutItem.Background>
                                 </MenuFlyoutItem>
-                                <MenuFlyoutItem BorderBrush="Black" Width="45" BorderThickness="0.1,0.1,0.1,0" Margin="0.1,0.1,0.1,0">
+                                <MenuFlyoutItem x:Name="RussianFlyButton" BorderBrush="Black" Width="45" BorderThickness="0.1,0.1,0.1,0" Margin="0.1,0.1,0.1,0" Click="RussianFlyButton_Click">
                                     <MenuFlyoutItem.Background>
                                         <ImageBrush Stretch="Uniform" ImageSource="/Assets/Flag/RussianFlag.png"/>
                                     </MenuFlyoutItem.Background>
                                 </MenuFlyoutItem>
-                                <MenuFlyoutItem BorderBrush="White" Width="45">
+                                <MenuFlyoutItem x:Name="SpanishFlyButton" BorderBrush="White" Width="45" Click="SpanishFlyButton_Click">
                                     <MenuFlyoutItem.Background>
                                         <ImageBrush Stretch="Uniform" ImageSource="/Assets/Flag/SpainFlag.png"/>
                                     </MenuFlyoutItem.Background>
@@ -224,7 +224,7 @@
 				AutomationProperties.Name="Back"
 				AutomationProperties.AutomationId="BackButton"
 				AutomationProperties.ItemType="Navigation Button"/>
-            <Rectangle x:Name="HeadPiece" Grid.Column="1" Fill="#FFED6B06" HorizontalAlignment="Left" Height="40" Margin="235,25,0,0" Stroke="#FFED6B06" VerticalAlignment="Top" Width="710" RadiusX="45" RadiusY="45"/>
+            <Rectangle x:Name="HeadPiece" Grid.Column="1" Fill="#FFED6B06" HorizontalAlignment="Left" Height="50" Margin="235,25,0,0" Stroke="#FFED6B06" VerticalAlignment="Top" Width="710" RadiusX="45" RadiusY="45"/>
         </Grid>
         <StackPanel x:Name="EventStack1" HorizontalAlignment="Left" Height="212" Margin="266,83,0,0" Grid.Row="1" VerticalAlignment="Top" Width="500">
             <Grid Height="206" Margin="0,0,244,0">
@@ -289,5 +289,6 @@
         </StackPanel>
 
         <Page/>
+        <TextBlock HorizontalAlignment="Left" Margin="626,23,0,0" TextWrapping="Wrap" Text="Events" VerticalAlignment="Top" Height="59" Width="317" FontSize="48"/>
     </Grid>
 </Page>

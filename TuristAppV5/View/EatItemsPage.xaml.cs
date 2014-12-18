@@ -180,6 +180,37 @@ namespace TuristAppV5.View
             MainViewModel.SelectedAttraction = viewModel.Restaurants.AttractionLists[3];
             Frame.Navigate(typeof(ItemDetailPageNEW));
         }
+
+        private void DanishFlyButton_Click_1(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            FileHandling.SaveLanguageAsJson("Danish");
+        }
+
+        private void EnglishFlyButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            FileHandling.SaveLanguageAsJson("English");
+        }
+
+        private void FrenchFlyButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            FileHandling.SaveLanguageAsJson("French");
+        }
+
+        private void GermanFlyButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            FileHandling.SaveLanguageAsJson("German");
+        }
+
+        private void RussianFlyButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            FileHandling.SaveLanguageAsJson("Russian");
+        }
+
+        private void SpanishFlyButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            FileHandling.SaveLanguageAsJson("Spanish");
+        }
+
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Exit();
