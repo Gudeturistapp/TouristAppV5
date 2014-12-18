@@ -102,15 +102,17 @@ namespace TuristAppV5.View
             if (!string.IsNullOrWhiteSpace(registerUserNameBox.Text) &&
                 !string.IsNullOrWhiteSpace(registerPasswordBox.Password) &&
 
-                !string.IsNullOrWhiteSpace(registerEmailBox.Text) &&
+                !string.IsNullOrWhiteSpace(registerEmailBox.Text) && 
                 !string.IsNullOrWhiteSpace(registerPhoneBox.Text))
+            
             {
+                if (registerEmailBox.Text.Contains("@"))
+                {
+                    if (!login.LoginDictionary.ContainsKey(registerUserNameBox.Text))
+                    {
+                      userData = new UserData(registerUserNameBox.Text, registerPasswordBox.Password, registerEmailBox.Text, registerPhoneBox.Text);
 
-                userData = new UserData(registerUserNameBox.Text, registerPasswordBox.Password, registerEmailBox.Text, registerPhoneBox.Text);
-
-                //userData.UserName = registerUserNameBox.Text;
-                //userData.UserEmail = registerEmailBox.Text;
-                //userData.UserPhone = registerPhoneBox.Text;
+                
 
                 login.LoginDictionary.Add(registerUserNameBox.Text, userData);
 
@@ -120,7 +122,24 @@ namespace TuristAppV5.View
                 RegisterButton.Flyout.Hide();
 
                 ErrorBlock.Text = "";
-                SuccessBlock.Text = "Success! User has been created.";
+                SuccessBlock.Text = "Success! User has been created.";   
+                    }
+                    else
+                    {
+                        SuccessBlock.Text = "";
+                        ErrorBlock.Text = "Error! Username already exists.";
+                    }
+
+               
+
+                }
+                else
+                {
+                    SuccessBlock.Text = "";
+                    ErrorBlock.Text = "Please enter a valid email.";
+                }
+
+                
 
             }
             else
@@ -173,10 +192,16 @@ namespace TuristAppV5.View
                 OrderAppBar.IsOpen = true;
                 OrderAppBar.Visibility = Visibility.Visible;
 
-              
-                OrderHereNameBox.Text = userData.UserName;
-                OrderHereEmailBox.Text = userData.UserEmail;
-                OrderHerePhoneBox.Text = userData.UserPhone;
+                try
+                {
+                    OrderHereNameBox.Text = userData.UserName;
+                    OrderHereEmailBox.Text = userData.UserEmail;
+                    OrderHerePhoneBox.Text = userData.UserPhone;
+                }
+                catch (Exception)
+                {
+                    
+                }
 
                 
                
@@ -232,19 +257,7 @@ namespace TuristAppV5.View
             Application.Current.Exit();
         }
 
-        public bool EmailTextBox(bool Success)
-        {
-            if (!registerEmailBox.Text.Contains("@"))
-            {
-                Success = true;
-                throw new ArgumentException("Please enter a correct Email.");
-            }
-            else
-            {
-                Success = false;
-                throw new ArgumentException("Success!");
-            }
-        }
+       
 
         private void AddReviewButton_Click(object sender, RoutedEventArgs e)
         {

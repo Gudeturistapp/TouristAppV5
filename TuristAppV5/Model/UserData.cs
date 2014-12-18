@@ -13,6 +13,11 @@ namespace TuristAppV5.Model
         private static string _phone;
         private static string _password;
 
+        
+
+      
+        
+
         public string UserName
         {
             get { return _userName; }

@@ -16,7 +16,7 @@ namespace TuristAppV5.View
     public sealed partial class MainPage : Page
     {
         private Login login = new Login();
-        private UserData userData;
+        private static UserData userData;
 
 
         public MainPage()

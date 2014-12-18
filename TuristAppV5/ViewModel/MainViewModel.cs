@@ -418,9 +418,9 @@ evento increíble, Festival de Roskilde es un fuera, 'viviendo en una tienda exp
             #region Shoppings
 
             Shopping.AddAttraction("Ro's Torv", shoppingsRoTorv, "/Assets/Shops/shopping_billede2.jpg");
-            Shopping.AddAttraction("Random Område", shoppingsGaaGade, "/Assets/Shops/koebmand_billede1.jpg");
-            Shopping.AddAttraction("WebShopping", shoppingskoebmand, "/Assets/Shops/Gaagade_billede2.gif");
-            Shopping.AddAttraction("Something", shoppingsBjergtrold, "/Assets/Shops/Trold_billede1.jpg");
+            Shopping.AddAttraction("Gågaden", shoppingsGaaGade, "/Assets/Shops/Gaagade_billede2.gif");
+            Shopping.AddAttraction("Brødrene L.", shoppingskoebmand, "/Assets/Shops/koebmand_billede1.jpg");
+            Shopping.AddAttraction("Bjergtrolden", shoppingsBjergtrold, "/Assets/Shops/Trold_billede1.jpg");
 
             #endregion
 
@@ -432,20 +432,20 @@ evento increíble, Festival de Roskilde es un fuera, 'viviendo en una tienda exp
                 "/Assets/Museum/viking_billede1.jpg");
             Culture.AddAttraction("Roskildes Domkirke", attractionRoskildeDomkirke,
                 "/Assets/Museum/Domkirke_billede2.jpg");
-            Culture.AddAttraction("Et random Galleri", attractionEtGallery, "/Assets/Museum/Galleri_billede2.jpg");
-            Culture.AddAttraction("someplace", attractionRaadhus, "/Assets/Museum/Radhus_billede1.JPG");
+            Culture.AddAttraction("Galleri LABR", attractionEtGallery, "/Assets/Museum/Galleri_billede2.jpg");
+            Culture.AddAttraction("Rådhuset", attractionRaadhus, "/Assets/Museum/Radhus_billede1.JPG");
 
             #endregion
 
             #region Comments
             Restaurants.AttractionLists[0].AddComment("Fantastisk hyggeligt sted");
-            Restaurants.AttractionLists[0].AddComment("wow det var godt nok en god bøf");
+            Restaurants.AttractionLists[0].AddComment("wow what a nice steak!");
             Restaurants.AttractionLists[0].AddComment("Lidt for mange børn til min smag");
             Restaurants.AttractionLists[0].AddComment("en rigtig god kombination af det hele");
             Restaurants.AttractionLists[1].AddComment("hold da op de laver god mad");
             Restaurants.AttractionLists[1].AddComment("alt for mange mennesker!");
             Restaurants.AttractionLists[1].AddComment("håber de for gjort noget ved interiøret snart");
-            Restaurants.AttractionLists[1].AddComment("fantastisk god service");
+            Restaurants.AttractionLists[1].AddComment("The most amazing service in Denmark!");
             Restaurants.AttractionLists[2].AddComment("service niveauet et helt i top!");
             Restaurants.AttractionLists[2].AddComment("super god mad, lidt for meget larm");
             Restaurants.AttractionLists[2].AddComment("alt for lang ventetid..");
@@ -453,11 +453,11 @@ evento increíble, Festival de Roskilde es un fuera, 'viviendo en una tienda exp
             Restaurants.AttractionLists[3].AddComment("hold kæft nogle lækre servitricer");
             Restaurants.AttractionLists[3].AddComment("dårlig mad...");
             Restaurants.AttractionLists[3].AddComment("lækker mad!!");
-            Restaurants.AttractionLists[3].AddComment("ikke noget for mig");
+            Restaurants.AttractionLists[3].AddComment("It didn't live up the US standard..");
 
             Shopping.AttractionLists[0].AddComment("Ej et fedt sted! fik bare alt jeg skulle bruge");
             Shopping.AttractionLists[0].AddComment("fandt ikke en skid..");
-            Shopping.AttractionLists[0].AddComment("alt for mange mennesker");
+            Shopping.AttractionLists[0].AddComment("waaay to crowded for my taste.");
             Shopping.AttractionLists[0].AddComment("service disken er til grin!");
             Shopping.AttractionLists[1].AddComment("ej et hyggeligt sted :-)");
             Shopping.AttractionLists[1].AddComment("Waow virkelig godt indrettet!");
@@ -470,12 +470,12 @@ evento increíble, Festival de Roskilde es un fuera, 'viviendo en una tienda exp
             Shopping.AttractionLists[3].AddComment("ej et dejligt sted");
             Shopping.AttractionLists[3].AddComment("virkelig dårligt indrettet");
             Shopping.AttractionLists[3].AddComment("flotte farver de har valgt her, smukke butikker");
-            Shopping.AttractionLists[3].AddComment("god service!!");
+            Shopping.AttractionLists[3].AddComment("dat service!!");
 
-            Culture.AttractionLists[0].AddComment("waow det var godt nok fantastisk");
+            Culture.AttractionLists[0].AddComment("most amazing experience ever!");
             Culture.AttractionLists[0].AddComment("en helt anden oplevelse end jeg havde regnet med");
-            Culture.AttractionLists[0].AddComment("hold da op det var kedeligt...");
-            Culture.AttractionLists[0].AddComment("fedeste sted nogensinde!!");
+            Culture.AttractionLists[0].AddComment("so boring zzzzzzzz...");
+            Culture.AttractionLists[0].AddComment("this place is really, really great.");
             Culture.AttractionLists[1].AddComment("hold da op for en fed oplevelse!");
             Culture.AttractionLists[1].AddComment("waow de havde mange flotte ting");
             Culture.AttractionLists[1].AddComment("helt sikkert et sted jeg skal hen igen");
@@ -491,7 +491,7 @@ evento increíble, Festival de Roskilde es un fuera, 'viviendo en una tienda exp
 
             Events.AttractionLists[0].AddComment("JEG ER FUUUULD");
             Events.AttractionLists[0].AddComment("WHAAAHHAAA NEEEXT YEAARRR");
-            Events.AttractionLists[0].AddComment("kedeligt....");
+            Events.AttractionLists[0].AddComment("ERH MAH GHERD GREATEST EVENT EVUR");
             Events.AttractionLists[0].AddComment("dårligt setup i år");
             Events.AttractionLists[1].AddComment("noget helt andet end jeg lige havde forventet");
             Events.AttractionLists[1].AddComment("hoold da op hvor var det flot");
@@ -502,7 +502,7 @@ evento increíble, Festival de Roskilde es un fuera, 'viviendo en una tienda exp
             Events.AttractionLists[2].AddComment("lidt kedeligt i forhold til sidste år");
             Events.AttractionLists[2].AddComment("glæder mig til næste år allerede!");
             Events.AttractionLists[3].AddComment("ej hvor var det fedt!!");
-            Events.AttractionLists[3].AddComment("familien og jeg skal helt sikkert besøge roskilde igen næste år");
+            Events.AttractionLists[3].AddComment("I will be sure to bring my whole family next year!");
             Events.AttractionLists[3].AddComment("godt nok kedeligt...");
             Events.AttractionLists[3].AddComment("fantastisk oplevelse!!");
             #endregion

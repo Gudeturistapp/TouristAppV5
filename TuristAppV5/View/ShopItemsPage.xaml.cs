@@ -166,7 +166,7 @@ namespace TuristAppV5.View
 
         private void ShopButton2_Click(object sender, RoutedEventArgs e)
         {
-            MainViewModel.SelectedAttraction = viewModel.Shopping.AttractionLists[1];
+            MainViewModel.SelectedAttraction = viewModel.Shopping.AttractionLists[2];
             MainViewModel.SelectedComments = viewModel.Shopping.AttractionLists[1].comments;
 
             Frame.Navigate(typeof (ItemDetailPageNEW));
@@ -174,7 +174,7 @@ namespace TuristAppV5.View
 
         private void ShopButton4_Click(object sender, RoutedEventArgs e)
         {
-            MainViewModel.SelectedAttraction = viewModel.Shopping.AttractionLists[2];
+            MainViewModel.SelectedAttraction = viewModel.Shopping.AttractionLists[1];
             MainViewModel.SelectedComments = viewModel.Shopping.AttractionLists[2].comments;
 
             Frame.Navigate(typeof (ItemDetailPageNEW));
