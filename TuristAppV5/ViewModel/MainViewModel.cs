@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
@@ -6,6 +7,14 @@ using System.Threading.Tasks;
 //using TuristAppV5.Model;
 using Windows.Globalization;
 using TuristAppV5.Annotations;
+=======
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics.Tracing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+>>>>>>> origin/Niclas
 using TuristAppV5.Common;
 using TuristAppV5.Model;
 
@@ -13,11 +22,16 @@ namespace TuristAppV5.ViewModel
 {
     public class MainViewModel :INotifyPropertyChanged
     {
-        //Properties + SelectedAttraction.
-        //Properties + SelectedAttraction + attributter.
+        //Properties
         #region Properties
+<<<<<<< HEAD
         public static Attractions SelectedAttraction { get; set; }
         public static Comments SelectedComments { get; set; }
+=======
+        public static string LanguageFromFile { get; set; }
+
+        public static Attractions SelectedAttraction { get; set; }
+>>>>>>> origin/Niclas
         public AttractionList Restaurants { get; set; }
         public AttractionList Events { get; set; }
         public AttractionList Culture { get; set; }
@@ -29,6 +43,7 @@ namespace TuristAppV5.ViewModel
 
        public MainViewModel()
         {
+<<<<<<< HEAD
 
 
             int language;
@@ -53,11 +68,17 @@ namespace TuristAppV5.ViewModel
             string attractionEtGallery = @"";
             string attractionRaadhus = @"";
 
+=======
+            GetLanguage();
+>>>>>>> origin/Niclas
             Restaurants = new AttractionList();
             Events = new AttractionList();
             Culture = new AttractionList();
             Shopping = new AttractionList();
+            DetailPageInfo();
+        }
 
+<<<<<<< HEAD
             //Ipsum
 
             #region Language Checker
@@ -88,15 +109,43 @@ namespace TuristAppV5.ViewModel
             //    language = 2;
             //}
 
-            #endregion
+=======
+        public void DetailPageInfo()
+        {
+            #region Attributter
+            string restaurentJensensBøfhus;
+            string restaurentBones;
+            string restaurentCafeVivaldi;
+            string restaurentMumm;
 
+            string eventRoskildeFestival;
+            string eventLysfest;
+            string eventHavnen;
+            string eventMusicon;
+
+            string shoppingsRoTorv;
+            string shoppingsRandomOmråde;
+            string shoppingsWebShopping;
+            string shoppingsSomething;
+
+            string attractionVikingeSkibsMuseum;
+            string attractionRoskildeDomkirke;
+            string attractionEtGallery;
+            string attractionSomeplace;
+>>>>>>> origin/Niclas
+            #endregion
             #region Text Definer
+<<<<<<< HEAD
 
            // if (language == 1)
+=======
+            if (LanguageFromFile.Equals("Danish"))
+>>>>>>> origin/Niclas
             {
                 //Danish
 
                 #region Danish version
+<<<<<<< HEAD
 
                 restaurentJensensBøfhus = @"Jensens Bøfhus er en utrolig hyggelig restaurant hvor man både som ny forelsket eller som et par med flere år bag sig 
 har mulighed for at få en dejlig og fantastisk aften, med utrolig lækker mad og en virkelig god service. Jensens Bøfhus har i de sidste 10 år leveret denne fantastiske service til alle der besøger dem,
@@ -150,10 +199,35 @@ fantastiske begivenhed, Roskilde Festival er en udenfor, 'leve i et telt' opleve
                 #endregion
                 }
               //  else if (language == 2)
+=======
+                restaurentJensensBøfhus = "123";
+                restaurentBones = "234";
+                restaurentCafeVivaldi = "345";
+                restaurentMumm = "456";
+
+                eventRoskildeFestival = "";
+                eventLysfest = "";
+                eventHavnen = "";
+                eventMusicon = "";
+
+                shoppingsRoTorv = "";
+                shoppingsRandomOmråde = "";
+                shoppingsWebShopping = "";
+                shoppingsSomething = "";
+
+                attractionVikingeSkibsMuseum = "";
+                attractionRoskildeDomkirke = "";
+                attractionEtGallery = "";
+                attractionSomeplace = "";
+                #endregion
+            }
+            else if (LanguageFromFile.Equals("English"))
+>>>>>>> origin/Niclas
             {
                 //English
 
                 #region English version
+<<<<<<< HEAD
 
                 restaurentJensensBøfhus = @"the restaurant Jensens Bøfhus is a extremely cozy and fantastic restaurant, where as you both as new lovers aswell as lovers for several decades
 have the oppertunity to have a wonderful and fantastic evening, with amazing food and some really excellent service. Jensens Bøfhus have for many years delivered this fantastic service to all that visits.
@@ -207,10 +281,35 @@ amazing event, Roskilde Festival is a outside, 'living in a tent' experience whe
                 #endregion
             }
          // else if (language == 3)
+=======
+                restaurentJensensBøfhus = "";
+                restaurentBones = "";
+                restaurentCafeVivaldi = "";
+                restaurentMumm = "";
+
+                eventRoskildeFestival = "";
+                eventLysfest = "";
+                eventHavnen = "";
+                eventMusicon = "";
+
+                shoppingsRoTorv = "";
+                shoppingsRandomOmråde = "";
+                shoppingsWebShopping = "";
+                shoppingsSomething = "";
+
+                attractionVikingeSkibsMuseum = "";
+                attractionRoskildeDomkirke = "";
+                attractionEtGallery = "";
+                attractionSomeplace = "";
+                #endregion
+            }
+            else if (LanguageFromFile.Equals("French"))
+>>>>>>> origin/Niclas
             {
                 //French
 
                 #region French version
+<<<<<<< HEAD
 
                 restaurentJensensBøfhus = @"le restaurant Jensens Bøfhus est un restaurant très confortable et fantastique, où que vous tant nouveaux amants Aswell que les amateurs depuis plusieurs décennies
 avoir l'oppertunity d'avoir un merveilleux et fantastique soir, avec de la nourriture incroyable et certains vraiment excellent service. Jensens Bøfhus ont depuis de nombreuses années livré ce service fantastique à tous qui visite.
@@ -264,10 +363,35 @@ sam-dim 17-23";
                 #endregion
             }
         //  else if (language == 4)
+=======
+                restaurentJensensBøfhus = "";
+                restaurentBones = "";
+                restaurentCafeVivaldi = "";
+                restaurentMumm = "";
+
+                eventRoskildeFestival = "";
+                eventLysfest = "";
+                eventHavnen = "";
+                eventMusicon = "";
+
+                shoppingsRoTorv = "";
+                shoppingsRandomOmråde = "";
+                shoppingsWebShopping = "";
+                shoppingsSomething = "";
+
+                attractionVikingeSkibsMuseum = "";
+                attractionRoskildeDomkirke = "";
+                attractionEtGallery = "";
+                attractionSomeplace = "";
+                #endregion
+            }
+            else if (LanguageFromFile.Equals("German"))
+>>>>>>> origin/Niclas
             {
                 //German
 
                 #region German version
+<<<<<<< HEAD
 
                 restaurentJensensBøfhus = @"Das Restaurant Jensens Bøfhus ist ein sehr gemütliches und fantastisches Restaurant, wo Sie sowohl als neuen Liebhaber als Liebhaber seit mehreren Jahrzehnten aswell
 haben die Chance habt, um eine wunderbare und fantastische Abend haben, mit unglaublichem Essen und ein paar wirklich exzellenten Service. Jensens Bøfhus sind seit vielen Jahren für alle, die besucht geliefert fantastischen Service.
@@ -321,10 +445,35 @@ erstaunliche Ereignis ist Roskilde Festival ein außen 'lebt in einem Zelt Erfah
                 #endregion
             }
           // else if (language == 5)
+=======
+                restaurentJensensBøfhus = "";
+                restaurentBones = "";
+                restaurentCafeVivaldi = "";
+                restaurentMumm = "";
+
+                eventRoskildeFestival = "";
+                eventLysfest = "";
+                eventHavnen = "";
+                eventMusicon = "";
+
+                shoppingsRoTorv = "";
+                shoppingsRandomOmråde = "";
+                shoppingsWebShopping = "";
+                shoppingsSomething = "";
+
+                attractionVikingeSkibsMuseum = "";
+                attractionRoskildeDomkirke = "";
+                attractionEtGallery = "";
+                attractionSomeplace = "";
+                #endregion
+            }
+            else if (LanguageFromFile.Equals("Russian"))
+>>>>>>> origin/Niclas
             {
                 //Russian
 
                 #region Russian version
+<<<<<<< HEAD
 
                 restaurentJensensBøfhus = @"Restoran Jensens Bøfhus yavlyayetsya chrezvychayno uyutnyy i fantasticheskiy restoran , gde, kak vy oba kak novyye lyubiteley Aswell kak lyubiteley v techeniye neskol'kikh desyatiletiy
 yest' oppertunity imet' prekrasnyy i fantasticheskiy vecher , s udivitel'noy pishchu, a na samom dele otlichnyy servis. Jensens bøfhus uzhe mnogo let chital etot fantasticheskiy servis dlya vsekh , kotoryy poseshchayet .
@@ -375,6 +524,27 @@ udivitel'noye sobytiye , Roskille Festival' snaruzhi, 'zhivet v palatke opyt' gd
                 attractionEtGallery = @" Vy posetit' Roskilde dlya vsekh krasavits i vse spetsial'nyye attraktsiony ? Togda smotret' ne dal'she, vy tol'ko chto nashli odin iz luchshikh i samykh zamechatel'nykh dostoprimechatel'nostey ikh vsekh! Korabl'-muzey vikingov yavlyayetsya odnim iz luchshikh perezhivaniya, kotoryye vy mozhete nayti i imet' s vashey sem'yey ili poputchikov , s mnogo iz oppertunities i vernut'sya v proshloye , eto prityazheniye dayet vam vse , chto iskal !";
                 attractionRaadhus = @" Vy posetit' Roskilde dlya vsekh krasavits i vse spetsial'nyye attraktsiony ? Togda smotret' ne dal'she, vy tol'ko chto nashli odin iz luchshikh i samykh zamechatel'nykh dostoprimechatel'nostey ikh vsekh! Korabl'-muzey vikingov yavlyayetsya odnim iz luchshikh perezhivaniya, kotoryye vy mozhete nayti i imet' s vashey sem'yey ili poputchikov , s mnogo iz oppertunities i vernut'sya v proshloye , eto prityazheniye dayet vam vse , chto iskal !";
 
+=======
+                restaurentJensensBøfhus = "";
+                restaurentBones = "";
+                restaurentCafeVivaldi = "";
+                restaurentMumm = "";
+
+                eventRoskildeFestival = "";
+                eventLysfest = "";
+                eventHavnen = "";
+                eventMusicon = "";
+
+                shoppingsRoTorv = "";
+                shoppingsRandomOmråde = "";
+                shoppingsWebShopping = "";
+                shoppingsSomething = "";
+
+                attractionVikingeSkibsMuseum = "";
+                attractionRoskildeDomkirke = "";
+                attractionEtGallery = "";
+                attractionSomeplace = "";
+>>>>>>> origin/Niclas
                 #endregion
             }
          //  else
@@ -382,6 +552,7 @@ udivitel'noye sobytiye , Roskille Festival' snaruzhi, 'zhivet v palatke opyt' gd
                 //Spanish
 
                 #region Spanish version
+<<<<<<< HEAD
 
                 restaurentJensensBøfhus = @"el restaurante Jensens Bøfhus es un muy acogedor y un fantástico restaurante, donde como usted tanto como nuevos amantes Aswell como amantes durante varias décadas
 tener el ágape para tener una maravillosa y fantástica noche, con comida increíble y algo realmente excelente servicio. Jensens Bøfhus haber durante muchos años entregado este fantástico servicio a todos los que visitan.
@@ -432,9 +603,29 @@ evento increíble, Festival de Roskilde es un fuera, 'viviendo en una tienda exp
                 attractionEtGallery = @"¿Va a visitar Roskilde para todas las bellezas y todos los lugares de interés especial? ¡No busques más, has encontrado una de las mejores y más maravillosas atracciones de todos ellos! Roskilde Galerie es una de las mejores experiencias que puede encontrar y tener con su familia o compañeros de viaje, con un montón de oppertunities y una mirada atrás en el tiempo, esta atracción te da todo lo que usted ha estado buscando! ";
                 attractionRaadhus = @"¿Va a visitar Roskilde para todas las bellezas y todos los lugares de interés especial? ¡No busques más, has encontrado una de las mejores y más maravillosas atracciones de todos ellos! Roskilde palacio de justicia es una de las mejores experiencias que puede encontrar y tener con su familia o compañeros de viaje, con un montón de oppertunities y una mirada atrás en el tiempo, esta atracción te da todo lo que usted ha estado buscando! ";
 
+=======
+                restaurentJensensBøfhus = "";
+                restaurentBones = "";
+                restaurentCafeVivaldi = "";
+                restaurentMumm = "";
+
+                eventRoskildeFestival = "";
+                eventLysfest = "";
+                eventHavnen = "";
+                eventMusicon = "";
+
+                shoppingsRoTorv = "";
+                shoppingsRandomOmråde = "";
+                shoppingsWebShopping = "";
+                shoppingsSomething = "";
+
+                attractionVikingeSkibsMuseum = "";
+                attractionRoskildeDomkirke = "";
+                attractionEtGallery = "";
+                attractionSomeplace = "";
+>>>>>>> origin/Niclas
                 #endregion
             }
-
             #endregion
 
             //Restaurants for detailPage.
@@ -556,6 +747,7 @@ evento increíble, Festival de Roskilde es un fuera, 'viviendo en una tienda exp
 
         }
 
+<<<<<<< HEAD
 
         #region PC
 
@@ -570,5 +762,11 @@ evento increíble, Festival de Roskilde es un fuera, 'viviendo en una tienda exp
 
         #endregion
 
+=======
+        public async void GetLanguage()
+        {
+            LanguageFromFile = await FileHandling.LoadLanguageAsync();
+        }
+>>>>>>> origin/Niclas
     }
 }
