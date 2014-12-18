@@ -160,24 +160,28 @@ namespace TuristAppV5.View
         private void EatButton1_Click(object sender, RoutedEventArgs e)
         {
             MainViewModel.SelectedAttraction = viewModel.Restaurants.AttractionLists[0];
+
             Frame.Navigate(typeof(ItemDetailPageNEW));
         }
 
         private void EatButton2_Click(object sender, RoutedEventArgs e)
         {
             MainViewModel.SelectedAttraction = viewModel.Restaurants.AttractionLists[1];
+
             Frame.Navigate(typeof(ItemDetailPageNEW));
         }
 
         private void EatButton4_Click(object sender, RoutedEventArgs e)
         {
             MainViewModel.SelectedAttraction = viewModel.Restaurants.AttractionLists[2];
+
             Frame.Navigate(typeof(ItemDetailPageNEW));
         }
 
         private void EatButton3_Click(object sender, RoutedEventArgs e)
         {
             MainViewModel.SelectedAttraction = viewModel.Restaurants.AttractionLists[3];
+
             Frame.Navigate(typeof(ItemDetailPageNEW));
         }
         private void ExitButton_Click(object sender, RoutedEventArgs e)
