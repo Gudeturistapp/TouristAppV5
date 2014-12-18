@@ -71,13 +71,13 @@ namespace TuristAppV5.View
                 !string.IsNullOrWhiteSpace(registerPhoneBox.Text))
             {
 
-                userData = new UserData(registerUserNameBox.Text, registerEmailBox.Text, registerPhoneBox.Text);
+                userData = new UserData(registerUserNameBox.Text, registerPasswordBox.Password, registerEmailBox.Text, registerPhoneBox.Text);
 
                 //userData.UserName = registerUserNameBox.Text;
                 //userData.UserEmail = registerEmailBox.Text;
                 //userData.UserPhone = registerPhoneBox.Text;
 
-                login.LoginDictionary.Add(registerUserNameBox.Text, registerPasswordBox.Password);
+                login.LoginDictionary.Add(registerUserNameBox.Text, userData);
 
 
                 login.IsLoggedIn = true;
@@ -97,7 +97,7 @@ namespace TuristAppV5.View
 
         public void Login()
         {
-            if (login.LoginDictionary.ContainsKey(UsernameLoginBox.Text) && PasswordLoginBox.Password == login.LoginDictionary[UsernameLoginBox.Text])
+            if (login.LoginDictionary.ContainsKey(UsernameLoginBox.Text) && PasswordLoginBox.Password == userData.Password)
             {
                 login.IsLoggedIn = true;
                 LoginButton.Flyout.Hide();

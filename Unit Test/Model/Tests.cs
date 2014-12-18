@@ -15,15 +15,19 @@ namespace UnitTesting
     [TestClass]
     public class Tests
     {
-        private Login login;
+       
         private UserData data;
         private ItemDetailPageNew itemDetailPage;
-
+        private Login login;
+        private Dictionary<string, string> loginDictionary;
+        
+        
         [TestInitialize]
         public void Beforetest()
         {
+            loginDictionary = new Dictionary<string, string>();
             login = new Login();
-            data = new UserData("", "", "");
+            data = new UserData("", "", "", "");
             itemDetailPage = new ItemDetailPageNew();
         }
 
@@ -37,13 +41,13 @@ namespace UnitTesting
 
             Assert.AreEqual("User", data.UserName);
 
-            login.LoginDictionary.Add(data.UserName, "321");
+            loginDictionary.Add(data.UserName, "321");
 
 
             try
             {
 
-                login.LoginDictionary.Clear();
+                loginDictionary.Clear();
                 data.UserName = null;
                 Assert.Fail();
 
@@ -69,11 +73,11 @@ namespace UnitTesting
         {
             //Adds an username(key), then checks and returns an error if the existing username(key) is already added to the dictionary. test 3.12
 
-            login.LoginDictionary.Add("ProTank", "");
-            Assert.IsTrue(login.LoginDictionary.ContainsKey("ProTank"));
+            loginDictionary.Add("ProTank", "");
+            Assert.IsTrue(loginDictionary.ContainsKey("ProTank"));
             try
             {
-                login.LoginDictionary.Add("ProTank", "");
+                loginDictionary.Add("ProTank", "");
                 Assert.Fail();
             }
             catch (ArgumentException ex)
