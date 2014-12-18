@@ -102,6 +102,22 @@
             </Setter>
         </Style>
     </Page.Resources>
+    <Page.BottomAppBar>
+        <AppBar Margin="0,0,-1,0" Background="White" BorderBrush="White" Height="105">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Horizontal">
+                    <AppBarButton x:Name="ExitButton" HorizontalAlignment="Stretch" Icon="Cancel" Label="Exit" VerticalAlignment="Stretch" Click="ExitButton_Click"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal">
+                    <AppBarButton x:Name="AddReviewButton" HorizontalAlignment="Left" Icon="Add" Label="Add Review" VerticalAlignment="Top" Click="AddReviewButton_Click"/>
+                </StackPanel>
+            </Grid>
+        </AppBar>
+    </Page.BottomAppBar>
     <Page.TopAppBar>
         <AppBar Height="105" Margin="0,0,0.429,0" Background="White">
             <Grid>
@@ -162,13 +178,13 @@
                                         </StackPanel>
                                         <StackPanel x:Name="StackRegister" Height="208">
                                             <TextBlock TextWrapping="Wrap" FontSize="13" Height="15" Foreground="#FFED6B06" Text="Username" Margin="10,0"/>
-                                            <TextBox x:Name="registerUserNameBox" TextWrapping="Wrap" Height="36" FontSize="7" MinHeight="20" Margin="10,0" PlaceholderText="Enter your Username"/>
+                                            <TextBox x:Name="registerUserNameBox" TextWrapping="Wrap" Height="36" FontSize="15" MinHeight="20" Margin="10,0" PlaceholderText="Enter your Username"/>
                                             <TextBlock TextWrapping="Wrap" FontSize="13" Height="18" Foreground="#FFED6B06" Text="Phone" Margin="10,0,0,0"/>
-                                            <TextBox x:Name="registerPhoneBox" TextWrapping="Wrap" FontSize="7" Height="36" MinHeight="20" Margin="10,0" PlaceholderText="Enter your Phone number"/>
+                                            <TextBox x:Name="registerPhoneBox" TextWrapping="Wrap" FontSize="15" Height="36" MinHeight="20" Margin="10,0" PlaceholderText="Enter your Phone number"/>
                                             <TextBlock TextWrapping="Wrap" Height="17" VerticalAlignment="Bottom" Foreground="#FFED6B06" Text="E-mail" FontSize="13" Margin="10,0,0,0"/>
-                                            <TextBox x:Name="registerEmailBox" TextWrapping="Wrap" Text="&#xA;" Height="36" FontSize="7" MinHeight="20" Margin="10,0" PlaceholderText="Enter your Email"/>
+                                            <TextBox x:Name="registerEmailBox" TextWrapping="Wrap" Text="&#xA;" Height="36" FontSize="15" MinHeight="20" Margin="10,0" PlaceholderText="Enter your Email"/>
                                             <TextBlock TextWrapping="Wrap" Height="14" VerticalAlignment="Bottom" Foreground="#FFED6B06" Text="Password" FontSize="13" Margin="10,0,0,0"/>
-                                            <PasswordBox x:Name="registerPasswordBox" Margin="10,0" Height="24" FontFamily="Global User Interface" RenderTransformOrigin="0.5,0.5">
+                                            <PasswordBox x:Name="registerPasswordBox" Margin="10,0" Height="24" FontFamily="Global User Interface" RenderTransformOrigin="0.5,0.5" FontSize="15">
                                                 <PasswordBox.RenderTransform>
                                                     <CompositeTransform ScaleY="-1"/>
                                                 </PasswordBox.RenderTransform>
@@ -208,14 +224,14 @@
                                                 </Flyout>
                                             </FlyoutBase.AttachedFlyout>
                                             <TextBlock TextWrapping="Wrap" FontSize="13" Height="15" Foreground="#FFED6B06" Text="Username" Margin="10,0"/>
-                                            <TextBox x:Name="UsernameLoginBox" TextWrapping="Wrap" Height="36" FontSize="12" MinHeight="20" Margin="10,0" PlaceholderText="Enter your Username" FontFamily="Global User Interface"/>
+                                            <TextBox x:Name="UsernameLoginBox" TextWrapping="Wrap" Height="36" FontSize="15" MinHeight="20" Margin="10,0" PlaceholderText="Enter your Username" FontFamily="Global User Interface"/>
                                             <TextBlock TextWrapping="Wrap" Height="30" VerticalAlignment="Bottom" Foreground="#FFED6B06" FontSize="13" Margin="10,0,0,0">
                             					<Run/>
                             					<LineBreak/>
                             					<Run Text="Password"/>
                                             </TextBlock>
                                             <StackPanel Height="48">
-                                                <PasswordBox x:Name="PasswordLoginBox" Height="3" Margin="10,0" RenderTransformOrigin="0.5,0.5" FontSize="7" FontFamily="Global User Interface">
+                                                <PasswordBox x:Name="PasswordLoginBox" Height="3" Margin="10,0" RenderTransformOrigin="0.5,0.5" FontSize="15" FontFamily="Global User Interface">
                                                     <PasswordBox.RenderTransform>
                                                         <CompositeTransform ScaleY="-1"/>
                                                     </PasswordBox.RenderTransform>
@@ -243,8 +259,118 @@
             </Grid>
         </AppBar>
     </Page.TopAppBar>
-    <Page.BottomAppBar>
-        <AppBar x:Name="OrderAppBar" Height="628" Margin="497,0,485,0" Visibility="Collapsed" Background="#FFED6B06" RenderTransformOrigin="0.5,0.5" BorderBrush="#FFED6B06">
+
+    <!--
+        This grid acts as a root panel for the page that defines two rows:
+        * Row 0 contains the back button and page title
+        * Row 1 contains the rest of the page layout
+    -->
+    <Grid>
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/Wood.jpg"/>
+        </Grid.Background>
+        <Grid.DataContext>
+            <ViewModel:MainViewModel/>
+        </Grid.DataContext>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1920"/>
+        </Grid.ColumnDefinitions>
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1080"/>
+        </Grid.RowDefinitions>
+
+
+        <!--
+            TODO: Content should be placed within the following grid 
+                  to show details for the current item
+        -->
+
+
+        <!--
+            TODO: Content should be placed within the following grid 
+                  to show details for the current item
+        -->
+
+
+        <!--
+            TODO: Content should be placed within the following grid 
+                  to show details for the current item
+        -->
+
+
+        <!--
+            TODO: Content should be placed within the following grid 
+                  to show details for the current item
+        -->
+        <!--
+            TODO: Content should be placed within the following grid 
+                  to show details for the current item
+        -->
+        <Rectangle Fill="#FFED6B06" HorizontalAlignment="Left" Height="633" Margin="0,135,0,0" VerticalAlignment="Top" Width="465"/>
+
+
+        <!--
+            TODO: Content should be placed within the following grid 
+                  to show details for the current item
+        -->
+        <Rectangle Fill="#FFED6B06" HorizontalAlignment="Left" Height="40" Margin="357,25,0,0" Stroke="#FFED6B06" VerticalAlignment="Top" Width="710" RadiusX="45" RadiusY="45"/>
+        <!--
+            TODO: Content should be placed within the following grid 
+                  to show details for the current item
+        -->
+        <Grid Grid.Row="1" x:Name="contentRegion"/>
+
+        <!-- Back button and page title -->
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.DataContext>
+                <ViewModel:MainViewModel/>
+            </Grid.DataContext>
+            <Button x:Name="backButton" Margin="39,59,39,0" Command="{Binding NavigationHelper.GoBackCommand, ElementName=pageRoot}"
+        		Style="{StaticResource NavigationBackButtonNormalStyle}"
+        		VerticalAlignment="Top"
+        		AutomationProperties.Name="Back"
+        		AutomationProperties.AutomationId="BackButton"
+        		AutomationProperties.ItemType="Navigation Button"/>
+            <Maps:Map Credentials="AntbJxTZZb2Q4bKMr0xQktLpJsaE1GUU1xQOhYDpLmof3c_88gDrCqDwKE2VR2xG" x:Name="myMap" Margin="7,460,1463,319" Grid.ColumnSpan="2" ZoomLevel="10" Width="450" Height="300">
+                <Maps:Map.Center>
+                    <Maps:Location Latitude="55.657700" Longitude="12.106900" />
+                </Maps:Map.Center>
+                <Maps:Pushpin>
+                    <Maps:MapLayer.Position>
+                        <Maps:Location Latitude="55.657700" Longitude="12.106900"/>
+                    </Maps:MapLayer.Position>
+                </Maps:Pushpin>
+            </Maps:Map>
+            <TextBlock x:Name="pageTitle" Text="{Binding SelectedAttraction._name}" FontWeight="SemiBold" FontSize="47" Style="{StaticResource HeaderTextBlockStyle}" 
+        		IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="272,0,889,1015" Grid.Column="1"/>
+            <Rectangle Grid.Column="1" Fill="White" HorizontalAlignment="Left" Height="1" Margin="16,451,0,0" VerticalAlignment="Top" Width="201"/>
+        </Grid>
+        <Ellipse x:Name="OrderButton1" Fill="#FFED6B06" HorizontalAlignment="Left" Height="272" Margin="498,645,0,0" Stroke="Black" VerticalAlignment="Top" Width="367"/>
+        <Image HorizontalAlignment="Left" Height="300" Margin="7,142,0,0" VerticalAlignment="Top" Width="450" Source="{Binding SelectedAttraction._photo}" Stretch="Fill"/>
+        <ListView Foreground="White" BorderBrush="#FFED6B06" BorderThickness="6" x:Name="ReviewList" HorizontalAlignment="Left" Height="490" Margin="930,135,0,0" VerticalAlignment="Top" Width="400" ItemsSource="{Binding SelectedComments.Comment, UpdateSourceTrigger=PropertyChanged}" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False"/>
+        <TextBox x:Name="AddReviewText" HorizontalAlignment="Left" Margin="930,625,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="142" Width="400" PlaceholderText="Write your Review here!" AcceptsReturn="True"/>
+        <TextBlock x:Name="OrderHereBlock" HorizontalAlignment="Left" Margin="548,700,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="61" Width="262" FontSize="40" FontWeight="Bold"/>
+        <TextBlock x:Name="DescriptionText" HorizontalAlignment="Left" Margin="498,135,0,0" TextWrapping="Wrap" Text="{Binding SelectedAttraction._description}" VerticalAlignment="Top" Height="325" Width="376" FontSize="15">
+            <TextBlock.DataContext>
+                <ViewModel:MainViewModel/>
+            </TextBlock.DataContext>
+        </TextBlock>
+        <Button x:Name="OrderButton" Content="" HorizontalAlignment="Left" Margin="495,642,0,0" VerticalAlignment="Top" Height="132" Width="373" BorderBrush="Transparent" Foreground="Transparent" Opacity="0" Click="OrderButton_Click_1">
+            <Button.Projection>
+                <PlaneProjection CenterOfRotationX="0" CenterOfRotationY="0" CenterOfRotationZ="25"/>
+            </Button.Projection>
+        </Button>
+        <TextBlock HorizontalAlignment="Left" Margin="-45,130,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <AppBar x:Name="OrderAppBar" Margin="497,134,1039,312" Visibility="Collapsed" Background="#FFED6B06" RenderTransformOrigin="0.5,0.5" BorderBrush="#FFED6B06">
             <StackPanel>
                 <StackPanel Height="87" Width="296">
                     <TextBlock TextWrapping="Wrap" Text="      Order" Height="146" HorizontalAlignment="Center" Width="296" VerticalAlignment="Center" FontSize="48"/>
@@ -293,93 +419,5 @@
                 </StackPanel>
             </StackPanel>
         </AppBar>
-    </Page.BottomAppBar>
-
-    <!--
-        This grid acts as a root panel for the page that defines two rows:
-        * Row 0 contains the back button and page title
-        * Row 1 contains the rest of the page layout
-    -->
-    <Grid>
-        <Grid.Background>
-            <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/Wood.jpg"/>
-        </Grid.Background>
-        <Grid.DataContext>
-            <ViewModel:MainViewModel/>
-        </Grid.DataContext>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1920"/>
-        </Grid.ColumnDefinitions>
-        <Grid.ChildrenTransitions>
-            <TransitionCollection>
-                <EntranceThemeTransition/>
-            </TransitionCollection>
-        </Grid.ChildrenTransitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="1080"/>
-        </Grid.RowDefinitions>
-
-
-        <!--
-            TODO: Content should be placed within the following grid 
-                  to show details for the current item
-        -->
-        <Rectangle Fill="#FFED6B06" HorizontalAlignment="Left" Height="40" Margin="357,25,0,0" Stroke="#FFED6B06" VerticalAlignment="Top" Width="710" RadiusX="45" RadiusY="45"/>
-        <!--
-            TODO: Content should be placed within the following grid 
-                  to show details for the current item
-        -->
-        <Grid Grid.Row="1" x:Name="contentRegion"/>
-
-        <!-- Back button and page title -->
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="120"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <Grid.DataContext>
-                <ViewModel:MainViewModel/>
-            </Grid.DataContext>
-            <Button x:Name="backButton" Margin="39,59,39,0" Command="{Binding NavigationHelper.GoBackCommand, ElementName=pageRoot}"
-				Style="{StaticResource NavigationBackButtonNormalStyle}"
-				VerticalAlignment="Top"
-				AutomationProperties.Name="Back"
-				AutomationProperties.AutomationId="BackButton"
-				AutomationProperties.ItemType="Navigation Button"/>
-            <Maps:Map Credentials="AntbJxTZZb2Q4bKMr0xQktLpJsaE1GUU1xQOhYDpLmof3c_88gDrCqDwKE2VR2xG" x:Name="myMap" Margin="0,480,1450,310" Grid.ColumnSpan="2"/>
-            <TextBlock x:Name="pageTitle" Text="{Binding SelectedAttraction._name}" FontWeight="SemiBold" FontSize="47" Style="{StaticResource HeaderTextBlockStyle}" 
-            	IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="416,0,881,1021" Grid.Column="1"/>
-            <Button Content="Button" Grid.Column="1" HorizontalAlignment="Left" Margin="710,556,0,0" VerticalAlignment="Top" Click="Button_Click"/>
-        </Grid>
-        <Ellipse x:Name="OrderButton1" Fill="#FFED6B06" HorizontalAlignment="Left" Height="272" Margin="498,645,0,0" Stroke="Black" VerticalAlignment="Top" Width="367"/>
-        <Image HorizontalAlignment="Left" Height="294" Margin="0,186,0,0" VerticalAlignment="Top" Width="470" Source="{Binding SelectedAttraction._photo}"/>
-        <ListView Foreground="White" BorderBrush="#FFED6B06" BorderThickness="6" x:Name="ReviewList" HorizontalAlignment="Left" Height="490" Margin="930,135,0,0" VerticalAlignment="Top" Width="400" ItemsSource="{Binding SelectedComments.Comment, UpdateSourceTrigger=PropertyChanged}"/>
-        <TextBox x:Name="AddReviewText" HorizontalAlignment="Left" Margin="930,625,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="70" Width="400" PlaceholderText="Write your Review here!" AcceptsReturn="True"/>
-        <TextBlock x:Name="OrderHereBlock" HorizontalAlignment="Left" Margin="548,700,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="61" Width="262" FontSize="40" FontWeight="Bold"/>
-        <TextBlock x:Name="DescriptionText" HorizontalAlignment="Left" Margin="498,186,0,0" TextWrapping="Wrap" Text="{Binding SelectedAttraction._description}" VerticalAlignment="Top" Height="359" Width="390" FontSize="15">
-            <TextBlock.DataContext>
-                <ViewModel:MainViewModel/>
-            </TextBlock.DataContext>
-        </TextBlock>
-        <Button x:Name="OrderButton" Content="" HorizontalAlignment="Left" Margin="495,642,0,0" VerticalAlignment="Top" Height="132" Width="373" BorderBrush="Transparent" Foreground="Transparent" Opacity="0" Click="OrderButton_Click_1">
-            <Button.Projection>
-                <PlaneProjection CenterOfRotationX="0" CenterOfRotationY="0" CenterOfRotationZ="25"/>
-            </Button.Projection>
-        </Button>
-        <AppBar Margin="-5,697,554,312" Background="White" BorderBrush="White">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <StackPanel Orientation="Horizontal">
-                    <AppBarButton x:Name="ExitButton" HorizontalAlignment="Stretch" Icon="Cancel" Label="Exit" VerticalAlignment="Stretch" Click="ExitButton_Click"/>
-                </StackPanel>
-                <StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal">
-                    <AppBarButton x:Name="AddReviewButton" HorizontalAlignment="Left" Icon="Add" Label="Add Review" VerticalAlignment="Top"/>
-                </StackPanel>
-            </Grid>
-        </AppBar>
-        <TextBlock HorizontalAlignment="Left" Margin="-45,130,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
     </Grid>
 </Page>
