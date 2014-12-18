@@ -61,37 +61,37 @@ namespace TuristAppV5.ViewModel
 
             #region Language Checker
 
-            if (FileHandling.LoadLanguageAsJson().Result.Contains("Dansk"))
-            {
-                language = 1;
-            }
-            else if (FileHandling.LoadLanguageAsJson().Result.Contains("Spanish"))
-            {
-                language = 6;
-            }
-            else if (FileHandling.LoadLanguageAsJson().Result.Contains("French"))
-            {
-                language = 3;
-            }
-            else if (FileHandling.LoadLanguageAsJson().Result.Contains("German"))
-            {
-                language = 4;
-            }
-            else if (FileHandling.LoadLanguageAsJson().Result.Contains("Russian"))
-            {
-                language = 5;
-            }
-            else
-            {
-                //Default language is now English
-                language = 2;
-            }
+            //if (FileHandling.LoadLanguageAsJson().Result.Contains("Dansk"))
+            //{
+            //    language = 1;
+            //}
+            //else if (FileHandling.LoadLanguageAsJson().Result.Contains("Spanish"))
+            //{
+            //    language = 6;
+            //}
+            //else if (FileHandling.LoadLanguageAsJson().Result.Contains("French"))
+            //{
+            //    language = 3;
+            //}
+            //else if (FileHandling.LoadLanguageAsJson().Result.Contains("German"))
+            //{
+            //    language = 4;
+            //}
+            //else if (FileHandling.LoadLanguageAsJson().Result.Contains("Russian"))
+            //{
+            //    language = 5;
+            //}
+            //else
+            //{
+            //    //Default language is now English
+            //    language = 2;
+            //}
 
             #endregion
 
             #region Text Definer
 
-            if (language == 1)
+           // if (language == 1)
             {
                 //Danish
 
@@ -148,7 +148,7 @@ fantastiske begivenhed, Roskilde Festival er en udenfor, 'leve i et telt' opleve
 
                 #endregion
                 }
-                else if (language == 2)
+              //  else if (language == 2)
             {
                 //English
 
@@ -205,7 +205,7 @@ amazing event, Roskilde Festival is a outside, 'living in a tent' experience whe
 
                 #endregion
             }
-          else if (language == 3)
+         // else if (language == 3)
             {
                 //French
 
@@ -262,7 +262,7 @@ sam-dim 17-23";
 
                 #endregion
             }
-          else if (language == 4)
+        //  else if (language == 4)
             {
                 //German
 
@@ -319,7 +319,7 @@ erstaunliche Ereignis ist Roskilde Festival ein außen 'lebt in einem Zelt Erfah
 
                 #endregion
             }
-           else if (language == 5)
+          // else if (language == 5)
             {
                 //Russian
 
@@ -376,7 +376,7 @@ udivitel'noye sobytiye , Roskille Festival' snaruzhi, 'zhivet v palatke opyt' gd
 
                 #endregion
             }
-           else
+         //  else
             {
                 //Spanish
 
