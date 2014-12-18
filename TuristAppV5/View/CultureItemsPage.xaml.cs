@@ -179,32 +179,32 @@ namespace TuristAppV5.View
 
         private void DanishFlybutton_Click_1(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
-            FileHandling.SaveLanguageAsJson("Danish");
+            FileHandling.WriteLanguageFileAsync("Danish");
         }
 
         private void EnglishFlybutton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
-            FileHandling.SaveLanguageAsJson("English");
+            FileHandling.WriteLanguageFileAsync("English");
         }
 
         private void FrenchFlybutton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
-            FileHandling.SaveLanguageAsJson("French");
+            FileHandling.WriteLanguageFileAsync("French");
         }
 
         private void GermanFlybutton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
-            FileHandling.SaveLanguageAsJson("German");
+            FileHandling.WriteLanguageFileAsync("German");
         }
 
         private void RussianFlybutton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
-            FileHandling.SaveLanguageAsJson("Russian");
+            FileHandling.WriteLanguageFileAsync("Russian");
         }
 
         private void SpanishFlybutton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
-            FileHandling.SaveLanguageAsJson("Spanish");
+            FileHandling.WriteLanguageFileAsync("Spanish");
         }
 
         private void ExitButton_Click(object sender, RoutedEventArgs e)

@@ -39,15 +39,11 @@ namespace TuristAppV5.View
                 //userData.UserEmail = registerEmailBox.Text;
                 //userData.UserPhone = registerPhoneBox.Text;
 
-<<<<<<< HEAD
                 login.LoginDictionary.Add(registerUserNameBox.Text, userData);
                 
-                userDataAsJson.SaveLoginData();
-=======
-                login.LoginDictionary.Add(registerUserNameBox.Text, registerPasswordBox.Password);
+               // login.LoginDictionary.Add(registerUserNameBox.Text, registerPasswordBox.Password);
 
                 //userDataAsJson.SaveLoginData();
->>>>>>> origin/test
 
 
                 login.IsLoggedIn = true;
