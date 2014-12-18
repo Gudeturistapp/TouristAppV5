@@ -27,28 +27,24 @@ namespace TuristAppV5.Common
         #region Language file handling.
         public static async void SaveLanguageAsync(string _language)
         {
-            //SaveLanguageAsync
-            WriteLanguageFileAsync(_language, languageFileName);
+            WriteLanguageFileAsync(_language);
         }
 
         public static async Task<string> LoadLanguageAsync()
         {
-            //LoadLanguageAsync
-            string languageJsonString = await ReadLanguageFileAsync(languageFileName);
+            string languageJsonString = await ReadLanguageFileAsync();
             return languageJsonString;
         }
 
-        public static async void WriteLanguageFileAsync(string languageDataString, string localFileName)
+        public static async void WriteLanguageFileAsync(string languageDataString)
         {
-            //WriteLanguageFileAsync
-            StorageFile localFile = await ApplicationData.Current.LocalFolder.CreateFileAsync(localFileName, CreationCollisionOption.ReplaceExisting);
+            StorageFile localFile = await ApplicationData.Current.LocalFolder.CreateFileAsync(languageFileName, CreationCollisionOption.ReplaceExisting);
             await FileIO.WriteTextAsync(localFile, languageDataString);
         }
 
-        public static async Task<string> ReadLanguageFileAsync(string localFileName)
+        public static async Task<string> ReadLanguageFileAsync()
         {
-            //ReadLanguageFileAsync
-            StorageFile localFile = await ApplicationData.Current.LocalFolder.GetFileAsync(localFileName);
+            StorageFile localFile = await ApplicationData.Current.LocalFolder.GetFileAsync(languageFileName);
             return await FileIO.ReadTextAsync(localFile);
         }
         #endregion

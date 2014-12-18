@@ -11,8 +11,10 @@ namespace TuristAppV5.ViewModel
 {
     public class MainViewModel
     {
-        //Properties + SelectedAttraction + attributter.
+        //Properties
         #region Properties
+        public string LanguageFromFile { get; set; }
+
         public static Attractions SelectedAttraction { get; set; }
         public AttractionList Restaurants { get; set; }
         public AttractionList Events { get; set; }
@@ -22,13 +24,17 @@ namespace TuristAppV5.ViewModel
 
         public MainViewModel()
         {
-            string language;
-
+            GetLanguage();
+            DetailPageInfo();
             Restaurants = new AttractionList();
             Events = new AttractionList();
             Culture = new AttractionList();
             Shopping = new AttractionList();
+        }
 
+        public void DetailPageInfo()
+        {
+            #region Attributter
             string restaurentJensensBøfhus = "";
             string restaurentBones = "";
             string restaurentCafeVivaldi = "";
@@ -48,39 +54,9 @@ namespace TuristAppV5.ViewModel
             string attractionRoskildeDomkirke = "";
             string attractionEtGallery = "";
             string attractionSomeplace = "";
-
-            #region Language Checker
-
-            language = FileHandling.LoadLanguageAsync().Result;
-            //if (FileHandling.LoadLanguageAsJson().Result.Contains("Dansk"))
-            //{
-            //    language = 1;
-            //}
-            //else if (FileHandling.LoadLanguageAsJson().Result.Contains("Spanish"))
-            //{
-            //    language = 6;
-            //}
-            //else if (FileHandling.LoadLanguageAsJson().Result.Contains("French"))
-            //{
-            //    language = 3;
-            //}
-            //else if (FileHandling.LoadLanguageAsJson().Result.Contains("German"))
-            //{
-            //    language = 4;
-            //}
-            //else if (FileHandling.LoadLanguageAsJson().Result.Contains("Russian"))
-            //{
-            //    language = 5;
-            //}
-            //else
-            //{
-            //    //Default language is now English
-            //    language = 2;
-            //} 
             #endregion
-
             #region Text Definer
-            if (language.Equals("Danish"))
+            if (LanguageFromFile.Equals("Danish"))
             {
                 //Danish
                 #region Danish version
@@ -102,10 +78,10 @@ namespace TuristAppV5.ViewModel
                 attractionVikingeSkibsMuseum = "";
                 attractionRoskildeDomkirke = "";
                 attractionEtGallery = "";
-                attractionSomeplace = ""; 
+                attractionSomeplace = "";
                 #endregion
             }
-            else if (language.Equals("English"))
+            else if (LanguageFromFile.Equals("English"))
             {
                 //English
                 #region English version
@@ -127,10 +103,10 @@ namespace TuristAppV5.ViewModel
                 attractionVikingeSkibsMuseum = "";
                 attractionRoskildeDomkirke = "";
                 attractionEtGallery = "";
-                attractionSomeplace = ""; 
+                attractionSomeplace = "";
                 #endregion
             }
-            else if (language.Equals("French"))
+            else if (LanguageFromFile.Equals("French"))
             {
                 //French
                 #region French version
@@ -152,10 +128,10 @@ namespace TuristAppV5.ViewModel
                 attractionVikingeSkibsMuseum = "";
                 attractionRoskildeDomkirke = "";
                 attractionEtGallery = "";
-                attractionSomeplace = ""; 
+                attractionSomeplace = "";
                 #endregion
             }
-            else if (language.Equals("German"))
+            else if (LanguageFromFile.Equals("German"))
             {
                 //German
                 #region German version
@@ -177,10 +153,10 @@ namespace TuristAppV5.ViewModel
                 attractionVikingeSkibsMuseum = "";
                 attractionRoskildeDomkirke = "";
                 attractionEtGallery = "";
-                attractionSomeplace = ""; 
+                attractionSomeplace = "";
                 #endregion
             }
-            else if (language.Equals("Russian"))
+            else if (LanguageFromFile.Equals("Russian"))
             {
                 //Russian
                 #region Russian version
@@ -202,7 +178,7 @@ namespace TuristAppV5.ViewModel
                 attractionVikingeSkibsMuseum = "";
                 attractionRoskildeDomkirke = "";
                 attractionEtGallery = "";
-                attractionSomeplace = ""; 
+                attractionSomeplace = "";
                 #endregion
             }
             else
@@ -227,7 +203,7 @@ namespace TuristAppV5.ViewModel
                 attractionVikingeSkibsMuseum = "";
                 attractionRoskildeDomkirke = "";
                 attractionEtGallery = "";
-                attractionSomeplace = ""; 
+                attractionSomeplace = "";
                 #endregion
             }
             #endregion
@@ -265,11 +241,9 @@ namespace TuristAppV5.ViewModel
             #endregion
         }
 
-        public string GetLanguage()
+        public async void GetLanguage()
         {
-            var task = FileHandling.LoadLanguageAsync();
-            task.Wait();
-            return task.Result;
+            LanguageFromFile = await FileHandling.ReadLanguageFileAsync();
         }
     }
 }
