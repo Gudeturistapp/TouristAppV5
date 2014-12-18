@@ -218,13 +218,10 @@ namespace TuristAppV5.View
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void AddReviewButton_Click(object sender, RoutedEventArgs e)
         {
             MainViewModel.SelectedComments.Comment.Add(AddReviewText.Text);
-            commentJson.SaveComments();
+            AddReviewText.Text = "";
         }
-
-
-
     }
 }
