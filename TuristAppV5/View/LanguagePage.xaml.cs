@@ -130,37 +130,37 @@ namespace TuristAppV5.View
         #region Buttons
         private void DanishLanguageButton(object sender, RoutedEventArgs e)
         {
-            FileHandling.SaveLanguageAsJson("Danish");
+            FileHandling.WriteLanguageFileAsync("Danish");
             Frame.Navigate(typeof(MainPage));
         }
 
         private void EnglishLanguageButton(object sender, RoutedEventArgs e)
         {
-            FileHandling.SaveLanguageAsJson("English");
+            FileHandling.WriteLanguageFileAsync("English");
             Frame.Navigate(typeof(MainPage));
         }
 
         private void SpanishLanguageButton(object sender, RoutedEventArgs e)
         {
-            FileHandling.SaveLanguageAsJson("Spanish");
+            FileHandling.WriteLanguageFileAsync("Spanish");
             Frame.Navigate(typeof(MainPage));
         }
 
         private void GermanLanguageButton(object sender, RoutedEventArgs e)
         {
-            FileHandling.SaveLanguageAsJson("German");
+            FileHandling.WriteLanguageFileAsync("German");
             Frame.Navigate(typeof(MainPage));
         }
 
         private void FrenchLanguageButton(object sender, RoutedEventArgs e)
         {
-            FileHandling.SaveLanguageAsJson("French");
+            FileHandling.WriteLanguageFileAsync("French");
             Frame.Navigate(typeof(MainPage));
         }
 
         private void RussianLanguageButton(object sender, RoutedEventArgs e)
         {
-            FileHandling.SaveLanguageAsJson("Russian");
+            FileHandling.WriteLanguageFileAsync("Russian");
             Frame.Navigate(typeof(MainPage));
         } 
         #endregion

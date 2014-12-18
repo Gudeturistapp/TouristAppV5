@@ -25,10 +25,10 @@ namespace TuristAppV5.Common
         private const string languageFileName = "Language.dat";
 
         #region Language file handling.
-        public static async void SaveLanguageAsync(string _language)
-        {
-            WriteLanguageFileAsync(_language);
-        }
+        //public static async void SaveLanguageAsync(string _language)
+        //{
+        //    WriteLanguageFileAsync(_language);
+        //}
 
         public static async Task<string> LoadLanguageAsync()
         {
@@ -48,13 +48,5 @@ namespace TuristAppV5.Common
             return await FileIO.ReadTextAsync(localFile);
         }
         #endregion
-
-        //public static async Task<String> FindLanguage()
-        //{
-        //    string boh;
-        //    var task = LoadLanguageAsJson();
-        //    task.Wait();
-        //    return task.Result;
-        //}
     }
 }
