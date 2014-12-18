@@ -124,6 +124,11 @@ namespace TuristAppV5.View
                 ErrorBlock.Text = "";
                 SuccessBlock.Text = "Success! User has been created.";
 
+                if (ErrorBlock.Text.Contains("@"))
+                {
+                    
+                }
+
             }
             else
             {

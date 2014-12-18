@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="dcb8dd06-854c-478d-8a96-f8dbf1ef29b9" name="Sequence" linkedPackageId="2bd52cd4-b939-4bce-bfe2-1148f210604c" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="dcb8dd06-854c-478d-8a96-f8dbf1ef29b9" name="Sequence" linkedPackageId="2bd52cd4-b939-4bce-bfe2-1148f210604c" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
   <packagedElements>
     <packageHasNamedElement>
       <interaction Id="b06b84bd-4907-4577-817e-75696886490e" name="Sequence" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
@@ -111,7 +111,7 @@
           <behaviorExecutionSpecification Id="a599aafc-352b-49e0-a1c0-7b55dd96cb1d" name="BehaviorExecutionSpecification3">
             <elementDefinition Id="1da9315e-42fa-4e5a-8ddc-c97b963b8d0e" />
             <coveredLifelines>
-              <lifelineMoniker Id="6ce49a5c-d0ee-464e-8e18-cb88da712df6" LastKnownName=": Selected (things)" />
+              <lifelineMoniker Id="6ce49a5c-d0ee-464e-8e18-cb88da712df6" LastKnownName=": Selected attraction" />
             </coveredLifelines>
             <finish>
               <executionOccurrenceSpecificationMoniker Id="deb2d9dd-c11e-4f72-ba10-3aa74ece13e9" LastKnownName="ExecutionOccurrenceSpecification6" />
@@ -132,25 +132,25 @@
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
-              <lifelineMoniker Id="6ce49a5c-d0ee-464e-8e18-cb88da712df6" LastKnownName=": Selected (things)" />
+              <lifelineMoniker Id="6ce49a5c-d0ee-464e-8e18-cb88da712df6" LastKnownName=": Selected attraction" />
             </covered>
           </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="f3cbc582-b908-407c-97b6-77b09689f55d" name="MessageOccurrenceSpecification10">
-            <elementDefinition Id="e5ad93d9-bd6a-4deb-9cd2-584d6030d992" />
-            <covered>
-              <lifelineMoniker Id="6ce49a5c-d0ee-464e-8e18-cb88da712df6" LastKnownName=": Selected (things)" />
-            </covered>
-          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="499852f2-fb00-4a1e-bd27-08254c6cd5e6" name="MessageOccurrenceSpecification9">
             <elementDefinition Id="e1f79d04-b346-42b5-b5c5-adf6a3f8a389" />
             <covered>
               <lifelineMoniker Id="534f9f63-60f5-4a24-adea-97ac5df0c894" LastKnownName=": MainViewModel" />
             </covered>
           </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="f3cbc582-b908-407c-97b6-77b09689f55d" name="MessageOccurrenceSpecification10">
+            <elementDefinition Id="e5ad93d9-bd6a-4deb-9cd2-584d6030d992" />
+            <covered>
+              <lifelineMoniker Id="6ce49a5c-d0ee-464e-8e18-cb88da712df6" LastKnownName=": Selected attraction" />
+            </covered>
+          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="e7f4ae35-ce1d-40ae-86a4-a9b08d436505" name="MessageOccurrenceSpecification11">
             <elementDefinition Id="985a3d90-dcf0-4f45-9dfd-c009bb28d712" />
             <covered>
-              <lifelineMoniker Id="6ce49a5c-d0ee-464e-8e18-cb88da712df6" LastKnownName=": Selected (things)" />
+              <lifelineMoniker Id="6ce49a5c-d0ee-464e-8e18-cb88da712df6" LastKnownName=": Selected attraction" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="dddb5a49-2b9a-436a-ada0-ab2ac7509000" name="MessageOccurrenceSpecification12">
@@ -167,7 +167,7 @@
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
-              <lifelineMoniker Id="6ce49a5c-d0ee-464e-8e18-cb88da712df6" LastKnownName=": Selected (things)" />
+              <lifelineMoniker Id="6ce49a5c-d0ee-464e-8e18-cb88da712df6" LastKnownName=": Selected attraction" />
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification Id="1a394b6a-d497-4877-985e-d619ba02c85c" name="MessageOccurrenceSpecification7">
@@ -196,7 +196,7 @@
           <behaviorExecutionSpecification Id="71463898-46cb-4f6b-acd1-3edc6cdee6ab" name="BehaviorExecutionSpecification4">
             <elementDefinition Id="3c7ccdef-e6d3-4729-b274-cdef4bcf1fc0" />
             <coveredLifelines>
-              <lifelineMoniker Id="6ce49a5c-d0ee-464e-8e18-cb88da712df6" LastKnownName=": Selected (things)" />
+              <lifelineMoniker Id="6ce49a5c-d0ee-464e-8e18-cb88da712df6" LastKnownName=": Selected attraction" />
             </coveredLifelines>
             <finish>
               <executionOccurrenceSpecificationMoniker Id="7b26ffcb-45e5-4284-976d-add9efb66b91" LastKnownName="ExecutionOccurrenceSpecification8" />
@@ -217,7 +217,7 @@
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
-              <lifelineMoniker Id="6ce49a5c-d0ee-464e-8e18-cb88da712df6" LastKnownName=": Selected (things)" />
+              <lifelineMoniker Id="6ce49a5c-d0ee-464e-8e18-cb88da712df6" LastKnownName=": Selected attraction" />
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification Id="a0a5dbd1-d675-4031-9f10-876e89a2a9ea" name="MessageOccurrenceSpecification13">
@@ -229,13 +229,13 @@
           <messageOccurrenceSpecification Id="118ee859-33d0-4f8f-869b-f27638bda2bb" name="MessageOccurrenceSpecification14">
             <elementDefinition Id="7d938fb6-9238-4b7c-afc0-9cea3ec84bed" />
             <covered>
-              <lifelineMoniker Id="6ce49a5c-d0ee-464e-8e18-cb88da712df6" LastKnownName=": Selected (things)" />
+              <lifelineMoniker Id="6ce49a5c-d0ee-464e-8e18-cb88da712df6" LastKnownName=": Selected attraction" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="05ec9ecd-27c7-45e5-afd2-7b81240be473" name="MessageOccurrenceSpecification15">
             <elementDefinition Id="878cc941-e096-4d10-8e41-dd025f8430df" />
             <covered>
-              <lifelineMoniker Id="6ce49a5c-d0ee-464e-8e18-cb88da712df6" LastKnownName=": Selected (things)" />
+              <lifelineMoniker Id="6ce49a5c-d0ee-464e-8e18-cb88da712df6" LastKnownName=": Selected attraction" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="12aa50ea-cc46-4f02-84ba-1019fa196a4f" name="MessageOccurrenceSpecification16">
@@ -252,7 +252,7 @@
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
-              <lifelineMoniker Id="6ce49a5c-d0ee-464e-8e18-cb88da712df6" LastKnownName=": Selected (things)" />
+              <lifelineMoniker Id="6ce49a5c-d0ee-464e-8e18-cb88da712df6" LastKnownName=": Selected attraction" />
             </covered>
           </executionOccurrenceSpecification>
         </fragments>
@@ -285,7 +285,7 @@
               <executionOccurrenceSpecificationMoniker Id="2db2d125-6252-4f49-aac2-e91663f07ca9" LastKnownName="ExecutionOccurrenceSpecification4" />
             </topLevelOccurrences>
           </lifeline>
-          <lifeline Id="6ce49a5c-d0ee-464e-8e18-cb88da712df6" name=": Selected (things)" isActor="false" lifelineDisplayName=": Selected (things)">
+          <lifeline Id="6ce49a5c-d0ee-464e-8e18-cb88da712df6" name=": Selected attraction" isActor="false" lifelineDisplayName=": Selected attraction">
             <elementDefinition Id="565dda6c-eab6-4bf6-910a-d6d030e20ac9" />
             <topLevelOccurrences>
               <executionOccurrenceSpecificationMoniker Id="03c9cec7-9497-4555-b7c8-3711fd716797" LastKnownName="ExecutionOccurrenceSpecification5" />
@@ -350,7 +350,7 @@
               <messageOccurrenceSpecificationMoniker Id="af06b3ad-2fc7-4848-9ce1-8dcad3f51a74" LastKnownName="MessageOccurrenceSpecification8" />
             </receiveEvent>
           </message>
-          <message Id="0ff5c8b7-4465-44f4-b0f3-cf2da49cf2a2" name="CreateOrder" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false">
+          <message Id="0ff5c8b7-4465-44f4-b0f3-cf2da49cf2a2" name="AddBooking" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false">
             <elementDefinition Id="1e390f65-957b-42d0-b3bb-d859d178aafe" />
             <sendEvent>
               <messageOccurrenceSpecificationMoniker Id="a0a5dbd1-d675-4031-9f10-876e89a2a9ea" LastKnownName="MessageOccurrenceSpecification13" />

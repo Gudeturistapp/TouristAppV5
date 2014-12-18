@@ -1,1 +1,1 @@
-Bruger: Brugeren vælger et sprog. En kategori bliver valgt, og kan ved oprettelse af en bruger tilføje kommentare og bestille tider til den valgte kategori.
+Bruger: Brugeren vælger et sprog. En kategori bliver valgt, og kan ved oprettelse af en bruger tilføje kommentare og bestille tider til den valgte attraction.
