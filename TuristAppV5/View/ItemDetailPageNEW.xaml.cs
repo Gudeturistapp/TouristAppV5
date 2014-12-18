@@ -107,9 +107,9 @@ namespace TuristAppV5.View
 
                 userData = new UserData(registerUserNameBox.Text, registerEmailBox.Text, registerPhoneBox.Text);
 
-                //userData.UserName = registerUserNameBox.Text;
-                //userData.UserEmail = registerEmailBox.Text;
-                //userData.UserPhone = registerPhoneBox.Text;
+                userData.UserName = registerUserNameBox.Text;
+                userData.UserEmail = registerEmailBox.Text;
+                userData.UserPhone = registerPhoneBox.Text;
 
                 login.LoginDictionary.Add(registerUserNameBox.Text, registerPasswordBox.Password);
 
@@ -172,10 +172,18 @@ namespace TuristAppV5.View
                 OrderAppBar.IsOpen = true;
                 OrderAppBar.Visibility = Visibility.Visible;
 
-              
-                OrderHereNameBox.Text = userData.UserName;
-                OrderHereEmailBox.Text = userData.UserEmail;
-                OrderHerePhoneBox.Text = userData.UserPhone;
+
+                try
+                {
+                    OrderHereNameBox.Text = userData.UserName;
+                    OrderHereEmailBox.Text = userData.UserEmail;
+                    OrderHerePhoneBox.Text = userData.UserPhone;
+                }
+                catch (Exception)
+                {
+                    
+                }
+               
 
                 
                
