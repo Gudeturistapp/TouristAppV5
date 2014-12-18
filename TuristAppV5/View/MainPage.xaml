@@ -82,13 +82,13 @@
                                         </StackPanel>
                                         <StackPanel x:Name="StackRegister" Height="208">
                                             <TextBlock TextWrapping="Wrap" FontSize="13" Height="15" Foreground="#FFED6B06" Text="Username" Margin="10,0"/>
-                                            <TextBox x:Name="registerUserNameBox" TextWrapping="Wrap" Height="36" FontSize="7" MinHeight="20" Margin="10,0" PlaceholderText="Enter your Username"/>
+                                            <TextBox x:Name="registerUserNameBox" TextWrapping="Wrap" Height="36" FontSize="15" MinHeight="20" Margin="10,0" PlaceholderText="Enter your Username"/>
                                             <TextBlock TextWrapping="Wrap" FontSize="13" Height="18" Foreground="#FFED6B06" Text="Phone" Margin="10,0,0,0"/>
-                                            <TextBox x:Name="registerPhoneBox" TextWrapping="Wrap" FontSize="7" Height="36" MinHeight="20" Margin="10,0" PlaceholderText="Enter your Phone number"/>
+                                            <TextBox x:Name="registerPhoneBox" TextWrapping="Wrap" FontSize="15" Height="36" MinHeight="20" Margin="10,0" PlaceholderText="Enter your Phone number"/>
                                             <TextBlock TextWrapping="Wrap" Height="17" VerticalAlignment="Bottom" Foreground="#FFED6B06" Text="E-mail" FontSize="13" Margin="10,0,0,0"/>
-                                            <TextBox x:Name="registerEmailBox" TextWrapping="Wrap" Text="&#xA;" Height="36" FontSize="7" MinHeight="20" Margin="10,0" PlaceholderText="Enter your Email"/>
+                                            <TextBox x:Name="registerEmailBox" TextWrapping="Wrap" Text="&#xA;" Height="36" FontSize="15" MinHeight="20" Margin="10,0" PlaceholderText="Enter your Email"/>
                                             <TextBlock TextWrapping="Wrap" Height="14" VerticalAlignment="Bottom" Foreground="#FFED6B06" Text="Password" FontSize="13" Margin="10,0,0,0"/>
-                                            <PasswordBox x:Name="registerPasswordBox" Margin="10,0" Height="24" FontFamily="Global User Interface" RenderTransformOrigin="0.5,0.5">
+                                            <PasswordBox x:Name="registerPasswordBox" Margin="10,0" Height="24" FontFamily="Global User Interface" RenderTransformOrigin="0.5,0.5" FontSize="15">
                                                 <PasswordBox.RenderTransform>
                                                     <CompositeTransform ScaleY="-1"/>
                                                 </PasswordBox.RenderTransform>
@@ -128,14 +128,14 @@
                                                 </Flyout>
                                             </FlyoutBase.AttachedFlyout>
                                             <TextBlock TextWrapping="Wrap" FontSize="13" Height="15" Foreground="#FFED6B06" Text="Username" Margin="10,0"/>
-                                            <TextBox x:Name="UsernameLoginBox" TextWrapping="Wrap" Height="36" FontSize="12" MinHeight="20" Margin="10,0" PlaceholderText="Enter your Username" FontFamily="Global User Interface"/>
+                                            <TextBox x:Name="UsernameLoginBox" TextWrapping="Wrap" Height="36" FontSize="15" MinHeight="20" Margin="10,0" PlaceholderText="Enter your Username" FontFamily="Global User Interface"/>
                                             <TextBlock TextWrapping="Wrap" Height="30" VerticalAlignment="Bottom" Foreground="#FFED6B06" FontSize="13" Margin="10,0,0,0">
-                								<Run/>
-                								<LineBreak/>
-                								<Run Text="Password"/>
+                                				<Run/>
+                                				<LineBreak/>
+                                				<Run Text="Password"/>
                                             </TextBlock>
                                             <StackPanel Height="48">
-                                                <PasswordBox x:Name="PasswordLoginBox" Height="3" Margin="10,0" RenderTransformOrigin="0.5,0.5" FontSize="7" FontFamily="Global User Interface">
+                                                <PasswordBox x:Name="PasswordLoginBox" Height="3" Margin="10,0" RenderTransformOrigin="0.5,0.5" FontSize="15" FontFamily="Global User Interface">
                                                     <PasswordBox.RenderTransform>
                                                         <CompositeTransform ScaleY="-1"/>
                                                     </PasswordBox.RenderTransform>
@@ -185,7 +185,7 @@
                 <Path Data="M161.5,0.5 L161.5,286.412 L161.241,286.409 C72.0825,284.452 0.5,221.199 0.5,143.456 C0.5,65.7134 72.0825,2.46051 161.241,0.502838 z" Fill="#FFED6B06" HorizontalAlignment="Left" Height="286.912" Margin="0,0.044,0,0" RenderTransformOrigin="1.0216,0.5" Stretch="Fill" Stroke="#FFED6B06" UseLayoutRounding="False" VerticalAlignment="Top" Width="162"/>
                 <Image HorizontalAlignment="Left" Height="185" VerticalAlignment="Top" Width="177" Margin="0,55,0,0" Stretch="Fill" Source="ms-appx:///Assets/Icons/appbar.cards.heart.png"/>
                 <TextBox HorizontalAlignment="Left" Margin="186,131,-2,0" TextWrapping="Wrap" Text="Events" VerticalAlignment="Top" Height="76" Width="147" Background="Transparent" Foreground="White" BorderBrush="Transparent" FontSize="22" FontWeight="Bold" IsReadOnly="True"/>
-                <Button x:Name="MenuButton1" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Height="290" Margin="-16,0,-3,0" Width="350" BorderBrush="Transparent" Foreground="Transparent" Opacity="0" Click="EventsButton_Click"/>
+                <Button x:Name="MenuButton1" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Height="290" Margin="0,-15,-19,0" Width="350" BorderBrush="Transparent" Foreground="Transparent" Opacity="0" Click="EventsButton_Click"/>
             </Grid>
         </StackPanel>
         <StackPanel HorizontalAlignment="Left" Height="300" Margin="747,127,0,0" VerticalAlignment="Top" Width="331">

@@ -94,13 +94,13 @@
                                         </StackPanel>
                                         <StackPanel x:Name="StackRegister" Height="208">
                                             <TextBlock TextWrapping="Wrap" FontSize="13" Height="15" Foreground="#FFED6B06" Text="Username" Margin="10,0"/>
-                                            <TextBox x:Name="registerUserNameBox" TextWrapping="Wrap" Height="36" FontSize="7" MinHeight="20" Margin="10,0" PlaceholderText="Enter your Username"/>
+                                            <TextBox x:Name="registerUserNameBox" TextWrapping="Wrap" Height="36" FontSize="15" MinHeight="20" Margin="10,0" PlaceholderText="Enter your Username"/>
                                             <TextBlock TextWrapping="Wrap" FontSize="13" Height="18" Foreground="#FFED6B06" Text="Phone" Margin="10,0,0,0"/>
-                                            <TextBox x:Name="registerPhoneBox" TextWrapping="Wrap" FontSize="7" Height="36" MinHeight="20" Margin="10,0" PlaceholderText="Enter your Phone number"/>
+                                            <TextBox x:Name="registerPhoneBox" TextWrapping="Wrap" FontSize="15" Height="36" MinHeight="20" Margin="10,0" PlaceholderText="Enter your Phone number"/>
                                             <TextBlock TextWrapping="Wrap" Height="17" VerticalAlignment="Bottom" Foreground="#FFED6B06" Text="E-mail" FontSize="13" Margin="10,0,0,0"/>
-                                            <TextBox x:Name="registerEmailBox" TextWrapping="Wrap" Text="&#xA;" Height="36" FontSize="7" MinHeight="20" Margin="10,0" PlaceholderText="Enter your Email"/>
+                                            <TextBox x:Name="registerEmailBox" TextWrapping="Wrap" Text="&#xA;" Height="36" FontSize="15" MinHeight="20" Margin="10,0" PlaceholderText="Enter your Email"/>
                                             <TextBlock TextWrapping="Wrap" Height="14" VerticalAlignment="Bottom" Foreground="#FFED6B06" Text="Password" FontSize="13" Margin="10,0,0,0"/>
-                                            <PasswordBox x:Name="registerPasswordBox" Margin="10,0" Height="24" FontFamily="Global User Interface" RenderTransformOrigin="0.5,0.5">
+                                            <PasswordBox x:Name="registerPasswordBox" Margin="10,0" Height="24" FontFamily="Global User Interface" RenderTransformOrigin="0.5,0.5" FontSize="15">
                                                 <PasswordBox.RenderTransform>
                                                     <CompositeTransform ScaleY="-1"/>
                                                 </PasswordBox.RenderTransform>
@@ -140,14 +140,14 @@
                                                 </Flyout>
                                             </FlyoutBase.AttachedFlyout>
                                             <TextBlock TextWrapping="Wrap" FontSize="13" Height="15" Foreground="#FFED6B06" Text="Username" Margin="10,0"/>
-                                            <TextBox x:Name="UsernameLoginBox" TextWrapping="Wrap" Height="36" FontSize="12" MinHeight="20" Margin="10,0" PlaceholderText="Enter your Username" FontFamily="Global User Interface"/>
+                                            <TextBox x:Name="UsernameLoginBox" TextWrapping="Wrap" Height="36" FontSize="15" MinHeight="20" Margin="10,0" PlaceholderText="Enter your Username" FontFamily="Global User Interface"/>
                                             <TextBlock TextWrapping="Wrap" Height="30" VerticalAlignment="Bottom" Foreground="#FFED6B06" FontSize="13" Margin="10,0,0,0">
                 								<Run/>
                 								<LineBreak/>
                 								<Run Text="Password"/>
                                             </TextBlock>
                                             <StackPanel Height="48">
-                                                <PasswordBox x:Name="PasswordLoginBox" Height="3" Margin="10,0" RenderTransformOrigin="0.5,0.5" FontSize="7" FontFamily="Global User Interface">
+                                                <PasswordBox x:Name="PasswordLoginBox" Height="3" Margin="10,0" RenderTransformOrigin="0.5,0.5" FontSize="15" FontFamily="Global User Interface">
                                                     <PasswordBox.RenderTransform>
                                                         <CompositeTransform ScaleY="-1"/>
                                                     </PasswordBox.RenderTransform>
@@ -249,7 +249,7 @@
                         <viewModel:MainViewModel/>
                     </Ellipse.DataContext>
                     <Ellipse.Fill>
-                        <ImageBrush ImageSource="ms-appx:///Assets/Eat/bones_logo.gif"/>
+                        <ImageBrush ImageSource="ms-appx:///Assets/Eat/bones_logo.png"/>
                     </Ellipse.Fill>
                 </Ellipse>
                 <Button x:Name="EatButton2" Content="Button" HorizontalAlignment="Left" Margin="7,-3,0,-3" VerticalAlignment="Top" Height="212" Width="223" BorderBrush="Transparent" Foreground="Transparent" Opacity="0" Click="EatButton2_Click">
@@ -281,7 +281,7 @@
                         <viewModel:MainViewModel/>
                     </Ellipse.DataContext>
                     <Ellipse.Fill>
-                        <ImageBrush ImageSource="ms-appx:///Assets/Eat/Vivaldi-logo.jpg"/>
+                        <ImageBrush ImageSource="ms-appx:///Assets/Eat/Vivaldi-logo.png"/>
                     </Ellipse.Fill>
                 </Ellipse>
                 <Button x:Name="EatButton4" Content="Button" HorizontalAlignment="Left" Margin="-3,-3,0,-3" VerticalAlignment="Top" Height="212" Width="233" BorderBrush="Transparent" Foreground="Transparent" Opacity="0" Click="EatButton4_Click"/>

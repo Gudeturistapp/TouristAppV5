@@ -149,7 +149,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Eat\Bones_Front.jpg" />
-    <Content Include="Assets\Eat\bones_logo.gif" />
+    <Content Include="Assets\Eat\bones_logo.png" />
     <Content Include="Assets\Eat\bones_steak.jpg" />
     <Content Include="Assets\Eat\bones_steak2.jpg" />
     <Content Include="Assets\Eat\Jensens logo.png" />
@@ -159,7 +159,7 @@
     <Content Include="Assets\Eat\Mumm_billede1.jpg" />
     <Content Include="Assets\Eat\mumm_billede2.jpg" />
     <Content Include="Assets\Eat\Mumm_logo.jpg" />
-    <Content Include="Assets\Eat\Vivaldi-logo.jpg" />
+    <Content Include="Assets\Eat\Vivaldi-logo.png" />
     <Content Include="Assets\Eat\Vivaldi_Front.jpg" />
     <Content Include="Assets\Eat\Vivaldi_Steak.jpg" />
     <Content Include="Assets\Eat\Vivaldi_Steak2.jpg" />
@@ -197,17 +197,17 @@
     <Content Include="Assets\Museum\Galleri_Logo.png" />
     <Content Include="Assets\Museum\Radhus_billede1.JPG" />
     <Content Include="Assets\Museum\radhus_billede2.jpg" />
-    <Content Include="Assets\Museum\radhus_logo.jpg" />
-    <Content Include="Assets\Museum\RoskildeDomkirke_logo.gif" />
+    <Content Include="Assets\Museum\radhus_logo.png" />
+    <Content Include="Assets\Museum\RoskildeDomkirke_logo.png" />
     <Content Include="Assets\Museum\viking_billede1.jpg" />
     <Content Include="Assets\Museum\viking_billede2.jpg" />
-    <Content Include="Assets\Museum\viking_logo.gif" />
+    <Content Include="Assets\Museum\viking_logo.png" />
     <Content Include="Assets\Shops\gaagade_billede1.jpg" />
     <Content Include="Assets\Shops\Gaagade_billede2.gif" />
     <Content Include="Assets\Shops\gaagade_Logo.jpg" />
     <Content Include="Assets\Shops\koebmand_billede1.jpg" />
     <Content Include="Assets\Shops\koebmand_billede2.jpg" />
-    <Content Include="Assets\Shops\koebmand_logo.jpg" />
+    <Content Include="Assets\Shops\Koebmand_logo.jpg" />
     <Content Include="Assets\Shops\Shopping_billede1.jpg" />
     <Content Include="Assets\Shops\shopping_billede2.jpg" />
     <Content Include="Assets\Shops\Shopping_Logo1.gif" />

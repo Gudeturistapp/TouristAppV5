@@ -16,6 +16,7 @@ using Windows.UI.Xaml.Navigation;
 
 // The Items Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234233
 using TuristAppV5.Model;
+using TuristAppV5.ViewModel;
 
 namespace TuristAppV5.View
 {
@@ -29,6 +30,8 @@ namespace TuristAppV5.View
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
         private Login login = new Login();
         private UserData userData;
+
+        MainViewModel viewModel = new MainViewModel();
 
         /// <summary>
         /// This can be changed to a strongly typed view model.
@@ -156,22 +159,26 @@ namespace TuristAppV5.View
 
         private void EatButton1_Click(object sender, RoutedEventArgs e)
         {
-
+            MainViewModel.SelectedAttraction = viewModel.Restaurants.AttractionLists[0];
+            Frame.Navigate(typeof(ItemDetailPageNEW));
         }
 
         private void EatButton2_Click(object sender, RoutedEventArgs e)
         {
-
+            MainViewModel.SelectedAttraction = viewModel.Restaurants.AttractionLists[1];
+            Frame.Navigate(typeof(ItemDetailPageNEW));
         }
 
         private void EatButton4_Click(object sender, RoutedEventArgs e)
         {
-
+            MainViewModel.SelectedAttraction = viewModel.Restaurants.AttractionLists[2];
+            Frame.Navigate(typeof(ItemDetailPageNEW));
         }
 
         private void EatButton3_Click(object sender, RoutedEventArgs e)
         {
-
+            MainViewModel.SelectedAttraction = viewModel.Restaurants.AttractionLists[3];
+            Frame.Navigate(typeof(ItemDetailPageNEW));
         }
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
