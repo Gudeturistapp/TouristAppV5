@@ -17,6 +17,7 @@ using Windows.UI.Xaml.Navigation;
 
 // The Item Detail Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234232
 using TuristAppV5.Model;
+using TuristAppV5.ViewModel;
 
 namespace TuristAppV5.View
 {
@@ -28,6 +29,7 @@ namespace TuristAppV5.View
     {
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
+        private MainViewModel viewModel = new MainViewModel();
 
         private Login login = new Login();
         private UserData userData;
@@ -199,18 +201,13 @@ namespace TuristAppV5.View
             Application.Current.Exit();
         }
 
-        public bool EmailTextBox(bool Success)
+        public void EmailTextBox()
         {
             if (!registerEmailBox.Text.Contains("@"))
             {
-                Success = true;
-                throw new ArgumentException("Please enter a correct Email.");
+                ErrorBlock.Text = "Please enter a valid email.";
             }
-            else
-            {
-                Success = false;
-                throw new ArgumentException("Success!");
-            }
+            
         }
 
         private void AddReviewButton_Click(object sender, RoutedEventArgs e)
@@ -222,7 +219,7 @@ namespace TuristAppV5.View
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            ReviewList.Items.Add(AddReviewText.Text);
+            MainViewModel.SelectedComments.Comment.Add(AddReviewText.Text);
             AddReviewText.Text = "";
         }
 

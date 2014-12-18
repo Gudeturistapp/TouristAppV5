@@ -160,24 +160,31 @@ namespace TuristAppV5.View
         private void ShopButton1_Click(object sender, RoutedEventArgs e)
         {
             MainViewModel.SelectedAttraction = viewModel.Shopping.AttractionLists[0];
+            MainViewModel.SelectedComments = viewModel.Shopping.AttractionLists[0].comments;
             Frame.Navigate(typeof (ItemDetailPageNEW));
         }
 
         private void ShopButton2_Click(object sender, RoutedEventArgs e)
         {
             MainViewModel.SelectedAttraction = viewModel.Shopping.AttractionLists[1];
+            MainViewModel.SelectedComments = viewModel.Shopping.AttractionLists[1].comments;
+
             Frame.Navigate(typeof (ItemDetailPageNEW));
         }
 
         private void ShopButton4_Click(object sender, RoutedEventArgs e)
         {
             MainViewModel.SelectedAttraction = viewModel.Shopping.AttractionLists[2];
+            MainViewModel.SelectedComments = viewModel.Shopping.AttractionLists[2].comments;
+
             Frame.Navigate(typeof (ItemDetailPageNEW));
         }
 
         private void ShopButton3_Click(object sender, RoutedEventArgs e)
         {
             MainViewModel.SelectedAttraction = viewModel.Shopping.AttractionLists[3];
+            MainViewModel.SelectedComments = viewModel.Shopping.AttractionLists[3].comments;
+
             Frame.Navigate(typeof (ItemDetailPageNEW));
         }
         private void ExitButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)

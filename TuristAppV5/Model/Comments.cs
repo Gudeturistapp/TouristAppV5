@@ -20,11 +20,11 @@ namespace TuristAppV5.Model
             set { comment = value; }
         }
 
-        public void AddComments(string comment)
-        {
-            Comment.Add(comment);
-            OnPropertyChanged("Comments");
-        }
+        //public void AddComments(string comment)
+        //{
+        //    Comment.Add(comment);
+        //    OnPropertyChanged("Comments");
+        //}
 
         #region PC
 
