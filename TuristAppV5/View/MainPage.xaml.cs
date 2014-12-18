@@ -16,11 +16,13 @@ namespace TuristAppV5.View
     {
         private Login login = new Login();
         private UserData userData;
+        private UserDataAsJson userDataAsJson = new UserDataAsJson();
 
 
         public MainPage()
         {
             this.InitializeComponent();
+            userDataAsJson.LoadLoginData();
         }
         private MainViewModel viewModel = new MainViewModel();
 
@@ -40,6 +42,8 @@ namespace TuristAppV5.View
                 //userData.UserPhone = registerPhoneBox.Text;
 
                 login.LoginDictionary.Add(registerUserNameBox.Text, registerPasswordBox.Password);
+                
+                userDataAsJson.SaveLoginData();
 
 
                 login.IsLoggedIn = true;

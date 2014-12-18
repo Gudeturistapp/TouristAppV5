@@ -36,7 +36,7 @@ namespace TuristAppV5.ViewModel
 
         public static async void SaveCommentAsJson()
         {
-            string CommentJsonString = JsonConvert.SerializeObject(viewModel.Events.AttractionLists[0].Comment);
+            string CommentJsonString = JsonConvert.SerializeObject(viewModel.Events.AttractionLists[0].comments);
             SerializeCommentFileAsync(CommentJsonString, JsonFileName);
         }
 

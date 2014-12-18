@@ -149,24 +149,31 @@ namespace TuristAppV5.View
         private void CultureButton1_Click(object sender, RoutedEventArgs e)
         {
             MainViewModel.SelectedAttraction = viewModel.Culture.AttractionLists[0];
+            MainViewModel.SelectedComments = viewModel.Culture.AttractionLists[0].comments;
             Frame.Navigate(typeof(ItemDetailPageNEW));
         }
 
         private void CultureButton2_Click(object sender, RoutedEventArgs e)
         {
             MainViewModel.SelectedAttraction = viewModel.Culture.AttractionLists[1];
+            MainViewModel.SelectedComments = viewModel.Culture.AttractionLists[1].comments;
+
             Frame.Navigate(typeof(ItemDetailPageNEW));
         }
 
         private void CultureButton4_Click(object sender, RoutedEventArgs e)
         {
             MainViewModel.SelectedAttraction = viewModel.Culture.AttractionLists[2];
+            MainViewModel.SelectedComments = viewModel.Culture.AttractionLists[2].comments;
+
             Frame.Navigate(typeof(ItemDetailPageNEW));
         }
 
         private void CultureButton3_Click(object sender, RoutedEventArgs e)
         {
             MainViewModel.SelectedAttraction = viewModel.Culture.AttractionLists[3];
+            MainViewModel.SelectedComments = viewModel.Culture.AttractionLists[3].comments;
+
             Frame.Navigate(typeof(ItemDetailPageNEW));
         }
 

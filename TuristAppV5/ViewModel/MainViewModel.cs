@@ -30,6 +30,7 @@ namespace TuristAppV5.ViewModel
        public MainViewModel()
         {
 
+
             int language;
 
             string restaurentJensensBøfhus = @"";
