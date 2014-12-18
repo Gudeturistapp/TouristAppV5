@@ -24,16 +24,16 @@ namespace TuristAppV5.ViewModel
 
         public MainViewModel()
         {
-            DetailPageInfo();
+            GetLanguage();
             Restaurants = new AttractionList();
             Events = new AttractionList();
             Culture = new AttractionList();
             Shopping = new AttractionList();
+            DetailPageInfo();
         }
 
         public void DetailPageInfo()
         {
-            GetLanguage();
             #region Attributter
             string restaurentJensensBøfhus;
             string restaurentBones;
