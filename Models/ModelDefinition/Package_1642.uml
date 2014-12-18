@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
   dslVersion="1.0.0.0"
   Id="3e2bfe89-4811-4dbe-ba1a-ca4e2bbdb94d"
   name="Model" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -110,16 +110,6 @@
                 LastKnownLocation="Package_1250.uml" />
             </type_NamedElement>
           </property>
-          <property
-            Id="836a5fad-7895-40af-9f3c-1a3f34fd4cee"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false" />
           <property
             Id="0fbfc3af-f756-4e63-b747-1f8c8cbbf5e2"
             name="Description"
@@ -302,6 +292,7 @@
           <property
             Id="e735ce98-1673-45b6-b17e-0849e3dbf50a"
             name="Userdata"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -320,6 +311,7 @@
           <property
             Id="ce7c1b46-7a3c-4de6-b00f-b64bc87b3dbb"
             name="IsLoggedIn"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -357,6 +349,121 @@
       <undefinedType
         Id="a260c538-26c1-4fb4-8ed0-9ec36b0ce3bf"
         name="ObserveableCollection&lt;Attrations&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="b450fe99-0333-4c61-8e70-9e3a7a73bef2"
+        name="Comments"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="493f8d19-32d3-4805-a519-90e9847ddf91"
+            isDerived="false"
+            sourceEndRoleName="Comments"
+            targetEndRoleName="Attractions"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="355a379a-0642-4868-be45-96f4969bddc9"
+              LastKnownName="Attractions"
+              LastKnownLocation="Package_1642.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="92d82201-5a7d-4ede-94fe-3e7bfe7bf8b9"
+                  name="Comments"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6d8198ad-09ad-4ccb-8d9e-badeef7f733f"
+                  name="Attractions"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="7455ea2c-d61e-4c36-b816-d6ed072d1fce"
+            isDerived="false"
+            sourceEndRoleName="Comments"
+            targetEndRoleName="MainViewModel"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="77ba7a42-c564-46d5-aa28-b125d935a630"
+              LastKnownName="MainViewModel"
+              LastKnownLocation="Package1_1641.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="df3328c5-a66a-473e-9145-9055f23ef62d"
+                  name="Comments"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4dab5536-1eed-450e-aab5-d127af0f45f6"
+                  name="MainViewModel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="c3c444c3-94ba-433c-ab38-6ea0caa34c11"
+            name="comment"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="4cc87f29-62ef-40ab-a3bd-a7f0583ec653"
+                LastKnownName="observeablecollection&lt;string&gt;"
+                LastKnownLocation="Package_1642.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="4cc87f29-62ef-40ab-a3bd-a7f0583ec653"
+        name="observeablecollection&lt;string&gt;" />
     </packageHasNamedElement>
   </packagedElements>
 </package>

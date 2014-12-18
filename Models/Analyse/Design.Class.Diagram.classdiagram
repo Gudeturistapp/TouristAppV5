@@ -144,7 +144,7 @@
             </class>
           </packageHasNamedElement>
           <packageHasNamedElement>
-            <class Id="fff8fe68-1318-462c-ae29-bb0bf8b2b1e1" name="EvenItemsPage" isAbstract="false" isLeaf="false" isActiveClass="false">
+            <class Id="fff8fe68-1318-462c-ae29-bb0bf8b2b1e1" name="EventItemsPage" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="8194eca3-ca4a-439a-b625-e95a23140a78" />
               <targetEnds>
                 <association Id="85619c56-ca4a-4188-8403-6ffd31fd1ba3" isDerived="false" sourceEndRoleName="EvenItemsPage" targetEndRoleName="MainViewModel" isLeaf="false" isAbstract="false">
@@ -225,6 +225,11 @@
               <elementDefinition Id="ceaa37d5-12c2-4547-9c08-37d1c960349e" />
             </class>
           </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="00130860-4ee4-4e54-9cbe-bdc1fcf3ddaf" name="Json" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="882ba79f-de4e-443b-a955-88f72dde6e3e" />
+            </class>
+          </packageHasNamedElement>
         </packagedElements>
       </package>
     </logicalClassDesignerModelHasPackages>
@@ -277,9 +282,6 @@
                   <type_NamedElement>
                     <referencedTypeMoniker Id="934f02b8-ecc1-4315-b320-5792c6ebc7a3" LastKnownName="string" />
                   </type_NamedElement>
-                </property>
-                <property Id="80602224-12c3-41cd-9a56-8d460388f841" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="836a5fad-7895-40af-9f3c-1a3f34fd4cee" />
                 </property>
                 <property Id="3db3d819-7300-4e62-bbcb-27358ebced8f" name="Description" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="0fbfc3af-f756-4e63-b747-1f8c8cbbf5e2" />
@@ -349,16 +351,63 @@
             <class Id="ec813396-bba9-4225-af92-9eb2ab4959e4" name="Login" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="bbb6fe76-d6fd-4341-9ca2-f0edf7de79ec" />
               <ownedAttributesInternal>
-                <property Id="08443a3a-cf92-4410-90b2-698b8b58d281" name="Userdata" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                <property Id="08443a3a-cf92-4410-90b2-698b8b58d281" name="Userdata" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="e735ce98-1673-45b6-b17e-0849e3dbf50a" />
                   <type_NamedElement>
-                    <referencedTypeMoniker Id="e8ba004a-a6b0-4c8e-9f57-7f1ffba6e82d" LastKnownName="dictionary" />
+                    <referencedTypeMoniker Id="5517fbdc-1ef0-4556-8770-2c4f9290eb02" LastKnownName="dictionary" />
                   </type_NamedElement>
                 </property>
-                <property Id="5ec87088-3b02-4793-b98f-00ee31036d6f" name="IsLoggedIn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                <property Id="5ec87088-3b02-4793-b98f-00ee31036d6f" name="IsLoggedIn" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="ce7c1b46-7a3c-4de6-b00f-b64bc87b3dbb" />
                   <type_NamedElement>
-                    <referencedTypeMoniker Id="a9af8873-50cb-438e-ab5b-e6b316430761" LastKnownName="bool" />
+                    <referencedTypeMoniker Id="c5b2510e-90aa-48c9-afdd-6c188c546411" LastKnownName="bool" />
+                  </type_NamedElement>
+                </property>
+              </ownedAttributesInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="7140328e-40a2-43b3-bb27-bb27e72ea4fb" name="Comments" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="b450fe99-0333-4c61-8e70-9e3a7a73bef2" />
+              <targetEnds>
+                <association Id="b28e6bb8-2390-4e48-b5c3-c7f21d86a6ec" isDerived="false" sourceEndRoleName="Comments" targetEndRoleName="Attractions" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="18b7bff9-f0c8-45ce-94f1-82618a6f5c8f" LastKnownName="Attractions" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="e4ff09d9-10f4-4eb0-b882-066d7df06466" name="Comments" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="92d82201-5a7d-4ede-94fe-3e7bfe7bf8b9" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="1bf11d46-8610-41fb-88cf-ce7ae50b7acb" name="Attractions" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="6d8198ad-09ad-4ccb-8d9e-badeef7f733f" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="493f8d19-32d3-4805-a519-90e9847ddf91" />
+                </association>
+                <association Id="16275093-6bdf-42b8-8efd-335d10389be2" isDerived="false" sourceEndRoleName="Comments" targetEndRoleName="MainViewModel" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="7f571ffc-112a-42da-8d3a-060ed2314f17" LastKnownName="MainViewModel" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="ebb34626-b6a3-4223-aa69-748826ef0e87" name="Comments" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="df3328c5-a66a-473e-9145-9055f23ef62d" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="4b62d77f-c0f8-4b0c-a3a6-094687cb077c" name="MainViewModel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="4dab5536-1eed-450e-aab5-d127af0f45f6" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="7455ea2c-d61e-4c36-b816-d6ed072d1fce" />
+                </association>
+              </targetEnds>
+              <ownedAttributesInternal>
+                <property Id="444e77b9-8205-4f3a-8c47-37f9c760b29c" name="comment" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c3c444c3-94ba-433c-ab38-6ea0caa34c11" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="e209c43f-ba29-4715-95b2-a3c36dc66916" LastKnownName="observeablecollection&lt;string&gt;" />
                   </type_NamedElement>
                 </property>
               </ownedAttributesInternal>
@@ -375,16 +424,6 @@
     <packageHasNamedElement>
       <referencedType Id="793861b7-c050-437d-957b-5e84d1765690" name="string string" isAbstract="false" isLeaf="false" cachedFullName="string string">
         <elementDefinition Id="0a83006f-d243-426e-a4d7-9fe3e21b7a77" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <referencedType Id="e8ba004a-a6b0-4c8e-9f57-7f1ffba6e82d" name="dictionary" isAbstract="false" isLeaf="false" cachedFullName="dictionary">
-        <elementDefinition Id="9684fbc1-7f85-4512-85c7-e21a402a7ab4" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <referencedType Id="a9af8873-50cb-438e-ab5b-e6b316430761" name="bool" isAbstract="false" isLeaf="false" cachedFullName="bool">
-        <elementDefinition Id="f41fe1ac-ffa9-4897-a4e0-7cbfa481fa9d" />
       </referencedType>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -410,6 +449,21 @@
     <packageHasNamedElement>
       <referencedType Id="fe5fda06-b899-42dd-83e7-fe466b9f105b" name="string" isAbstract="false" isLeaf="false" cachedFullName="string">
         <elementDefinition Id="7b4e4727-52e4-4a06-86aa-2f72be626935" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="c5b2510e-90aa-48c9-afdd-6c188c546411" name="bool" isAbstract="false" isLeaf="false" cachedFullName="bool">
+        <elementDefinition Id="f41fe1ac-ffa9-4897-a4e0-7cbfa481fa9d" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="5517fbdc-1ef0-4556-8770-2c4f9290eb02" name="dictionary" isAbstract="false" isLeaf="false" cachedFullName="dictionary">
+        <elementDefinition Id="9684fbc1-7f85-4512-85c7-e21a402a7ab4" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="e209c43f-ba29-4715-95b2-a3c36dc66916" name="observeablecollection&lt;string&gt;" isAbstract="false" isLeaf="false" cachedFullName="observeablecollection&lt;string&gt;">
+        <elementDefinition Id="4cc87f29-62ef-40ab-a3bd-a7f0583ec653" />
       </referencedType>
     </packageHasNamedElement>
   </packagedElements>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
   dslVersion="1.0.0.0"
   Id="dda288e4-6b39-4bb7-8cc9-fb29d8ae56ee"
   name="Models" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -1192,7 +1192,7 @@
             <coveredLifelines>
               <lifelineMoniker
                 Id="565dda6c-eab6-4bf6-910a-d6d030e20ac9"
-                LastKnownName=": Selected (things)"
+                LastKnownName=": Selected attraction"
                 LastKnownLocation="Models.uml" />
             </coveredLifelines>
             <finish>
@@ -1232,7 +1232,7 @@
             <covered>
               <lifelineMoniker
                 Id="565dda6c-eab6-4bf6-910a-d6d030e20ac9"
-                LastKnownName=": Selected (things)"
+                LastKnownName=": Selected attraction"
                 LastKnownLocation="Models.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -1252,7 +1252,7 @@
             <covered>
               <lifelineMoniker
                 Id="565dda6c-eab6-4bf6-910a-d6d030e20ac9"
-                LastKnownName=": Selected (things)"
+                LastKnownName=": Selected attraction"
                 LastKnownLocation="Models.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -1262,7 +1262,7 @@
             <covered>
               <lifelineMoniker
                 Id="565dda6c-eab6-4bf6-910a-d6d030e20ac9"
-                LastKnownName=": Selected (things)"
+                LastKnownName=": Selected attraction"
                 LastKnownLocation="Models.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -1290,7 +1290,7 @@
             <covered>
               <lifelineMoniker
                 Id="565dda6c-eab6-4bf6-910a-d6d030e20ac9"
-                LastKnownName=": Selected (things)"
+                LastKnownName=": Selected attraction"
                 LastKnownLocation="Models.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -1338,7 +1338,7 @@
             <coveredLifelines>
               <lifelineMoniker
                 Id="565dda6c-eab6-4bf6-910a-d6d030e20ac9"
-                LastKnownName=": Selected (things)"
+                LastKnownName=": Selected attraction"
                 LastKnownLocation="Models.uml" />
             </coveredLifelines>
             <finish>
@@ -1378,7 +1378,7 @@
             <covered>
               <lifelineMoniker
                 Id="565dda6c-eab6-4bf6-910a-d6d030e20ac9"
-                LastKnownName=": Selected (things)"
+                LastKnownName=": Selected attraction"
                 LastKnownLocation="Models.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -1398,7 +1398,7 @@
             <covered>
               <lifelineMoniker
                 Id="565dda6c-eab6-4bf6-910a-d6d030e20ac9"
-                LastKnownName=": Selected (things)"
+                LastKnownName=": Selected attraction"
                 LastKnownLocation="Models.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -1408,7 +1408,7 @@
             <covered>
               <lifelineMoniker
                 Id="565dda6c-eab6-4bf6-910a-d6d030e20ac9"
-                LastKnownName=": Selected (things)"
+                LastKnownName=": Selected attraction"
                 LastKnownLocation="Models.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -1436,7 +1436,7 @@
             <covered>
               <lifelineMoniker
                 Id="565dda6c-eab6-4bf6-910a-d6d030e20ac9"
-                LastKnownName=": Selected (things)"
+                LastKnownName=": Selected attraction"
                 LastKnownLocation="Models.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -1513,9 +1513,9 @@
           </lifeline>
           <lifeline
             Id="565dda6c-eab6-4bf6-910a-d6d030e20ac9"
-            name=": Selected (things)"
+            name=": Selected attraction"
             isActor="false"
-            lifelineDisplayName=": Selected (things)">
+            lifelineDisplayName=": Selected attraction">
             <topLevelOccurrences>
               <executionOccurrenceSpecificationMoniker
                 Id="62050335-3089-42f3-82fa-5806c9062801"
@@ -2519,20 +2519,7 @@
         name="Language"
         isAbstract="false"
         isLeaf="false"
-        isActiveClass="false">
-        <ownedAttributesInternal>
-          <property
-            Id="b9a4f707-166d-410e-baaa-7d6fc963d86e"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false" />
-        </ownedAttributesInternal>
-      </class>
+        isActiveClass="false" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
@@ -2677,6 +2664,7 @@
           <property
             Id="0e5c5c65-0059-461a-aad4-0f601138ac6a"
             name="IsLoggedIn"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -2710,6 +2698,7 @@
           <property
             Id="8c968c7e-e353-4c5f-a5d1-7001ab6e4466"
             name="Password"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -2721,6 +2710,7 @@
           <property
             Id="3f3e6740-b2b0-4761-bfa1-cea4d9c7ac53"
             name="Email"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -2732,6 +2722,7 @@
           <property
             Id="92a310e1-b576-4374-ab81-7438a75673e1"
             name="Phone"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -2743,6 +2734,7 @@
           <property
             Id="76620174-2714-41b9-8ec5-109e2bf8b436"
             name="UserName"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -2760,6 +2752,83 @@
         name="Create user"
         isAbstract="false"
         isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="4af50f19-d327-4354-861f-441724217f3b"
+        name="Comments"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="83ff0c13-7129-4daf-a13f-d24a992bc17d"
+            isDerived="false"
+            sourceEndRoleName="Comments"
+            targetEndRoleName="Attractions"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="d03f7479-c3f8-493e-9a94-f72d3cf72dd2"
+              LastKnownName="Attractions"
+              LastKnownLocation="Models.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2d97b7e2-1899-469b-b862-3fb7444324fb"
+                  name="Comments"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="7c832179-6201-4f28-bf8d-6507ace1a958"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="04b5e358-f1f9-4e9d-b497-d5f2ea026df6"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5b9c8a8c-f031-4155-974a-f0a9a1d2cc1a"
+                  name="Attractions"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="00eb8261-b6ac-4427-8d03-1a96ddfcf75f"
+            name="comment"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

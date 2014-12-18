@@ -4,11 +4,6 @@
     <logicalClassDesignerModelHasTypes>
       <class Id="92292a74-f3ac-476c-b68e-447c81e96348" name="Language" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="6ed9d440-cb2b-4768-8533-ce1c35c2d587" />
-        <ownedAttributesInternal>
-          <property Id="130f2cac-171c-42ec-885c-842ae9d8aa32" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="b9a4f707-166d-410e-baaa-7d6fc963d86e" />
-          </property>
-        </ownedAttributesInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
@@ -72,7 +67,7 @@
       <class Id="7f0694e5-ce85-4018-80f5-08b87b87cca4" name="Login" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="20a70261-2126-4c6f-a9c5-fee89b20265c" />
         <ownedAttributesInternal>
-          <property Id="b782c28c-3ab3-4299-8776-d310e6c0be95" name="IsLoggedIn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="b782c28c-3ab3-4299-8776-d310e6c0be95" name="IsLoggedIn" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="0e5c5c65-0059-461a-aad4-0f601138ac6a" />
           </property>
           <property Id="b4567dcc-0cfd-4603-8c37-bb4cf00e17a4" name="LoginDictionary" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -85,17 +80,55 @@
       <class Id="8fba44c9-cab9-4b54-9c6d-50f5bc7f58d3" name="User Data" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="d39e53e5-e037-42dc-943b-db498eb77d0d" />
         <ownedAttributesInternal>
-          <property Id="6c983144-fd32-405c-ba11-c489fe490a32" name="Password" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="6c983144-fd32-405c-ba11-c489fe490a32" name="Password" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="8c968c7e-e353-4c5f-a5d1-7001ab6e4466" />
           </property>
-          <property Id="ae291898-189b-4e3b-8221-e19a5938c974" name="Email" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="ae291898-189b-4e3b-8221-e19a5938c974" name="Email" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="3f3e6740-b2b0-4761-bfa1-cea4d9c7ac53" />
           </property>
-          <property Id="8238b01c-c022-43f5-9767-5f0c6aef4faa" name="Phone" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="8238b01c-c022-43f5-9767-5f0c6aef4faa" name="Phone" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="92a310e1-b576-4374-ab81-7438a75673e1" />
           </property>
-          <property Id="1ad7fcd5-69e6-4eea-9dec-f83db7e68ca7" name="UserName" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="1ad7fcd5-69e6-4eea-9dec-f83db7e68ca7" name="UserName" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="76620174-2714-41b9-8ec5-109e2bf8b436" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="4d1474a0-8b19-48dc-a01c-166d2fcb58d2" name="Comments" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="4af50f19-d327-4354-861f-441724217f3b" />
+        <targetEnds>
+          <association Id="a30d3b43-f222-43f9-a4a2-3d62b77a3fc6" isDerived="false" sourceEndRoleName="Comments" targetEndRoleName="Attractions" isLeaf="false" isAbstract="false">
+            <classMoniker Id="5731b624-c198-44d6-a0d6-c104f9b78505" LastKnownName="Attractions" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6fad08ff-35c9-4a89-b674-8aefb896cc0d" name="Comments" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="d62b6637-3871-4383-b041-a5322cb4e8bd" name="Lower" value="*">
+                      <elementDefinition Id="7c832179-6201-4f28-bf8d-6507ace1a958" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="092f5126-1e25-43f8-8157-d6b4bd19e9e6" name="Upper" value="*">
+                      <elementDefinition Id="04b5e358-f1f9-4e9d-b497-d5f2ea026df6" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="2d97b7e2-1899-469b-b862-3fb7444324fb" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="923cd19a-8036-44a3-9e17-7e83a040b3c0" name="Attractions" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="5b9c8a8c-f031-4155-974a-f0a9a1d2cc1a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="83ff0c13-7129-4daf-a13f-d24a992bc17d" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="0c50f187-3249-41f9-8e4a-34a33d141456" name="comment" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="00eb8261-b6ac-4427-8d03-1a96ddfcf75f" />
           </property>
         </ownedAttributesInternal>
       </class>
