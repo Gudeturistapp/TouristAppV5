@@ -34,7 +34,6 @@ namespace TuristAppV5.View
         private Comments comments = new Comments();
         private Login login = new Login();
         private UserData userData;
-        private static CommentAsJson commentJson = new CommentAsJson();
         public ObservableDictionary DefaultViewModel
         {
             get { return this.defaultViewModel; }
@@ -48,7 +47,6 @@ namespace TuristAppV5.View
         public ItemDetailPageNEW()
         {
             this.InitializeComponent();
-            commentJson.LoadComments();
             this.navigationHelper = new NavigationHelper(this);
             this.navigationHelper.LoadState += navigationHelper_LoadState;
 

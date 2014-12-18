@@ -1,11 +1,14 @@
-﻿using System.Collections.ObjectModel;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
-//using TuristAppV5.Model;
 using Windows.Globalization;
 using TuristAppV5.Annotations;
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics.Tracing;
+using System.Linq;
 using TuristAppV5.Common;
 using TuristAppV5.Model;
 
@@ -13,91 +16,57 @@ namespace TuristAppV5.ViewModel
 {
     public class MainViewModel :INotifyPropertyChanged
     {
-        //Properties + SelectedAttraction.
-        //Properties + SelectedAttraction + attributter.
+        //Properties
         #region Properties
+        public static string LanguageFromFile { get; set; }
+
         public static Attractions SelectedAttraction { get; set; }
         public static Comments SelectedComments { get; set; }
+        
         public AttractionList Restaurants { get; set; }
         public AttractionList Events { get; set; }
         public AttractionList Culture { get; set; }
         public AttractionList Shopping { get; set; }
         public string Comment { get; set; }
-
-        
         #endregion
 
        public MainViewModel()
         {
-
-
-            int language;
-
-            string restaurentJensensBøfhus = @"";
-            string restaurentBones = @"";
-            string restaurentCafeVivaldi = @"";
-            string restaurentMumm = @"";
-
-            string eventRoskildeFestival = @"";
-            string eventLysfest = @"";
-            string eventHavnen = @"";
-            string eventMusicon = @"";
-
-            string shoppingsRoTorv = @"";
-            string shoppingsGaaGade = @"";
-            string shoppingskoebmand = @"";
-            string shoppingsBjergtrold = @"";
-
-            string attractionVikingeSkibsMuseum = @"";
-            string attractionRoskildeDomkirke = @"";
-            string attractionEtGallery = @"";
-            string attractionRaadhus = @"";
-
+            GetLanguage();
             Restaurants = new AttractionList();
             Events = new AttractionList();
             Culture = new AttractionList();
             Shopping = new AttractionList();
+            DetailPageInfo();
+        }
 
-            //Ipsum
+        public void DetailPageInfo()
+        {
+            #region Attributter
+            string restaurentJensensBøfhus;
+            string restaurentBones;
+            string restaurentCafeVivaldi;
+            string restaurentMumm;
 
-            #region Language Checker
+            string eventRoskildeFestival;
+            string eventLysfest;
+            string eventHavnen;
+            string eventMusicon;
 
-            //if (FileHandling.LoadLanguageAsJson().Result.Contains("Dansk"))
-            //{
-            //    language = 1;
-            //}
-            //else if (FileHandling.LoadLanguageAsJson().Result.Contains("Spanish"))
-            //{
-            //    language = 6;
-            //}
-            //else if (FileHandling.LoadLanguageAsJson().Result.Contains("French"))
-            //{
-            //    language = 3;
-            //}
-            //else if (FileHandling.LoadLanguageAsJson().Result.Contains("German"))
-            //{
-            //    language = 4;
-            //}
-            //else if (FileHandling.LoadLanguageAsJson().Result.Contains("Russian"))
-            //{
-            //    language = 5;
-            //}
-            //else
-            //{
-            //    //Default language is now English
-            //    language = 2;
-            //}
+            string shoppingsRoTorv;
+            string shoppingsGaaGade;
+            string shoppingskoebmand;
+            string shoppingsBjergtrold;
 
+            string attractionVikingeSkibsMuseum;
+            string attractionRoskildeDomkirke;
+            string attractionEtGallery;
+            string attractionRaadhus;
             #endregion
-
             #region Text Definer
-
-           // if (language == 1)
+            if (LanguageFromFile.Equals("Danish"))
             {
-                //Danish
-
                 #region Danish version
-
                 restaurentJensensBøfhus = @"Jensens Bøfhus er en utrolig hyggelig restaurant hvor man både som ny forelsket eller som et par med flere år bag sig 
 har mulighed for at få en dejlig og fantastisk aften, med utrolig lækker mad og en virkelig god service. Jensens Bøfhus har i de sidste 10 år leveret denne fantastiske service til alle der besøger dem,
 og de kan findes på:
@@ -148,13 +117,10 @@ fantastiske begivenhed, Roskilde Festival er en udenfor, 'leve i et telt' opleve
                 attractionRaadhus = @"Er du besøger Roskilde for alle de skønheder og alle de særlige attraktioner? Derefter ser ikke yderligere, du lige har fundet en af de bedste og mest vidunderlige attraktioner i dem alle! Det gamle rådhus er en af de bedste oplevelser du kan finde og har med din familie eller medrejsende, mange muligheder og et kig tilbage i tiden, denne attraktion giver dig alt, hvad du har ledt efter!";
 
                 #endregion
-                }
-              //  else if (language == 2)
+            }
+            else if (LanguageFromFile.Equals("English"))
             {
-                //English
-
                 #region English version
-
                 restaurentJensensBøfhus = @"the restaurant Jensens Bøfhus is a extremely cozy and fantastic restaurant, where as you both as new lovers aswell as lovers for several decades
 have the oppertunity to have a wonderful and fantastic evening, with amazing food and some really excellent service. Jensens Bøfhus have for many years delivered this fantastic service to all that visits.
 Have have the same Oppertunity and can contact them on:
@@ -206,12 +172,9 @@ amazing event, Roskilde Festival is a outside, 'living in a tent' experience whe
 
                 #endregion
             }
-         // else if (language == 3)
+            else if (LanguageFromFile.Equals("French"))
             {
-                //French
-
                 #region French version
-
                 restaurentJensensBøfhus = @"le restaurant Jensens Bøfhus est un restaurant très confortable et fantastique, où que vous tant nouveaux amants Aswell que les amateurs depuis plusieurs décennies
 avoir l'oppertunity d'avoir un merveilleux et fantastique soir, avec de la nourriture incroyable et certains vraiment excellent service. Jensens Bøfhus ont depuis de nombreuses années livré ce service fantastique à tous qui visite.
 Avoir le même Oppertunity et peut les contacter sur:
@@ -263,12 +226,9 @@ sam-dim 17-23";
 
                 #endregion
             }
-        //  else if (language == 4)
+            else if (LanguageFromFile.Equals("German"))
             {
-                //German
-
                 #region German version
-
                 restaurentJensensBøfhus = @"Das Restaurant Jensens Bøfhus ist ein sehr gemütliches und fantastisches Restaurant, wo Sie sowohl als neuen Liebhaber als Liebhaber seit mehreren Jahrzehnten aswell
 haben die Chance habt, um eine wunderbare und fantastische Abend haben, mit unglaublichem Essen und ein paar wirklich exzellenten Service. Jensens Bøfhus sind seit vielen Jahren für alle, die besucht geliefert fantastischen Service.
 Haben die gleiche Oppertunity und können sie auf an:
@@ -303,7 +263,7 @@ Mo-Fr 17-22
 Sa-So 17-23";
 
                 eventRoskildeFestival = @"Das Roskilde Festival ist eine der größten Attraktionen in Roskilde, und ziehen mehrere tausend Menschen in die Stadt jedes Jahr für diese
-erstaunliche Ereignis ist Roskilde Festival ein außen 'lebt in einem Zelt Erfahrung' wo man Spaß haben in einer neuen Weise mit all Ihren Freunden, während Sie die vielen Musik-Optionen, die sie jedes Jahr zu bieten";
+                erstaunliche Ereignis ist Roskilde Festival ein außen 'lebt in einem Zelt Erfahrung' wo man Spaß haben in einer neuen Weise mit all Ihren Freunden, während Sie die vielen Musik-Optionen, die sie jedes Jahr zu bieten";
                 eventLysfest = @"das Licht Fest bietet Ihnen als Besucher in dieser wunderbaren Veranstaltung, um die Chance habt eine schöne Zeit mit Ihrer Familie und Freunde zu haben Genießen Sie die Musik, die Menschen und die schöne Aussicht an diesem erstaunlichen Ereignis.";
                 eventHavnen = @"die Roskilde Docks bietet Ihnen als Besucher in dieser wunderbaren Veranstaltung, um die Chance habt eine schöne Zeit mit Ihrer Familie und Freunde zu haben Genießen Sie die Musik, die Menschen und die schöne Aussicht an diesem erstaunlichen Ereignis.";
                 eventMusicon = @"das Musicon event bietet Ihnen als Besucher in dieser wunderbaren Veranstaltung, um die Chance habt eine schöne Zeit mit Ihrer Familie und Freunde zu haben Genießen Sie die Musik, die Menschen und die schöne Aussicht an diesem erstaunlichen Ereignis.";
@@ -320,12 +280,9 @@ erstaunliche Ereignis ist Roskilde Festival ein außen 'lebt in einem Zelt Erfah
 
                 #endregion
             }
-          // else if (language == 5)
+            else if (LanguageFromFile.Equals("Russian"))
             {
-                //Russian
-
                 #region Russian version
-
                 restaurentJensensBøfhus = @"Restoran Jensens Bøfhus yavlyayetsya chrezvychayno uyutnyy i fantasticheskiy restoran , gde, kak vy oba kak novyye lyubiteley Aswell kak lyubiteley v techeniye neskol'kikh desyatiletiy
 yest' oppertunity imet' prekrasnyy i fantasticheskiy vecher , s udivitel'noy pishchu, a na samom dele otlichnyy servis. Jensens bøfhus uzhe mnogo let chital etot fantasticheskiy servis dlya vsekh , kotoryy poseshchayet .
 Yest' imeyut odinakovuyu Oppertunity i mozhete svyazat'sya s nimi po :
@@ -374,13 +331,10 @@ udivitel'noye sobytiye , Roskille Festival' snaruzhi, 'zhivet v palatke opyt' gd
                 attractionRoskildeDomkirke = @" Vy posetit' Roskilde dlya vsekh krasavits i vse spetsial'nyye attraktsiony ? Togda smotret' ne dal'she, vy tol'ko chto nashli odin iz luchshikh i samykh zamechatel'nykh dostoprimechatel'nostey ikh vsekh! Korabl'-muzey vikingov yavlyayetsya odnim iz luchshikh perezhivaniya, kotoryye vy mozhete nayti i imet' s vashey sem'yey ili poputchikov , s mnogo iz oppertunities i vernut'sya v proshloye , eto prityazheniye dayet vam vse , chto iskal !";
                 attractionEtGallery = @" Vy posetit' Roskilde dlya vsekh krasavits i vse spetsial'nyye attraktsiony ? Togda smotret' ne dal'she, vy tol'ko chto nashli odin iz luchshikh i samykh zamechatel'nykh dostoprimechatel'nostey ikh vsekh! Korabl'-muzey vikingov yavlyayetsya odnim iz luchshikh perezhivaniya, kotoryye vy mozhete nayti i imet' s vashey sem'yey ili poputchikov , s mnogo iz oppertunities i vernut'sya v proshloye , eto prityazheniye dayet vam vse , chto iskal !";
                 attractionRaadhus = @" Vy posetit' Roskilde dlya vsekh krasavits i vse spetsial'nyye attraktsiony ? Togda smotret' ne dal'she, vy tol'ko chto nashli odin iz luchshikh i samykh zamechatel'nykh dostoprimechatel'nostey ikh vsekh! Korabl'-muzey vikingov yavlyayetsya odnim iz luchshikh perezhivaniya, kotoryye vy mozhete nayti i imet' s vashey sem'yey ili poputchikov , s mnogo iz oppertunities i vernut'sya v proshloye , eto prityazheniye dayet vam vse , chto iskal !";
-
                 #endregion
             }
-         //  else
+            else
             {
-                //Spanish
-
                 #region Spanish version
 
                 restaurentJensensBøfhus = @"el restaurante Jensens Bøfhus es un muy acogedor y un fantástico restaurante, donde como usted tanto como nuevos amantes Aswell como amantes durante varias décadas
@@ -434,7 +388,6 @@ evento increíble, Festival de Roskilde es un fuera, 'viviendo en una tienda exp
 
                 #endregion
             }
-
             #endregion
 
             //Restaurants for detailPage.
@@ -556,6 +509,10 @@ evento increíble, Festival de Roskilde es un fuera, 'viviendo en una tienda exp
 
         }
 
+        public async void GetLanguage()
+        {
+            LanguageFromFile = await FileHandling.LoadLanguageAsync();
+        }
 
         #region PC
 
@@ -569,6 +526,5 @@ evento increíble, Festival de Roskilde es un fuera, 'viviendo en una tienda exp
         }
 
         #endregion
-
     }
 }
