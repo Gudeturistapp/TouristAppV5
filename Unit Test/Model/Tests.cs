@@ -97,14 +97,10 @@ namespace UnitTesting
        public void Testmethod5()
        {
            //tester om brugeren bruger @ ved registerering af email indtast test 3.8 her
-
-           itemDetailPage.EmailTextBlock.Text = "l";
-
-           Assert.AreEqual("l", itemDetailPage.EmailTextBlock.Text);
-
            try
            {
-               itemDetailPage.EmailTextBlock.Text = "";
+               itemDetailPage.EmailTextbox1 = "";
+               Assert.Fail();
            }
            catch (ArgumentException ex)
            {

@@ -10,16 +10,21 @@ using TuristAppV5.Annotations;
 
 namespace TuristAppV5.Model
 {
-    public class AttractionList :INotifyPropertyChanged
+    public class Comments :INotifyPropertyChanged
     {
-        public ObservableCollection<Attractions> AttractionLists  = new ObservableCollection<Attractions>();
+        private ObservableCollection<string> comment = new ObservableCollection<string>();
 
-        public void AddAttraction(string name, string description, string photo)
+        public ObservableCollection<string> Comment
         {
-            AttractionLists.Add(new Attractions(name, description, photo));
-            OnPropertyChanged();
+            get { return comment; }
+            set { comment = value; }
         }
 
+        public void AddComments(string comment)
+        {
+            Comment.Add(comment);
+            OnPropertyChanged("Comments");
+        }
 
         #region PC
 

@@ -1,9 +1,11 @@
 ﻿// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
+using System.ComponentModel;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using TuristAppV5.Common;
 using TuristAppV5.Model;
+using TuristAppV5.ViewModel;
 
 namespace TuristAppV5.View
 {
@@ -13,12 +15,14 @@ namespace TuristAppV5.View
     public sealed partial class MainPage : Page
     {
         private Login login = new Login();
-        private UserData _userData;
+        private UserData userData;
+
 
         public MainPage()
         {
             this.InitializeComponent();
         }
+        private MainViewModel viewModel = new MainViewModel();
 
         public void Register()
         {
@@ -29,7 +33,11 @@ namespace TuristAppV5.View
                 !string.IsNullOrWhiteSpace(registerPhoneBox.Text))
             {
 
-                _userData = new UserData(registerUserNameBox.Text, registerEmailBox.Text, registerPhoneBox.Text);
+                userData = new UserData(registerUserNameBox.Text, registerEmailBox.Text, registerPhoneBox.Text);
+
+                //userData.UserName = registerUserNameBox.Text;
+                //userData.UserEmail = registerEmailBox.Text;
+                //userData.UserPhone = registerPhoneBox.Text;
 
                 login.LoginDictionary.Add(registerUserNameBox.Text, registerPasswordBox.Password);
 
@@ -77,8 +85,17 @@ namespace TuristAppV5.View
             Login();
         }
 
+
+        private void Button_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof (ItemDetailPageNEW));
+        }
+
+
         private void EventsButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
+            
+
             Frame.Navigate(typeof (EventItemsPage));
         }
 
