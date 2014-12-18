@@ -59,17 +59,10 @@ namespace UnitTesting
             }
       }
 
+        
         [TestMethod]
 
         public void Testmethod2()
-        {
-            //indtast test 2.1 her
-
-        }
-
-        [TestMethod]
-
-        public void Testmethod3()
         {
             //Adds an username(key), then checks and returns an error if the existing username(key) is already added to the dictionary. test 3.12
 
@@ -88,7 +81,7 @@ namespace UnitTesting
 
        [TestMethod]
 
-        public void Testmethod4()
+        public void Testmethod3()
         {
             //tester om brugeren er logget ind indtast test 3.6 her
             login.IsLoggedIn = true;
@@ -98,7 +91,7 @@ namespace UnitTesting
 
        [TestMethod]
 
-       public void Testmethod5()
+       public void Testmethod4()
        {
            //tester om brugeren bruger @ ved registerering af email indtast test 3.8 her
            try
