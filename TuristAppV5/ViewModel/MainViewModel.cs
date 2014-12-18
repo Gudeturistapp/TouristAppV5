@@ -13,7 +13,7 @@ namespace TuristAppV5.ViewModel
     {
         //Properties
         #region Properties
-        public string LanguageFromFile { get; set; }
+        public static string LanguageFromFile { get; set; }
 
         public static Attractions SelectedAttraction { get; set; }
         public AttractionList Restaurants { get; set; }
@@ -24,7 +24,6 @@ namespace TuristAppV5.ViewModel
 
         public MainViewModel()
         {
-            GetLanguage();
             DetailPageInfo();
             Restaurants = new AttractionList();
             Events = new AttractionList();
@@ -34,36 +33,37 @@ namespace TuristAppV5.ViewModel
 
         public void DetailPageInfo()
         {
+            GetLanguage();
             #region Attributter
-            string restaurentJensensBøfhus = "";
-            string restaurentBones = "";
-            string restaurentCafeVivaldi = "";
-            string restaurentMumm = "";
+            string restaurentJensensBøfhus;
+            string restaurentBones;
+            string restaurentCafeVivaldi;
+            string restaurentMumm;
 
-            string eventRoskildeFestival = "";
-            string eventLysfest = "";
-            string eventHavnen = "";
-            string eventMusicon = "";
+            string eventRoskildeFestival;
+            string eventLysfest;
+            string eventHavnen;
+            string eventMusicon;
 
-            string shoppingsRoTorv = "";
-            string shoppingsRandomOmråde = "";
-            string shoppingsWebShopping = "";
-            string shoppingsSomething = "";
+            string shoppingsRoTorv;
+            string shoppingsRandomOmråde;
+            string shoppingsWebShopping;
+            string shoppingsSomething;
 
-            string attractionVikingeSkibsMuseum = "";
-            string attractionRoskildeDomkirke = "";
-            string attractionEtGallery = "";
-            string attractionSomeplace = "";
+            string attractionVikingeSkibsMuseum;
+            string attractionRoskildeDomkirke;
+            string attractionEtGallery;
+            string attractionSomeplace;
             #endregion
             #region Text Definer
             if (LanguageFromFile.Equals("Danish"))
             {
                 //Danish
                 #region Danish version
-                restaurentJensensBøfhus = "";
-                restaurentBones = "";
-                restaurentCafeVivaldi = "";
-                restaurentMumm = "";
+                restaurentJensensBøfhus = "123";
+                restaurentBones = "234";
+                restaurentCafeVivaldi = "345";
+                restaurentMumm = "456";
 
                 eventRoskildeFestival = "";
                 eventLysfest = "";
@@ -243,7 +243,7 @@ namespace TuristAppV5.ViewModel
 
         public async void GetLanguage()
         {
-            LanguageFromFile = await FileHandling.ReadLanguageFileAsync();
+            LanguageFromFile = await FileHandling.LoadLanguageAsync();
         }
     }
 }

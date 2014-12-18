@@ -22,7 +22,7 @@ namespace TuristAppV5.Common
     public class FileHandling
     {
         private static string _language = "English";
-        private const string languageFileName = "Language.DAT";
+        private const string languageFileName = "Language.dat";
 
         #region Language file handling.
         public static async void SaveLanguageAsync(string _language)
