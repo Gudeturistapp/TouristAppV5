@@ -17,6 +17,7 @@ using Windows.UI.Xaml.Navigation;
 
 // The Item Detail Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234232
 using TuristAppV5.Model;
+using TuristAppV5.ViewModel;
 
 namespace TuristAppV5.View
 {
@@ -29,21 +30,15 @@ namespace TuristAppV5.View
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
 
+
+        private Comments comments = new Comments();
         private Login login = new Login();
         private UserData userData;
-
-        /// <summary>
-        /// This can be changed to a strongly typed view model.
-        /// </summary>
         public ObservableDictionary DefaultViewModel
         {
             get { return this.defaultViewModel; }
         }
 
-        /// <summary>
-        /// NavigationHelper is used on each page to aid in navigation and 
-        /// process lifetime management
-        /// </summary>
         public NavigationHelper NavigationHelper
         {
             get { return this.navigationHelper; }
@@ -63,19 +58,9 @@ namespace TuristAppV5.View
             {
                 OrderHereBlock.Text = "   Order here";
             }
+            
         }
 
-        /// <summary>
-        /// Populates the page with content passed during navigation.  Any saved state is also
-        /// provided when recreating a page from a prior session.
-        /// </summary>
-        /// <param name="sender">
-        /// The source of the event; typically <see cref="NavigationHelper"/>
-        /// </param>
-        /// <param name="e">Event data that provides both the navigation parameter passed to
-        /// <see cref="Frame.Navigate(Type, Object)"/> when this page was initially requested and
-        /// a dictionary of state preserved by this page during an earlier
-        /// session.  The state will be null the first time a page is visited.</param>
         private void navigationHelper_LoadState(object sender, LoadStateEventArgs e)
         {
             object navigationParameter;
@@ -112,24 +97,24 @@ namespace TuristAppV5.View
 
         #endregion
 
-
-
         public void Register()
         {
             if (!string.IsNullOrWhiteSpace(registerUserNameBox.Text) &&
                 !string.IsNullOrWhiteSpace(registerPasswordBox.Password) &&
 
-                !string.IsNullOrWhiteSpace(registerEmailBox.Text) &&
+                !string.IsNullOrWhiteSpace(registerEmailBox.Text) && 
                 !string.IsNullOrWhiteSpace(registerPhoneBox.Text))
+            
             {
+                if (registerEmailBox.Text.Contains("@"))
+                {
+                    if (!login.LoginDictionary.ContainsKey(registerUserNameBox.Text))
+                    {
+                      userData = new UserData(registerUserNameBox.Text, registerPasswordBox.Password, registerEmailBox.Text, registerPhoneBox.Text);
 
-                userData = new UserData(registerUserNameBox.Text, registerEmailBox.Text, registerPhoneBox.Text);
+                
 
-                //userData.UserName = registerUserNameBox.Text;
-                //userData.UserEmail = registerEmailBox.Text;
-                //userData.UserPhone = registerPhoneBox.Text;
-
-                login.LoginDictionary.Add(registerUserNameBox.Text, registerPasswordBox.Password);
+                login.LoginDictionary.Add(registerUserNameBox.Text, userData);
 
 
                 login.IsLoggedIn = true;
@@ -137,7 +122,24 @@ namespace TuristAppV5.View
                 RegisterButton.Flyout.Hide();
 
                 ErrorBlock.Text = "";
-                SuccessBlock.Text = "Success! User has been created.";
+                SuccessBlock.Text = "Success! User has been created.";   
+                    }
+                    else
+                    {
+                        SuccessBlock.Text = "";
+                        ErrorBlock.Text = "Error! Username already exists.";
+                    }
+
+               
+
+                }
+                else
+                {
+                    SuccessBlock.Text = "";
+                    ErrorBlock.Text = "Please enter a valid email.";
+                }
+
+                
 
                 if (ErrorBlock.Text.Contains("@"))
                 {
@@ -154,7 +156,7 @@ namespace TuristAppV5.View
 
         public void Login()
         {
-            if (login.LoginDictionary.ContainsKey(UsernameLoginBox.Text) && PasswordLoginBox.Password == login.LoginDictionary[UsernameLoginBox.Text])
+            if (login.LoginDictionary.ContainsKey(UsernameLoginBox.Text) && PasswordLoginBox.Password == userData.Password)
             {
                 login.IsLoggedIn = true;
                 LoginButton.Flyout.Hide();
@@ -177,15 +179,15 @@ namespace TuristAppV5.View
             Register();
         }
 
+        private void LoginButton1_Click(object sender, RoutedEventArgs e)
+        {
+            Login();
+        }
+
         private void CancelOrderButton_Click(object sender, RoutedEventArgs e)
         {
             OrderAppBar.Visibility = Visibility.Collapsed;
 
-        }
-
-        private void LoginButton1_Click(object sender, RoutedEventArgs e)
-        {
-            Login();
         }
 
         private void OrderButton_Click_1(object sender, RoutedEventArgs e)
@@ -195,10 +197,16 @@ namespace TuristAppV5.View
                 OrderAppBar.IsOpen = true;
                 OrderAppBar.Visibility = Visibility.Visible;
 
-              
-                OrderHereNameBox.Text = userData.UserName;
-                OrderHereEmailBox.Text = userData.UserEmail;
-                OrderHerePhoneBox.Text = userData.UserPhone;
+                try
+                {
+                    OrderHereNameBox.Text = userData.UserName;
+                    OrderHereEmailBox.Text = userData.UserEmail;
+                    OrderHerePhoneBox.Text = userData.UserPhone;
+                }
+                catch (Exception)
+                {
+                    
+                }
 
                 
                
@@ -219,11 +227,47 @@ namespace TuristAppV5.View
             
         }
 
+        private void DanishFlyButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            FileHandling.WriteLanguageFileAsync("Danish");
+        }
+
+        private void EnglishFlyButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            FileHandling.WriteLanguageFileAsync("English");
+        }
+
+        private void FrenchFlyButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            FileHandling.WriteLanguageFileAsync("French");
+        }
+
+        private void GermanFlyButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            FileHandling.WriteLanguageFileAsync("German");
+        }
+
+        private void RussianFlyButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            FileHandling.WriteLanguageFileAsync("Russian");
+        }
+
+        private void SpanishFlyButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            FileHandling.WriteLanguageFileAsync("Spanish");
+        }
+
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Exit();
         }
 
+       
 
+        private void AddReviewButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainViewModel.SelectedComments.Comment.Add(AddReviewText.Text);
+            AddReviewText.Text = "";
+        }
     }
 }

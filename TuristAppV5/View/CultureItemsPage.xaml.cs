@@ -15,6 +15,8 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
 // The Items Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234233
+using TuristAppV5.Model;
+using TuristAppV5.ViewModel;
 
 namespace TuristAppV5.View
 {
@@ -26,6 +28,10 @@ namespace TuristAppV5.View
     {
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
+        private Login login = new Login();
+        private UserData userData;
+
+        MainViewModel viewModel = new MainViewModel();
 
         /// <summary>
         /// This can be changed to a strongly typed view model.
@@ -51,20 +57,70 @@ namespace TuristAppV5.View
             this.navigationHelper.LoadState += navigationHelper_LoadState;
         }
 
-        /// <summary>
-        /// Populates the page with content passed during navigation.  Any saved state is also
-        /// provided when recreating a page from a prior session.
-        /// </summary>
-        /// <param name="sender">
-        /// The source of the event; typically <see cref="NavigationHelper"/>
-        /// </param>
-        /// <param name="e">Event data that provides both the navigation parameter passed to
-        /// <see cref="Frame.Navigate(Type, Object)"/> when this page was initially requested and
-        /// a dictionary of state preserved by this page during an earlier
-        /// session.  The state will be null the first time a page is visited.</param>
         private void navigationHelper_LoadState(object sender, LoadStateEventArgs e)
         {
             // TODO: Assign a bindable collection of items to this.DefaultViewModel["Items"]
+        }
+
+        public void Register()
+        {
+            if (!string.IsNullOrWhiteSpace(registerUserNameBox.Text) &&
+                !string.IsNullOrWhiteSpace(registerPasswordBox.Password) &&
+
+                !string.IsNullOrWhiteSpace(registerEmailBox.Text) &&
+                !string.IsNullOrWhiteSpace(registerPhoneBox.Text))
+            {
+
+                userData = new UserData(registerUserNameBox.Text, registerPasswordBox.Password, registerEmailBox.Text, registerPhoneBox.Text);
+
+                //userData.UserName = registerUserNameBox.Text;
+                //userData.UserEmail = registerEmailBox.Text;
+                //userData.UserPhone = registerPhoneBox.Text;
+
+                login.LoginDictionary.Add(registerUserNameBox.Text, userData);
+
+
+                login.IsLoggedIn = true;
+
+                RegisterButton.Flyout.Hide();
+
+                ErrorBlock.Text = "";
+                SuccessBlock.Text = "Success! User has been created.";
+
+            }
+            else
+            {
+                SuccessBlock.Text = "";
+                ErrorBlock.Text = "Error! Please input values in all fields.";
+            }
+        }
+
+        public void Login()
+        {
+            if (login.LoginDictionary.ContainsKey(UsernameLoginBox.Text) && PasswordLoginBox.Password == userData.Password)
+            {
+                login.IsLoggedIn = true;
+                LoginButton.Flyout.Hide();
+
+                ErrorBlock.Text = "";
+                SuccessBlock.Text = "Success! Loggged in.";
+            }
+            else
+            {
+                SuccessBlock.Text = "";
+                ErrorBlock.Text = "Error! Username or password incorrect.";
+            }
+        }
+
+
+        private void RegisterButton1_Click(object sender, RoutedEventArgs e)
+        {
+            Register();
+        }
+
+        private void LoginButton1_Click(object sender, RoutedEventArgs e)
+        {
+            Login();
         }
 
         #region NavigationHelper registration
@@ -92,23 +148,68 @@ namespace TuristAppV5.View
 
         private void CultureButton1_Click(object sender, RoutedEventArgs e)
         {
-
+            MainViewModel.SelectedAttraction = viewModel.Culture.AttractionLists[0];
+            MainViewModel.SelectedComments = viewModel.Culture.AttractionLists[0].comments;
+            Frame.Navigate(typeof(ItemDetailPageNEW));
         }
 
         private void CultureButton2_Click(object sender, RoutedEventArgs e)
         {
+            MainViewModel.SelectedAttraction = viewModel.Culture.AttractionLists[1];
+            MainViewModel.SelectedComments = viewModel.Culture.AttractionLists[1].comments;
 
+            Frame.Navigate(typeof(ItemDetailPageNEW));
         }
 
         private void CultureButton4_Click(object sender, RoutedEventArgs e)
         {
+            MainViewModel.SelectedAttraction = viewModel.Culture.AttractionLists[2];
+            MainViewModel.SelectedComments = viewModel.Culture.AttractionLists[2].comments;
 
+            Frame.Navigate(typeof(ItemDetailPageNEW));
         }
 
         private void CultureButton3_Click(object sender, RoutedEventArgs e)
         {
+            MainViewModel.SelectedAttraction = viewModel.Culture.AttractionLists[3];
+            MainViewModel.SelectedComments = viewModel.Culture.AttractionLists[3].comments;
 
+            Frame.Navigate(typeof(ItemDetailPageNEW));
         }
 
+        private void DanishFlybutton_Click_1(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            FileHandling.WriteLanguageFileAsync("Danish");
+        }
+
+        private void EnglishFlybutton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            FileHandling.WriteLanguageFileAsync("English");
+        }
+
+        private void FrenchFlybutton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            FileHandling.WriteLanguageFileAsync("French");
+        }
+
+        private void GermanFlybutton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            FileHandling.WriteLanguageFileAsync("German");
+        }
+
+        private void RussianFlybutton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            FileHandling.WriteLanguageFileAsync("Russian");
+        }
+
+        private void SpanishFlybutton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            FileHandling.WriteLanguageFileAsync("Spanish");
+        }
+
+        private void ExitButton_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Exit();
+        }
       }
 }

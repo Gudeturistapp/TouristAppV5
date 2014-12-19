@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
 // The Items Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234233
+using TuristAppV5.Model;
 using TuristAppV5.ViewModel;
 
 namespace TuristAppV5.View
@@ -27,6 +28,8 @@ namespace TuristAppV5.View
     {
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
+        private Login login = new Login();
+        private UserData userData;
 
         MainViewModel viewModel = new MainViewModel();
         ItemDetailPageNEW itemDetailPage = new ItemDetailPageNEW();
@@ -94,36 +97,128 @@ namespace TuristAppV5.View
 
         #endregion
 
-        
+        public void Register()
+        {
+            if (!string.IsNullOrWhiteSpace(registerUserNameBox.Text) &&
+                !string.IsNullOrWhiteSpace(registerPasswordBox.Password) &&
+
+                !string.IsNullOrWhiteSpace(registerEmailBox.Text) &&
+                !string.IsNullOrWhiteSpace(registerPhoneBox.Text))
+            {
+
+                userData = new UserData(registerUserNameBox.Text, registerPasswordBox.Password, registerEmailBox.Text, registerPhoneBox.Text);
+
+                //userData.UserName = registerUserNameBox.Text;
+                //userData.UserEmail = registerEmailBox.Text;
+                //userData.UserPhone = registerPhoneBox.Text;
+
+                login.LoginDictionary.Add(registerUserNameBox.Text, userData);
+
+
+                login.IsLoggedIn = true;
+
+                RegisterButton.Flyout.Hide();
+
+                ErrorBlock.Text = "";
+                SuccessBlock.Text = "Success! User has been created.";
+
+            }
+            else
+            {
+                SuccessBlock.Text = "";
+                ErrorBlock.Text = "Error! Please input values in all fields.";
+            }
+        }
+
+        public void Login()
+        {
+            if (login.LoginDictionary.ContainsKey(UsernameLoginBox.Text) && PasswordLoginBox.Password == userData.Password)
+            {
+                login.IsLoggedIn = true;
+                LoginButton.Flyout.Hide();
+
+                ErrorBlock.Text = "";
+                SuccessBlock.Text = "Success! Loggged in.";
+            }
+            else
+            {
+                SuccessBlock.Text = "";
+                ErrorBlock.Text = "Error! Username or password incorrect.";
+            }
+        }
+
+
+        private void RegisterButton1_Click(object sender, RoutedEventArgs e)
+        {
+            Register();
+        }
+
+        private void LoginButton1_Click(object sender, RoutedEventArgs e)
+        {
+            Login();
+        }
 
         private void EventButton2_Click(object sender, RoutedEventArgs e)
         {
             MainViewModel.SelectedAttraction = viewModel.Events.AttractionLists[1];
+            MainViewModel.SelectedComments = viewModel.Events.AttractionLists[1].comments;
             Frame.Navigate(typeof (ItemDetailPageNEW));
         }
 
         private void EventButton4_Click(object sender, RoutedEventArgs e)
         {
             MainViewModel.SelectedAttraction = viewModel.Events.AttractionLists[2];
+            MainViewModel.SelectedComments = viewModel.Events.AttractionLists[2].comments;
             Frame.Navigate(typeof (ItemDetailPageNEW));
         }
 
         private void EventButton3_Click(object sender, RoutedEventArgs e)
         {
             MainViewModel.SelectedAttraction = viewModel.Events.AttractionLists[3];
+            MainViewModel.SelectedComments = viewModel.Events.AttractionLists[3].comments;
             Frame.Navigate(typeof (ItemDetailPageNEW));
         }
 
         private void EventButton1_Click_1(object sender, RoutedEventArgs e)
         {
             MainViewModel.SelectedAttraction = viewModel.Events.AttractionLists[0];
+            MainViewModel.SelectedComments = viewModel.Events.AttractionLists[0].comments;
             Frame.Navigate(typeof(ItemDetailPageNEW));
         }
 
-        private void Login()
+        private void DanishFlybutton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
-            itemDetailPage.Login();
+            FileHandling.WriteLanguageFileAsync("Danish");
         }
 
+        private void EnglishFlyButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            FileHandling.WriteLanguageFileAsync("English");
+        }
+
+        private void FrenchFlyButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            FileHandling.WriteLanguageFileAsync("French");
+        }
+
+        private void GermanFlyButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            FileHandling.WriteLanguageFileAsync("German");
+        }
+
+        private void RussianFlyButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            FileHandling.WriteLanguageFileAsync("Russian");
+        }
+
+        private void SpanishFlyButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            FileHandling.WriteLanguageFileAsync("Spanish");
+        }
+
+        private void ExitButton_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Exit();
+        }
       }
 }

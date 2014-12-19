@@ -28,7 +28,7 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <StackPanel Orientation="Horizontal">
-                    <AppBarButton x:Name="ExitButton" HorizontalAlignment="Stretch" Icon="Cancel" Label="Exit" VerticalAlignment="Stretch"/>
+                    <AppBarButton x:Name="ExitButton" HorizontalAlignment="Stretch" Icon="Cancel" Label="Exit" VerticalAlignment="Stretch" Click="ExitButton_Click"/>
                 </StackPanel>
                 <StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal"/>
             </Grid>
@@ -45,32 +45,32 @@
                     <AppBarButton Label="Language" Height="88" Width="100" Foreground="#FFED6B06" Icon="Flag">
                         <AppBarButton.Resources>
                             <MenuFlyout x:Key="LanguageFlyOut">
-                                <MenuFlyoutItem Margin="0,0,0,0" Height="34" BorderBrush="White">
+                                <MenuFlyoutItem x:Name="DanishFlyButton" Margin="0,0,0,0" Height="34" BorderBrush="White" Click="DanishFlybutton_Click">
                                     <MenuFlyoutItem.Background>
                                         <ImageBrush ImageSource="/Assets/Flag/DenmarkFlag.png" Stretch="Uniform"/>
                                     </MenuFlyoutItem.Background>
                                 </MenuFlyoutItem>
-                                <MenuFlyoutItem BorderBrush="White" Width="45" Height="40">
+                                <MenuFlyoutItem x:Name="EnglishFlyButton" BorderBrush="White" Width="45" Height="40" Click="EnglishFlyButton_Click">
                                     <MenuFlyoutItem.Background>
                                         <ImageBrush Stretch="Uniform" ImageSource="/Assets/Flag/USFlag.png"/>
                                     </MenuFlyoutItem.Background>
                                 </MenuFlyoutItem>
-                                <MenuFlyoutItem BorderBrush="White" Width="45" Margin="0,0.1" BorderThickness="0,0.1">
+                                <MenuFlyoutItem x:Name="FrenchFlyButton" BorderBrush="White" Width="45" Margin="0,0.1" BorderThickness="0,0.1" Click="FrenchFlyButton_Click">
                                     <MenuFlyoutItem.Background>
                                         <ImageBrush Stretch="Uniform" ImageSource="/Assets/Flag/FranceFlag.png"/>
                                     </MenuFlyoutItem.Background>
                                 </MenuFlyoutItem>
-                                <MenuFlyoutItem BorderBrush="White" Width="45">
+                                <MenuFlyoutItem x:Name="GermanFlyButton" BorderBrush="White" Width="45" Click="GermanFlyButton_Click">
                                     <MenuFlyoutItem.Background>
                                         <ImageBrush Stretch="Uniform" ImageSource="/Assets/Flag/GermanyFlag.png"/>
                                     </MenuFlyoutItem.Background>
                                 </MenuFlyoutItem>
-                                <MenuFlyoutItem BorderBrush="Black" Width="45" BorderThickness="0.1,0.1,0.1,0" Margin="0.1,0.1,0.1,0">
+                                <MenuFlyoutItem x:Name="RussianFlyButton" BorderBrush="Black" Width="45" BorderThickness="0.1,0.1,0.1,0" Margin="0.1,0.1,0.1,0" Click="RussianFlyButton_Click">
                                     <MenuFlyoutItem.Background>
                                         <ImageBrush Stretch="Uniform" ImageSource="/Assets/Flag/RussianFlag.png"/>
                                     </MenuFlyoutItem.Background>
                                 </MenuFlyoutItem>
-                                <MenuFlyoutItem BorderBrush="White" Width="45">
+                                <MenuFlyoutItem x:Name="SpanishFlyButton" BorderBrush="White" Width="45" Click="SpanishFlyButton_Click">
                                     <MenuFlyoutItem.Background>
                                         <ImageBrush Stretch="Uniform" ImageSource="/Assets/Flag/SpainFlag.png"/>
                                     </MenuFlyoutItem.Background>
@@ -83,39 +83,36 @@
                     </AppBarButton>
                 </StackPanel>
                 <StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal">
-                    <AppBarButton x:Name="RegisterButton" HorizontalAlignment="Stretch" Icon="AddFriend" Label="Register" VerticalAlignment="Stretch">
+                    <AppBarButton x:Name="RegisterButton" HorizontalAlignment="Stretch" Icon="AddFriend" Label="Register" VerticalAlignment="Stretch" Margin="0,0,0,-13">
                         <AppBarButton.Resources>
                             <Flyout x:Key="FlyoutBase2">
-                                <Grid Height="250" Width="200">
+                                <Grid Height="298" Width="200">
                                     <StackPanel Margin="-16,-20,-19,-15">
                                         <StackPanel Height="10"/>
                                         <StackPanel Height="35" Margin="35,0,36,0">
                                             <TextBlock TextWrapping="Wrap" Text="Register" Height="65" HorizontalAlignment="Center" Width="235" VerticalAlignment="Center" FontSize="25" Margin="34,0,-104.714,0" Foreground="#FFED6B06" FontWeight="Bold"/>
                                         </StackPanel>
-                                        <StackPanel Height="180">
-                                            <TextBlock TextWrapping="Wrap" FontSize="13" Height="15" Foreground="#FFED6B06" Text="Name" Margin="10,0"/>
-                                            <TextBox TextWrapping="Wrap" Height="15" FontSize="13" MinHeight="20" Margin="10,0"/>
+                                        <StackPanel x:Name="StackRegister" Height="208">
+                                            <TextBlock TextWrapping="Wrap" FontSize="13" Height="15" Foreground="#FFED6B06" Text="Username" Margin="10,0"/>
+                                            <TextBox x:Name="registerUserNameBox" TextWrapping="Wrap" Height="36" FontSize="15" MinHeight="20" Margin="10,0" PlaceholderText="Enter your Username"/>
                                             <TextBlock TextWrapping="Wrap" FontSize="13" Height="18" Foreground="#FFED6B06" Text="Phone" Margin="10,0,0,0"/>
-                                            <TextBox TextWrapping="Wrap" FontSize="13" Height="21" MinHeight="20" Margin="10,0"/>
+                                            <TextBox x:Name="registerPhoneBox" TextWrapping="Wrap" FontSize="15" Height="36" MinHeight="20" Margin="10,0" PlaceholderText="Enter your Phone number"/>
                                             <TextBlock TextWrapping="Wrap" Height="17" VerticalAlignment="Bottom" Foreground="#FFED6B06" Text="E-mail" FontSize="13" Margin="10,0,0,0"/>
-                                            <TextBox TextWrapping="Wrap" Text="&#xA;" Height="15" FontSize="13" MinHeight="20" Margin="10,0"/>
+                                            <TextBox x:Name="registerEmailBox" TextWrapping="Wrap" Text="&#xA;" Height="36" FontSize="15" MinHeight="20" Margin="10,0" PlaceholderText="Enter your Email"/>
                                             <TextBlock TextWrapping="Wrap" Height="14" VerticalAlignment="Bottom" Foreground="#FFED6B06" Text="Password" FontSize="13" Margin="10,0,0,0"/>
-                                            <TextBox TextWrapping="Wrap" Text="&#xA;" Height="20" FontSize="13" RenderTransformOrigin="0.5,0.5" Margin="9,0,11,0" MinHeight="20">
-                                                <TextBox.RenderTransform>
+                                            <PasswordBox x:Name="registerPasswordBox" Margin="10,0" Height="24" FontFamily="Global User Interface" RenderTransformOrigin="0.5,0.5" FontSize="15">
+                                                <PasswordBox.RenderTransform>
                                                     <CompositeTransform ScaleY="-1"/>
-                                                </TextBox.RenderTransform>
-                                            </TextBox>
-                                            <TextBlock TextWrapping="Wrap" Height="12" VerticalAlignment="Bottom" Foreground="#FFED6B06" Text="Re-Enter Password" FontSize="13" Margin="10,0,0,0"/>
-                                            <TextBox TextWrapping="Wrap" Text="&#xA;" Height="20" FontSize="13" RenderTransformOrigin="0.5,0.5" Margin="9,0,11,0" MinHeight="20">
-                                                <TextBox.RenderTransform>
-                                                    <CompositeTransform ScaleY="-1"/>
-                                                </TextBox.RenderTransform>
-                                            </TextBox>
-                                            <TextBlock TextWrapping="Wrap" Height="13" VerticalAlignment="Bottom" Foreground="#FFED6B06" FontSize="13"/>
+                                                </PasswordBox.RenderTransform>
+                                            </PasswordBox>
                                         </StackPanel>
-                                        <StackPanel Height="76" Width="364">
-                                            <StackPanel Height="86" Margin="0,0,123.286,0" Orientation="Horizontal">
-                                                <AppBarButton x:Name="RegisterButton1" HorizontalAlignment="Stretch" Icon="Add" Label="Register" VerticalAlignment="Stretch" Margin="0,-14,0,9.714" Width="221"/>
+                                        <StackPanel Height="114" Margin="0,0,-228,0">
+                                            <StackPanel Height="121" Margin="0,0,123,0" Orientation="Horizontal">
+                                                <AppBarButton x:Name="RegisterButton1" HorizontalAlignment="Stretch" Label="Register" VerticalAlignment="Stretch"  Margin="0,-4,0,10" Width="221" Click="RegisterButton1_Click">
+                                                    <AppBarButton.Icon>
+                                                        <SymbolIcon Height="40" Symbol="Add" VerticalAlignment="Top"/>
+                                                    </AppBarButton.Icon>
+                                                </AppBarButton>
                                             </StackPanel>
                                         </StackPanel>
                                     </StackPanel>
@@ -126,7 +123,7 @@
                             <StaticResource ResourceKey="FlyoutBase2"/>
                         </AppBarButton.Flyout>
                     </AppBarButton>
-                    <AppBarButton x:Name="LoginButton" HorizontalAlignment="Stretch" Icon="Contact" Label="Login" VerticalAlignment="Stretch">
+                    <AppBarButton x:Name="LoginButton" HorizontalAlignment="Stretch" Icon="Contact" Label="Login" VerticalAlignment="Stretch" Margin="0,0,0,-13">
                         <AppBarButton.Resources>
                             <Flyout x:Key="FlyoutBase3">
                                 <Grid Height="200" Width="200">
@@ -142,26 +139,24 @@
                                                     <Grid Height="100" Width="100"/>
                                                 </Flyout>
                                             </FlyoutBase.AttachedFlyout>
-                                            <TextBlock TextWrapping="Wrap" FontSize="13" Height="15" Foreground="#FFED6B06" Text="Name" Margin="10,0"/>
-                                            <TextBox TextWrapping="Wrap" Height="15" FontSize="13" MinHeight="20" Margin="10,0"/>
-                                            <TextBlock TextWrapping="Wrap" Height="14" VerticalAlignment="Bottom" Foreground="#FFED6B06" Text="Password" FontSize="13" Margin="10,0,0,0"/>
-                                            <TextBox TextWrapping="Wrap" Text="&#xA;" Height="20" FontSize="13" RenderTransformOrigin="0.5,0.5" Margin="9,0,11,0" MinHeight="20">
-                                                <TextBox.RenderTransform>
-                                                    <CompositeTransform ScaleY="-1"/>
-                                                </TextBox.RenderTransform>
-                                            </TextBox>
-                                            <TextBlock TextWrapping="Wrap" Height="12" VerticalAlignment="Bottom" Foreground="#FFED6B06" Text="Re-Enter Password" FontSize="13" Margin="10,0,0,0"/>
-                                            <TextBox TextWrapping="Wrap" Text="&#xA;" Height="20" FontSize="13" RenderTransformOrigin="0.5,0.5" Margin="9,0,11,0" MinHeight="20">
-                                                <TextBox.RenderTransform>
-                                                    <CompositeTransform ScaleY="-1"/>
-                                                </TextBox.RenderTransform>
-                                            </TextBox>
-                                            <TextBlock TextWrapping="Wrap" Height="13" VerticalAlignment="Bottom" Foreground="#FFED6B06" FontSize="13"/>
-                                            <StackPanel Height="17"/>
+                                            <TextBlock TextWrapping="Wrap" FontSize="13" Height="15" Foreground="#FFED6B06" Text="Username" Margin="10,0"/>
+                                            <TextBox x:Name="UsernameLoginBox" TextWrapping="Wrap" Height="36" FontSize="15" MinHeight="20" Margin="10,0" PlaceholderText="Enter your Username" FontFamily="Global User Interface"/>
+                                            <TextBlock TextWrapping="Wrap" Height="30" VerticalAlignment="Bottom" Foreground="#FFED6B06" FontSize="13" Margin="10,0,0,0">
+                								<Run/>
+                								<LineBreak/>
+                								<Run Text="Password"/>
+                                            </TextBlock>
+                                            <StackPanel Height="48">
+                                                <PasswordBox x:Name="PasswordLoginBox" Height="3" Margin="10,0" RenderTransformOrigin="0.5,0.5" FontSize="15" FontFamily="Global User Interface">
+                                                    <PasswordBox.RenderTransform>
+                                                        <CompositeTransform ScaleY="-1"/>
+                                                    </PasswordBox.RenderTransform>
+                                                </PasswordBox>
+                                            </StackPanel>
                                         </StackPanel>
                                         <StackPanel Height="76" Width="364">
                                             <StackPanel Height="85" Margin="0,0,130.286,0" Orientation="Horizontal">
-                                                <AppBarButton x:Name="LoginButton1" HorizontalAlignment="Stretch" Icon="Add" Label="Register" VerticalAlignment="Stretch" Margin="0,-14,0,-4" Width="219">
+                                                <AppBarButton x:Name="LoginButton1" HorizontalAlignment="Stretch" Icon="Add" Label="Login" VerticalAlignment="Stretch" Margin="0,-14,0,-4" Width="219" FontFamily="Global User Interface" Click="LoginButton1_Click">
                                                     <TextBlock Height="100" TextWrapping="Wrap" Text="TextBlock" Width="100"/>
                                                 </AppBarButton>
                                             </StackPanel>
@@ -175,6 +170,8 @@
                         </AppBarButton.Flyout>
                     </AppBarButton>
                 </StackPanel>
+                <TextBlock x:Name="SuccessBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="175,27,0,0" TextWrapping="Wrap" Text="" Foreground="Green" FontWeight="SemiBold" FontSize="21" VerticalAlignment="Top" Height="48" Width="303"/>
+                <TextBlock x:Name="ErrorBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="175,27,0,0" TextWrapping="Wrap" Height="48" Width="303" Text="" FontWeight="SemiBold" FontSize="21" Foreground="Red" VerticalAlignment="Top"/>
             </Grid>
         </AppBar>
     </Page.TopAppBar>
@@ -204,11 +201,14 @@
 			Grid.RowSpan="2"
 			Padding="116,136,116,46"
 			SelectionMode="None"
-			IsSwipeEnabled="false" Background="#B200C8FF">
+			IsSwipeEnabled="false">
+            <GridView.Background>
+                <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/Wood.jpg"/>
+            </GridView.Background>
             <GridView.DataContext>
                 <viewModel:MainViewModel/>
             </GridView.DataContext>
-            
+
 
         </GridView>
 
@@ -224,7 +224,7 @@
 				AutomationProperties.Name="Back"
 				AutomationProperties.AutomationId="BackButton"
 				AutomationProperties.ItemType="Navigation Button"/>
-            <Rectangle x:Name="HeadPiece" Grid.Column="1" Fill="#FFED6B06" HorizontalAlignment="Left" Height="40" Margin="235,25,0,0" Stroke="#FFED6B06" VerticalAlignment="Top" Width="710" RadiusX="45" RadiusY="45"/>
+            <Rectangle x:Name="HeadPiece" Grid.Column="1" Fill="#FFED6B06" HorizontalAlignment="Left" Height="50" Margin="235,25,0,0" Stroke="#FFED6B06" VerticalAlignment="Top" Width="710" RadiusX="45" RadiusY="45"/>
         </Grid>
         <StackPanel x:Name="EventStack1" HorizontalAlignment="Left" Height="212" Margin="266,83,0,0" Grid.Row="1" VerticalAlignment="Top" Width="500">
             <Grid Height="206" Margin="0,0,244,0">
@@ -289,5 +289,6 @@
         </StackPanel>
 
         <Page/>
+        <TextBlock HorizontalAlignment="Left" Margin="626,23,0,0" TextWrapping="Wrap" Text="Events" VerticalAlignment="Top" Height="59" Width="317" FontSize="48"/>
     </Grid>
 </Page>
