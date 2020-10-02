@@ -97,8 +97,10 @@ Global
 		{DD190009-0BAE-4BDB-9550-4E458BE8DF60}.Release|x86.ActiveCfg = Release|x86
 		{DD190009-0BAE-4BDB-9550-4E458BE8DF60}.Release|x86.Build.0 = Release|x86
 		{DD190009-0BAE-4BDB-9550-4E458BE8DF60}.Release|x86.Deploy.0 = Release|x86
-	EndGlobalSection
+	
+	
+	EndGlobalSection1
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
+	EndGlobalSection1
 EndGlobal
